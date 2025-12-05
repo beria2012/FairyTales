@@ -3,55 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic Library</title>
-    <!-- Подключаем красивые шрифты -->
+    <title>Royal Fairy Tales</title>
+    <!-- Подключаем "Богатые" шрифты -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 <body>
     <div id="app">
+        <!-- Фон с летающими частицами (магия) -->
+        <div class="magic-bg">
+            <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+            <div class="firefly"></div><div class="firefly"></div><div class="firefly"></div>
+        </div>
+
         <!-- LIBRARY VIEW -->
         <div id="library-view" class="container">
             <header>
-                <h1>✨ The Enchanted Library ✨</h1>
-                <div class="search-box">
-                    <input type="text" id="search-input" placeholder="Search for a tale or author...">
+                <div class="title-frame">
+                    <h1>✨ The Royal Library ✨</h1>
+                    <p class="subtitle">A Treasury of Enchanted Tales</p>
+                </div>
+                
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="✨ Search for magic...">
+                    <span class="search-icon">🔍</span>
                 </div>
             </header>
             
             <div id="books-grid" class="grid">
-                <!-- Books will appear here -->
+                <!-- Книги появляются здесь -->
             </div>
             
             <div id="empty-state" class="hidden">
-                <p>No tales found yet... 🕯️</p>
+                <p>The magic scroll is empty... 📜</p>
             </div>
         </div>
 
-        <!-- READER VIEW (The Book) -->
+        <!-- READER VIEW -->
         <div id="reader-view" class="reader-modal hidden">
+            <!-- Кнопка "Назад" в виде деревянной таблички -->
             <div class="controls-top">
-                <button id="close-btn" class="btn-fantasy">✖ Close Book</button>
+                <button id="close-btn" class="btn-wood">
+                    <span>✖ Return to Library</span>
+                </button>
             </div>
 
-            <!-- Контейнер для книги -->
-            <div class="book-container">
-                <!-- Фоновая картинка (ваша книга) -->
+            <div class="book-stage">
                 <div class="book-bg">
-                    <!-- Сами листающиеся страницы -->
                     <div id="flip-book"></div>
                 </div>
             </div>
 
-            <!-- Управление аудио внизу -->
-            <div id="audio-bar" class="hidden">
-                <p>🎧 Audio Version:</p>
+            <div id="audio-bar" class="hidden glass-panel">
+                <p>🎵 Storyteller Voice:</p>
                 <audio id="audio-player" controls></audio>
             </div>
-            
-            <p class="hint">Use arrow keys or click corners to flip pages</p>
         </div>
     </div>
 
