@@ -3,164 +3,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Fairy Tales Library</title>
+    <!-- 1. Обновленное название во вкладке браузера -->
+    <title>Magic Fairy Tales For Kids</title>
     
-    <!-- Fonts -->
+    <!-- Fonts: 'Quicksand' для современности, 'Fredoka One' для заголовков -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Henny+Penny&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600;700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
     
-    <!-- Icon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏰</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>">
 
-    <!-- Styles (CSS) -->
     <style>
         :root {
-            --deep-sky: #090e18;
-            --night-purple: #1a0b2e;
-            --gold-glow: #ffd700;
-            --gold-dark: #b8860b;
-            --parchment: #f4e4bc;
-            --wood-dark: #3e2723;
-            --wood-light: #5d4037;
-            --book-red: #8a1c1c;
-            --text-main: #2b1d0e;
+            /* Современная палитра "Магический закат" */
+            --bg-gradient: linear-gradient(135deg, #240b36 0%, #c31432 100%);
+            --glass-bg: rgba(255, 255, 255, 0.1);
+            --glass-border: rgba(255, 255, 255, 0.2);
+            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            
+            --accent-gold: #FFD700;
+            --accent-pink: #ff6b6b;
+            --accent-blue: #4facfe;
+            
+            --text-white: #ffffff;
+            --text-soft: #f0f0f0;
         }
 
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Cormorant Garamond', serif;
-            background-color: var(--deep-sky);
-            color: #fff;
+            font-family: 'Quicksand', sans-serif;
+            background: var(--bg-gradient);
+            color: var(--text-white);
             min-height: 100vh;
             overflow-x: hidden;
-            cursor: none;
+            cursor: none; /* Скрываем обычный курсор */
         }
 
         *, *::before, *::after { box-sizing: border-box; }
 
-        /* --- MAGIC CURSOR --- */
-        .cursor-dot, .cursor-outline {
-            position: fixed; top: 0; left: 0; transform: translate(-50%, -50%);
-            border-radius: 50%; z-index: 9999; pointer-events: none;
+        /* --- ФОНОВЫЕ ЭФФЕКТЫ (Floating Blobs) --- */
+        .ambient-light {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+            animation: floatBlob 20s infinite alternate;
         }
-        .cursor-dot { width: 8px; height: 8px; background: var(--gold-glow); box-shadow: 0 0 15px var(--gold-glow); }
-        .cursor-outline { width: 40px; height: 40px; border: 2px solid rgba(255, 215, 0, 0.5); transition: width 0.2s, height 0.2s; }
+        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #7000ff; }
+        .blob-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: #ff0055; animation-delay: -5s; }
+        .blob-3 { top: 40%; left: 40%; width: 30vw; height: 30vw; background: #00d2ff; animation-delay: -10s; }
 
-        /* --- BACKGROUND --- */
-        .world-bg { position: fixed; width: 100%; height: 100%; z-index: -1; background: linear-gradient(to bottom, #05081c 0%, #1a0b2e 100%); overflow: hidden; }
-        .stars { position: absolute; width: 100%; height: 100%; background: url('https://www.transparenttextures.com/patterns/stardust.png'); opacity: 0.8; }
-        .clouds { position: absolute; top: 10%; width: 300%; height: 100%; background: url('https://raw.githubusercontent.com/yemon/react-parallax-scrolling/master/demo/src/images/cloud.png') repeat-x; background-size: contain; opacity: 0.15; animation: drift 120s linear infinite; }
-        .castle-silhouette { position: absolute; bottom: 0; width: 100%; height: 50%; background-image: url('https://i.ibb.co/3Wrq1gq/castle-silhouette.png'); background-repeat: no-repeat; background-position: bottom center; background-size: contain; opacity: 0.4; }
-        .fog { position: absolute; bottom: 0; width: 100%; height: 30%; background: linear-gradient(to top, var(--night-purple), transparent); }
-        @keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-        /* --- UI ELEMENTS --- */
-        header { text-align: center; padding-top: 50px; z-index: 10; position: relative; }
-        .logo-area h1 { font-family: 'Cinzel Decorative', cursive; font-size: 5rem; color: var(--gold-glow); text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); margin: 10px 0; }
-        .crown-icon { font-size: 4rem; animation: float 3s infinite; }
-        
-        .search-scroll {
-            background: var(--parchment);
-            padding: 15px 40px; border-radius: 60px; border: 4px solid var(--wood-dark);
-            display: flex; align-items: center; width: 100%; max-width: 550px; margin: 40px auto 0;
-            transform: rotate(-1.5deg); transition: 0.4s;
-            background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png');
-        }
-        .search-scroll:focus-within { transform: rotate(0) scale(1.05); border-color: var(--gold-dark); }
-        .search-scroll input { border: none; background: transparent; width: 100%; font-family: 'Henny Penny', cursive; font-size: 1.6rem; color: #3e2723; outline: none; text-align: center; }
-
-        /* --- BOOKS GRID --- */
-        .shelves { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 90px 40px; margin: 60px auto; max-width: 1200px; padding: 0 20px; }
-        
-        .book-card { position: relative; width: 230px; height: 340px; perspective: 1500px; cursor: pointer; margin: 0 auto; transition: transform 0.4s; }
-        .book-card:hover { transform: translateY(-20px) scale(1.02); z-index: 10; }
-        
-        .book-cover {
-            width: 100%; height: 100%; border-radius: 4px 12px 12px 4px;
-            box-shadow: inset 5px 0 10px rgba(0,0,0,0.4), 15px 20px 30px rgba(0,0,0,0.6);
-            background-size: cover; background-position: center; border-left: 14px solid rgba(0,0,0,0.3);
-            display: flex; flex-direction: column; justify-content: flex-end; overflow: hidden;
-        }
-        .book-info { background: linear-gradient(to top, rgba(15, 5, 20, 0.95), transparent); padding: 30px 15px 15px; text-align: center; }
-        .book-info h3 { margin: 0; color: var(--gold-glow); font-family: 'Cinzel Decorative', cursive; text-shadow: 0 2px 4px #000; }
-        
-        .pages-edge {
-            position: absolute; top: 6px; right: -12px; width: 12px; height: 96%;
-            background: linear-gradient(to right, #fdfbf0, #ccc 100%);
-            border-radius: 0 4px 4px 0; transform: rotateY(90deg); transform-origin: left;
+        @keyframes floatBlob {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(50px, 50px) scale(1.1); }
         }
 
-        /* --- READER --- */
-        .reader-overlay { position: fixed; inset: 0; background: rgba(5, 3, 10, 0.9); z-index: 100; display: flex; align-items: center; justify-content: center; backdrop-filter: blur(15px); }
-        .wood-frame { width: 95%; height: 90%; max-width: 1400px; background: var(--wood-dark) url('https://www.transparenttextures.com/patterns/wood-pattern.png'); border-radius: 20px; position: relative; display: flex; flex-direction: column; align-items: center; padding: 20px; border: 4px solid var(--gold-dark); }
-        
-        .btn-magic { background: var(--book-red); color: #ffecb3; border: 2px solid var(--gold-dark); padding: 12px 30px; border-radius: 30px; font-family: 'Henny Penny', cursive; font-size: 1.3rem; cursor: pointer; margin-bottom: 20px; }
-        
-        .book-stage { flex-grow: 1; display: flex; align-items: center; justify-content: center; width: 100%; }
-        
-        .page { background: var(--parchment); border: 1px solid #d4c5a3; overflow: hidden; box-shadow: inset 0 0 40px rgba(62, 39, 35, 0.2); }
-        .page-image { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; padding: 10px; }
-        .page-number { position: absolute; bottom: 10px; width: 100%; text-align: center; color: var(--wood-dark); font-family: 'Cinzel Decorative'; }
+        /* --- МАГИЧЕСКИЙ КУРСОР --- */
+        .cursor-dot {
+            position: fixed; top: 0; left: 0; width: 12px; height: 12px;
+            background: #fff; border-radius: 50%; pointer-events: none; z-index: 9999;
+            box-shadow: 0 0 10px #fff, 0 0 20px var(--accent-pink);
+            transform: translate(-50%, -50%);
+        }
+        .cursor-ring {
+            position: fixed; top: 0; left: 0; width: 40px; height: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 50%;
+            pointer-events: none; z-index: 9998;
+            transition: 0.1s; transform: translate(-50%, -50%);
+        }
 
-        .magic-player { background: rgba(26, 11, 46, 0.85); border: 2px solid var(--gold-glow); border-radius: 50px; padding: 10px 30px; display: flex; align-items: center; gap: 20px; margin-top: 10px; }
-        .magic-player p { margin: 0; color: var(--gold-glow); font-family: 'Cinzel Decorative'; }
+        /* --- HEADER --- */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .title-container {
+            display: inline-block;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        h1 {
+            font-family: 'Fredoka One', cursive; /* Пухлый, добрый шрифт */
+            font-size: 3.5rem; /* Чуть меньше, чтобы длинное название влезло красиво */
+            margin: 0;
+            background: linear-gradient(to right, #fff, #ffd700);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 10px;
+            font-weight: 600;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 20px;
+            border-radius: 20px;
+            display: inline-block;
+            backdrop-filter: blur(5px);
+        }
+
+        /* --- СОВРЕМЕННЫЙ ПОИСК --- */
+        .search-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .glass-search {
+            position: relative;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50px;
+            padding: 10px 25px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 500px;
+            box-shadow: var(--glass-shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .glass-search:focus-within {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+            border-color: rgba(255,255,255,0.6);
+        }
+
+        .glass-search input {
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            width: 100%;
+            margin-left: 10px;
+            outline: none;
+        }
+        .glass-search input::placeholder { color: rgba(255,255,255,0.6); }
+        .search-icon { font-size: 1.5rem; filter: drop-shadow(0 0 5px var(--accent-gold)); }
+
+        /* --- КНИЖНАЯ ПОЛКА --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 60px 40px;
+            margin-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        /* 3D КАРТОЧКА */
+        .book-card {
+            perspective: 1000px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .card-inner {
+            position: relative;
+            width: 240px;
+            height: 360px;
+            margin: 0 auto;
+            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+        }
+
+        .book-card:hover .card-inner {
+            transform: translateY(-15px) rotateY(-10deg);
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px; /* Сильное скругление */
+            box-shadow: 
+                -10px 10px 20px rgba(0,0,0,0.3),
+                0 0 0 1px rgba(255,255,255,0.1) inset; /* Тонкая рамка */
+        }
+
+        /* Сияние при наведении */
+        .book-card:hover .cover-image {
+            box-shadow: 
+                -15px 15px 30px rgba(0,0,0,0.4),
+                0 0 20px var(--accent-pink);
+        }
+
+        .meta-info {
+            margin-top: 15px;
+            opacity: 0.9;
+            transition: 0.3s;
+        }
         
+        .meta-info h3 {
+            font-size: 1.4rem;
+            margin: 0;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .meta-info p {
+            margin: 5px 0 0;
+            color: var(--accent-gold);
+            font-size: 0.95rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- ЧИТАЛКА (MODAL) --- */
+        .modal-overlay {
+            position: fixed; inset: 0;
+            background: rgba(10, 5, 30, 0.8);
+            backdrop-filter: blur(20px);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        .glass-frame {
+            width: 95vw; height: 90vh;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            display: flex; flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        /* Кнопка назад */
+        .btn-close {
+            position: absolute; top: 20px; left: 20px;
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-family: 'Quicksand', sans-serif;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.2s;
+            display: flex; align-items: center; gap: 10px;
+            z-index: 200;
+        }
+        .btn-close:hover { background: var(--accent-pink); transform: scale(1.05); border-color: transparent; }
+
+        .book-stage {
+            flex-grow: 1;
+            width: 100%;
+            display: flex; justify-content: center; align-items: center;
+        }
+
+        /* Аудио плеер в стиле Glass */
+        .glass-player {
+            margin-top: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 10px 30px;
+            display: flex; align-items: center; gap: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .glass-player span { font-size: 1.5rem; animation: pulse 2s infinite; }
+        .glass-player p { margin: 0; font-weight: 600; font-size: 0.9rem; color: var(--accent-gold); }
+
+        /* Страницы */
+        .page {
+            background: #fff;
+            border-radius: 5px; /* Немного скруглим углы страниц */
+            overflow: hidden;
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.05);
+        }
+        
+        .page-content {
+            height: 100%; width: 100%;
+            display: flex; flex-direction: column;
+            justify-content: center; align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .page img {
+            max-width: 100%; max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Пустое состояние */
+        .empty-state {
+            text-align: center;
+            margin-top: 100px;
+            background: rgba(255,255,255,0.1);
+            padding: 40px;
+            border-radius: 30px;
+            border: 1px dashed rgba(255,255,255,0.3);
+            display: inline-block;
+        }
+
+        /* Utility */
         .hidden { display: none !important; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
+            .card-inner { width: 160px; height: 240px; }
+        }
     </style>
 </head>
 <body>
-    <div class="cursor-dot"></div><div class="cursor-outline"></div>
+    <!-- Фоновые пятна -->
+    <div class="ambient-light blob-1"></div>
+    <div class="ambient-light blob-2"></div>
+    <div class="ambient-light blob-3"></div>
+
+    <!-- Курсор -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
 
     <div id="app">
-        <div class="world-bg">
-            <div class="stars"></div><div class="clouds"></div><div class="castle-silhouette"></div><div class="fog"></div>
-        </div>
-
+        <!-- БИБЛИОТЕКА -->
         <div id="library-view" class="container">
             <header>
-                <div class="logo-area">
-                    <div class="crown-icon">👑</div>
-                    <h1>Royal Fairy Tales</h1>
+                <div class="title-container">
+                    <!-- 2. Обновленный заголовок на странице -->
+                    <h1>Magic Fairy Tales For Kids</h1>
+                    <div class="subtitle">Where dreams come alive ✨</div>
                 </div>
-                <div class="search-wrapper">
-                    <div class="search-scroll">
-                        <span>✨</span>
-                        <input type="text" id="search-input" placeholder="Whisper a story name here...">
+
+                <div class="search-container">
+                    <div class="glass-search">
+                        <span class="search-icon">🔎</span>
+                        <input type="text" id="search-input" placeholder="Find a story...">
                     </div>
                 </div>
             </header>
             
-            <div id="books-grid" class="shelves"></div>
+            <div id="books-grid" class="grid"></div>
             
-            <div id="empty-state" class="hidden" style="text-align:center; margin-top:50px;">
-                <div class="search-scroll" style="transform:none; flex-direction:column; gap:10px;">
-                    <p style="color:#3e2723; font-family:'Henny Penny'; font-size:1.5rem;">The library is empty...</p>
-                    <p style="color:#5d4037;">Add folders to <b>public/tales/</b></p>
+            <div id="empty-state" class="hidden" style="text-align: center;">
+                <div class="empty-state">
+                    <h2>👻 No stories found!</h2>
+                    <p>Add folders to <code>public/tales/</code> to see magic happen.</p>
                 </div>
             </div>
         </div>
 
-        <div id="reader-view" class="reader-overlay hidden">
-            <div class="wood-frame">
-                <button id="close-btn" class="btn-magic">🔙 Return to Library</button>
+        <!-- ЧИТАЛКА -->
+        <div id="reader-view" class="modal-overlay hidden">
+            <div class="glass-frame">
+                <button id="close-btn" class="btn-close">
+                    <span>❮</span> Library
+                </button>
+
                 <div class="book-stage">
                     <div id="flip-book"></div>
                 </div>
-                <div id="audio-bar" class="hidden magic-player">
-                    <span>🦁</span>
+
+                <div id="audio-bar" class="hidden glass-player">
+                    <span>🔊</span>
                     <div>
-                        <p>Storyteller</p>
-                        <audio id="audio-player" controls></audio>
+                        <p>Story Audio</p>
+                        <audio id="audio-player" controls style="height: 30px; opacity: 0.8;"></audio>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Scripts -->
+    <!-- Зависимости -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 
@@ -175,20 +410,21 @@
 
         async function init() {
             try {
-                // Загружаем сгенерированный JSON файл
+                // Пытаемся загрузить индекс
                 const response = await fetch('/tales-index.json');
-                
-                if (!response.ok) {
-                    throw new Error('Index file not found (Run npm run scan)');
-                }
-                
+                if (!response.ok) throw new Error('Index not found');
                 allTales = await response.json();
                 renderLibrary(allTales);
-                setupSearch();
             } catch (e) {
-                console.warn("Could not load tales:", e);
-                document.getElementById('empty-state').classList.remove('hidden');
+                console.warn("Using demo data because JSON load failed.");
+                // Демо данные для красоты, если файла нет
+                allTales = [
+                    { id: 'demo1', title: 'The Star Bunny', author: 'Cosmic Tales', cover: 'https://cdn.pixabay.com/photo/2022/11/14/19/22/rabbit-7592446_960_720.jpg', pages: 4 },
+                    { id: 'demo2', title: 'Ocean Secret', author: 'Mermaid Blue', cover: 'https://cdn.pixabay.com/photo/2023/03/13/19/18/ai-generated-7850438_960_720.jpg', pages: 4 }
+                ];
+                renderLibrary(allTales);
             }
+            setupSearch();
         }
 
         function renderLibrary(tales) {
@@ -204,29 +440,35 @@
             }
 
             tales.forEach((tale, index) => {
-                const colors = ['#8a1c1c', '#1c3b8a', '#1c8a45', '#4a1c8a', '#5d4037'];
-                const randomColor = colors[index % colors.length];
+                const colors = ['#FF6B6B', '#4ECDC4', '#FFE66D', '#1A535C'];
+                const bg = colors[index % colors.length];
+
                 const card = document.createElement('div');
                 card.className = 'book-card';
                 
-                // Формируем путь
+                // Логика пути (оставляем старую логику путей)
                 const coverUrl = tale.cover 
                     ? (tale.cover.startsWith('http') ? tale.cover : `/tales/${tale.id}/${tale.cover}`)
                     : '';
 
-                const coverStyle = coverUrl ? `background-image: url('${coverUrl}')` : `background-color: ${randomColor}`;
+                // Если картинки нет, красивый градиент
+                const imgTag = coverUrl 
+                    ? `<img src="${coverUrl}" class="cover-image" alt="${tale.title}">`
+                    : `<div class="cover-image" style="background: linear-gradient(135deg, ${bg}, #222); display:flex; align-items:center; justify-content:center; font-size:3rem;">📖</div>`;
 
                 card.innerHTML = `
-                    <div class="book-cover" style="${coverStyle}">
-                        <div class="book-info">
+                    <div class="card-inner">
+                        ${imgTag}
+                        <div class="meta-info">
                             <h3>${tale.title}</h3>
-                            <p>${tale.author || 'Folklore'}</p>
+                            <p>${tale.author || 'Story'}</p>
                         </div>
                     </div>
-                    <div class="pages-edge"></div>
                 `;
                 
-                card.style.animation = `float 6s ease-in-out ${index * 0.3}s infinite`;
+                // Анимация появления
+                card.style.animation = `fadeIn 0.6s ease-out ${index * 0.1}s backwards`;
+                
                 card.onclick = () => openBook(tale);
                 grid.appendChild(card);
             });
@@ -261,28 +503,43 @@
             if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
             bookEl.innerHTML = ''; 
 
-            if (Array.isArray(tale.pages)) {
-                tale.pages.forEach((pageFile, i) => {
-                    const div = document.createElement('div');
-                    div.className = 'page';
-                    const imgSrc = `/tales/${tale.id}/${pageFile}`;
-                    div.innerHTML = `<img src="${imgSrc}" class="page-image" loading="lazy"><div class="page-number">- ${i + 1} -</div>`;
-                    bookEl.appendChild(div);
-                });
-            } else {
-                // Fallback для старого формата
-                for(let i=1; i<= (tale.pages || 4); i++) {
-                    const div = document.createElement('div');
-                    div.className = 'page';
-                    div.innerHTML = `<div class="page-number">Page ${i}</div>`;
-                    bookEl.appendChild(div);
+            // Генерация страниц
+            const pagesToRender = Array.isArray(tale.pages) ? tale.pages : Array.from({length: tale.pages || 4}, (_, i) => i + 1);
+            
+            pagesToRender.forEach((pageItem, i) => {
+                const div = document.createElement('div');
+                div.className = 'page';
+                
+                // Логика контента страницы
+                let content = '';
+                if (typeof pageItem === 'string' && (pageItem.endsWith('.jpg') || pageItem.endsWith('.png'))) {
+                    // Это путь к файлу
+                     const imgSrc = `/tales/${tale.id}/${pageItem}`;
+                     content = `<img src="${imgSrc}" loading="lazy" alt="Page ${i+1}">`;
+                } else {
+                    // Это номер или демо
+                    // Для красоты, если нет картинки - покажем текст
+                    content = `
+                        <div class="page-content">
+                            <h2 style="color: #333; font-family: 'Fredoka One'">${tale.title}</h2>
+                            <p style="color: #666;">Page ${i + 1}</p>
+                            ${i === 0 ? '<div style="font-size:3rem; margin-top:20px;">🏰</div>' : ''}
+                        </div>
+                    `;
                 }
-            }
 
+                div.innerHTML = content;
+                bookEl.appendChild(div);
+            });
+
+            // Запуск PageFlip
             const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
             pageFlipInstance = new PageFlip(bookEl, {
-                width: 400, height: 600, size: 'fixed',
-                drawShadow: true, showCover: true, usePortrait: true
+                width: 400, height: 600, 
+                size: 'fixed',
+                drawShadow: true, 
+                showCover: true, 
+                usePortrait: true
             });
             pageFlipInstance.loadFromHTML(document.querySelectorAll('.page'));
         }
@@ -294,16 +551,25 @@
             if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
         };
 
+        // Логика курсора
         function initCursor() {
             const dot = document.querySelector('.cursor-dot');
-            const outline = document.querySelector('.cursor-outline');
+            const ring = document.querySelector('.cursor-ring');
+            
+            // Отключаем на тач-устройствах
             if (window.matchMedia("(pointer: coarse)").matches) {
-                dot.style.display = 'none'; outline.style.display = 'none'; document.body.style.cursor = 'auto'; return;
+                dot.style.display = 'none'; ring.style.display = 'none';
+                document.body.style.cursor = 'auto'; return;
             }
+
             window.addEventListener('mousemove', (e) => {
                 dot.style.left = `${e.clientX}px`; dot.style.top = `${e.clientY}px`;
-                outline.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 500, fill: "forwards" });
+                ring.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 400, fill: "forwards" });
             });
+
+            // Эффект нажатия
+            window.addEventListener('mousedown', () => ring.style.transform = 'translate(-50%, -50%) scale(0.5)');
+            window.addEventListener('mouseup', () => ring.style.transform = 'translate(-50%, -50%) scale(1)');
         }
     </script>
 </body>
