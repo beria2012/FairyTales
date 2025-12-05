@@ -1,47 +1,57 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Волшебные Сказки</title>
+    <title>Magic Library</title>
+    <!-- Подключаем красивые шрифты -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 </head>
 <body>
     <div id="app">
-        <!-- Экран библиотеки -->
+        <!-- LIBRARY VIEW -->
         <div id="library-view" class="container">
             <header>
-                <h1>✨ Волшебная Библиотека ✨</h1>
+                <h1>✨ The Enchanted Library ✨</h1>
                 <div class="search-box">
-                    <input type="text" id="search-input" placeholder="🔍 Найти сказку или автора...">
+                    <input type="text" id="search-input" placeholder="Search for a tale or author...">
                 </div>
             </header>
             
             <div id="books-grid" class="grid">
-                <!-- Сюда скрипт добавит книги -->
+                <!-- Books will appear here -->
             </div>
             
             <div id="empty-state" class="hidden">
-                <p>Такой сказки пока нет 😔</p>
+                <p>No tales found yet... 🕯️</p>
             </div>
         </div>
 
-        <!-- Экран чтения (Книга) -->
+        <!-- READER VIEW (The Book) -->
         <div id="reader-view" class="reader-modal hidden">
             <div class="controls-top">
-                <button id="close-btn" class="btn-wood">✖ Вернуться в библиотеку</button>
-                <div id="audio-player-container" class="hidden">
-                    <audio id="audio-player" controls></audio>
+                <button id="close-btn" class="btn-fantasy">✖ Close Book</button>
+            </div>
+
+            <!-- Контейнер для книги -->
+            <div class="book-container">
+                <!-- Фоновая картинка (ваша книга) -->
+                <div class="book-bg">
+                    <!-- Сами листающиеся страницы -->
+                    <div id="flip-book"></div>
                 </div>
             </div>
 
-            <div class="book-stage">
-                <div id="flip-book">
-                    <!-- Страницы будут здесь -->
-                </div>
+            <!-- Управление аудио внизу -->
+            <div id="audio-bar" class="hidden">
+                <p>🎧 Audio Version:</p>
+                <audio id="audio-player" controls></audio>
             </div>
             
-            <p class="hint">Листайте мышкой или стрелками клавиатуры</p>
+            <p class="hint">Use arrow keys or click corners to flip pages</p>
         </div>
     </div>
 
