@@ -33,7 +33,7 @@ function renderLibrary(tales) {
     tales.forEach(tale => {
         const card = document.createElement('div');
         card.className = 'book-card';
-        // Если обложки нет, ставим заглушку в стиле старой книги
+        // Заглушка, если нет обложки
         const coverSrc = tale.cover ? `/tales/${tale.id}/${tale.cover}` : 'https://i.ibb.co/3rL2j9n/vintage-cover-placeholder.jpg';
         
         card.innerHTML = `
@@ -47,27 +47,32 @@ function renderLibrary(tales) {
 }
 
 // Поиск
-document.getElementById('search-input').addEventListener('input', (e) => {
-    const query = e.target.value;
-    if (!query) {
-        renderLibrary(allTales);
-        return;
-    }
-    const fuse = new Fuse(allTales, { keys: ['title', 'author'], threshold: 0.4 });
-    renderLibrary(fuse.search(query).map(r => r.item));
-});
+const searchInput = document.getElementById('search-input');
+if(searchInput) {
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value;
+        if (!query) {
+            renderLibrary(allTales);
+            return;
+        }
+        const fuse = new Fuse(allTales, { keys: ['title', 'author'], threshold: 0.4 });
+        renderLibrary(fuse.search(query).map(r => r.item));
+    });
+}
 
 async function openBook(tale) {
     document.getElementById('library-view').classList.add('hidden');
     document.getElementById('reader-view').classList.remove('hidden');
 
     const audioBar = document.getElementById('audio-bar');
+    const audioPlayer = document.getElementById('audio-player');
+    
     if (tale.audio) {
         audioBar.classList.remove('hidden');
-        document.getElementById('audio-player').src = `/tales/${tale.id}/${tale.audio}`;
+        audioPlayer.src = `/tales/${tale.id}/${tale.audio}`;
     } else {
         audioBar.classList.add('hidden');
-        document.getElementById('audio-player').pause();
+        audioPlayer.pause();
     }
 
     const bookEl = document.getElementById('flip-book');
@@ -85,3 +90,34 @@ async function openBook(tale) {
         const count = tale.pages || 5;
         for(let i=1; i <= count; i++) {
             const div = document.createElement('div');
+            div.className = 'page';
+            div.innerHTML = `<img src="/tales/${tale.id}/${i}.jpg" loading="lazy" onerror="this.style.display='none'">`;
+            bookEl.appendChild(div);
+        }
+    }
+
+    // Инициализация книги
+    pageFlipInstance = new PageFlip(bookEl, {
+        width: 400,
+        height: 600,
+        size: 'fixed',
+        drawShadow: true,
+        maxShadowOpacity: 0.3,
+        showCover: false,
+        usePortrait: false 
+    });
+
+    pageFlipInstance.loadFromHTML(document.querySelectorAll('.page'));
+}
+
+const closeBtn = document.getElementById('close-btn');
+if(closeBtn) {
+    closeBtn.onclick = () => {
+        document.getElementById('reader-view').classList.add('hidden');
+        document.getElementById('library-view').classList.remove('hidden');
+        document.getElementById('audio-player').pause();
+        if (pageFlipInstance) pageFlipInstance.destroy();
+    };
+}
+
+init();
