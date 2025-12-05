@@ -1,256 +1,262 @@
 :root {
-    --deep-purple: #1a0b2e;
-    --royal-blue: #111b33;
-    --gold: #ffd700;
-    --parchment: #fffbf0;
-    --text-main: #2b1d0e;
+    --deep-sky: #090e18;
+    --night-purple: #1a0b2e;
+    --gold-glow: #ffd700;
+    --gold-dark: #b8860b;
+    --parchment: #f4e4bc;
+    --wood-dark: #3e2723;
+    --book-red: #8a1c1c;
+    --book-blue: #1c3b8a;
+    --book-green: #1c8a45;
 }
 
 body {
     margin: 0;
-    background: radial-gradient(circle at center, #2e1a47, #0d0616);
     font-family: 'Cormorant Garamond', serif;
+    background-color: var(--deep-sky);
     color: #fff;
     min-height: 100vh;
     overflow-x: hidden;
+    cursor: none; /* Скрываем стандартный курсор для кастомного */
 }
 
-/* --- МАГИЧЕСКИЙ ФОН --- */
-.magic-bg {
-    position: fixed; top:0; left:0; width:100%; height:100%;
-    pointer-events: none;
-    z-index: 0;
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-    opacity: 0.4;
-}
-
-.firefly {
-    position: absolute;
-    width: 4px; height: 4px;
-    background: var(--gold);
+/* --- МАГИЧЕСКИЙ КУРСОР --- */
+.cursor-dot, .cursor-outline {
+    position: fixed; top: 0; left: 0;
+    transform: translate(-50%, -50%);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--gold);
-    animation: floatUp 10s infinite linear;
-    opacity: 0;
+    z-index: 9999;
+    pointer-events: none;
+}
+.cursor-dot {
+    width: 8px; height: 8px;
+    background: var(--gold-glow);
+    box-shadow: 0 0 10px var(--gold-glow);
+}
+.cursor-outline {
+    width: 40px; height: 40px;
+    border: 2px solid rgba(255, 215, 0, 0.5);
+    transition: width 0.2s, height 0.2s;
 }
 
-.firefly:nth-child(1) { left: 10%; animation-delay: 0s; }
-.firefly:nth-child(2) { left: 30%; animation-delay: 2s; }
-.firefly:nth-child(3) { left: 70%; animation-delay: 4s; }
-.firefly:nth-child(4) { left: 90%; animation-delay: 1s; }
-.firefly:nth-child(5) { left: 50%; animation-delay: 6s; }
-
-@keyframes floatUp {
-    0% { transform: translateY(100vh) scale(0); opacity: 0; }
-    50% { opacity: 1; }
-    100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+/* --- ФОН (ПАРАЛЛАКС) --- */
+.world-bg {
+    position: fixed; width: 100%; height: 100%; z-index: -1;
+    background: linear-gradient(to bottom, #05081c 0%, #1a0b2e 100%);
+    overflow: hidden;
 }
 
-/* --- КОНТЕЙНЕР --- */
-.container {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+.stars {
+    position: absolute; width: 100%; height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    opacity: 0.6;
+    animation: twinkle 5s infinite alternate;
 }
 
-/* --- ЗАГОЛОВОК --- */
+.clouds {
+    position: absolute; top: 0; left: 0; width: 200%; height: 100%;
+    background: url('https://raw.githubusercontent.com/yemon/react-parallax-scrolling/master/demo/src/images/cloud.png') repeat-x;
+    background-size: cover;
+    opacity: 0.2;
+    animation: drift 60s linear infinite;
+}
+
+.castle-bg {
+    position: absolute; bottom: 0; width: 100%; height: 40%;
+    background: url('https://i.ibb.co/3Wrq1gq/castle-silhouette.png') no-repeat bottom center;
+    background-size: contain;
+    opacity: 0.3;
+}
+
+@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@keyframes twinkle { from { opacity: 0.4; } to { opacity: 0.8; } }
+
+/* --- HEADER --- */
 header {
     text-align: center;
-    margin-bottom: 60px;
-}
-
-.title-frame {
-    display: inline-block;
-    border-bottom: 2px solid var(--gold);
-    border-top: 2px solid var(--gold);
-    padding: 20px 60px;
-    background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(5px);
-    border-radius: 50px;
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
-}
-
-h1 {
-    font-family: 'Cinzel Decorative', cursive;
-    color: var(--gold);
-    font-size: 4rem;
-    margin: 0;
-    text-shadow: 2px 2px 4px #000;
-    letter-spacing: 2px;
-}
-
-.subtitle {
-    font-size: 1.5rem;
-    color: #e0d4b6;
-    margin-top: 10px;
-    font-style: italic;
-}
-
-/* --- ПОИСК --- */
-.search-container {
-    margin-top: 30px;
+    padding-top: 40px;
     position: relative;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    z-index: 10;
 }
 
-.search-container input {
-    width: 100%;
-    padding: 18px 50px 18px 25px;
-    border-radius: 30px;
-    border: 2px solid var(--gold);
-    background: rgba(20, 10, 30, 0.8);
-    color: var(--gold);
-    font-size: 1.4rem;
-    font-family: 'Cormorant Garamond', serif;
-    outline: none;
-    box-shadow: 0 0 20px rgba(0,0,0,0.5);
-    transition: 0.3s;
+.logo-area h1 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 5rem;
+    color: var(--gold-glow);
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 4px 4px 0px #000;
+    margin: 0;
+    line-height: 1;
 }
 
-.search-container input:focus {
-    background: rgba(30, 15, 45, 0.95);
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4);
-}
-.search-icon {
-    position: absolute; right: 20px; top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.5rem;
-    filter: drop-shadow(0 0 2px var(--gold));
-}
+.crown-icon { font-size: 3rem; animation: float 3s ease-in-out infinite; }
 
-/* --- СЕТКА КНИГ --- */
-.grid {
+.ribbon {
+    width: 300px; height: 50px; margin: -20px auto 0;
+    background: #8a1c1c;
+    position: relative;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Henny Penny', cursive;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+}
+.ribbon::before, .ribbon::after {
+    content: ''; position: absolute; border-style: solid; bottom: -10px;
+}
+.ribbon::before { border-width: 0 10px 10px 0; border-color: transparent #581010 transparent transparent; left: 0; }
+.ribbon::after { border-width: 0 0 10px 10px; border-color: transparent transparent transparent #581010; right: 0; }
+
+/* --- ПОИСК (СВИТОК) --- */
+.search-wrapper { margin-top: 40px; display: flex; justify-content: center; }
+
+.search-scroll {
+    background: var(--parchment);
+    padding: 10px 30px;
+    border-radius: 50px;
+    border: 4px solid var(--wood-dark);
+    display: flex; align-items: center;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(139, 69, 19, 0.2);
+    width: 100%; max-width: 500px;
+    transform: rotate(-1deg);
+    transition: transform 0.3s;
+}
+.search-scroll:focus-within { transform: rotate(0) scale(1.05); border-color: var(--gold-dark); }
+
+.search-scroll input {
+    border: none; background: transparent; width: 100%;
+    font-family: 'Henny Penny', cursive;
+    font-size: 1.5rem; color: #3e2723; outline: none;
+}
+.search-scroll input::placeholder { color: rgba(62, 39, 35, 0.5); }
+
+/* --- ПОЛКИ С КНИГАМИ --- */
+.shelves {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 80px 40px;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
 }
 
+/* 3D КНИГА */
 .book-card {
-    background: transparent;
+    position: relative;
+    width: 220px; height: 320px;
     perspective: 1000px;
     cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.book-card:hover { transform: translateY(-20px); }
+
+.book-cover {
+    width: 100%; height: 100%;
+    border-radius: 5px 15px 15px 5px;
+    box-shadow: 
+        inset 4px 0 10px rgba(0,0,0,0.5), /* Сгиб */
+        inset 0 0 20px rgba(0,0,0,0.5), /* Виньетка */
+        10px 10px 30px rgba(0,0,0,0.6); /* Тень */
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    background-size: cover;
+    background-position: center;
+    border-left: 12px solid rgba(0,0,0,0.3); /* Корешок */
+    display: flex; flex-direction: column; justify-content: flex-end;
+    overflow: hidden;
+}
+
+/* Эффект страниц сбоку */
+.book-card::after {
+    content: ''; position: absolute; top: 5px; right: -10px; width: 10px; height: 96%;
+    background: linear-gradient(to right, #fff, #ccc 2px, #fff 4px);
+    border-radius: 0 5px 5px 0;
+    transform: rotateY(90deg);
+}
+
+.book-info {
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    padding: 20px 10px 10px;
     text-align: center;
 }
 
-.book-card img {
-    width: 100%;
-    height: 340px;
-    object-fit: cover;
-    border-radius: 5px 15px 15px 5px;
-    box-shadow: -5px 5px 10px rgba(0,0,0,0.5), inset 0 0 20px rgba(0,0,0,0.5);
-    border-left: 8px solid #3e2723;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.book-card:hover img {
-    transform: translateY(-15px) rotateY(-10deg);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.8), 0 0 20px rgba(255,215,0,0.3);
-}
-
-.book-card h3 {
-    margin: 15px 0 5px;
-    color: var(--gold);
+.book-info h3 {
+    margin: 0; color: var(--gold-glow);
     font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.3rem;
-    text-shadow: 1px 1px 2px #000;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 2px #000;
 }
 
-.book-card p {
-    color: #bbb;
-    font-size: 1.1rem;
-    font-style: italic;
+/* Декор "пыльцы" при наведении */
+.book-card:hover::before {
+    content: '✨'; position: absolute; top: -20px; right: -20px; font-size: 2rem;
+    animation: float 1s infinite;
 }
 
-/* --- РЕЖИМ ЧТЕНИЯ --- */
-.reader-modal {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(5, 5, 10, 0.97);
+/* --- ЧИТАЛКА (МОДАЛЬНОЕ ОКНО) --- */
+.reader-overlay {
+    position: fixed; inset: 0;
+    background: rgba(10, 5, 20, 0.95);
     z-index: 100;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.5s;
 }
+
+.wood-frame {
+    width: 95%; height: 90%;
+    max-width: 1400px;
+    border: 30px solid transparent;
+    border-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png') 30 stretch;
+    box-shadow: inset 0 0 50px #000;
+    position: relative;
+    display: flex; flex-direction: column; align-items: center;
+}
+
+.btn-magic {
+    position: absolute; top: -40px; left: 20px;
+    background: var(--book-red);
+    color: #fff; border: 2px solid var(--gold-dark);
+    padding: 10px 20px; border-radius: 20px;
+    font-family: 'Henny Penny', cursive;
+    font-size: 1.2rem; cursor: pointer;
+    box-shadow: 0 5px 0 var(--wood-dark);
+    transition: 0.2s;
+}
+.btn-magic:active { transform: translateY(5px); box-shadow: none; }
+
+.book-stage {
+    flex-grow: 1; display: flex; align-items: center; justify-content: center;
+    width: 100%;
+}
+
+/* АУДИО ПЛЕЕР */
+.magic-player {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--gold-glow);
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex; align-items: center; gap: 15px;
+    margin-bottom: -50px; /* Выносим за пределы рамки */
+    backdrop-filter: blur(5px);
+}
+.magic-player p { margin: 0; font-style: italic; color: var(--gold-glow); }
+
+/* --- АНИМАЦИИ --- */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .hidden { display: none !important; }
 
-.controls-top {
-    position: absolute; top: 30px; left: 30px; z-index: 200;
-}
-
-.btn-wood {
-    background: #5d4037;
-    border: 2px solid #3e2723;
-    color: #ffecb3;
-    padding: 10px 25px;
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 8px;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 5px 15px rgba(0,0,0,0.5);
-    transition: 0.3s;
-}
-.btn-wood:hover {
-    transform: scale(1.05);
-    color: #fff;
-    box-shadow: 0 0 20px var(--gold);
-}
-
-/* СЦЕНА КНИГИ */
-.book-stage {
-    position: relative;
-    width: 100%;
-    max-width: 1100px;
-    height: 750px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scale(0.9);
-}
-
-.book-bg {
-    width: 100%; height: 100%;
-    background-image: url('https://i.ibb.co/6803487/open-book-bg.jpg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-
-#flip-book {
-    margin-top: 30px;
-}
-
-/* СТРАНИЦЫ */
+/* Стиль страницы для PageFlip */
 .page {
-    background-color: #fdfbf0;
-    background-image: url('https://www.transparenttextures.com/patterns/aged-paper.png'); 
+    background-color: var(--parchment);
+    box-shadow: inset 0 0 30px rgba(62, 39, 35, 0.1);
+    border: 1px solid #e0c9a6;
     overflow: hidden;
-    box-shadow: inset 0 0 30px rgba(139, 69, 19, 0.15);
 }
-.page img {
-    width: 100%; height: 100%;
-    object-fit: contain;
-    filter: sepia(0.4) contrast(1.1);
-}
-
-/* ПАНЕЛЬ АУДИО */
-.glass-panel {
-    position: absolute; bottom: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,215,0, 0.3);
-    padding: 15px 30px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-}
-.glass-panel p { color: var(--gold); font-size: 1.2rem; margin: 0; }
+.page img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
