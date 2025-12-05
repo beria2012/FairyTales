@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Fairy Tales For Kids</title>
     
-    <!-- Шрифты -->
+    <!-- Fonts: 'Fredoka' for headers, 'Quicksand' for UI, 'Caveat' for book text -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
@@ -16,9 +16,10 @@
         :root {
             --bg-deep: #141414;
             --bg-gradient: radial-gradient(circle at 50% 0%, #2b1055 0%, #141414 80%);
-            --card-radius: 16px;
+            --card-radius: 12px;
             --text-main: #ffffff;
-            --page-bg: #fffbf0; /* Цвет бумаги */
+            --page-bg: #fffbf0; /* Paper color */
+            --accent-color: #ffd700;
         }
 
         body {
@@ -36,20 +37,20 @@
         /* --- HEADER --- */
         header {
             display: flex; flex-direction: column; align-items: center;
-            padding: 30px 20px; z-index: 10; position: relative;
+            padding: 40px 20px; z-index: 10; position: relative;
         }
 
         h1 {
             font-family: 'Fredoka One', cursive;
             font-size: 3rem; margin: 0 0 20px 0;
-            background: linear-gradient(to right, #fff, #ffd700);
+            background: linear-gradient(to right, #fff, var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
             text-align: center;
         }
 
-        /* Поиск */
+        /* Search Bar */
         .search-bar {
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(12px);
@@ -67,16 +68,16 @@
         }
         .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
 
-        /* --- ГАЛЕРЕЯ --- */
+        /* --- GRID GALLERY --- */
         .gallery-container { width: 95%; max-width: 1600px; margin: 0 auto; padding-bottom: 50px; }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 30px; margin-top: 30px;
         }
 
-        /* --- КАРТОЧКА (ИСПРАВЛЕННАЯ) --- */
+        /* --- BOOK CARD --- */
         .tile {
             position: relative;
             border-radius: var(--card-radius);
@@ -84,7 +85,8 @@
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
             aspect-ratio: 2 / 3;
-            background: #222; /* Цвет фона пока грузится */
+            background: #222;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .tile:hover {
@@ -93,50 +95,49 @@
             z-index: 2;
         }
 
-        /* Картинка */
+        /* Cover Image */
         .tile-img {
             width: 100%; height: 100%;
             object-fit: cover;
             display: block;
         }
 
-        /* Заглушка (если картинки нет) */
+        /* Fallback if no cover */
         .tile-fallback {
             position: absolute; inset: 0;
             display: flex; flex-direction: column;
             align-items: center; justify-content: center;
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-            padding: 20px; text-align: center;
-            display: none; /* Скрыто по умолчанию */
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            padding: 10px; text-align: center;
         }
         .tile-fallback span { font-size: 3rem; margin-bottom: 10px; }
-        .tile-fallback h3 { font-size: 1.2rem; color: #fff; margin: 0; }
+        .tile-fallback h3 { font-size: 1.1rem; color: #fff; margin: 0; }
 
-        /* Текст внизу */
+        /* Text Overlay */
         .tile-overlay {
             position: absolute; bottom: 0; left: 0; width: 100%;
-            padding: 40px 15px 15px;
-            background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
-            opacity: 1; transition: opacity 0.3s;
+            padding: 50px 15px 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            opacity: 1; 
         }
         .tile h3 { margin: 0; font-size: 1.1rem; color: #fff; text-shadow: 0 2px 4px #000; }
         .tile p { margin: 5px 0 0; font-size: 0.85rem; color: #ccc; }
 
-        /* Иконка Play */
+        /* Play Icon */
         .play-icon {
             position: absolute; top: 50%; left: 50%;
             transform: translate(-50%, -50%) scale(0.8);
-            width: 60px; height: 60px;
-            background: rgba(255, 255, 255, 0.25);
+            width: 50px; height: 50px;
+            background: rgba(255, 255, 255, 0.2);
             backdrop-filter: blur(4px);
             border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-size: 24px; opacity: 0; transition: 0.3s;
-            border: 2px solid #fff; box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            font-size: 20px; opacity: 0; transition: 0.3s;
+            border: 2px solid #fff;
         }
         .tile:hover .play-icon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
-        /* --- ЧИТАЛКА --- */
+        /* --- READER MODAL --- */
         .modal {
             position: fixed; inset: 0;
             background: #111;
@@ -152,17 +153,17 @@
 
         .close-btn {
             position: absolute; top: 20px; right: 30px;
-            background: rgba(255,255,255,0.15); border: none;
+            background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);
             color: white; padding: 10px 20px; border-radius: 30px;
             cursor: pointer; font-weight: bold; font-family: 'Quicksand';
             z-index: 200; transition: 0.2s;
         }
-        .close-btn:hover { background: #ff0055; }
+        .close-btn:hover { background: var(--accent-color); color: #000; border-color: transparent; }
 
-        /* Стили страницы книги */
+        /* --- BOOK PAGE STYLES --- */
         .page {
             background-color: var(--page-bg);
-            border: 1px solid #e0e0e0;
+            border: 1px solid #dcd0b3;
             overflow: hidden;
             box-shadow: inset 0 0 30px rgba(0,0,0,0.05);
         }
@@ -173,22 +174,25 @@
             padding: 20px;
         }
 
-        /* Картинка на странице */
+        /* Top: Image Container */
         .page-img-container {
-            flex: 1; /* Занимает все свободное место сверху */
+            flex: 1; /* Takes up remaining space */
             width: 100%;
             display: flex; align-items: center; justify-content: center;
             overflow: hidden;
             border-radius: 8px;
             margin-bottom: 20px;
+            background: rgba(0,0,0,0.02);
         }
+        
         .page-img-container img {
-            max-width: 100%; max-height: 100%;
+            max-width: 100%; 
+            max-height: 100%;
             object-fit: contain;
-            filter: drop-shadow(0 5px 10px rgba(0,0,0,0.2));
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
         }
 
-        /* Текст на странице */
+        /* Bottom: Text Container */
         .page-text {
             flex-shrink: 0;
             background: #fff;
@@ -196,29 +200,29 @@
             border-radius: 10px;
             border: 1px dashed #dcd0b3;
             color: #4a3b2a;
-            font-family: 'Caveat', cursive; /* Рукописный сказочный шрифт */
+            font-family: 'Caveat', cursive; /* Handwritten font */
             font-size: 1.6rem;
-            line-height: 1.3;
+            line-height: 1.4;
             text-align: center;
-            min-height: 150px; /* Минимальная высота для текста */
+            min-height: 140px; /* Fixed height for text area */
             display: flex; align-items: center; justify-content: center;
         }
 
-        /* Аудио */
+        /* Audio Player */
         .audio-bar {
             position: absolute; bottom: 20px;
-            background: rgba(30, 30, 30, 0.9);
-            padding: 10px 20px; border-radius: 50px;
+            background: rgba(20, 20, 20, 0.9);
+            padding: 8px 20px; border-radius: 50px;
             display: flex; gap: 15px; align-items: center;
             border: 1px solid #444;
         }
-        .audio-bar p { margin: 0; color: #ffd700; font-size: 0.9rem; }
+        .audio-bar p { margin: 0; color: var(--accent-color); font-size: 0.9rem; }
 
         /* Helpers */
         .hidden { display: none !important; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* Mobile */
+        /* Responsive */
         @media (max-width: 768px) {
             h1 { font-size: 2rem; }
             .grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
@@ -229,20 +233,23 @@
 <body>
 
     <div id="app">
-        <header>
-            <h1>Magic Fairy Tales For Kids</h1>
-            <div class="search-bar">
-                <span>🔍</span>
-                <input type="text" id="search-input" placeholder="Search for magic...">
-            </div>
-        </header>
+        <!-- LIBRARY VIEW -->
+        <div id="library-view">
+            <header>
+                <h1>Magic Fairy Tales For Kids</h1>
+                <div class="search-bar">
+                    <span>🔍</span>
+                    <input type="text" id="search-input" placeholder="Search for stories...">
+                </div>
+            </header>
 
-        <div class="gallery-container">
-            <div id="gallery-grid" class="grid"></div>
-            
-            <div id="empty-state" class="hidden" style="text-align: center; margin-top: 50px; color: #888;">
-                <h2>No stories found 🕸️</h2>
-                <p>Run <code>npm run scan</code> to update library.</p>
+            <div class="gallery-container">
+                <div id="gallery-grid" class="grid"></div>
+                
+                <div id="empty-state" class="hidden" style="text-align: center; margin-top: 50px; color: #888;">
+                    <h2>No stories found 🕸️</h2>
+                    <p>Please run <code>npm run scan</code> to update the library.</p>
+                </div>
             </div>
         </div>
 
@@ -251,12 +258,13 @@
             <div class="book-wrapper">
                 <button id="close-btn" class="close-btn">✖ Close Book</button>
                 
+                <!-- The flipbook container -->
                 <div id="flip-book"></div>
 
                 <div id="audio-bar" class="hidden audio-bar">
                     <span>🔊</span>
                     <div>
-                        <p>Storyteller</p>
+                        <p>Narrator</p>
                         <audio id="audio-player" controls style="height: 25px; opacity: 0.9; width: 200px;"></audio>
                     </div>
                 </div>
@@ -264,7 +272,7 @@
         </div>
     </div>
 
-    <!-- Библиотеки -->
+    <!-- Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 
@@ -278,15 +286,25 @@
 
         async function init() {
             try {
-                // Добавляем timestamp чтобы браузер не кэшировал старый JSON
+                // Fetch the JSON generated by scan-tales.js
+                // Adding timestamp to prevent caching during development
                 const response = await fetch(`/tales-index.json?t=${new Date().getTime()}`);
                 if (!response.ok) throw new Error('Index not found');
                 allTales = await response.json();
                 renderGallery(allTales);
             } catch (e) {
-                console.warn("Using demo data (JSON load failed).");
-                renderGallery([]); // Показываем пустой стейт или демо
-                document.getElementById('empty-state').classList.remove('hidden');
+                console.warn("Could not load local index. Using demo data for visualization.");
+                // Demo data in case the script hasn't run yet
+                allTales = [
+                    { 
+                        id: 'demo', title: 'Demo Story', author: 'System', cover: '', 
+                        content: [
+                            { text: "Welcome to the Magic Library!", image: "" },
+                            { text: "Add your folders to public/tales/ to see them here.", image: "" }
+                        ] 
+                    }
+                ];
+                renderGallery(allTales);
             }
             setupSearch();
         }
@@ -307,17 +325,23 @@
                 const card = document.createElement('div');
                 card.className = 'tile';
                 
-                // Формируем путь к обложке
+                // Determine cover path
                 const coverUrl = tale.cover 
                     ? (tale.cover.startsWith('http') ? tale.cover : `/tales/${tale.id}/${tale.cover}`)
                     : '';
 
+                // Handle missing cover
+                const imgContent = coverUrl 
+                    ? `<img src="${coverUrl}" class="tile-img" alt="${tale.title}" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">`
+                    : '';
+
+                const fallbackDisplay = coverUrl ? 'none' : 'flex';
+
                 card.innerHTML = `
-                    <img src="${coverUrl}" class="tile-img" alt="${tale.title}" 
-                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                    ${imgContent}
                     
-                    <!-- ЗАГЛУШКА, если картинка сломана или её нет -->
-                    <div class="tile-fallback" style="${!coverUrl ? 'display:flex' : ''}">
+                    <!-- Fallback if image fails or is missing -->
+                    <div class="tile-fallback" style="display: ${fallbackDisplay}">
                         <span>📖</span>
                         <h3>${tale.title}</h3>
                     </div>
@@ -330,6 +354,8 @@
                     </div>
                 `;
                 
+                // Animation delay for nice effect
+                card.style.animation = `fadeIn 0.5s ease backwards ${index * 0.05}s`;
                 card.onclick = () => openBook(tale);
                 grid.appendChild(card);
             });
@@ -346,11 +372,11 @@
         }
 
         async function openBook(tale) {
-            document.querySelector('.gallery-container').classList.add('hidden');
-            document.querySelector('header').classList.add('hidden');
+            // Switch views
+            document.getElementById('library-view').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
 
-            // Аудио
+            // Setup Audio
             const audioBar = document.getElementById('audio-bar');
             const audioPlayer = document.getElementById('audio-player');
             if (tale.audio) {
@@ -361,15 +387,14 @@
                 audioPlayer.pause();
             }
 
+            // Setup Flipbook
             const bookEl = document.getElementById('flip-book');
             if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
             bookEl.innerHTML = ''; 
 
-            // ЛОГИКА ГЕНЕРАЦИИ СТРАНИЦ
-            // Проверяем: это новый формат (content) или старый (pages)?
-            
+            // --- PAGE GENERATION LOGIC ---
             if (tale.content && Array.isArray(tale.content)) {
-                // НОВЫЙ ФОРМАТ: Текст + Картинка
+                // New Format: Array of objects {text, image}
                 tale.content.forEach((pageItem, i) => {
                     const div = document.createElement('div');
                     div.className = 'page';
@@ -380,7 +405,7 @@
                     div.innerHTML = `
                         <div class="page-content">
                             <div class="page-img-container">
-                                ${imgSrc ? `<img src="${imgSrc}" loading="lazy">` : '<span style="font-size:3rem">✨</span>'}
+                                ${imgSrc ? `<img src="${imgSrc}" loading="lazy" alt="Page ${i+1}">` : '<span style="font-size:3rem; opacity:0.3">✨</span>'}
                             </div>
                             <div class="page-text">
                                 ${text}
@@ -390,35 +415,38 @@
                     `;
                     bookEl.appendChild(div);
                 });
-            } 
-            else if (Array.isArray(tale.pages)) {
-                // СТАРЫЙ ФОРМАТ (только массив картинок)
-                tale.pages.forEach((pageFile, i) => {
-                    const div = document.createElement('div');
-                    div.className = 'page';
-                    const imgSrc = `/tales/${tale.id}/${pageFile}`;
-                    div.innerHTML = `<img src="${imgSrc}" style="width:100%; height:100%; object-fit:contain;">`;
-                    bookEl.appendChild(div);
-                });
+            } else {
+                // Fallback for empty/wrong format
+                const div = document.createElement('div');
+                div.className = 'page';
+                div.innerHTML = `<div class="page-content" style="justify-content:center; text-align:center;"><h2>${tale.title}</h2><p>No content pages found.</p></div>`;
+                bookEl.appendChild(div);
             }
 
-            // Запускаем книгу
+            // Initialize PageFlip
             const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
             pageFlipInstance = new PageFlip(bookEl, {
-                width: 500, height: 700, 
+                width: 500, // Width of one page
+                height: 700, 
                 size: 'fixed',
                 drawShadow: true, 
                 showCover: true, 
-                usePortrait: true // Мобильный режим (одна страница)
+                usePortrait: true // Single page view (best for mobile/reading)
             });
             pageFlipInstance.loadFromHTML(bookEl.children);
         }
 
+        // Close Button Logic
         document.getElementById('close-btn').onclick = () => {
             document.getElementById('reader-view').classList.add('hidden');
-            document.querySelector('.gallery-container').classList.remove('hidden');
-            document.querySelector('header').classList.remove('hidden');
-            document.getElementById('audio-player').pause();
+            document.getElementById('library-view').classList.remove('hidden');
+            
+            // Stop audio
+            const audioPlayer = document.getElementById('audio-player');
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+
+            // Destroy flipbook instance to save memory
             if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
         };
     </script>

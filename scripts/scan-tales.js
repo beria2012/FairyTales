@@ -1,15 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 
-// Настройки путей
 const TALES_DIR = path.join(__dirname, '../public/tales');
 const OUTPUT_FILE = path.join(__dirname, '../public/tales-index.json');
 
-console.log('✨ Сканирование сказочного королевства...');
+console.log('✨ Scanning Fairy Tales Library...');
 
-// Проверяем существование папки
 if (!fs.existsSync(TALES_DIR)) {
-    console.error(`❌ Папка ${TALES_DIR} не найдена! Создайте public/tales`);
+    console.error(`❌ Folder ${TALES_DIR} not found! Please create public/tales`);
     process.exit(1);
 }
 
@@ -26,19 +24,17 @@ items.forEach(item => {
                 const metaContent = fs.readFileSync(metaPath, 'utf-8');
                 const meta = JSON.parse(metaContent);
 
-                // Добавляем сказку в список
                 tales.push({
                     id: folderName,
-                    ...meta
+                    ...meta 
                 });
-                console.log(`📖 Найден том: ${meta.title || folderName}`);
+                console.log(`📖 Found book: ${meta.title || folderName}`);
             } catch (err) {
-                console.error(`⚠️ Ошибка чтения магии в ${folderName}:`, err.message);
+                console.error(`⚠️ Error reading ${folderName}:`, err.message);
             }
         }
     }
 });
 
-// Записываем результат в public/tales-index.json
 fs.writeFileSync(OUTPUT_FILE, JSON.stringify(tales, null, 2));
-console.log(`✅ Готово! Всего сказок: ${tales.length}. Индекс записан в public/tales-index.json`);
+console.log(`✅ Done! Total stories: ${tales.length}. Index saved to public/tales-index.json`);

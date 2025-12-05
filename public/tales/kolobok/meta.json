@@ -1,19 +1,19 @@
 {
-  "title": "Колобок",
-  "author": "Народная сказка",
+  "title": "The Gingerbread Man",
+  "author": "Folklore",
   "cover": "cover.jpg",
   "audio": "audio.mp3",
   "content": [
     {
-      "text": "Жили-были старик со старухой. Вот и говорит старик старухе: — Испеки мне, старуха, колобок.",
+      "text": "Once upon a time there was an old man and an old woman.",
       "image": "1.jpg"
     },
     {
-      "text": "Взяла старуха крылышко, по коробу поскребла, по сусеку помела и наскребла муки горсти две.",
+      "text": "The old woman scraped the bottom of the barrel and swept the wing.",
       "image": "2.jpg"
     },
     {
-      "text": "Замесила муку на сметане, состряпала колобок, изжарила в масле и на окошко студить положила.",
+      "text": "She baked a Gingerbread Man and put him on the window to cool.",
       "image": "3.jpg"
     }
   ]
