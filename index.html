@@ -3,399 +3,289 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 1. Обновленное название во вкладке браузера -->
     <title>Magic Fairy Tales For Kids</title>
     
-    <!-- Fonts: 'Quicksand' для современности, 'Fredoka One' для заголовков -->
+    <!-- Шрифты: Округлые и добрые -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@400;600;700&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
     
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦄</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏰</text></svg>">
 
     <style>
         :root {
-            /* Современная палитра "Магический закат" */
-            --bg-gradient: linear-gradient(135deg, #240b36 0%, #c31432 100%);
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --glass-border: rgba(255, 255, 255, 0.2);
-            --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            /* Палитра "Магический стриминг" */
+            --bg-deep: #141414; /* Темный фон как в кинотеатре */
+            --bg-gradient: radial-gradient(circle at 50% 0%, #2b1055 0%, #141414 80%);
             
-            --accent-gold: #FFD700;
-            --accent-pink: #ff6b6b;
-            --accent-blue: #4facfe;
-            
-            --text-white: #ffffff;
-            --text-soft: #f0f0f0;
+            --card-radius: 16px;
+            --accent-glow: #ff0055;
+            --text-main: #ffffff;
+            --glass: rgba(255, 255, 255, 0.1);
         }
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Quicksand', sans-serif;
-            background: var(--bg-gradient);
-            color: var(--text-white);
+            background: var(--bg-deep);
+            background-image: var(--bg-gradient);
+            color: var(--text-main);
             min-height: 100vh;
             overflow-x: hidden;
-            cursor: none; /* Скрываем обычный курсор */
         }
 
         *, *::before, *::after { box-sizing: border-box; }
 
-        /* --- ФОНОВЫЕ ЭФФЕКТЫ (Floating Blobs) --- */
-        .ambient-light {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(80px);
-            z-index: -1;
-            opacity: 0.6;
-            animation: floatBlob 20s infinite alternate;
-        }
-        .blob-1 { top: -10%; left: -10%; width: 50vw; height: 50vw; background: #7000ff; }
-        .blob-2 { bottom: -10%; right: -10%; width: 40vw; height: 40vw; background: #ff0055; animation-delay: -5s; }
-        .blob-3 { top: 40%; left: 40%; width: 30vw; height: 30vw; background: #00d2ff; animation-delay: -10s; }
-
-        @keyframes floatBlob {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(50px, 50px) scale(1.1); }
-        }
-
-        /* --- МАГИЧЕСКИЙ КУРСОР --- */
-        .cursor-dot {
-            position: fixed; top: 0; left: 0; width: 12px; height: 12px;
-            background: #fff; border-radius: 50%; pointer-events: none; z-index: 9999;
-            box-shadow: 0 0 10px #fff, 0 0 20px var(--accent-pink);
-            transform: translate(-50%, -50%);
-        }
-        .cursor-ring {
-            position: fixed; top: 0; left: 0; width: 40px; height: 40px;
-            border: 2px solid rgba(255, 255, 255, 0.5); border-radius: 50%;
-            pointer-events: none; z-index: 9998;
-            transition: 0.1s; transform: translate(-50%, -50%);
-        }
-
-        /* --- HEADER --- */
+        /* --- UI HEADER (Шапка) --- */
         header {
-            text-align: center;
-            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 40px;
             position: relative;
             z-index: 10;
         }
 
-        .title-container {
-            display: inline-block;
-            animation: float 6s ease-in-out infinite;
-        }
-
         h1 {
-            font-family: 'Fredoka One', cursive; /* Пухлый, добрый шрифт */
-            font-size: 3.5rem; /* Чуть меньше, чтобы длинное название влезло красиво */
-            margin: 0;
+            font-family: 'Fredoka One', cursive;
+            font-size: 3rem;
+            margin: 0 0 20px 0;
             background: linear-gradient(to right, #fff, #ffd700);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            text-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
             letter-spacing: 1px;
-            line-height: 1.2;
+            text-align: center;
         }
 
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-top: 10px;
-            font-weight: 600;
-            background: rgba(255,255,255,0.2);
-            padding: 5px 20px;
-            border-radius: 20px;
-            display: inline-block;
-            backdrop-filter: blur(5px);
-        }
-
-        /* --- СОВРЕМЕННЫЙ ПОИСК --- */
-        .search-container {
-            margin-top: 40px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .glass-search {
-            position: relative;
-            background: var(--glass-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--glass-border);
+        /* Поиск (Glassmorphism) */
+        .search-bar {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
             border-radius: 50px;
-            padding: 10px 25px;
+            padding: 12px 25px;
             display: flex;
             align-items: center;
             width: 100%;
-            max-width: 500px;
-            box-shadow: var(--glass-shadow);
-            transition: transform 0.3s, box-shadow 0.3s;
+            max-width: 600px;
+            transition: 0.3s;
         }
-
-        .glass-search:focus-within {
+        .search-bar:focus-within {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
             transform: scale(1.02);
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-            border-color: rgba(255,255,255,0.6);
         }
-
-        .glass-search input {
+        .search-bar input {
             background: transparent;
             border: none;
-            color: #fff;
+            color: white;
             font-family: 'Quicksand', sans-serif;
             font-size: 1.2rem;
-            font-weight: 600;
             width: 100%;
             margin-left: 10px;
             outline: none;
         }
-        .glass-search input::placeholder { color: rgba(255,255,255,0.6); }
-        .search-icon { font-size: 1.5rem; filter: drop-shadow(0 0 5px var(--accent-gold)); }
+        .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
 
-        /* --- КНИЖНАЯ ПОЛКА --- */
-        .container {
-            max-width: 1200px;
+        /* --- ГАЛЕРЕЯ (ФИЛЬМОТЕКА) --- */
+        .gallery-container {
+            width: 95%; /* Почти на всю ширину */
+            max-width: 1600px;
             margin: 0 auto;
-            padding: 20px;
-            position: relative;
-            z-index: 1;
+            padding-bottom: 50px;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-            gap: 60px 40px;
-            margin-top: 50px;
-            padding-bottom: 100px;
+            /* Адаптивная сетка: плитки подстраиваются под экран */
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
         }
 
-        /* 3D КАРТОЧКА */
-        .book-card {
-            perspective: 1000px;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .card-inner {
+        /* --- КАРТОЧКА (TILE) --- */
+        .tile {
             position: relative;
-            width: 240px;
-            height: 360px;
-            margin: 0 auto;
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            transform-style: preserve-3d;
+            border-radius: var(--card-radius);
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.3s;
+            aspect-ratio: 2 / 3; /* Стандартный формат постера */
+            background: #222;
         }
 
-        .book-card:hover .card-inner {
-            transform: translateY(-15px) rotateY(-10deg);
+        .tile:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            z-index: 2; /* Карточка всплывает над другими */
         }
 
-        .cover-image {
+        /* Картинка на весь размер */
+        .tile img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            border-radius: 20px; /* Сильное скругление */
-            box-shadow: 
-                -10px 10px 20px rgba(0,0,0,0.3),
-                0 0 0 1px rgba(255,255,255,0.1) inset; /* Тонкая рамка */
+            transition: opacity 0.3s;
         }
 
-        /* Сияние при наведении */
-        .book-card:hover .cover-image {
-            box-shadow: 
-                -15px 15px 30px rgba(0,0,0,0.4),
-                0 0 20px var(--accent-pink);
-        }
-
-        .meta-info {
-            margin-top: 15px;
+        /* Затемнение снизу для текста */
+        .tile-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 15px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
             opacity: 0.9;
-            transition: 0.3s;
         }
-        
-        .meta-info h3 {
-            font-size: 1.4rem;
+
+        .tile h3 {
             margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
             color: #fff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
         }
         
-        .meta-info p {
+        .tile p {
             margin: 5px 0 0;
-            color: var(--accent-gold);
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 0.85rem;
+            color: #ddd;
+            font-weight: 500;
+        }
+
+        /* Иконка Play при наведении */
+        .play-icon {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%) scale(0.5);
+            width: 50px; height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 24px;
+            opacity: 0;
+            transition: 0.3s;
+            border: 2px solid white;
+        }
+
+        .tile:hover .play-icon {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        /* --- ЗАГЛУШКА (ЕСЛИ НЕТ КАРТИНКИ) --- */
+        .tile-placeholder {
+            width: 100%; height: 100%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem;
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
         }
 
         /* --- ЧИТАЛКА (MODAL) --- */
-        .modal-overlay {
+        .modal {
             position: fixed; inset: 0;
-            background: rgba(10, 5, 30, 0.8);
-            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.9); /* Темный фон для фокуса */
             z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: fadeIn 0.4s ease-out;
+            display: flex; align-items: center; justify-content: center;
+            animation: fadeIn 0.3s;
         }
 
-        .glass-frame {
-            width: 95vw; height: 90vh;
-            max-width: 1200px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            border-radius: 40px;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            display: flex; flex-direction: column;
-            align-items: center;
+        .book-wrapper {
             position: relative;
-            padding: 20px;
+            width: 100%; height: 100%;
+            max-width: 100vw;
+            display: flex; flex-direction: column; align-items: center; justify-content: center;
         }
 
-        /* Кнопка назад */
-        .btn-close {
-            position: absolute; top: 20px; left: 20px;
-            background: rgba(255,255,255,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
-            color: #fff;
-            padding: 10px 25px;
+        .close-btn {
+            position: absolute; top: 20px; right: 30px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 10px 20px;
             border-radius: 30px;
-            font-family: 'Quicksand', sans-serif;
-            font-weight: 700;
             cursor: pointer;
-            transition: 0.2s;
-            display: flex; align-items: center; gap: 10px;
+            font-weight: bold;
             z-index: 200;
         }
-        .btn-close:hover { background: var(--accent-pink); transform: scale(1.05); border-color: transparent; }
+        .close-btn:hover { background: #ff0055; border-color: transparent; }
 
-        .book-stage {
-            flex-grow: 1;
-            width: 100%;
-            display: flex; justify-content: center; align-items: center;
-        }
-
-        /* Аудио плеер в стиле Glass */
-        .glass-player {
-            margin-top: 10px;
-            background: rgba(255, 255, 255, 0.1);
+        /* Аудио плеер */
+        .audio-bar {
+            position: absolute; bottom: 30px;
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid #333;
+            padding: 10px 20px;
             border-radius: 50px;
-            padding: 10px 30px;
-            display: flex; align-items: center; gap: 20px;
-            border: 1px solid rgba(255,255,255,0.2);
+            display: flex; gap: 15px; align-items: center;
         }
-        .glass-player span { font-size: 1.5rem; animation: pulse 2s infinite; }
-        .glass-player p { margin: 0; font-weight: 600; font-size: 0.9rem; color: var(--accent-gold); }
+        .audio-bar p { margin: 0; color: #aaa; font-size: 0.9rem; }
 
-        /* Страницы */
-        .page {
-            background: #fff;
-            border-radius: 5px; /* Немного скруглим углы страниц */
-            overflow: hidden;
-            box-shadow: inset 0 0 30px rgba(0,0,0,0.05);
-        }
-        
-        .page-content {
-            height: 100%; width: 100%;
-            display: flex; flex-direction: column;
-            justify-content: center; align-items: center;
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .page img {
-            max-width: 100%; max-height: 100%;
-            object-fit: contain;
-        }
-
-        /* Пустое состояние */
-        .empty-state {
-            text-align: center;
-            margin-top: 100px;
-            background: rgba(255,255,255,0.1);
-            padding: 40px;
-            border-radius: 30px;
-            border: 1px dashed rgba(255,255,255,0.3);
-            display: inline-block;
-        }
-
-        /* Utility */
+        /* --- ЭФФЕКТЫ --- */
         .hidden { display: none !important; }
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
-        @keyframes fadeIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
-        /* Mobile */
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            .grid { grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); }
-            .card-inner { width: 160px; height: 240px; }
+        /* Курсор */
+        .cursor-blob {
+            width: 300px; height: 300px;
+            background: radial-gradient(#ff0055, transparent 70%);
+            position: fixed; top:0; left:0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.15;
+            transition: 0.1s ease;
         }
     </style>
 </head>
 <body>
-    <!-- Фоновые пятна -->
-    <div class="ambient-light blob-1"></div>
-    <div class="ambient-light blob-2"></div>
-    <div class="ambient-light blob-3"></div>
-
-    <!-- Курсор -->
-    <div class="cursor-dot"></div>
-    <div class="cursor-ring"></div>
+    <!-- Фоновый свет за курсором -->
+    <div class="cursor-blob"></div>
 
     <div id="app">
-        <!-- БИБЛИОТЕКА -->
-        <div id="library-view" class="container">
-            <header>
-                <div class="title-container">
-                    <!-- 2. Обновленный заголовок на странице -->
-                    <h1>Magic Fairy Tales For Kids</h1>
-                    <div class="subtitle">Where dreams come alive ✨</div>
-                </div>
+        <header>
+            <h1>Magic Fairy Tales For Kids</h1>
+            <div class="search-bar">
+                <span>🔍</span>
+                <input type="text" id="search-input" placeholder="Search for magic stories...">
+            </div>
+        </header>
 
-                <div class="search-container">
-                    <div class="glass-search">
-                        <span class="search-icon">🔎</span>
-                        <input type="text" id="search-input" placeholder="Find a story...">
-                    </div>
-                </div>
-            </header>
+        <div class="gallery-container">
+            <div id="gallery-grid" class="grid">
+                <!-- Карточки будут здесь -->
+            </div>
             
-            <div id="books-grid" class="grid"></div>
-            
-            <div id="empty-state" class="hidden" style="text-align: center;">
-                <div class="empty-state">
-                    <h2>👻 No stories found!</h2>
-                    <p>Add folders to <code>public/tales/</code> to see magic happen.</p>
-                </div>
+            <div id="empty-state" class="hidden" style="text-align: center; margin-top: 50px; color: #888;">
+                <h2>No stories found 🕸️</h2>
+                <p>Add folders to <code>public/tales/</code></p>
             </div>
         </div>
 
         <!-- ЧИТАЛКА -->
-        <div id="reader-view" class="modal-overlay hidden">
-            <div class="glass-frame">
-                <button id="close-btn" class="btn-close">
-                    <span>❮</span> Library
-                </button>
+        <div id="reader-view" class="modal hidden">
+            <div class="book-wrapper">
+                <button id="close-btn" class="close-btn">✖ Close</button>
+                
+                <!-- Контейнер для книги -->
+                <div id="flip-book"></div>
 
-                <div class="book-stage">
-                    <div id="flip-book"></div>
-                </div>
-
-                <div id="audio-bar" class="hidden glass-player">
-                    <span>🔊</span>
+                <div id="audio-bar" class="hidden audio-bar">
+                    <span style="font-size: 1.2rem;">🔊</span>
                     <div>
-                        <p>Story Audio</p>
-                        <audio id="audio-player" controls style="height: 30px; opacity: 0.8;"></audio>
+                        <p>Narrator</p>
+                        <audio id="audio-player" controls style="height: 25px; opacity: 0.8;"></audio>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Зависимости -->
+    <!-- Библиотеки -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 
@@ -405,30 +295,32 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             init();
-            initCursor();
+            initCursorLight();
         });
 
         async function init() {
             try {
-                // Пытаемся загрузить индекс
                 const response = await fetch('/tales-index.json');
                 if (!response.ok) throw new Error('Index not found');
                 allTales = await response.json();
-                renderLibrary(allTales);
+                renderGallery(allTales);
             } catch (e) {
-                console.warn("Using demo data because JSON load failed.");
-                // Демо данные для красоты, если файла нет
+                console.warn("Using demo data.");
+                // Демо данные для примера (если нет backend)
                 allTales = [
-                    { id: 'demo1', title: 'The Star Bunny', author: 'Cosmic Tales', cover: 'https://cdn.pixabay.com/photo/2022/11/14/19/22/rabbit-7592446_960_720.jpg', pages: 4 },
-                    { id: 'demo2', title: 'Ocean Secret', author: 'Mermaid Blue', cover: 'https://cdn.pixabay.com/photo/2023/03/13/19/18/ai-generated-7850438_960_720.jpg', pages: 4 }
+                    { id: '1', title: 'Cinderella', author: 'Charles Perrault', cover: 'https://i.pinimg.com/736x/c7/4e/03/c74e030e2aa592186c34863001850772.jpg', pages: 4 },
+                    { id: '2', title: 'Little Red Riding Hood', author: 'Grimm Brothers', cover: 'https://i.pinimg.com/564x/e7/73/06/e7730626359239d2243e86c757c244c9.jpg', pages: 4 },
+                    { id: '3', title: 'The Snow Queen', author: 'H.C. Andersen', cover: 'https://i.pinimg.com/564x/a4/09/b3/a409b3046772714578b273461239856a.jpg', pages: 4 },
+                    { id: '4', title: 'Alice in Wonderland', author: 'Lewis Carroll', cover: 'https://i.pinimg.com/736x/88/2c/83/882c83c276a605f643f87342898c8941.jpg', pages: 4 },
+                    { id: '5', title: 'Peter Pan', author: 'J.M. Barrie', cover: 'https://i.pinimg.com/564x/97/e5/23/97e523315a0c36720138980848981441.jpg', pages: 4 }
                 ];
-                renderLibrary(allTales);
+                renderGallery(allTales);
             }
             setupSearch();
         }
 
-        function renderLibrary(tales) {
-            const grid = document.getElementById('books-grid');
+        function renderGallery(tales) {
+            const grid = document.getElementById('gallery-grid');
             const emptyState = document.getElementById('empty-state');
             grid.innerHTML = '';
             
@@ -440,34 +332,30 @@
             }
 
             tales.forEach((tale, index) => {
-                const colors = ['#FF6B6B', '#4ECDC4', '#FFE66D', '#1A535C'];
-                const bg = colors[index % colors.length];
-
                 const card = document.createElement('div');
-                card.className = 'book-card';
+                card.className = 'tile';
                 
-                // Логика пути (оставляем старую логику путей)
+                // Путь к обложке
                 const coverUrl = tale.cover 
                     ? (tale.cover.startsWith('http') ? tale.cover : `/tales/${tale.id}/${tale.cover}`)
                     : '';
 
-                // Если картинки нет, красивый градиент
-                const imgTag = coverUrl 
-                    ? `<img src="${coverUrl}" class="cover-image" alt="${tale.title}">`
-                    : `<div class="cover-image" style="background: linear-gradient(135deg, ${bg}, #222); display:flex; align-items:center; justify-content:center; font-size:3rem;">📖</div>`;
+                // Контент карточки (Обложка + Название внизу)
+                const imgContent = coverUrl 
+                    ? `<img src="${coverUrl}" alt="${tale.title}" loading="lazy">`
+                    : `<div class="tile-placeholder">📖</div>`;
 
                 card.innerHTML = `
-                    <div class="card-inner">
-                        ${imgTag}
-                        <div class="meta-info">
-                            <h3>${tale.title}</h3>
-                            <p>${tale.author || 'Story'}</p>
-                        </div>
+                    ${imgContent}
+                    <div class="play-icon">▶</div>
+                    <div class="tile-overlay">
+                        <h3>${tale.title}</h3>
+                        <p>${tale.author || 'Unknown'}</p>
                     </div>
                 `;
                 
-                // Анимация появления
-                card.style.animation = `fadeIn 0.6s ease-out ${index * 0.1}s backwards`;
+                // Плавное появление
+                card.style.animation = `fadeIn 0.5s ease backwards ${index * 0.05}s`;
                 
                 card.onclick = () => openBook(tale);
                 grid.appendChild(card);
@@ -478,14 +366,16 @@
             const searchInput = document.getElementById('search-input');
             searchInput.addEventListener('input', (e) => {
                 const query = e.target.value;
-                if (!query) return renderLibrary(allTales);
+                if (!query) return renderGallery(allTales);
                 const fuse = new Fuse(allTales, { keys: ['title', 'author'], threshold: 0.4 });
-                renderLibrary(fuse.search(query).map(r => r.item));
+                renderGallery(fuse.search(query).map(r => r.item));
             });
         }
 
+        // --- ЛОГИКА ЧИТАЛКИ (Остается прежней, она работает хорошо) ---
         async function openBook(tale) {
-            document.getElementById('library-view').classList.add('hidden');
+            document.querySelector('.gallery-container').classList.add('hidden');
+            document.querySelector('header').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
 
             const audioBar = document.getElementById('audio-bar');
@@ -503,73 +393,58 @@
             if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
             bookEl.innerHTML = ''; 
 
-            // Генерация страниц
+            // Генерируем страницы
             const pagesToRender = Array.isArray(tale.pages) ? tale.pages : Array.from({length: tale.pages || 4}, (_, i) => i + 1);
             
             pagesToRender.forEach((pageItem, i) => {
                 const div = document.createElement('div');
-                div.className = 'page';
-                
-                // Логика контента страницы
+                div.style.backgroundColor = "#fff";
+                div.style.display = "flex";
+                div.style.justifyContent = "center";
+                div.style.alignItems = "center";
+                div.style.overflow = "hidden";
+                div.style.border = "1px solid #ddd";
+
                 let content = '';
                 if (typeof pageItem === 'string' && (pageItem.endsWith('.jpg') || pageItem.endsWith('.png'))) {
-                    // Это путь к файлу
                      const imgSrc = `/tales/${tale.id}/${pageItem}`;
-                     content = `<img src="${imgSrc}" loading="lazy" alt="Page ${i+1}">`;
+                     content = `<img src="${imgSrc}" style="width:100%; height:100%; object-fit:contain;">`;
                 } else {
-                    // Это номер или демо
-                    // Для красоты, если нет картинки - покажем текст
-                    content = `
-                        <div class="page-content">
-                            <h2 style="color: #333; font-family: 'Fredoka One'">${tale.title}</h2>
-                            <p style="color: #666;">Page ${i + 1}</p>
-                            ${i === 0 ? '<div style="font-size:3rem; margin-top:20px;">🏰</div>' : ''}
-                        </div>
-                    `;
+                    // Fallback для демо
+                    content = `<div style="padding:20px; text-align:center;">
+                        <h2>${tale.title}</h2><p>Page ${i + 1}</p>
+                    </div>`;
                 }
-
                 div.innerHTML = content;
                 bookEl.appendChild(div);
             });
 
-            // Запуск PageFlip
             const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
             pageFlipInstance = new PageFlip(bookEl, {
-                width: 400, height: 600, 
+                width: 500, height: 700, 
                 size: 'fixed',
                 drawShadow: true, 
                 showCover: true, 
-                usePortrait: true
+                usePortrait: true // Одна страница на экране (удобнее для чтения)
             });
-            pageFlipInstance.loadFromHTML(document.querySelectorAll('.page'));
+            pageFlipInstance.loadFromHTML(bookEl.children);
         }
 
         document.getElementById('close-btn').onclick = () => {
             document.getElementById('reader-view').classList.add('hidden');
-            document.getElementById('library-view').classList.remove('hidden');
+            document.querySelector('.gallery-container').classList.remove('hidden');
+            document.querySelector('header').classList.remove('hidden');
             document.getElementById('audio-player').pause();
             if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
         };
 
-        // Логика курсора
-        function initCursor() {
-            const dot = document.querySelector('.cursor-dot');
-            const ring = document.querySelector('.cursor-ring');
-            
-            // Отключаем на тач-устройствах
-            if (window.matchMedia("(pointer: coarse)").matches) {
-                dot.style.display = 'none'; ring.style.display = 'none';
-                document.body.style.cursor = 'auto'; return;
-            }
-
+        // Световой эффект за курсором
+        function initCursorLight() {
+            const blob = document.querySelector('.cursor-blob');
             window.addEventListener('mousemove', (e) => {
-                dot.style.left = `${e.clientX}px`; dot.style.top = `${e.clientY}px`;
-                ring.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 400, fill: "forwards" });
+                blob.style.left = e.clientX + 'px';
+                blob.style.top = e.clientY + 'px';
             });
-
-            // Эффект нажатия
-            window.addEventListener('mousedown', () => ring.style.transform = 'translate(-50%, -50%) scale(0.5)');
-            window.addEventListener('mouseup', () => ring.style.transform = 'translate(-50%, -50%) scale(1)');
         }
     </script>
 </body>
