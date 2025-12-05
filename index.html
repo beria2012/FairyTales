@@ -7,7 +7,7 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&family=Cinzel:wght@600&family=Caveat:wght@600&display=swap" rel="stylesheet">
     
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏰</text></svg>">
 
@@ -15,10 +15,9 @@
         :root {
             --bg-deep: #141414;
             --bg-gradient: radial-gradient(circle at 50% 0%, #2b1055 0%, #141414 80%);
-            --card-radius: 12px;
-            --text-main: #ffffff;
-            --page-bg: #fffbf0;
-            --accent-color: #ffd700;
+            --accent-gold: #ffd700;
+            --page-bg: #fdfbf7; /* Warm paper color */
+            --wood-texture: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
         }
 
         body {
@@ -26,23 +25,23 @@
             font-family: 'Quicksand', sans-serif;
             background: var(--bg-deep);
             background-image: var(--bg-gradient);
-            color: var(--text-main);
+            color: #fff;
             min-height: 100vh;
             overflow-x: hidden;
         }
 
         *, *::before, *::after { box-sizing: border-box; }
 
-        /* HEADER */
+        /* --- HEADER & LIBRARY (Netflix Style) --- */
         header {
             display: flex; flex-direction: column; align-items: center;
-            padding: 40px 20px; z-index: 10; position: relative;
+            padding: 40px 20px;
         }
 
         h1 {
             font-family: 'Fredoka One', cursive;
             font-size: 3rem; margin: 0 0 20px 0;
-            background: linear-gradient(to right, #fff, var(--accent-color));
+            background: linear-gradient(to right, #fff, var(--accent-gold));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
@@ -53,192 +52,177 @@
             background: rgba(255, 255, 255, 0.15);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
-            padding: 12px 25px;
+            border-radius: 50px; padding: 12px 25px;
             display: flex; align-items: center; width: 100%; max-width: 600px;
-            transition: 0.3s;
         }
-        .search-bar:focus-within { transform: scale(1.02); background: rgba(255, 255, 255, 0.25); }
         .search-bar input {
             background: transparent; border: none; color: white;
             font-family: 'Quicksand', sans-serif; font-size: 1.2rem;
             width: 100%; margin-left: 10px; outline: none;
         }
-        .search-bar input::placeholder { color: rgba(255, 255, 255, 0.6); }
 
-        /* GALLERY GRID */
         .gallery-container { width: 95%; max-width: 1600px; margin: 0 auto; padding-bottom: 50px; }
-
         .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 30px; margin-top: 30px;
         }
 
-        /* --- КАРТОЧКА КНИГИ --- */
         .tile {
-            position: relative;
-            border-radius: var(--card-radius);
-            overflow: hidden;
-            cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            aspect-ratio: 2 / 3;
-            background: #222;
+            position: relative; border-radius: 12px; overflow: hidden;
+            cursor: pointer; transition: transform 0.3s, box-shadow 0.3s;
+            aspect-ratio: 2 / 3; background: #222;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
-
-        .tile:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
-            z-index: 2;
-        }
-
-        /* Обложка */
-        .tile-img {
-            width: 100%; height: 100%;
-            object-fit: cover; /* Это важно чтобы картинка не сплющивалась */
-            display: block;
-            transition: opacity 0.3s;
-        }
-
-        /* Заглушка (если картинка сломалась) */
-        .tile-fallback {
-            position: absolute; inset: 0;
-            display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            padding: 10px; text-align: center;
-            z-index: 0;
-        }
-        .tile-fallback span { font-size: 3rem; margin-bottom: 10px; }
-        .tile-fallback h3 { font-size: 1.1rem; color: #fff; margin: 0; }
-
-        /* --- КНОПКА PLAY (ИСПРАВЛЕННАЯ) --- */
-        .play-icon {
-            position: absolute; top: 50%; left: 50%;
-            transform: translate(-50%, -50%) scale(0.8);
-            width: 60px; height: 60px;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(4px);
-            border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            opacity: 0; transition: 0.3s;
-            border: 2px solid #fff;
-            z-index: 10;
-        }
+        .tile:hover { transform: scale(1.05); z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.6); }
+        .tile-img { width: 100%; height: 100%; object-fit: cover; display: block; }
         
-        /* SVG иконка внутри круга */
-        .play-icon svg {
-            width: 24px; height: 24px;
-            fill: white;
-            /* Визуальная компенсация: треугольник всегда кажется смещенным влево, 
-               поэтому сдвигаем его чуть вправо */
-            margin-left: 4px; 
-        }
-
-        .tile:hover .play-icon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
-
-        /* Текст внизу */
         .tile-overlay {
             position: absolute; bottom: 0; left: 0; width: 100%;
-            padding: 60px 15px 15px;
+            padding: 50px 15px 15px;
             background: linear-gradient(to top, rgba(0,0,0,0.95), transparent);
-            opacity: 1; 
-            z-index: 5;
         }
-        .tile h3 { margin: 0; font-size: 1.1rem; color: #fff; text-shadow: 0 2px 4px #000; }
-        .tile p { margin: 5px 0 0; font-size: 0.85rem; color: #ccc; }
+        .tile h3 { margin: 0; font-size: 1.1rem; color: #fff; }
+        .play-icon {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) scale(0.8);
+            width: 50px; height: 50px; border-radius: 50%; border: 2px solid #fff;
+            display: flex; align-items: center; justify-content: center;
+            opacity: 0; transition: 0.3s; background: rgba(0,0,0,0.3);
+        }
+        .play-icon svg { width: 20px; height: 20px; fill: white; margin-left: 3px; }
+        .tile:hover .play-icon { opacity: 1; transform: translate(-50%, -50%) scale(1); }
 
-
-        /* --- READER MODAL --- */
+        /* --- READER MODAL (The Desk) --- */
         .modal {
             position: fixed; inset: 0;
-            background: #111;
+            background-color: #1a0b0b;
+            background-image: var(--wood-texture); /* Wooden desk effect */
             z-index: 100;
             display: flex; align-items: center; justify-content: center;
-            animation: fadeIn 0.4s;
+            animation: fadeIn 0.5s;
+            box-shadow: inset 0 0 150px rgba(0,0,0,0.9); /* Vignette */
         }
 
-        .book-wrapper {
-            position: relative; width: 100%; height: 100%;
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
+        /* --- NAVIGATION ARROWS --- */
+        .nav-arrow {
+            position: absolute; top: 50%; transform: translateY(-50%);
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: #fff;
+            width: 60px; height: 60px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 2rem; cursor: pointer; transition: 0.2s;
+            user-select: none; z-index: 200;
+        }
+        .nav-arrow:hover { background: var(--accent-gold); color: #000; box-shadow: 0 0 20px var(--accent-gold); }
+        .nav-arrow.prev { left: 40px; }
+        .nav-arrow.next { right: 40px; }
+
+        /* --- REALISTIC BOOK STYLES --- */
+        .book-stage {
+            display: flex; align-items: center; justify-content: center;
+            perspective: 1500px;
         }
 
-        .close-btn {
-            position: absolute; top: 20px; right: 30px;
-            background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);
-            color: white; padding: 10px 20px; border-radius: 30px;
-            cursor: pointer; font-weight: bold; font-family: 'Quicksand';
-            z-index: 200; transition: 0.2s;
+        /* Shadows for depth */
+        .stf__wrapper {
+            filter: drop-shadow(0 20px 40px rgba(0,0,0,0.6));
         }
-        .close-btn:hover { background: var(--accent-color); color: #000; border-color: transparent; }
 
-        /* СТРАНИЦЫ КНИГИ */
         .page {
             background-color: var(--page-bg);
-            border: 1px solid #dcd0b3;
             overflow: hidden;
-            box-shadow: inset 0 0 30px rgba(0,0,0,0.05);
+            /* Real paper texture */
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+            border-right: 1px solid #e3d0b5;
         }
 
+        /* Spine shadow (gradient) for realism */
+        .page.--left {
+            border-right: none;
+            box-shadow: inset -15px 0 20px -10px rgba(0,0,0,0.1); /* Shadow near spine */
+            border-radius: 5px 0 0 5px;
+        }
+        .page.--right {
+            border-left: none;
+            box-shadow: inset 15px 0 20px -10px rgba(0,0,0,0.1); /* Shadow near spine */
+            border-radius: 0 5px 5px 0;
+        }
+
+        /* Cover Page (Hardcover look) */
+        .page.cover {
+            background-color: #2c3e50;
+            border: 2px solid rgba(255,255,255,0.1);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+        }
+        .cover-img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Content Layout */
         .page-content {
-            height: 100%; width: 100%;
+            height: 100%; padding: 30px;
             display: flex; flex-direction: column;
-            padding: 20px;
+            color: #3e2723;
         }
 
-        .page-img-container {
-            flex: 1; width: 100%;
-            display: flex; align-items: center; justify-content: center;
-            overflow: hidden;
-            border-radius: 8px; margin-bottom: 20px;
-            background: rgba(0,0,0,0.02);
+        .book-title-page {
+            height: 100%; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; text-align: center;
+            border: 4px double #8a1c1c; padding: 20px; margin: 10px;
         }
-        
-        .page-img-container img {
-            max-width: 100%; max-height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+
+        .page-image {
+            width: 100%; height: 50%; object-fit: contain;
+            margin-bottom: 20px;
+            filter: sepia(0.2); /* Vintage feel */
+            border: 1px solid #dcd0b3;
+            padding: 5px; background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
         .page-text {
-            flex-shrink: 0;
-            background: #fff;
-            padding: 15px;
-            border-radius: 10px;
-            border: 1px dashed #dcd0b3;
-            color: #4a3b2a;
-            font-family: 'Caveat', cursive;
-            font-size: 1.6rem;
-            line-height: 1.4;
+            font-family: 'Caveat', cursive; /* Handwritten / Fairy tale font */
+            font-size: 1.5rem; line-height: 1.4;
             text-align: center;
-            min-height: 140px;
-            display: flex; align-items: center; justify-content: center;
         }
+
+        .page-footer {
+            margin-top: auto; text-align: center; font-size: 0.9rem; color: #888;
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Controls */
+        .close-btn {
+            position: absolute; top: 30px; left: 30px;
+            background: rgba(0,0,0,0.5); border: 1px solid #555;
+            color: white; padding: 10px 20px; border-radius: 30px;
+            cursor: pointer; font-weight: bold; z-index: 200;
+        }
+        .close-btn:hover { background: #d32f2f; border-color: transparent; }
 
         .audio-bar {
-            position: absolute; bottom: 20px;
-            background: rgba(20, 20, 20, 0.9);
-            padding: 8px 20px; border-radius: 50px;
-            display: flex; gap: 15px; align-items: center;
-            border: 1px solid #444;
+            position: absolute; bottom: 30px;
+            background: rgba(0,0,0,0.7); border-radius: 30px;
+            padding: 10px 20px; display: flex; align-items: center; gap: 15px;
+            border: 1px solid #444; z-index: 200;
         }
-        .audio-bar p { margin: 0; color: var(--accent-color); font-size: 0.9rem; }
+        .audio-bar p { margin: 0; color: var(--accent-gold); font-size: 0.9rem; }
 
+        /* Helper */
         .hidden { display: none !important; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
+        /* Responsive */
         @media (max-width: 768px) {
-            h1 { font-size: 2rem; }
-            .grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
-            .page-text { font-size: 1.3rem; min-height: 120px; }
+            .nav-arrow { width: 40px; height: 40px; font-size: 1.5rem; }
+            .nav-arrow.prev { left: 10px; }
+            .nav-arrow.next { right: 10px; }
+            .page-text { font-size: 1.2rem; }
         }
     </style>
 </head>
 <body>
 
     <div id="app">
-        <!-- LIBRARY VIEW -->
+        <!-- LIBRARY -->
         <div id="library-view">
             <header>
                 <h1>Magic Fairy Tales For Kids</h1>
@@ -250,25 +234,30 @@
 
             <div class="gallery-container">
                 <div id="gallery-grid" class="grid"></div>
-                
-                <div id="empty-state" class="hidden" style="text-align: center; margin-top: 50px; color: #888;">
+                <div id="empty-state" class="hidden" style="text-align:center; margin-top:50px; color:#888;">
                     <h2>No stories found 🕸️</h2>
-                    <p>Please run <code>npm run scan</code> to update the library.</p>
+                    <p>Run <code>npm run scan</code> to update.</p>
                 </div>
             </div>
         </div>
 
-        <!-- READER VIEW -->
+        <!-- REALISTIC READER -->
         <div id="reader-view" class="modal hidden">
-            <div class="book-wrapper">
-                <button id="close-btn" class="close-btn">✖ Close Book</button>
+            <button id="close-btn" class="close-btn">✖ Exit Library</button>
+            
+            <!-- Navigation Arrows -->
+            <div class="nav-arrow prev" id="btn-prev">❮</div>
+            <div class="nav-arrow next" id="btn-next">❯</div>
+
+            <div class="book-stage">
                 <div id="flip-book"></div>
-                <div id="audio-bar" class="hidden audio-bar">
-                    <span>🔊</span>
-                    <div>
-                        <p>Narrator</p>
-                        <audio id="audio-player" controls style="height: 25px; opacity: 0.9; width: 200px;"></audio>
-                    </div>
+            </div>
+
+            <div id="audio-bar" class="hidden audio-bar">
+                <span>🔊</span>
+                <div>
+                    <p>Narrator Voice</p>
+                    <audio id="audio-player" controls style="height: 25px; width: 200px; opacity:0.9;"></audio>
                 </div>
             </div>
         </div>
@@ -283,18 +272,31 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             init();
+            
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (document.getElementById('reader-view').classList.contains('hidden')) return;
+                
+                if (e.key === 'ArrowRight') {
+                    if (pageFlipInstance) pageFlipInstance.flipNext();
+                } else if (e.key === 'ArrowLeft') {
+                    if (pageFlipInstance) pageFlipInstance.flipPrev();
+                } else if (e.key === 'Escape') {
+                    closeReader();
+                }
+            });
         });
 
         async function init() {
             try {
-                // Добавляем timestamp, чтобы сбросить кэш и увидеть новые картинки
                 const response = await fetch(`/tales-index.json?t=${new Date().getTime()}`);
                 if (!response.ok) throw new Error('Index not found');
                 allTales = await response.json();
                 renderGallery(allTales);
             } catch (e) {
-                console.warn("Could not load local index.");
-                renderGallery([]);
+                console.warn("Using demo data.");
+                allTales = []; 
+                renderGallery(allTales);
                 document.getElementById('empty-state').classList.remove('hidden');
             }
             setupSearch();
@@ -306,8 +308,7 @@
             grid.innerHTML = '';
             
             if (!tales || tales.length === 0) {
-                emptyState.classList.remove('hidden');
-                return;
+                emptyState.classList.remove('hidden'); return;
             } else {
                 emptyState.classList.add('hidden');
             }
@@ -315,40 +316,16 @@
             tales.forEach((tale, index) => {
                 const card = document.createElement('div');
                 card.className = 'tile';
-                
-                // Формируем путь к обложке
-                const coverUrl = tale.cover 
-                    ? (tale.cover.startsWith('http') ? tale.cover : `/tales/${tale.id}/${tale.cover}`)
-                    : '';
+                const coverUrl = tale.cover ? (tale.cover.startsWith('http') ? tale.cover : `/tales/${tale.id}/${tale.cover}`) : '';
 
                 card.innerHTML = `
-                    <!-- 1. Заглушка (по умолчанию видна) -->
-                    <div class="tile-fallback" id="fallback-${index}">
-                        <span style="font-size: 3rem;">📖</span>
-                        <h3 style="margin-top:10px">${tale.title}</h3>
+                    ${coverUrl ? `<img src="${coverUrl}" class="tile-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">` : ''}
+                    <div class="tile-fallback" style="display:${coverUrl ? 'none' : 'flex'}; position:absolute; inset:0; background:#333; align-items:center; justify-content:center; flex-direction:column;">
+                        <span style="font-size:3rem">📖</span>
                     </div>
-
-                    <!-- 2. Картинка (если загрузится, перекроет заглушку) -->
-                    ${coverUrl ? `
-                    <img src="${coverUrl}" class="tile-img" alt="${tale.title}" 
-                         style="position:absolute; top:0; left:0; z-index:1;"
-                         onload="document.getElementById('fallback-${index}').style.display='none'"
-                         onerror="this.style.display='none'; document.getElementById('fallback-${index}').style.display='flex'">
-                    ` : ''}
-
-                    <!-- 3. Кнопка Play (SVG для ровного центра) -->
-                    <div class="play-icon">
-                        <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg>
-                    </div>
-                    
-                    <!-- 4. Текст внизу -->
-                    <div class="tile-overlay">
-                        <h3>${tale.title}</h3>
-                        <p>${tale.author || 'Folklore'}</p>
-                    </div>
+                    <div class="play-icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"></path></svg></div>
+                    <div class="tile-overlay"><h3>${tale.title}</h3><p>${tale.author || 'Folklore'}</p></div>
                 `;
-                
-                card.style.animation = `fadeIn 0.5s ease backwards ${index * 0.05}s`;
                 card.onclick = () => openBook(tale);
                 grid.appendChild(card);
             });
@@ -382,45 +359,83 @@
             if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
             bookEl.innerHTML = ''; 
 
+            // 1. HARD COVER (Front)
+            const coverUrl = tale.cover ? (tale.cover.startsWith('http') ? tale.cover : `/tales/${tale.id}/${tale.cover}`) : null;
+            const coverDiv = document.createElement('div');
+            coverDiv.className = 'page cover';
+            coverDiv.innerHTML = coverUrl 
+                ? `<img src="${coverUrl}" class="cover-img">`
+                : `<div class="book-title-page"><h1 style="color:#fff">${tale.title}</h1></div>`;
+            bookEl.appendChild(coverDiv);
+
+            // 2. TITLE PAGE (Inside)
+            const titleDiv = document.createElement('div');
+            titleDiv.className = 'page';
+            titleDiv.innerHTML = `
+                <div class="book-title-page">
+                    <h2 style="font-family:'Cinzel'; color:#3e2723; font-size:2rem; margin-top:50px;">${tale.title}</h2>
+                    <p style="font-style:italic;">by ${tale.author || 'Unknown'}</p>
+                    <div style="margin-top:auto; font-size:2rem;">❦</div>
+                </div>`;
+            bookEl.appendChild(titleDiv);
+
+            // 3. STORY PAGES
             if (tale.content && Array.isArray(tale.content)) {
                 tale.content.forEach((pageItem, i) => {
                     const div = document.createElement('div');
                     div.className = 'page';
                     const imgSrc = pageItem.image ? `/tales/${tale.id}/${pageItem.image}` : '';
+                    
                     div.innerHTML = `
                         <div class="page-content">
-                            <div class="page-img-container">
-                                ${imgSrc ? `<img src="${imgSrc}" loading="lazy" alt="Page ${i+1}">` : '<span style="font-size:3rem; opacity:0.3">✨</span>'}
-                            </div>
+                            ${imgSrc ? `<img src="${imgSrc}" class="page-image">` : ''}
                             <div class="page-text">${pageItem.text || ''}</div>
-                            <div style="text-align:center; color:#ccc; font-size:0.8rem; margin-top:5px;">${i + 1}</div>
+                            <div class="page-footer">- ${i + 1} -</div>
                         </div>
                     `;
                     bookEl.appendChild(div);
                 });
-            } else {
-                const div = document.createElement('div');
-                div.className = 'page';
-                div.innerHTML = `<div class="page-content" style="justify-content:center; text-align:center;"><h2>${tale.title}</h2><p>No content pages found.</p></div>`;
-                bookEl.appendChild(div);
             }
 
+            // 4. BACK COVER
+            const backCover = document.createElement('div');
+            backCover.className = 'page cover';
+            backCover.style.background = "#2c3e50"; // Hard back color
+            bookEl.appendChild(backCover);
+
+            // INITIALIZE PAGE FLIP
             const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
+            
+            // Detect Mobile vs Desktop for spread
+            const isMobile = window.innerWidth < 768;
+
             pageFlipInstance = new PageFlip(bookEl, {
-                width: 500, height: 700, size: 'fixed',
-                drawShadow: true, showCover: true, usePortrait: true
+                width: isMobile ? 350 : 450, 
+                height: isMobile ? 550 : 600,
+                size: 'fixed',
+                // Desktop: 2 pages (true book feel), Mobile: 1 page
+                usePortrait: isMobile, 
+                showCover: true,
+                maxShadowOpacity: 0.5, // Realistic shadows
+                mobileScrollSupport: false // Prevent scroll interference
             });
+            
             pageFlipInstance.loadFromHTML(bookEl.children);
         }
 
-        document.getElementById('close-btn').onclick = () => {
+        function closeReader() {
             document.getElementById('reader-view').classList.add('hidden');
             document.getElementById('library-view').classList.remove('hidden');
             const audioPlayer = document.getElementById('audio-player');
             audioPlayer.pause();
-            audioPlayer.currentTime = 0;
             if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
-        };
+        }
+
+        // Button Listeners
+        document.getElementById('close-btn').onclick = closeReader;
+        document.getElementById('btn-prev').onclick = () => { if(pageFlipInstance) pageFlipInstance.flipPrev(); };
+        document.getElementById('btn-next').onclick = () => { if(pageFlipInstance) pageFlipInstance.flipNext(); };
+
     </script>
 </body>
 </html>
