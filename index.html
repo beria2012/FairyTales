@@ -18,6 +18,8 @@
             --gold: #ffd700;
         }
 
+        * { box-sizing: border-box; }
+
         body {
             margin: 0; padding: 0;
             font-family: 'Cormorant Garamond', serif;
@@ -40,6 +42,7 @@
         h1 { 
             font-family: 'Cinzel', serif; color: var(--gold); margin-bottom: 20px; 
             text-shadow: 0 2px 10px rgba(0,0,0,0.5); font-size: 3rem;
+            max-width: 100%; word-wrap: break-word;
         }
 
         /* SEARCH */
@@ -72,11 +75,15 @@
         }
         .tile h3 { font-size: 1.2rem; margin-top: 10px; color: #ddd; }
         
-        .audio-badge {
-            position: absolute; top: 10px; right: 10px;
+        /* Badges for Audio/Video */
+        .media-badges {
+            position: absolute; top: 10px; right: 10px; display: flex; gap: 5px;
+        }
+        .badge {
             background: rgba(0,0,0,0.7); border-radius: 50%;
             width: 30px; height: 30px; display: flex; align-items: center; justify-content: center;
             border: 1px solid var(--gold); box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+            font-size: 0.9rem;
         }
 
         /* --- READER VIEW --- */
@@ -98,14 +105,12 @@
 
         .stf__wrapper { filter: drop-shadow(0 20px 50px rgba(0,0,0,0.7)); }
 
-        /* --- PAGES STYLING --- */
+        /* PAGES */
         .page {
             background-color: var(--page-color); overflow: hidden;
             border: 1px solid #e3d0b5;
             background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
         }
-
-        /* Тени для разворота */
         .page.--left { border-right: none; box-shadow: inset -40px 0 60px -30px rgba(0,0,0,0.3); }
         .page.--right { border-left: none; box-shadow: inset 40px 0 60px -30px rgba(0,0,0,0.3); }
 
@@ -126,21 +131,30 @@
             line-height: 1.4; text-align: center; flex-grow: 1;
         }
         .page-footer { text-align: center; font-size: 1rem; color: #888; margin-top: 10px; font-family: serif; }
-
-        /* Титульная страница */
         .title-content {
             justify-content: center; text-align: center; 
             border: 4px double #3e2723; margin: 20px; height: calc(100% - 40px);
             display: flex; flex-direction: column;
         }
 
-        /* UI CONTROLS */
-        .close-btn {
+        /* CONTROLS (Buttons) */
+        .top-controls {
             position: absolute; top: 20px; right: 20px;
+            display: flex; gap: 10px; z-index: 200;
+        }
+
+        .control-btn {
             background: rgba(0,0,0,0.6); color: #fff;
             border: 1px solid #fff; padding: 8px 15px;
-            cursor: pointer; z-index: 200; border-radius: 5px;
+            cursor: pointer; border-radius: 5px;
+            font-family: sans-serif; font-weight: bold;
+            display: flex; align-items: center; gap: 5px;
+            transition: 0.2s;
         }
+        .control-btn:hover { background: #333; }
+        .close-btn:hover { background: #d32f2f; border-color: #d32f2f; }
+        .video-btn { border-color: #ff0000; color: #ffcccc; }
+        .video-btn:hover { background: #990000; }
 
         .nav-arrow {
             position: absolute; top: 50%; transform: translateY(-50%);
@@ -163,6 +177,25 @@
         .audio-title { color: var(--gold); font-size: 0.8rem; margin-bottom: 5px; }
         audio { height: 30px; width: 300px; filter: invert(0.9); }
 
+        /* VIDEO MODAL (YouTube) */
+        #video-modal {
+            position: fixed; inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            display: flex; align-items: center; justify-content: center;
+            flex-direction: column;
+        }
+        .video-container {
+            position: relative; width: 80%; max-width: 900px; aspect-ratio: 16/9;
+            box-shadow: 0 0 50px rgba(255, 0, 0, 0.3);
+            border: 2px solid #333;
+        }
+        .video-container iframe { width: 100%; height: 100%; }
+        .close-video-btn {
+            margin-top: 20px; padding: 10px 30px; font-size: 1.2rem;
+            background: #fff; color: #000; border: none; cursor: pointer; border-radius: 30px;
+        }
+
         .hidden { display: none !important; }
 
         /* --- MOBILE MODE --- */
@@ -171,31 +204,34 @@
             h1 { font-size: 2rem; }
             
             #reader-view {
-                position: fixed; inset: 0;
-                display: block; overflow-y: auto;
+                position: fixed; inset: 0; display: block; 
+                overflow-y: auto; overflow-x: hidden;
                 padding-top: 60px; padding-bottom: 120px;
             }
-
             .book-stage { display: block; width: 100%; height: auto; padding: 10px; }
             .nav-arrow { display: none; }
             .stf__wrapper { filter: none; }
-            .close-btn { position: fixed; top: 10px; right: 10px; background: #d32f2f; }
-            
-            #audio-controls {
-                position: fixed; bottom: 20px; left: 50%; 
-                transform: translateX(-50%); width: 90%;
-            }
+
+            /* Buttons fixed on top */
+            .top-controls { position: fixed; top: 10px; right: 10px; flex-wrap: wrap; justify-content: flex-end; }
+
+            /* Audio fixed on bottom */
+            #audio-controls { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 90%; }
             audio { width: 100%; }
 
+            /* Pages stack */
             .page {
-                position: relative !important; width: 100% !important; height: auto !important;
-                min-height: 500px; margin-bottom: 20px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.5) !important;
-                border-radius: 5px; display: block !important; transform: none !important;
+                position: relative !important; display: block !important; 
+                transform: none !important; width: 90% !important; 
+                margin: 0 auto 30px auto; height: auto !important;
+                min-height: 500px; box-shadow: 0 5px 15px rgba(0,0,0,0.5) !important;
+                border-radius: 5px;
             }
             .page.--left, .page.--right { box-shadow: none; }
             .page-img-box { height: 250px; }
             .title-content { height: 400px; }
+            
+            .video-container { width: 95%; }
         }
     </style>
 </head>
@@ -217,19 +253,36 @@
 
     <!-- READER -->
     <div id="reader-view" class="hidden">
-        <button class="close-btn" onclick="closeBook()">✖ Exit</button>
+        
+        <div class="top-controls">
+            <!-- Кнопка видео появится здесь JS-ом если есть ссылка -->
+            <button id="watch-btn" class="control-btn video-btn hidden" onclick="openVideo()">
+                <span>📺</span> Watch Video
+            </button>
+            <button class="control-btn close-btn" onclick="closeBook()">
+                <span>✖</span> Exit
+            </button>
+        </div>
         
         <div class="nav-arrow prev" onclick="flipPrev()">‹</div>
         <div class="nav-arrow next" onclick="flipNext()">›</div>
 
         <div class="book-stage">
-            <!-- Контейнер для книги создается динамически -->
+            <div id="flip-book"></div>
         </div>
 
         <div id="audio-controls" class="hidden">
             <div class="audio-title">🎧 Audio Story</div>
             <audio id="audio-player" controls controlsList="nodownload"></audio>
         </div>
+    </div>
+
+    <!-- VIDEO MODAL -->
+    <div id="video-modal" class="hidden">
+        <div class="video-container">
+            <div id="yt-player-container"></div>
+        </div>
+        <button class="close-video-btn" onclick="closeVideo()">Close Video</button>
     </div>
 
     <!-- Scripts -->
@@ -240,13 +293,13 @@
         let allTales = [];
         let bookInstance = null;
         let isMobile = window.innerWidth <= 768;
+        let currentVideoId = null;
 
         window.addEventListener('resize', () => {
             const newIsMobile = window.innerWidth <= 768;
             if (newIsMobile !== isMobile) {
                 isMobile = newIsMobile;
                 if (!document.getElementById('reader-view').classList.contains('hidden')) {
-                    // Перезагрузка страницы при смене ориентации для корректного пересчета
                     location.reload();
                 }
             }
@@ -270,10 +323,10 @@
                         title: 'The Gingerbread Man', 
                         author: 'Folklore', 
                         cover: 'https://cdn.pixabay.com/photo/2019/04/10/16/27/book-4117282_960_720.jpg',
-                        audio: '', 
+                        audio: '',
+                        youtube: 'https://www.youtube.com/watch?v=YoQ8-7l9i9o', // Пример видео
                         content: [
                             { text: "Once upon a time there was an old man and an old woman.", image: "https://cdn.pixabay.com/photo/2012/10/26/02/44/pancakes-63108_960_720.jpg" },
-                            { text: "One day, the old woman baked a Gingerbread Man.", image: "https://cdn.pixabay.com/photo/2016/12/17/14/32/cookies-1913636_960_720.jpg" },
                             { text: "Run, run, as fast as you can! You can't catch me!", image: "" }
                         ]
                     }
@@ -295,11 +348,14 @@
                     ? `/tales/${tale.id}/${tale.cover}` 
                     : (tale.cover || 'https://via.placeholder.com/300x450?text=No+Cover');
                 
-                const hasAudio = tale.audio ? '<div class="audio-badge">🎧</div>' : '';
+                // Badges
+                let badges = '';
+                if (tale.audio) badges += '<div class="badge">🎧</div>';
+                if (tale.youtube) badges += '<div class="badge" style="border-color:#ff0000">🎬</div>';
 
                 div.innerHTML = `
                     <img src="${imgUrl}">
-                    ${hasAudio}
+                    <div class="media-badges">${badges}</div>
                     <h3>${tale.title}</h3>
                 `;
                 div.onclick = () => openBook(tale);
@@ -321,8 +377,6 @@
             document.getElementById('library-view').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
 
-            // --- КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ ---
-            // Вместо очистки innerHTML, мы полностью пересоздаем элемент книги
             const stage = document.querySelector('.book-stage');
             const oldBook = document.getElementById('flip-book');
             if (oldBook) oldBook.remove();
@@ -331,13 +385,9 @@
             bookEl.id = 'flip-book';
             stage.appendChild(bookEl);
 
-            if (bookInstance) { 
-                bookInstance.destroy(); 
-                bookInstance = null; 
-            }
-            // -------------------------------
+            if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
 
-            // AUDIO
+            // 1. SETUP AUDIO
             const audioWrapper = document.getElementById('audio-controls');
             const audioPlayer = document.getElementById('audio-player');
             if (tale.audio) {
@@ -349,9 +399,24 @@
                 audioPlayer.pause();
             }
 
-            // ГЕНЕРАЦИЯ СТРАНИЦ
+            // 2. SETUP VIDEO BUTTON
+            const videoBtn = document.getElementById('watch-btn');
+            if (tale.youtube) {
+                // Извлекаем ID видео
+                const videoId = getYoutubeID(tale.youtube);
+                if (videoId) {
+                    currentVideoId = videoId;
+                    videoBtn.classList.remove('hidden');
+                } else {
+                    videoBtn.classList.add('hidden');
+                }
+            } else {
+                videoBtn.classList.add('hidden');
+                currentVideoId = null;
+            }
 
-            // 1. Левая страница разворота: Титул
+            // 3. GENERATE PAGES
+            // Title Page
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
             titlePage.innerHTML = `
@@ -362,7 +427,7 @@
                 </div>`;
             bookEl.appendChild(titlePage);
 
-            // 2. Контент
+            // Content
             if (tale.content) {
                 tale.content.forEach((item, i) => {
                     const page = document.createElement('div');
@@ -379,7 +444,6 @@
                 });
             }
 
-            // Четное кол-во страниц для разворота на ПК
             if (bookEl.children.length % 2 !== 0 && !isMobile) {
                 const emptyPage = document.createElement('div');
                 emptyPage.className = 'page';
@@ -387,21 +451,51 @@
                 bookEl.appendChild(emptyPage);
             }
 
-            // ЗАПУСК
-            if (isMobile) {
-                // На мобильных не запускаем PageFlip
-            } else {
+            // 4. INIT BOOK
+            if (!isMobile) {
                 const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
                 bookInstance = new PageFlip(bookEl, {
                     width: 550, height: 750,
-                    size: 'fixed', 
-                    usePortrait: false, // Разворот
+                    size: 'fixed', usePortrait: false,
                     minWidth: 300, minHeight: 400,
-                    maxShadowOpacity: 0.5, 
-                    showCover: false // Открываем сразу
+                    maxShadowOpacity: 0.5, showCover: false
                 });
                 bookInstance.loadFromHTML(bookEl.querySelectorAll('.page'));
             }
+        }
+
+        // --- VIDEO LOGIC ---
+        function getYoutubeID(url) {
+            const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+            const match = url.match(regExp);
+            return (match && match[2].length === 11) ? match[2] : null;
+        }
+
+        function openVideo() {
+            if (!currentVideoId) return;
+            
+            // Ставим аудио на паузу, чтобы не мешало
+            document.getElementById('audio-player').pause();
+
+            const modal = document.getElementById('video-modal');
+            const container = document.getElementById('yt-player-container');
+            
+            // Вставляем iframe
+            container.innerHTML = `
+                <iframe src="https://www.youtube.com/embed/${currentVideoId}?autoplay=1" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen></iframe>
+            `;
+            modal.classList.remove('hidden');
+        }
+
+        function closeVideo() {
+            const modal = document.getElementById('video-modal');
+            const container = document.getElementById('yt-player-container');
+            
+            modal.classList.add('hidden');
+            container.innerHTML = ''; // Очищаем iframe чтобы остановить звук
         }
 
         function closeBook() {
@@ -412,12 +506,7 @@
             audioPlayer.pause();
             audioPlayer.currentTime = 0;
 
-            if (bookInstance) { 
-                bookInstance.destroy(); 
-                bookInstance = null; 
-            }
-            
-            // Удаляем DOM элемент книги, чтобы очистить память
+            if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
             const oldBook = document.getElementById('flip-book');
             if (oldBook) oldBook.remove();
         }
