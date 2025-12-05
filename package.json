@@ -2,7 +2,8 @@
   "name": "magic-fairytales",
   "version": "1.0.0",
   "scripts": {
-    "dev": "vite",
+    "scan": "node scripts/scan-tales.js",
+    "dev": "node scripts/scan-tales.js && vite",
     "build": "node scripts/scan-tales.js && vite build",
     "preview": "vite preview"
   },

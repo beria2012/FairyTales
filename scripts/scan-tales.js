@@ -1,41 +1,44 @@
 const fs = require('fs');
 const path = require('path');
 
-const talesDir = path.join(__dirname, '../public/tales');
-const outputFile = path.join(__dirname, '../public/tales-index.json');
+// Настройки путей
+const TALES_DIR = path.join(__dirname, '../public/tales');
+const OUTPUT_FILE = path.join(__dirname, '../public/tales-index.json');
 
-// Проверяем, существует ли папка
-if (!fs.existsSync(talesDir)) {
-    fs.mkdirSync(talesDir, { recursive: true });
+console.log('✨ Сканирование сказочного королевства...');
+
+// Проверяем существование папки
+if (!fs.existsSync(TALES_DIR)) {
+    console.error(`❌ Папка ${TALES_DIR} не найдена! Создайте public/tales`);
+    process.exit(1);
 }
 
 const tales = [];
-const items = fs.readdirSync(talesDir);
+const items = fs.readdirSync(TALES_DIR, { withFileTypes: true });
 
 items.forEach(item => {
-    const itemPath = path.join(talesDir, item);
-    if (fs.statSync(itemPath).isDirectory()) {
-        // Ищем файл meta.json внутри папки сказки
-        const metaPath = path.join(itemPath, 'meta.json');
-        
+    if (item.isDirectory()) {
+        const folderName = item.name;
+        const metaPath = path.join(TALES_DIR, folderName, 'meta.json');
+
         if (fs.existsSync(metaPath)) {
             try {
                 const metaContent = fs.readFileSync(metaPath, 'utf-8');
                 const meta = JSON.parse(metaContent);
-                
-                // Добавляем путь к папке (id = название папки)
+
+                // Добавляем сказку в список
                 tales.push({
-                    id: item,
+                    id: folderName,
                     ...meta
                 });
-                console.log(`✅ Найдена сказка: ${meta.title}`);
+                console.log(`📖 Найден том: ${meta.title || folderName}`);
             } catch (err) {
-                console.error(`❌ Ошибка чтения JSON в папке ${item}:`, err);
+                console.error(`⚠️ Ошибка чтения магии в ${folderName}:`, err.message);
             }
         }
     }
 });
 
-// Сохраняем общий список
-fs.writeFileSync(outputFile, JSON.stringify(tales, null, 2));
-console.log(`🎉 Список сказок обновлен! Всего: ${tales.length}`);
+// Записываем результат в public/tales-index.json
+fs.writeFileSync(OUTPUT_FILE, JSON.stringify(tales, null, 2));
+console.log(`✅ Готово! Всего сказок: ${tales.length}. Индекс записан в public/tales-index.json`);
