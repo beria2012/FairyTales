@@ -96,7 +96,6 @@
             padding: 20px; padding-bottom: 80px; 
         }
 
-        /* Тень для открытой книги */
         .stf__wrapper { filter: drop-shadow(0 20px 50px rgba(0,0,0,0.7)); }
 
         /* --- PAGES STYLING --- */
@@ -128,7 +127,7 @@
         }
         .page-footer { text-align: center; font-size: 1rem; color: #888; margin-top: 10px; font-family: serif; }
 
-        /* Титульная страница (первая слева) */
+        /* Титульная страница */
         .title-content {
             justify-content: center; text-align: center; 
             border: 4px double #3e2723; margin: 20px; height: calc(100% - 40px);
@@ -224,7 +223,7 @@
         <div class="nav-arrow next" onclick="flipNext()">›</div>
 
         <div class="book-stage">
-            <div id="flip-book"></div>
+            <!-- Контейнер для книги создается динамически -->
         </div>
 
         <div id="audio-controls" class="hidden">
@@ -247,7 +246,8 @@
             if (newIsMobile !== isMobile) {
                 isMobile = newIsMobile;
                 if (!document.getElementById('reader-view').classList.contains('hidden')) {
-                    closeBook(); 
+                    // Перезагрузка страницы при смене ориентации для корректного пересчета
+                    location.reload();
                 }
             }
         });
@@ -321,9 +321,21 @@
             document.getElementById('library-view').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
 
-            const bookEl = document.getElementById('flip-book');
-            if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
-            bookEl.innerHTML = '';
+            // --- КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ ---
+            // Вместо очистки innerHTML, мы полностью пересоздаем элемент книги
+            const stage = document.querySelector('.book-stage');
+            const oldBook = document.getElementById('flip-book');
+            if (oldBook) oldBook.remove();
+
+            const bookEl = document.createElement('div');
+            bookEl.id = 'flip-book';
+            stage.appendChild(bookEl);
+
+            if (bookInstance) { 
+                bookInstance.destroy(); 
+                bookInstance = null; 
+            }
+            // -------------------------------
 
             // AUDIO
             const audioWrapper = document.getElementById('audio-controls');
@@ -337,9 +349,7 @@
                 audioPlayer.pause();
             }
 
-            // --- ГЕНЕРАЦИЯ СТРАНИЦ ---
-            // Теперь мы НЕ создаем внешнюю обложку (cover).
-            // Книга начинается сразу с содержимого.
+            // ГЕНЕРАЦИЯ СТРАНИЦ
 
             // 1. Левая страница разворота: Титул
             const titlePage = document.createElement('div');
@@ -352,7 +362,7 @@
                 </div>`;
             bookEl.appendChild(titlePage);
 
-            // 2. Остальные страницы (Контент)
+            // 2. Контент
             if (tale.content) {
                 tale.content.forEach((item, i) => {
                     const page = document.createElement('div');
@@ -369,7 +379,7 @@
                 });
             }
 
-            // Если количество страниц нечетное, добавляем пустую страницу в конец, чтобы закрыть разворот
+            // Четное кол-во страниц для разворота на ПК
             if (bookEl.children.length % 2 !== 0 && !isMobile) {
                 const emptyPage = document.createElement('div');
                 emptyPage.className = 'page';
@@ -377,9 +387,9 @@
                 bookEl.appendChild(emptyPage);
             }
 
-            // --- ЗАПУСК ---
+            // ЗАПУСК
             if (isMobile) {
-                // На мобильных ничего не запускаем, работает CSS Scroll
+                // На мобильных не запускаем PageFlip
             } else {
                 const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
                 bookInstance = new PageFlip(bookEl, {
@@ -388,7 +398,7 @@
                     usePortrait: false, // Разворот
                     minWidth: 300, minHeight: 400,
                     maxShadowOpacity: 0.5, 
-                    showCover: false // ВАЖНО: Книга считается уже открытой
+                    showCover: false // Открываем сразу
                 });
                 bookInstance.loadFromHTML(bookEl.querySelectorAll('.page'));
             }
@@ -402,7 +412,14 @@
             audioPlayer.pause();
             audioPlayer.currentTime = 0;
 
-            if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
+            if (bookInstance) { 
+                bookInstance.destroy(); 
+                bookInstance = null; 
+            }
+            
+            // Удаляем DOM элемент книги, чтобы очистить память
+            const oldBook = document.getElementById('flip-book');
+            if (oldBook) oldBook.remove();
         }
 
         function flipNext() { if(!isMobile) bookInstance?.flipNext(); }
