@@ -3,394 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic Fairy Tales For Kids</title>
+    <title>Magic Fairy Tales</title>
     
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&family=Cinzel:wght@700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Caveat:wght@600&display=swap" rel="stylesheet">
     
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏰</text></svg>">
-
     <style>
         :root {
-            --bg-deep: #0f0f0f;
-            --accent-gold: #ffd700;
-            /* Цвет бумаги как на фото (кремовый) */
-            --paper-color: #fdfae7; 
-            /* Текстура стола */
-            --desk-texture: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            --bg-wood: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            --page-color: #fcfae7; /* Кремовая бумага */
+            --cover-color: #2b1d0e; /* Темная кожа */
+            --text-color: #3e2723;
         }
 
         body {
-            margin: 0; padding: 0;
-            font-family: 'Quicksand', sans-serif;
-            background: #111;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cormorant Garamond', serif;
+            background-color: #111;
             color: #fff;
-            min-height: 100vh;
-            overflow-x: hidden;
+            height: 100vh;
+            overflow: hidden; /* Чтобы не было скролла самого сайта при чтении */
         }
 
-        *, *::before, *::after { box-sizing: border-box; }
+        /* --- LIBRARY VIEW (Сетка книг) --- */
+        #library-view {
+            padding: 20px;
+            height: 100vh;
+            overflow-y: auto;
+            background: #141414;
+            text-align: center;
+        }
 
-        /* --- HEADER & LIBRARY (Оставляем как было, красиво) --- */
-        header { display: flex; flex-direction: column; align-items: center; padding: 30px; }
-        h1 { font-family: 'Fredoka One', cursive; font-size: 3rem; margin: 0 0 20px 0; color: var(--accent-gold); text-shadow: 0 4px 10px rgba(0,0,0,0.5); text-align: center; }
-        
-        .search-bar { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 50px; padding: 10px 25px; display: flex; width: 100%; max-width: 500px; }
-        .search-bar input { background: transparent; border: none; color: white; width: 100%; outline: none; font-size: 1.1rem; margin-left: 10px; }
+        h1 { font-family: 'Cinzel', serif; color: #ffd700; margin-bottom: 30px; }
 
-        .gallery-container { width: 95%; max-width: 1400px; margin: 0 auto; padding-bottom: 50px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 30px; margin-top: 30px; }
-        
-        /* Карточки */
-        .tile { position: relative; border-radius: 10px; overflow: hidden; cursor: pointer; transition: 0.3s; aspect-ratio: 2/3; background: #222; box-shadow: 0 5px 15px rgba(0,0,0,0.5); }
-        .tile:hover { transform: scale(1.05); z-index: 2; box-shadow: 0 10px 30px rgba(0,0,0,0.8); }
-        .tile-img { width: 100%; height: 100%; object-fit: cover; }
-        .tile-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px 10px 10px; background: linear-gradient(to top, rgba(0,0,0,0.9), transparent); }
-        .tile h3 { margin: 0; font-size: 1rem; color: #fff; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        /* --- REALISTIC BOOK READER --- */
-        .modal {
+        .tile {
+            cursor: pointer;
+            transition: transform 0.2s;
+            perspective: 1000px;
+        }
+        .tile:hover { transform: translateY(-10px); }
+
+        .tile img {
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            aspect-ratio: 2/3;
+            object-fit: cover;
+        }
+        .tile h3 { font-size: 1.2rem; margin-top: 10px; color: #ddd; }
+
+        /* --- READER VIEW (Сама книга) --- */
+        #reader-view {
             position: fixed; inset: 0;
             background-color: #1a0b0b;
-            background-image: var(--desk-texture);
-            z-index: 100;
-            display: flex; align-items: center; justify-content: center;
-            animation: fadeIn 0.5s;
+            background-image: var(--bg-wood); /* Деревянный стол */
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 150px rgba(0,0,0,0.9); /* Виньетка по краям */
         }
 
-        /* КОНТЕЙНЕР КНИГИ (Имитация толщины страниц по бокам) */
-        .book-realistic-frame {
-            position: relative;
-            /* Ширина книги + боковые грани */
-            padding: 10px 30px; 
-            background: #2c0e0e; /* Цвет обложки под страницами */
-            border-radius: 4px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8); /* Глубокая тень на столе */
-            
-            /* Магия CSS: рисуем полоски страниц по бокам градиентом */
-            background-image: 
-                linear-gradient(90deg, #dcd0b3 1px, #fdfae7 3px), /* Левая стопка */
-                linear-gradient(-90deg, #dcd0b3 1px, #fdfae7 3px); /* Правая стопка */
-            background-size: 25px 100%; /* Ширина стопки страниц */
-            background-repeat: no-repeat;
-            background-position: left center, right center;
-        }
-
-        /* Декоративный кант (как на фото) */
-        .book-realistic-frame::before {
-            content: '';
-            position: absolute; top: -5px; bottom: -5px; left: 25px; right: 25px;
-            border-top: 5px solid #8a1c1c;
-            border-bottom: 5px solid #8a1c1c;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        /* Область перелистывания */
+        /* Сцена для книги */
         .book-stage {
-            /* Фиксированные размеры разворота */
-            width: 1000px; 
-            height: 650px;
-            position: relative;
-            z-index: 1;
+            /* Важно: контейнер должен быть достаточно широким для ДВУХ страниц */
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
 
-        /* Сами страницы */
+        /* Сама книга (контейнер flip-book) */
+        .stf__wrapper {
+            /* Тень под всей книгой */
+            filter: drop-shadow(0 20px 50px rgba(0,0,0,0.7));
+        }
+
+        /* --- СТИЛИ СТРАНИЦ --- */
         .page {
-            background-color: var(--paper-color);
+            background-color: var(--page-color);
             overflow: hidden;
             border: 1px solid #e3d0b5;
+            /* Текстура бумаги */
+            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
         }
 
-        /* Тень у корешка (сгиба) */
+        /* Тень у корешка (сгиб книги) */
+        /* Левая страница: тень справа */
         .page.--left {
             border-right: none;
-            /* Внутренняя тень справа (у сгиба) */
-            box-shadow: inset -25px 0 40px -20px rgba(0,0,0,0.25); 
+            box-shadow: inset -30px 0 50px -20px rgba(0,0,0,0.2); 
         }
+        /* Правая страница: тень слева */
         .page.--right {
             border-left: none;
-            /* Внутренняя тень слева (у сгиба) */
-            box-shadow: inset 25px 0 40px -20px rgba(0,0,0,0.25);
+            box-shadow: inset 30px 0 50px -20px rgba(0,0,0,0.2);
         }
 
-        /* Контент на странице */
-        .page-content {
-            height: 100%; padding: 40px;
-            display: flex; flex-direction: column;
-            color: #3e2723;
-        }
-
-        /* Картинка на странице */
-        .page-img-frame {
-            width: 100%; height: 50%;
+        /* Жесткая обложка */
+        .page.cover {
+            background-color: var(--cover-color);
+            border: 4px solid #d4af37; /* Золотая рамка */
+            color: #d4af37;
             display: flex; align-items: center; justify-content: center;
-            border: 2px solid #d4c5a3;
-            padding: 10px; margin-bottom: 20px;
-            background: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: inset 0 0 60px rgba(0,0,0,0.8);
         }
-        .page-img-frame img { max-width: 100%; max-height: 100%; object-fit: contain; }
+        .cover-img {
+            width: 100%; height: 100%; object-fit: cover;
+        }
 
-        /* Текст на странице */
+        /* Контент внутри */
+        .page-content {
+            height: 100%;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            color: var(--text-color);
+        }
+
+        .page-img-box {
+            width: 100%;
+            height: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 20px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transform: rotate(-1deg); /* Легкая небрежность "вклеенного" фото */
+        }
+        .page-img-box img {
+            max-width: 100%; max-height: 100%; object-fit: contain;
+        }
+
         .page-text {
             font-family: 'Caveat', cursive; /* Рукописный шрифт */
-            font-size: 1.6rem; line-height: 1.5;
+            font-size: 1.8rem;
+            line-height: 1.4;
             text-align: center;
-            flex-grow: 1; display: flex; align-items: center; justify-content: center;
+            flex-grow: 1;
+        }
+        
+        .page-footer {
+            text-align: center; font-size: 1rem; color: #888; margin-top: 10px;
+            font-family: serif;
         }
 
-        .page-num { text-align: center; color: #aaa; font-family: serif; margin-top: 10px; }
-
-        /* Обложки внутри книги */
-        .page.cover-hard {
-            background: #1a1a1a; /* Темная кожа */
-            border: 2px solid #d4af37; /* Золотая рамка */
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: inset 0 0 50px rgba(0,0,0,0.8);
-        }
-        .page.cover-hard h1 { color: #d4af37; font-family: 'Cinzel', serif; font-size: 2.5rem; text-transform: uppercase; }
-
-        /* Кнопки управления */
+        /* --- КНОПКИ УПРАВЛЕНИЯ --- */
         .close-btn {
-            position: absolute; top: 20px; right: 30px;
-            background: rgba(0,0,0,0.6); border: 1px solid #666; color: white;
-            padding: 8px 15px; border-radius: 4px; cursor: pointer; z-index: 200;
+            position: absolute; top: 20px; right: 20px;
+            background: rgba(0,0,0,0.7); color: #fff;
+            border: 1px solid #fff; padding: 10px 20px;
+            cursor: pointer; z-index: 200; font-family: sans-serif;
+            border-radius: 5px;
         }
         .close-btn:hover { background: #d32f2f; border-color: #d32f2f; }
 
-        .audio-bar {
-            position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
-            background: rgba(20,20,20,0.9); padding: 10px 20px; border-radius: 30px;
-            display: flex; align-items: center; gap: 10px; border: 1px solid #444; z-index: 200;
-        }
-        .audio-bar p { margin: 0; color: #ffd700; font-size: 0.9rem; }
-
-        /* Стрелки навигации */
-        .arrow {
+        .nav-arrow {
             position: absolute; top: 50%; transform: translateY(-50%);
-            font-size: 4rem; color: rgba(255,255,255,0.3); cursor: pointer;
-            user-select: none; transition: 0.2s; z-index: 150;
+            font-size: 4rem; color: rgba(255,255,255,0.3);
+            cursor: pointer; user-select: none; z-index: 150;
+            transition: 0.2s;
         }
-        .arrow:hover { color: #ffd700; transform: translateY(-50%) scale(1.1); }
-        .arrow.left { left: 40px; }
-        .arrow.right { right: 40px; }
+        .nav-arrow:hover { color: #ffd700; transform: translateY(-50%) scale(1.1); }
+        .nav-arrow.prev { left: 40px; }
+        .nav-arrow.next { right: 40px; }
 
         .hidden { display: none !important; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        /* Адаптив: На телефонах все равно придется показывать 1 страницу, иначе будет мелко */
-        @media (max-width: 1100px) {
-            .book-stage { width: 100vw; height: 80vh; }
-            .book-realistic-frame { padding: 0; background: none; box-shadow: none; }
-            .book-realistic-frame::before { display: none; }
-            .arrow { font-size: 2rem; }
-            .arrow.left { left: 10px; } .arrow.right { right: 10px; }
-        }
     </style>
 </head>
 <body>
 
-    <div id="app">
-        <!-- ГАЛЕРЕЯ (Список сказок) -->
-        <div id="library-view">
-            <header>
-                <h1>Magic Fairy Tales For Kids</h1>
-                <div class="search-bar">
-                    <span>🔍</span>
-                    <input type="text" id="search-input" placeholder="Find a story...">
-                </div>
-            </header>
+    <!-- БИБЛИОТЕКА -->
+    <div id="library-view">
+        <header>
+            <h1>The Magic Library</h1>
+        </header>
+        <div id="gallery-grid" class="grid"></div>
+        <p id="loading-msg" style="margin-top:20px; color:#666;">Loading tales...</p>
+    </div>
 
-            <div class="gallery-container">
-                <div id="gallery-grid" class="grid"></div>
-                <div id="empty-state" class="hidden" style="text-align:center; margin-top:50px; color:#888;">
-                    <h2>No stories found 🕸️</h2>
-                    <p>Run <code>npm run scan</code></p>
-                </div>
-            </div>
-        </div>
+    <!-- ЧИТАЛКА (КНИГА) -->
+    <div id="reader-view" class="hidden">
+        <button class="close-btn" onclick="closeBook()">✖ Close Book</button>
+        
+        <div class="nav-arrow prev" onclick="flipPrev()">‹</div>
+        <div class="nav-arrow next" onclick="flipNext()">›</div>
 
-        <!-- РЕЖИМ ЧТЕНИЯ (КНИГА) -->
-        <div id="reader-view" class="modal hidden">
-            <button id="close-btn" class="close-btn">✖ Close Book</button>
-            
-            <div class="arrow left" id="btn-prev">‹</div>
-            <div class="arrow right" id="btn-next">›</div>
-
-            <!-- Реалистичная рамка (стопки страниц) -->
-            <div class="book-realistic-frame">
-                <div class="book-stage">
-                    <div id="flip-book"></div>
-                </div>
-            </div>
-
-            <div id="audio-bar" class="hidden audio-bar">
-                <span style="font-size:1.5rem">🔊</span>
-                <audio id="audio-player" controls style="height: 25px; width: 200px; opacity:0.9;"></audio>
+        <div class="book-stage">
+            <div id="flip-book">
+                <!-- Страницы генерируются JS -->
             </div>
         </div>
     </div>
 
-    <!-- Библиотеки -->
+    <!-- Библиотека PageFlip -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 
-    <script type="module">
+    <script>
         let allTales = [];
-        let pageFlipInstance = null;
+        let bookInstance = null;
 
         document.addEventListener('DOMContentLoaded', () => {
-            init();
-            // Клавиатура
-            document.addEventListener('keydown', (e) => {
-                if(document.getElementById('reader-view').classList.contains('hidden')) return;
-                if(e.key === 'ArrowRight') pageFlipInstance?.flipNext();
-                if(e.key === 'ArrowLeft') pageFlipInstance?.flipPrev();
-                if(e.key === 'Escape') closeReader();
-            });
+            loadTales();
         });
 
-        async function init() {
+        async function loadTales() {
             try {
-                const response = await fetch(`/tales-index.json?t=${new Date().getTime()}`);
-                if (!response.ok) throw new Error('Index not found');
-                allTales = await response.json();
-                renderGallery(allTales);
-            } catch (e) {
-                // Демонстрационные данные, если JSON не найден
-                allTales = [{
-                    id: 'demo', title: 'Demo: The Gingerbread Man', author: 'Folklore', cover: '',
-                    content: [
-                        {text: "Once upon a time there was an old man and an old woman.", image: ""},
-                        {text: "The old woman scraped the bottom of the barrel.", image: ""}
-                    ]
-                }];
-                renderGallery(allTales);
+                // Пытаемся загрузить индекс
+                const res = await fetch('/tales-index.json');
+                if(!res.ok) throw new Error("No index");
+                allTales = await res.json();
+                renderLibrary(allTales);
+            } catch(e) {
+                // Если нет бэкенда, используем демо-данные для проверки работы
+                console.warn("Using demo data");
+                allTales = [
+                    {
+                        id: 'demo', title: 'The Gingerbread Man', author: 'Folklore', cover: 'https://cdn.pixabay.com/photo/2019/04/10/16/27/book-4117282_960_720.jpg',
+                        content: [
+                            { text: "Once upon a time there was an old man and an old woman.", image: "https://cdn.pixabay.com/photo/2012/10/26/02/44/pancakes-63108_960_720.jpg" },
+                            { text: "One day, the old woman baked a Gingerbread Man.", image: "https://cdn.pixabay.com/photo/2016/12/17/14/32/cookies-1913636_960_720.jpg" },
+                            { text: "But the Gingerbread Man jumped out of the oven and ran away!", image: "https://cdn.pixabay.com/photo/2020/12/13/16/20/gingerbread-man-5828795_960_720.jpg" },
+                            { text: "Run, run, as fast as you can! You can't catch me!", image: "" }
+                        ]
+                    }
+                ];
+                renderLibrary(allTales);
             }
-            setupSearch();
+            document.getElementById('loading-msg').style.display = 'none';
         }
 
-        function renderGallery(tales) {
+        function renderLibrary(tales) {
             const grid = document.getElementById('gallery-grid');
             grid.innerHTML = '';
             
-            tales.forEach((tale) => {
-                const card = document.createElement('div');
-                card.className = 'tile';
-                const coverUrl = tale.cover ? (tale.cover.startsWith('http') ? tale.cover : `/tales/${tale.id}/${tale.cover}`) : '';
-
-                card.innerHTML = `
-                    ${coverUrl ? `<img src="${coverUrl}" class="tile-img">` : ''}
-                    <div class="tile-overlay"><h3>${tale.title}</h3></div>
+            tales.forEach(tale => {
+                const div = document.createElement('div');
+                div.className = 'tile';
+                const imgUrl = tale.cover && !tale.cover.startsWith('http') 
+                    ? `/tales/${tale.id}/${tale.cover}` 
+                    : (tale.cover || 'https://via.placeholder.com/300x450?text=No+Cover');
+                
+                div.innerHTML = `
+                    <img src="${imgUrl}">
+                    <h3>${tale.title}</h3>
                 `;
-                card.onclick = () => openBook(tale);
-                grid.appendChild(card);
+                div.onclick = () => openBook(tale);
+                grid.appendChild(div);
             });
         }
 
-        function setupSearch() {
-            document.getElementById('search-input').addEventListener('input', (e) => {
-                const query = e.target.value;
-                if (!query) return renderGallery(allTales);
-                const fuse = new Fuse(allTales, { keys: ['title'], threshold: 0.4 });
-                renderGallery(fuse.search(query).map(r => r.item));
-            });
-        }
-
-        async function openBook(tale) {
+        function openBook(tale) {
             document.getElementById('library-view').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
 
-            const audioBar = document.getElementById('audio-bar');
-            const audioPlayer = document.getElementById('audio-player');
-            if (tale.audio) {
-                audioBar.classList.remove('hidden');
-                audioPlayer.src = tale.audio.startsWith('http') ? tale.audio : `/tales/${tale.id}/${tale.audio}`;
-            } else {
-                audioBar.classList.add('hidden');
-                audioPlayer.pause();
-            }
-
             const bookEl = document.getElementById('flip-book');
-            if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
-            bookEl.innerHTML = ''; 
+            // Очищаем старую книгу
+            if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
+            bookEl.innerHTML = '';
 
-            // 1. HARD COVER FRONT
-            const coverUrl = tale.cover ? (tale.cover.startsWith('http') ? tale.cover : `/tales/${tale.id}/${tale.cover}`) : null;
+            // 1. ПЕРЕДНЯЯ ОБЛОЖКА
+            const coverUrl = tale.cover && !tale.cover.startsWith('http') ? `/tales/${tale.id}/${tale.cover}` : tale.cover;
             const frontCover = document.createElement('div');
-            frontCover.className = 'page cover-hard';
+            frontCover.className = 'page cover';
             frontCover.innerHTML = coverUrl 
-                ? `<img src="${coverUrl}" style="width:100%; height:100%; object-fit:cover;">`
+                ? `<img src="${coverUrl}" class="cover-img">`
                 : `<h1>${tale.title}</h1>`;
             bookEl.appendChild(frontCover);
 
-            // 2. INNER TITLE PAGE
+            // 2. ТИТУЛЬНЫЙ ЛИСТ
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
             titlePage.innerHTML = `
-                <div class="page-content" style="justify-content:center; text-align:center;">
-                    <h1 style="font-family:'Cinzel'; color:#3e2723; font-size:2.5rem;">${tale.title}</h1>
-                    <p style="font-style:italic; margin-top:20px;">${tale.author || 'Folklore'}</p>
-                    <div style="margin-top:50px; font-size:2rem;">❦</div>
+                <div class="page-content" style="justify-content:center; text-align:center; border: 4px double #3e2723; margin:20px;">
+                    <h1 style="font-family:'Cinzel'; color:#2b1d0e; font-size:2.5rem; margin-top:50px;">${tale.title}</h1>
+                    <p style="font-style:italic;">${tale.author || 'Folklore'}</p>
                 </div>`;
             bookEl.appendChild(titlePage);
 
-            // 3. CONTENT PAGES
-            if (tale.content && Array.isArray(tale.content)) {
-                tale.content.forEach((pageItem, i) => {
-                    const div = document.createElement('div');
-                    div.className = 'page';
+            // 3. СТРАНИЦЫ ИСТОРИИ
+            if (tale.content) {
+                tale.content.forEach((item, i) => {
+                    const page = document.createElement('div');
+                    page.className = 'page';
                     
-                    const imgSrc = pageItem.image ? `/tales/${tale.id}/${pageItem.image}` : '';
+                    const img = item.image && !item.image.startsWith('http') ? `/tales/${tale.id}/${item.image}` : item.image;
                     
-                    div.innerHTML = `
+                    page.innerHTML = `
                         <div class="page-content">
-                            ${imgSrc ? `<div class="page-img-frame"><img src="${imgSrc}"></div>` : ''}
-                            <div class="page-text">${pageItem.text || ''}</div>
-                            <div class="page-num">- ${i + 1} -</div>
+                            ${img ? `<div class="page-img-box"><img src="${img}"></div>` : ''}
+                            <div class="page-text">${item.text || ''}</div>
+                            <div class="page-footer">- ${i+1} -</div>
                         </div>
                     `;
-                    bookEl.appendChild(div);
+                    bookEl.appendChild(page);
                 });
             }
 
-            // 4. HARD COVER BACK
+            // 4. ЗАДНЯЯ ОБЛОЖКА
             const backCover = document.createElement('div');
-            backCover.className = 'page cover-hard';
+            backCover.className = 'page cover';
             bookEl.appendChild(backCover);
 
-            // INIT FLIP
+            // ИНИЦИАЛИЗАЦИЯ (Самое важное для правильного вида)
             const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
             
-            // Если экран большой - показываем разворот (2 стр), если маленький - одну
-            const isMobile = window.innerWidth < 1000;
+            // Расчет размеров: Одна страница
+            const width = 550; 
+            const height = 750;
 
-            pageFlipInstance = new PageFlip(bookEl, {
-                width: 500, // Ширина ОДНОЙ страницы
-                height: 650,
-                size: isMobile ? 'stretch' : 'fixed',
-                // ВАЖНО: false = разворот из двух страниц (на ПК)
-                usePortrait: isMobile, 
+            bookInstance = new PageFlip(bookEl, {
+                width: width,
+                height: height,
+                size: 'fixed',
+                // usePortrait: false заставляет показывать ДВЕ страницы на десктопе
+                usePortrait: false, 
+                minWidth: 300,
+                minHeight: 400,
+                maxShadowOpacity: 0.5, 
                 showCover: true,
-                maxShadowOpacity: 0.5
+                mobileScrollSupport: false
             });
-            
-            pageFlipInstance.loadFromHTML(bookEl.children);
+
+            bookInstance.loadFromHTML(bookEl.querySelectorAll('.page'));
         }
 
-        function closeReader() {
+        function closeBook() {
             document.getElementById('reader-view').classList.add('hidden');
             document.getElementById('library-view').classList.remove('hidden');
-            document.getElementById('audio-player').pause();
-            if (pageFlipInstance) { pageFlipInstance.destroy(); pageFlipInstance = null; }
+            if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
         }
 
-        document.getElementById('close-btn').onclick = closeReader;
-        document.getElementById('btn-prev').onclick = () => pageFlipInstance?.flipPrev();
-        document.getElementById('btn-next').onclick = () => pageFlipInstance?.flipNext();
-
+        function flipNext() { bookInstance?.flipNext(); }
+        function flipPrev() { bookInstance?.flipPrev(); }
     </script>
 </body>
 </html>
