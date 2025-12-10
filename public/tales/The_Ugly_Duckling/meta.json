@@ -1,0 +1,84 @@
+{
+  "title": "The Ugly Duckling",
+  "author": "Hans Christian Andersen",
+  "cover": "cover.jpeg",
+  "audio": "audio.mp3",
+  "youtube": "https://youtu.be/MGYBzv9_pkM",
+  "content": [
+    {
+      "text": "Once upon a time, on a quiet little farm, a mother duck sat on her nest. One by one, her eggs began to hatch. “Quack, quack!” said the fluffy yellow ducklings as they came out.",
+      "side": "left",
+      "image": "1_left.jpg"
+    },
+    {
+      "text": "But one egg was much bigger than the others. When the last egg finally cracked open, out came a big, gray duckling. He didn’t look like the others at all.",
+      "side": "right",
+      "image": "1_right.jpg"
+    },
+    {
+      "text": "The other ducklings stared.“You’re so big and weird!” one said.“You’re not cute like us,” another whispered. “My dear, you may not be as pretty as your siblings, but you are just as special,” Momma duck",
+      "side": "left",
+      "image": "2_left.jpg"
+    },
+    {
+      "text": "said, giving the duckling lots of love. The gray duckling felt sad. He didn’t understand why he looked different. Wherever he went, the other animals laughed at him.",
+      "side": "right",
+      "image": "2_right.jpg"
+    },
+    {
+      "text": "The chickens clucked, the cats sneered, and the ducks waddled away. “Go away, ugly duckling!” they said. “You don’t look like us,” said the rabbits. “Why are you so gray?” asked the bluebirds.",
+      "side": "left",
+      "image": "3_left.jpg"
+    },
+    {
+      "text": "So the poor duckling ran off, looking for a place where he would belong. As autumn came, he found a beautiful lake shining in the sunlight.",
+      "side": "right",
+      "image": "3_right.jpg"
+    },
+    {
+      "text": "There, he saw a group of graceful white swans swimming on the water, their wings shining like silver. Enchanted by their beauty, the little duckling went closer. But he stopped.",
+      "side": "left",
+      "image": "4_left.jpg"
+    },
+    {
+      "text": "He remembered how others had treated him. He was afraid the swans would laugh at him too. To his surprise, the swans turned and smiled. “Hello there, little friend.",
+      "side": "right",
+      "image": "4_right.jpg"
+    },
+    {
+      "text": "You are welcome to join us,” said the kindest swan. “But I’m not beautiful like you,” the duckling said quietly. “I’m just an ugly duckling.” The kind swan nodded gently.",
+      "side": "left",
+      "image": "5_left.jpg"
+    },
+    {
+      "text": "“You may think that now, but beauty is not just about looks. It’s about being kind, brave, and true to yourself. Come, let us be friends.”",
+      "side": "right",
+      "image": "5_right.jpg"
+    },
+    {
+      "text": "With new hope and happiness, the little duckling swam into the lake. The swans welcomed him warmly. They played games, splashed in the water, and laughed under the moon.",
+      "side": "left",
+      "image": "6_left.jpg"
+    },
+    {
+      "text": "One morning, the duckling looked into the lake—and gasped. A beautiful creature stared back at him. His dull gray feathers were gone.",
+      "side": "right",
+      "image": "6_right.jpg"
+    },
+    {
+      "text": "He now had bright white feathers, a long neck, and gentle eyes. He had grown into a beautiful swan—just like his new friends.",
+      "side": "left",
+      "image": "7_left.jpg"
+    },
+    {
+      "text": "From that day on, the little duckling was no longer the “Ugly Duckling.” He had become a brave and graceful swan, ready to face any challenge that came his way. And he knew that true beauty was inside.",
+      "side": "right",
+      "image": "7_right.jpg"
+    },
+    {
+      "text": "The End!",
+      "side": "left",
+      "image": "8_left.jpg"
+    }
+  ]
+}
