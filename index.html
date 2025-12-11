@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* --- ВАШИ ОРИГИНАЛЬНЫЕ СТИЛИ --- */
+        /* --- ВАШ ОРИГИНАЛЬНЫЙ СВЕТЛЫЙ ДИЗАЙН --- */
         :root {
             --bg-gradient: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
             --card-bg: #ffffff;
@@ -34,6 +34,7 @@
             overflow: hidden; 
         }
 
+        /* Декор фона */
         .bg-shape {
             position: fixed; border-radius: 50%;
             filter: blur(50px); z-index: -1; opacity: 0.5;
@@ -48,6 +49,7 @@
             100% { transform: translate(30px, 30px) scale(1.1); }
         }
 
+        /* --- БИБЛИОТЕКА --- */
         #library-view {
             padding: 20px; height: 100vh; overflow-y: auto; text-align: center;
             scrollbar-width: thin; scrollbar-color: #fff rgba(255,255,255,0.3);
@@ -78,7 +80,6 @@
         }
         .search-bar input::placeholder { color: #9ca3af; }
         .search-icon { font-size: 1.5rem; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
         .grid {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -111,9 +112,10 @@
             box-shadow: 0 3px 8px rgba(0,0,0,0.15); font-size: 1rem; border: 2px solid #f0f0f0;
         }
 
-        /* --- READER --- */
+        /* --- READER (ЧИТАЛКА) --- */
         #reader-view {
             position: fixed; inset: 0; background-color: var(--reader-bg);
+            /* Легкий паттерн на фоне читалки */
             background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 4h2v2H5V5zm4 4h2v2H9V9zm4 4h2v2h-2v-2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
             z-index: 1000; display: flex; flex-direction: column;
             align-items: center; justify-content: center;
@@ -134,26 +136,36 @@
         .page.--left { border-radius: 5px 0 0 5px; border-right: none; box-shadow: inset -20px 0 40px -10px rgba(0,0,0,0.15); }
         .page.--right { border-radius: 0 5px 5px 0; border-left: none; box-shadow: inset 20px 0 40px -10px rgba(0,0,0,0.15); }
 
+        /* 
+           ИСПРАВЛЕНИЕ ДЛЯ ШИРОКИХ КАРТИНОК:
+           Убираем боковые отступы у главного контейнера (.page-content),
+           чтобы картинка могла растянуться на 100%.
+           Отступы для текста добавляем отдельно в .page-text.
+        */
         .page-content {
-            height: 100%; padding: 40px 50px; display: flex;
-            flex-direction: column; color: var(--book-text-color);
+            height: 100%; 
+            padding: 40px 0; /* Было 40px 50px, убрали бока */
+            display: flex;
+            flex-direction: column; 
+            color: var(--book-text-color);
         }
 
         .page-img-box {
-            width: 100%; height: 50%; 
-            display: flex; align-items: center; justify-content: center;
+            width: 100%; 
+            height: 45%; 
+            display: block;
             margin-bottom: 25px; 
-            background: transparent; 
-            box-shadow: none;
-            padding: 0;
+            padding: 0; /* Без отступов */
         }
         
         .page-img-box img { 
-            max-width: 100%; max-height: 100%; object-fit: contain; 
-            border-radius: 8px;
+            width: 100%;      
+            height: 100%;     
+            object-fit: cover; /* Заполняет всю область */
+            object-position: top center; 
+            display: block;
             mix-blend-mode: multiply; 
-            filter: contrast(1.05) sepia(0.1); 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+            filter: contrast(1.05) sepia(0.1);
         }
 
         .page-text {
@@ -163,11 +175,13 @@
             text-align: justify; 
             flex-grow: 1;
             font-weight: 500;
+            padding: 0 50px; /* Вернули отступы только для текста */
         }
         
         .page-footer { 
             text-align: center; font-size: 0.9rem; color: #998; 
             margin-top: 15px; font-family: 'Fredoka', sans-serif; 
+            padding: 0 50px;
         }
         
         .title-content {
@@ -177,7 +191,7 @@
             display: flex; flex-direction: column; padding: 20px;
         }
 
-        /* --- НОВОЕ: СТИЛИ ДЛЯ ПОДСВЕТКИ СЛОВ --- */
+        /* --- ПОДСВЕТКА СЛОВ --- */
         .word-span {
             border-radius: 3px;
             transition: background-color 0.1s;
@@ -185,13 +199,13 @@
         }
         
         .word-active {
-            background-color: #fffd7e; /* Светло-желтая подсветка */
+            background-color: #fffd7e; /* Желтый фон */
             color: #d63031;             /* Красный текст */
             font-weight: 600;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             padding: 0 2px;
         }
-        /* -------------------------------------- */
+        /* ---------------------- */
 
         .top-controls {
             position: absolute; top: 20px; right: 20px; display: flex; gap: 15px; z-index: 200;
@@ -245,7 +259,6 @@
             background: #fff; color: var(--text-dark); border: none; cursor: pointer; border-radius: 30px;
             font-family: 'Fredoka', sans-serif; font-weight: bold;
         }
-        .close-video-btn:hover { background: #ff7675; color: white; }
 
         .hidden { display: none !important; }
 
@@ -275,7 +288,7 @@
             }
             .page.--left, .page.--right { box-shadow: none; border-radius: 15px; }
             .page-img-box { height: 250px; }
-            .page-text { font-size: 1.3rem; }
+            .page-text { font-size: 1.3rem; padding: 0 20px; }
             .title-content { height: 350px; border-color: #fab1a0; }
             .video-container { width: 95%; }
         }
@@ -346,7 +359,7 @@
         let bookInstance = null;
         let isMobile = window.innerWidth <= 768;
         let currentVideoId = null;
-        let currentSyncData = []; // Для синхронизации страниц и слов
+        let currentSyncData = [];
 
         window.addEventListener('resize', () => {
             const newIsMobile = window.innerWidth <= 768;
@@ -364,51 +377,45 @@
 
         async function loadTales() {
             try {
-                // Пытаемся загрузить с сервера
                 const res = await fetch('/tales-index.json');
                 if(!res.ok) throw new Error("No index");
                 allTales = await res.json();
                 renderLibrary(allTales);
             } catch(e) {
                 console.warn("Using demo data");
-                // ВАШИ ДАННЫЕ С РАЗБИВКОЙ ПО СЛОВАМ
+                // ДЕМО ДАННЫЕ (Три медведя) с разбивкой по словам
                 allTales = [
                     {
                         id: 'demo_bears', 
                         title: 'Goldilocks & 3 Bears', 
                         author: 'Folklore', 
                         cover: 'https://cdn.pixabay.com/photo/2023/05/29/18/59/bear-8026958_1280.jpg',
-                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Замените на свое
                         youtube: '',
                         content: [
                             {
-                                text: "Once upon a time...",
-                                side: "right",
+                                text: "Once upon a time, in a cozy little house...",
+                                side: "left",
                                 start: 0.0,
                                 end: 14.8,
                                 image: "https://cdn.pixabay.com/photo/2020/06/15/18/06/bears-5302684_1280.jpg",
                                 words: [
                                     {"w": "Once", "s": 0.0, "e": 0.32},
                                     {"w": "upon", "s": 0.32, "e": 0.6},
-                                    {"w": "a",    "s": 0.6, "e": 0.6},
-                                    {"w": "time,", "s": 0.6, "e": 1.12},
-                                    {"w": "in",   "s": 1.12, "e": 1.5},
-                                    {"w": "a",    "s": 1.5, "e": 1.7},
-                                    {"w": "cozy", "s": 1.7, "e": 2.2},
-                                    {"w": "little", "s": 2.2, "e": 2.8},
-                                    {"w": "house", "s": 2.8, "e": 3.5},
-                                    {"w": "at",   "s": 3.5, "e": 3.8},
-                                    {"w": "the",  "s": 3.8, "e": 4.0},
-                                    {"w": "edge", "s": 4.0, "e": 4.5},
-                                    {"w": "of",   "s": 4.5, "e": 4.7},
-                                    {"w": "a",    "s": 4.7, "e": 4.9},
-                                    {"w": "great,", "s": 4.9, "e": 5.5},
-                                    {"w": "whispering", "s": 5.5, "e": 6.5},
-                                    {"w": "forest,", "s": 6.5, "e": 7.5},
-                                    {"w": "there", "s": 7.5, "e": 8.0},
-                                    {"w": "lived", "s": 8.0, "e": 8.5},
-                                    {"w": "three", "s": 8.5, "e": 9.0},
-                                    {"w": "bears...", "s": 9.0, "e": 10.0}
+                                    {"w": "a",    "s": 0.6, "e": 0.8},
+                                    {"w": "time,", "s": 0.8, "e": 1.12}
+                                ]
+                            },
+                            {
+                                text: "One morning, Mama Bear stirred the porridge...",
+                                side: "right",
+                                start: 14.8, 
+                                end: 36.08,
+                                image: "https://cdn.pixabay.com/photo/2019/07/28/19/04/autumn-4369408_1280.jpg",
+                                words: [
+                                    {"w": "One", "s": 23.64, "e": 24.0},
+                                    {"w": "morning,", "s": 24.0, "e": 24.52},
+                                    {"w": "Mama", "s": 24.52, "e": 24.96}
                                 ]
                             }
                         ]
@@ -418,7 +425,7 @@
             }
             document.getElementById('loading-msg').style.display = 'none';
             setupSearch();
-            setupAudioSync(); // Запуск логики синхронизации
+            setupAudioSync();
         }
 
         function renderLibrary(tales) {
@@ -464,35 +471,39 @@
             audioPlayer.ontimeupdate = () => {
                 const currentTime = audioPlayer.currentTime;
                 
-                // 1. Поиск страницы и перелистывание
-                const activePageData = currentSyncData.find(block => currentTime >= block.start && currentTime < block.end);
+                // Используем filter, чтобы найти ВСЕ страницы (левую и правую)
+                const activePages = currentSyncData.filter(block => currentTime >= block.start && currentTime < block.end);
 
-                if (activePageData) {
-                    if (lastPageIndex !== activePageData.pageIndex) {
-                        lastPageIndex = activePageData.pageIndex;
+                if (activePages.length > 0) {
+                    
+                    // 1. Перелистывание (берем первую найденную страницу как ориентир)
+                    const primaryPage = activePages[0];
+                    if (lastPageIndex !== primaryPage.pageIndex) {
+                        lastPageIndex = primaryPage.pageIndex;
                         if (!isMobile && bookInstance) {
-                            bookInstance.flip(activePageData.pageIndex);
+                            bookInstance.flip(primaryPage.pageIndex);
                         } else {
-                            const p = document.getElementById(`page-index-${activePageData.pageIndex}`);
+                            const p = document.getElementById(`page-index-${primaryPage.pageIndex}`);
                             if(p) p.scrollIntoView({behavior:'smooth', block:'center'});
                         }
                     }
 
-                    // 2. Подсветка слов на текущей странице
-                    const activePageEl = document.getElementById(`page-index-${activePageData.pageIndex}`);
-                    if (activePageEl) {
-                        const spans = activePageEl.querySelectorAll('.word-span');
-                        spans.forEach(span => {
-                            const start = parseFloat(span.dataset.s);
-                            const end = parseFloat(span.dataset.e);
-                            // Если время попадает в диапазон слова
-                            if (currentTime >= start && currentTime < end) {
-                                span.classList.add('word-active');
-                            } else {
-                                span.classList.remove('word-active');
-                            }
-                        });
-                    }
+                    // 2. Подсветка слов (проходим по всем активным страницам)
+                    activePages.forEach(pageData => {
+                        const activePageEl = document.getElementById(`page-index-${pageData.pageIndex}`);
+                        if (activePageEl) {
+                            const spans = activePageEl.querySelectorAll('.word-span');
+                            spans.forEach(span => {
+                                const start = parseFloat(span.dataset.s);
+                                const end = parseFloat(span.dataset.e);
+                                if (currentTime >= start && currentTime < end) {
+                                    span.classList.add('word-active');
+                                } else {
+                                    span.classList.remove('word-active');
+                                }
+                            });
+                        }
+                    });
                 }
             }
         }
@@ -535,7 +546,7 @@
                 currentVideoId = null;
             }
 
-            // Title Page (Index 0)
+            // Титульный лист
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
             titlePage.id = 'page-index-0';
@@ -552,9 +563,8 @@
                     const pageIndex = i + 1;
                     const page = document.createElement('div');
                     page.className = 'page';
-                    page.id = `page-index-${pageIndex}`; // ID для поиска страницы
+                    page.id = `page-index-${pageIndex}`;
 
-                    // Сохраняем данные для синхронизации страницы
                     if (item.start !== undefined) {
                         currentSyncData.push({
                             pageIndex: pageIndex,
@@ -565,7 +575,7 @@
 
                     const img = item.image && !item.image.startsWith('http') ? `/tales/${tale.id}/${item.image}` : item.image;
                     
-                    // --- ГЕНЕРАЦИЯ HTML ДЛЯ СЛОВ ---
+                    // Генерация слов в <span>
                     let textHtml = '';
                     if (item.words && item.words.length > 0) {
                         textHtml = item.words.map(w => 
@@ -574,7 +584,6 @@
                     } else {
                         textHtml = item.text || '';
                     }
-                    // --------------------------------
 
                     page.innerHTML = `
                         <div class="page-content">

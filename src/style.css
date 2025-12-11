@@ -1,292 +1,303 @@
+/* =========================================
+   1. VARIABLES & RESET
+   ========================================= */
 :root {
-    --deep-sky: #090e18;
-    --night-purple: #1a0b2e;
-    --gold-glow: #ffd700;
-    --gold-dark: #b8860b;
-    --parchment: #f4e4bc;
-    --wood-dark: #3e2723;
-    --book-red: #8a1c1c;
-    --book-blue: #1c3b8a;
-    --book-green: #1c8a45;
+    /* Палитра светлой темы */
+    --bg-gradient: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+    --card-bg: #ffffff;
+    --text-dark: #5e548e;
+    --text-accent: #ff6b6b;
+    --page-color: #fffbf0;
+    --reader-bg: rgba(45, 52, 54, 0.95);
+    --book-text-color: #2c1810;
 }
+
+* { box-sizing: border-box; }
 
 body {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    background-color: var(--deep-sky);
-    color: #fff;
-    min-height: 100vh;
-    overflow-x: hidden;
-    cursor: none; /* Скрываем стандартный курсор для кастомного */
+    margin: 0; padding: 0;
+    font-family: 'Quicksand', sans-serif;
+    background-image: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-dark);
+    height: 100vh;
+    overflow: hidden; 
 }
 
-/* --- МАГИЧЕСКИЙ КУРСОР --- */
-.cursor-dot, .cursor-outline {
-    position: fixed; top: 0; left: 0;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 9999;
-    pointer-events: none;
+/* =========================================
+   2. BACKGROUND DECORATION (BLOBS)
+   ========================================= */
+.bg-shape {
+    position: fixed; border-radius: 50%;
+    filter: blur(50px); z-index: -1; opacity: 0.5;
+    animation: float 10s infinite ease-in-out alternate;
 }
-.cursor-dot {
-    width: 8px; height: 8px;
-    background: var(--gold-glow);
-    box-shadow: 0 0 10px var(--gold-glow);
-}
-.cursor-outline {
-    width: 40px; height: 40px;
-    border: 2px solid rgba(255, 215, 0, 0.5);
-    transition: width 0.2s, height 0.2s;
+.shape-1 { width: 300px; height: 300px; background: #8fd3f4; top: -50px; left: -50px; }
+.shape-2 { width: 400px; height: 400px; background: #ffd1ff; bottom: -100px; right: -50px; animation-delay: -5s; }
+.shape-3 { width: 200px; height: 200px; background: #fff6b7; top: 40%; left: 30%; animation-delay: -2s; opacity: 0.4; }
+
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(30px, 30px) scale(1.1); }
 }
 
-/* --- ФОН (ПАРАЛЛАКС) --- */
-.world-bg {
-    position: fixed; width: 100%; height: 100%; z-index: -1;
-    background: linear-gradient(to bottom, #05081c 0%, #1a0b2e 100%);
-    overflow: hidden;
+/* =========================================
+   3. LIBRARY VIEW (GRID & SEARCH)
+   ========================================= */
+#library-view {
+    padding: 20px; height: 100vh; overflow-y: auto; text-align: center;
+    scrollbar-width: thin; scrollbar-color: #fff rgba(255,255,255,0.3);
 }
 
-.stars {
-    position: absolute; width: 100%; height: 100%;
-    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
-    opacity: 0.6;
-    animation: twinkle 5s infinite alternate;
-}
-
-.clouds {
-    position: absolute; top: 0; left: 0; width: 200%; height: 100%;
-    background: url('https://raw.githubusercontent.com/yemon/react-parallax-scrolling/master/demo/src/images/cloud.png') repeat-x;
-    background-size: cover;
-    opacity: 0.2;
-    animation: drift 60s linear infinite;
-}
-
-.castle-bg {
-    position: absolute; bottom: 0; width: 100%; height: 40%;
-    background: url('https://i.ibb.co/3Wrq1gq/castle-silhouette.png') no-repeat bottom center;
-    background-size: contain;
-    opacity: 0.3;
-}
-
-@keyframes drift { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-@keyframes twinkle { from { opacity: 0.4; } to { opacity: 0.8; } }
-
-/* --- HEADER --- */
 header {
-    text-align: center;
-    padding-top: 40px;
-    position: relative;
-    z-index: 10;
+    display: flex; flex-direction: column; align-items: center; margin-bottom: 40px;
+    position: relative; z-index: 10;
 }
 
-.logo-area h1 {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 5rem;
-    color: var(--gold-glow);
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5), 4px 4px 0px #000;
-    margin: 0;
-    line-height: 1;
+h1 { 
+    font-family: 'Fredoka', sans-serif; color: #fff; margin-bottom: 25px; 
+    font-size: 3.5rem; text-shadow: 0 4px 0px rgba(0,0,0,0.1), 2px 2px 15px rgba(161, 140, 209, 0.5);
+    letter-spacing: 1.5px;
 }
 
-.crown-icon { font-size: 3rem; animation: float 3s ease-in-out infinite; }
+.search-bar {
+    background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);
+    border: 3px solid #fff; border-radius: 50px; padding: 15px 30px;
+    display: flex; align-items: center; width: 90%; max-width: 600px;
+    box-shadow: 0 10px 25px rgba(108, 92, 231, 0.15); transition: transform 0.3s;
+}
+.search-bar:focus-within { transform: scale(1.05); box-shadow: 0 15px 30px rgba(108, 92, 231, 0.25); background: #fff; }
+.search-bar input {
+    background: transparent; border: none; color: var(--text-dark);
+    font-family: 'Fredoka', sans-serif; font-size: 1.3rem;
+    width: 100%; margin-left: 15px; outline: none; font-weight: 600;
+}
+.search-bar input::placeholder { color: #9ca3af; }
+.search-icon { font-size: 1.5rem; animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
-.ribbon {
-    width: 300px; height: 50px; margin: -20px auto 0;
-    background: #8a1c1c;
-    position: relative;
-    color: #fff;
+/* Grid */
+.grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 40px; max-width: 1200px; margin: 0 auto; padding-bottom: 50px;
+}
+
+.tile {
+    background: var(--card-bg); border-radius: 25px; padding: 15px;
+    cursor: pointer; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative; box-shadow: 0 10px 20px rgba(94, 84, 142, 0.1);
+}
+.tile:hover { transform: translateY(-15px) scale(1.03); box-shadow: 0 20px 40px rgba(94, 84, 142, 0.2); }
+
+.tile img {
+    width: 100%; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    aspect-ratio: 2/3; object-fit: cover;
+}
+
+.tile h3 { 
+    font-family: 'Fredoka', sans-serif; font-size: 1.4rem; margin-top: 15px; 
+    color: var(--text-dark); line-height: 1.2;
+}
+
+.media-badges {
+    position: absolute; top: 25px; right: 25px; display: flex; gap: 5px;
+}
+.badge {
+    background: #fff; border-radius: 50%; width: 32px; height: 32px; 
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Henny Penny', cursive;
-    font-size: 1.2rem;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
-}
-.ribbon::before, .ribbon::after {
-    content: ''; position: absolute; border-style: solid; bottom: -10px;
-}
-.ribbon::before { border-width: 0 10px 10px 0; border-color: transparent #581010 transparent transparent; left: 0; }
-.ribbon::after { border-width: 0 0 10px 10px; border-color: transparent transparent transparent #581010; right: 0; }
-
-/* --- ПОИСК (СВИТОК) --- */
-.search-wrapper { margin-top: 40px; display: flex; justify-content: center; }
-
-.search-scroll {
-    background: var(--parchment);
-    padding: 10px 30px;
-    border-radius: 50px;
-    border: 4px solid var(--wood-dark);
-    display: flex; align-items: center;
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3), inset 0 0 20px rgba(139, 69, 19, 0.2);
-    width: 100%; max-width: 500px;
-    transform: rotate(-1deg);
-    transition: transform 0.3s;
-}
-.search-scroll:focus-within { transform: rotate(0) scale(1.05); border-color: var(--gold-dark); }
-
-.search-scroll input {
-    border: none; background: transparent; width: 100%;
-    font-family: 'Henny Penny', cursive;
-    font-size: 1.5rem; color: #3e2723; outline: none;
-}
-.search-scroll input::placeholder { color: rgba(62, 39, 35, 0.5); }
-
-/* --- ПОЛКИ С КНИГАМИ --- */
-.shelves {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 80px 40px;
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15); font-size: 1rem; border: 2px solid #f0f0f0;
 }
 
-/* 3D КНИГА */
-.book-card {
-    position: relative;
-    width: 220px; height: 320px;
-    perspective: 1000px;
-    cursor: pointer;
-    transition: transform 0.3s;
+/* =========================================
+   4. READER VIEW (BOOK CONTAINER)
+   ========================================= */
+#reader-view {
+    position: fixed; inset: 0; background-color: var(--reader-bg);
+    background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 4h2v2H5V5zm4 4h2v2H9V9zm4 4h2v2h-2v-2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
+    z-index: 1000; display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
 }
-
-.book-card:hover { transform: translateY(-20px); }
-
-.book-cover {
-    width: 100%; height: 100%;
-    border-radius: 5px 15px 15px 5px;
-    box-shadow: 
-        inset 4px 0 10px rgba(0,0,0,0.5), /* Сгиб */
-        inset 0 0 20px rgba(0,0,0,0.5), /* Виньетка */
-        10px 10px 30px rgba(0,0,0,0.6); /* Тень */
-    position: relative;
-    transform-style: preserve-3d;
-    transition: transform 0.5s;
-    background-size: cover;
-    background-position: center;
-    border-left: 12px solid rgba(0,0,0,0.3); /* Корешок */
-    display: flex; flex-direction: column; justify-content: flex-end;
-    overflow: hidden;
-}
-
-/* Эффект страниц сбоку */
-.book-card::after {
-    content: ''; position: absolute; top: 5px; right: -10px; width: 10px; height: 96%;
-    background: linear-gradient(to right, #fff, #ccc 2px, #fff 4px);
-    border-radius: 0 5px 5px 0;
-    transform: rotateY(90deg);
-}
-
-.book-info {
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-    padding: 20px 10px 10px;
-    text-align: center;
-}
-
-.book-info h3 {
-    margin: 0; color: var(--gold-glow);
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.2rem;
-    text-shadow: 0 2px 2px #000;
-}
-
-/* Декор "пыльцы" при наведении */
-.book-card:hover::before {
-    content: '✨'; position: absolute; top: -20px; right: -20px; font-size: 2rem;
-    animation: float 1s infinite;
-}
-
-/* --- ЧИТАЛКА (МОДАЛЬНОЕ ОКНО) --- */
-.reader-overlay {
-    position: fixed; inset: 0;
-    background: rgba(10, 5, 20, 0.95);
-    z-index: 100;
-    display: flex; align-items: center; justify-content: center;
-    backdrop-filter: blur(10px);
-    animation: fadeIn 0.5s;
-}
-
-.wood-frame {
-    width: 95%; height: 90%;
-    max-width: 1400px;
-    border: 30px solid transparent;
-    border-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png') 30 stretch;
-    box-shadow: inset 0 0 50px #000;
-    position: relative;
-    display: flex; flex-direction: column; align-items: center;
-}
-
-.btn-magic {
-    position: absolute; top: -40px; left: 20px;
-    background: var(--book-red);
-    color: #fff; border: 2px solid var(--gold-dark);
-    padding: 10px 20px; border-radius: 20px;
-    font-family: 'Henny Penny', cursive;
-    font-size: 1.2rem; cursor: pointer;
-    box-shadow: 0 5px 0 var(--wood-dark);
-    transition: 0.2s;
-}
-.btn-magic:active { transform: translateY(5px); box-shadow: none; }
 
 .book-stage {
-    flex-grow: 1; display: flex; align-items: center; justify-content: center;
-    width: 100%;
+    flex-grow: 1; width: 100%; display: flex;
+    align-items: center; justify-content: center; padding: 20px; padding-bottom: 80px; 
 }
 
-/* АУДИО ПЛЕЕР */
-.magic-player {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid var(--gold-glow);
-    border-radius: 50px;
-    padding: 10px 20px;
-    display: flex; align-items: center; gap: 15px;
-    margin-bottom: -50px; /* Выносим за пределы рамки */
-    backdrop-filter: blur(5px);
-}
-.magic-player p { margin: 0; font-style: italic; color: var(--gold-glow); }
+.stf__wrapper { filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5)); }
 
-/* --- АНИМАЦИИ --- */
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-.hidden { display: none !important; }
-
-/* Стиль страницы для PageFlip */
+/* =========================================
+   5. PAGE STYLES (LAYOUT & CONTENT)
+   ========================================= */
 .page {
-    background-color: var(--parchment);
-    box-shadow: inset 0 0 30px rgba(62, 39, 35, 0.1);
-    border: 1px solid #e0c9a6;
-    overflow: hidden;
+    background-color: var(--page-color); overflow: hidden;
+    border: 1px solid #e3d0b5;
+    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
 }
-.page img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+.page.--left { border-radius: 5px 0 0 5px; border-right: none; box-shadow: inset -20px 0 40px -10px rgba(0,0,0,0.15); }
+.page.--right { border-radius: 0 5px 5px 0; border-left: none; box-shadow: inset 20px 0 40px -10px rgba(0,0,0,0.15); }
 
-
-/* Контейнер текста на странице */
-.page-text-container {
-    padding: 20px 30px;
-    font-family: 'Cormorant Garamond', serif; /* Ваш шрифт */
-    font-size: 1.3rem;
-    line-height: 1.6;
-    color: var(--wood-dark); /* Темно-коричневый текст на пергаменте */
-    text-align: justify;
+/* Контейнер контента внутри страницы */
+.page-content {
+    height: 100%; 
+    padding: 40px 0; /* Убраны боковые отступы, чтобы картинка была на всю ширину */
+    display: flex; flex-direction: column; 
+    color: var(--book-text-color);
 }
 
-/* Обычное слово (неактивное) */
+/* Блок картинки (ШИРОКИЙ) */
+.page-img-box {
+    width: 100%; 
+    height: 45%; 
+    display: block;
+    margin-bottom: 25px; 
+    padding: 0; /* Без padding, чтобы касаться краев */
+}
+
+.page-img-box img { 
+    width: 100%;      
+    height: 100%;     
+    object-fit: cover; /* Заполнение */
+    object-position: top center; 
+    display: block;
+    mix-blend-mode: multiply; 
+    filter: contrast(1.05) sepia(0.1);
+}
+
+/* Блок текста (С отступами) */
+.page-text {
+    font-family: 'Lora', serif; 
+    font-size: 1.5rem; 
+    line-height: 1.5; 
+    text-align: justify; 
+    flex-grow: 1;
+    font-weight: 500;
+    padding: 0 50px; /* Отступы только для текста */
+}
+
+.page-footer { 
+    text-align: center; font-size: 0.9rem; color: #998; 
+    margin-top: 15px; font-family: 'Fredoka', sans-serif; 
+    padding: 0 50px;
+}
+
+.title-content {
+    justify-content: center; text-align: center; 
+    border: 3px double #d4a5a5; border-radius: 10px;
+    margin: 20px; height: calc(100% - 40px);
+    display: flex; flex-direction: column; padding: 20px;
+}
+
+/* =========================================
+   6. KARAOKE HIGHLIGHTING
+   ========================================= */
 .word-span {
-    display: inline-block; /* Чтобы трансформации работали */
-    padding: 0 2px;
-    border-radius: 4px;
-    transition: all 0.1s ease;
+    border-radius: 3px;
+    transition: background-color 0.1s;
     cursor: default;
 }
 
-/* --- МАГИЧЕСКАЯ ПОДСВЕТКА (АКТИВНОЕ СЛОВО) --- */
 .word-active {
-    color: var(--book-red);       /* Текст становится красным */
-    background: rgba(255, 215, 0, 0.3); /* Легкий золотой фон */
-    text-shadow: 0 0 1px var(--gold-dark); /* Четкость */
-    transform: scale(1.1);        /* Слегка увеличивается */
-    font-weight: bold;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); /* Свечение */
+    background-color: #fffd7e; /* Желтый фон */
+    color: #d63031;             /* Красный текст */
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 0 2px;
+}
+
+/* =========================================
+   7. CONTROLS (BUTTONS, AUDIO, VIDEO)
+   ========================================= */
+.top-controls {
+    position: absolute; top: 20px; right: 20px; display: flex; gap: 15px; z-index: 200;
+}
+
+.control-btn {
+    background: #fff; color: var(--text-dark);
+    border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px;
+    font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 1rem;
+    display: flex; align-items: center; gap: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.2s;
+}
+.control-btn:hover { transform: translateY(-3px) scale(1.05); }
+.close-btn { background: #ff7675; color: white; }
+.video-btn { background: #74b9ff; color: white; }
+
+.nav-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%;
+    cursor: pointer; user-select: none; z-index: 150; transition: 0.2s;
+    display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.8);
+}
+.nav-arrow svg { width: 50px; height: 50px; fill: currentColor; }
+.nav-arrow:hover { background: #fff; color: var(--text-accent); box-shadow: 0 0 20px #fff; }
+.nav-arrow.prev { left: 40px; }
+.nav-arrow.next { right: 40px; }
+
+#audio-controls {
+    position: absolute; bottom: 30px;
+    background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px);
+    padding: 10px 30px; border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.3);
+    display: flex; flex-direction: column; align-items: center;
+    z-index: 200; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.audio-title { color: #fff; font-family: 'Fredoka', sans-serif; margin-bottom: 5px; letter-spacing: 1px;}
+audio { height: 35px; width: 300px; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3)); }
+
+#video-modal {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 2000;
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+}
+.video-container {
+    position: relative; width: 80%; max-width: 900px; aspect-ratio: 16/9;
+    border-radius: 20px; overflow: hidden; box-shadow: 0 0 50px rgba(116, 185, 255, 0.5);
+    border: 4px solid #fff; background: #000;
+}
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.close-video-btn {
+    margin-top: 20px; padding: 12px 40px; font-size: 1.2rem;
+    background: #fff; color: var(--text-dark); border: none; cursor: pointer; border-radius: 30px;
+    font-family: 'Fredoka', sans-serif; font-weight: bold;
+}
+
+.hidden { display: none !important; }
+
+/* =========================================
+   8. MOBILE RESPONSIVE
+   ========================================= */
+@media (max-width: 768px) {
+    body { overflow: auto; }
+    h1 { font-size: 2.5rem; }
+    
+    #reader-view {
+        position: fixed; inset: 0; display: block; 
+        overflow-y: auto; overflow-x: hidden;
+        padding-top: 80px; padding-bottom: 140px;
+        background-color: #fffbf0; background-image: none;
+    }
+    
+    .book-stage { display: block; width: 100%; height: auto; padding: 10px; }
+    .nav-arrow { display: none; }
+    .stf__wrapper { filter: none; }
+    
+    .top-controls { position: fixed; top: 10px; right: 10px; width: 100%; justify-content: flex-end; padding-right: 10px; }
+    
+    #audio-controls {
+        position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 95%; background: #333;
+    }
+    audio { width: 100%; filter: invert(1); }
+    
+    .page {
+        position: relative !important; display: block !important; 
+        transform: none !important; width: 92% !important; 
+        margin: 0 auto 30px auto; height: auto !important;
+        min-height: 400px; box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
+        border-radius: 15px; border: none; background: #fff;
+    }
+    .page.--left, .page.--right { box-shadow: none; border-radius: 15px; }
+    
+    .page-img-box { height: 250px; }
+    .page-text { font-size: 1.3rem; padding: 0 20px; }
+    .title-content { height: 350px; border-color: #fab1a0; }
+    .video-container { width: 95%; }
 }
