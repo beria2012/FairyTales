@@ -2,7 +2,7 @@
    1. VARIABLES & RESET
    ========================================= */
 :root {
-    /* Light Theme Palette */
+    /* Color Palette */
     --bg-gradient: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
     --card-bg: #ffffff;
     --text-dark: #5e548e;
@@ -126,93 +126,96 @@ h1 {
 .stf__wrapper { filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5)); }
 
 /* =========================================
-   5. PAGE STYLES (LAYOUT & CONTENT) - ИСПРАВЛЕНО
+   5. PAGE STYLES (LAYOUT & CONTENT)
    ========================================= */
 .page {
     background-color: var(--page-color); overflow: hidden;
     border: 1px solid #e3d0b5;
     background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-    /* Сбрасываем внутренние отступы самого элемента страницы, 
-       чтобы контент внутри контролировал поля */
+    /* Reset padding on the paper itself, so content controls margins */
     padding: 0 !important;
 }
 .page.--left { border-radius: 5px 0 0 5px; border-right: none; box-shadow: inset -20px 0 40px -10px rgba(0,0,0,0.15); }
 .page.--right { border-radius: 0 5px 5px 0; border-left: none; box-shadow: inset 20px 0 40px -10px rgba(0,0,0,0.15); }
 
 /* 
-   ГЛАВНЫЙ КОНТЕЙНЕР КОНТЕНТА 
-   ИСПРАВЛЕНИЕ №2: Padding здесь создает поля и для картинки, и для текста.
+   MAIN CONTENT CONTAINER
+   Padding here creates the margins for BOTH the image and text.
 */
 .page-content {
     height: 100%; 
     width: 100%;
     
-    /* Эти отступы создают "поля" страницы */
-    padding: 30px 40px !important; 
+    /* === FIX 1: MARGINS === */
+    /* This padding acts as the paper margin for all content */
+    padding: 35px 45px !important; 
     
     display: flex; 
     flex-direction: column; 
     justify-content: flex-start;
-    gap: 20px; /* Отступ между картинкой и текстом */
+    gap: 25px; /* Space between image and text */
     
     color: var(--book-text-color);
+    box-sizing: border-box;
 }
 
 /* 
-   БЛОК С КАРТИНКОЙ 
+   IMAGE BLOCK 
 */
 .page-img-box {
-    flex: 1; /* Занимает оставшееся свободное место */
+    /* 'flex: 1' allows image to take available space but shrink for text */
+    flex: 1 1 auto; 
     width: 100%; 
     
-    /* Обнуляем margin, так как отступы теперь задает родитель .page-content */
+    /* Remove margins here since parent handles it */
     margin: 0 !important; 
     padding: 0 !important; 
     
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,0.05);
     overflow: hidden; 
+    
     display: flex;
-    align-items: center; /* Центрирование картинки по вертикали */
+    align-items: center; 
     justify-content: center;
     
-    /* Скругление углов картинки для эстетики */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.02);
 }
 
 .page-img-box img { 
     width: 100%;      
     height: 100%;     
-    object-fit: cover; /* Заполняет блок, обрезая лишнее */
+    object-fit: cover; /* Fills box without distortion */
     object-position: center; 
     display: block;
-    mix-blend-mode: multiply; /* Эффект наложения на бумагу */
-    filter: contrast(1.05) sepia(0.1);
+    mix-blend-mode: multiply; /* Blend with paper texture */
 }
 
 /* 
-   БЛОК С ТЕКСТОМ 
-   ИСПРАВЛЕНИЕ №1: display: block для корректного отображения абзацев
+   TEXT BLOCK 
 */
 .page-text {
-    /* Не даем тексту сжиматься меньше чем на 35% от высоты контента */
+    /* Prevent text from shrinking to zero */
     flex: 0 0 auto;
-    min-height: 20%;
-    max-height: 50%;
     
     font-family: 'Lora', serif; 
     font-size: 1.25rem; 
     line-height: 1.6; 
-    text-align: justify;
     font-weight: 500;
     
-    /* Убрали padding отсюда, он теперь в родителе */
+    /* === FIX 2: TEXT BLOCK === */
+    display: block;        /* Ensures words wrap naturally */
+    text-align: justify;   /* Creates the blocky book-text look */
+    text-align-last: left; /* Prevents the last line from stretching */
+    
     padding: 0 !important; 
+    margin: 0 !important;
     
-    /* Блочное отображение позволяет словам переноситься */
-    display: block; 
-    
-    /* Скролл, если текста слишком много */
+    /* Scroll only if text is very long */
+    max-height: 45%; 
     overflow-y: auto; 
+    
+    /* Scrollbar Styling */
     scrollbar-width: thin;
     scrollbar-color: #d4a5a5 transparent;
 }
@@ -240,7 +243,9 @@ h1 {
     border-radius: 3px;
     transition: background-color 0.1s;
     cursor: default;
-    display: inline; /* Гарантирует, что слова ведут себя как текст */
+    
+    /* Critical: Ensures spans flow like normal text words */
+    display: inline; 
 }
 
 .word-active {
@@ -343,11 +348,11 @@ audio { height: 35px; width: 300px; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3
     }
     .page.--left, .page.--right { box-shadow: none; border-radius: 15px; }
     
-    /* Адаптация для мобильных: чуть меньше поля */
-    .page-content { padding: 20px !important; }
+    /* Mobile Margins: Slightly smaller than desktop */
+    .page-content { padding: 25px !important; gap: 15px; }
     
     .page-img-box { height: 250px; flex: none; }
-    .page-text { font-size: 1.3rem; padding: 0; flex: none; display: block; }
+    .page-text { font-size: 1.3rem; padding: 0; flex: none; display: block; max-height: none; }
     .title-content { height: 350px; border-color: #fab1a0; }
     .video-container { width: 95%; }
 }

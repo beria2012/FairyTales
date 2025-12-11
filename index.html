@@ -5,356 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Fairy Tales Library</title>
     
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
     
-    <style>
-        /* =========================================
-           1. VARIABLES & RESET
-           ========================================= */
-        :root {
-            /* Light Theme Palette */
-            --bg-gradient: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
-            --card-bg: #ffffff;
-            --text-dark: #5e548e;
-            --text-accent: #ff6b6b;
-            --page-color: #fffbf0;
-            --reader-bg: rgba(45, 52, 54, 0.95);
-            --book-text-color: #2c1810;
-        }
-
-        * { box-sizing: border-box; }
-
-        body {
-            margin: 0; padding: 0;
-            font-family: 'Quicksand', sans-serif;
-            background-image: var(--bg-gradient);
-            background-attachment: fixed;
-            color: var(--text-dark);
-            height: 100vh;
-            overflow: hidden; 
-        }
-
-        /* =========================================
-           2. BACKGROUND DECORATION
-           ========================================= */
-        .bg-shape {
-            position: fixed; border-radius: 50%;
-            filter: blur(50px); z-index: -1; opacity: 0.5;
-            animation: float 10s infinite ease-in-out alternate;
-        }
-        .shape-1 { width: 300px; height: 300px; background: #8fd3f4; top: -50px; left: -50px; }
-        .shape-2 { width: 400px; height: 400px; background: #ffd1ff; bottom: -100px; right: -50px; animation-delay: -5s; }
-        .shape-3 { width: 200px; height: 200px; background: #fff6b7; top: 40%; left: 30%; animation-delay: -2s; opacity: 0.4; }
-
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            100% { transform: translate(30px, 30px) scale(1.1); }
-        }
-
-        /* =========================================
-           3. LIBRARY VIEW (GRID & SEARCH)
-           ========================================= */
-        #library-view {
-            padding: 20px; height: 100vh; overflow-y: auto; text-align: center;
-            scrollbar-width: thin; scrollbar-color: #fff rgba(255,255,255,0.3);
-        }
-
-        header {
-            display: flex; flex-direction: column; align-items: center; margin-bottom: 40px;
-            position: relative; z-index: 10;
-        }
-
-        h1 { 
-            font-family: 'Fredoka', sans-serif; color: #fff; margin-bottom: 25px; 
-            font-size: 3.5rem; text-shadow: 0 4px 0px rgba(0,0,0,0.1), 2px 2px 15px rgba(161, 140, 209, 0.5);
-            letter-spacing: 1.5px;
-        }
-
-        .search-bar {
-            background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(10px);
-            border: 3px solid #fff; border-radius: 50px; padding: 15px 30px;
-            display: flex; align-items: center; width: 90%; max-width: 600px;
-            box-shadow: 0 10px 25px rgba(108, 92, 231, 0.15); transition: transform 0.3s;
-        }
-        .search-bar:focus-within { transform: scale(1.05); box-shadow: 0 15px 30px rgba(108, 92, 231, 0.25); background: #fff; }
-        .search-bar input {
-            background: transparent; border: none; color: var(--text-dark);
-            font-family: 'Fredoka', sans-serif; font-size: 1.3rem;
-            width: 100%; margin-left: 15px; outline: none; font-weight: 600;
-        }
-        .search-bar input::placeholder { color: #9ca3af; }
-        .search-icon { font-size: 1.5rem; animation: bounce 2s infinite; }
-        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-
-        /* Grid System */
-        .grid {
-            display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-            gap: 40px; max-width: 1200px; margin: 0 auto; padding-bottom: 50px;
-        }
-
-        .tile {
-            background: var(--card-bg); border-radius: 25px; padding: 15px;
-            cursor: pointer; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            position: relative; box-shadow: 0 10px 20px rgba(94, 84, 142, 0.1);
-        }
-        .tile:hover { transform: translateY(-15px) scale(1.03); box-shadow: 0 20px 40px rgba(94, 84, 142, 0.2); }
-
-        .tile img {
-            width: 100%; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            aspect-ratio: 2/3; object-fit: cover;
-        }
-
-        .tile h3 { 
-            font-family: 'Fredoka', sans-serif; font-size: 1.4rem; margin-top: 15px; 
-            color: var(--text-dark); line-height: 1.2;
-        }
-
-        .media-badges {
-            position: absolute; top: 25px; right: 25px; display: flex; gap: 5px;
-        }
-        .badge {
-            background: #fff; border-radius: 50%; width: 32px; height: 32px; 
-            display: flex; align-items: center; justify-content: center;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.15); font-size: 1rem; border: 2px solid #f0f0f0;
-        }
-
-        /* =========================================
-           4. READER VIEW (BOOK CONTAINER)
-           ========================================= */
-        #reader-view {
-            position: fixed; inset: 0; background-color: var(--reader-bg);
-            background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 4h2v2H5V5zm4 4h2v2H9V9zm4 4h2v2h-2v-2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-            z-index: 1000; display: flex; flex-direction: column;
-            align-items: center; justify-content: center;
-        }
-
-        .book-stage {
-            flex-grow: 1; width: 100%; display: flex;
-            align-items: center; justify-content: center; padding: 20px; padding-bottom: 80px; 
-        }
-
-        .stf__wrapper { filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5)); }
-
-        /* =========================================
-           5. PAGE STYLES (LAYOUT & CONTENT)
-           ========================================= */
-        .page {
-            background-color: var(--page-color); overflow: hidden;
-            border: 1px solid #e3d0b5;
-            background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-            /* Reset padding for the page container itself */
-            padding: 0 !important;
-        }
-        .page.--left { border-radius: 5px 0 0 5px; border-right: none; box-shadow: inset -20px 0 40px -10px rgba(0,0,0,0.15); }
-        .page.--right { border-radius: 0 5px 5px 0; border-left: none; box-shadow: inset 20px 0 40px -10px rgba(0,0,0,0.15); }
-
-        /* 
-           MAIN CONTENT CONTAINER
-           - Uses Flexbox to split height vertically.
-           - Padding is 0 to ensure image touches edges.
-        */
-        .page-content {
-            height: 100%; 
-            width: 100%;
-            padding: 0 !important; 
-            display: flex; 
-            flex-direction: column; 
-            color: var(--book-text-color);
-        }
-
-        /* 
-           IMAGE BLOCK (TOP)
-           - flex: 2 (Takes approx 66% of height)
-           - No padding, no margin.
-        */
-        .page-img-box {
-            flex: 2; 
-            width: 100%; 
-            margin: 0 !important; 
-            padding: 0 !important; 
-            overflow: hidden; 
-            display: flex;
-            align-items: flex-end; 
-            justify-content: center;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .page-img-box img { 
-            width: 100%;      
-            height: 100%;     
-            /* cover: Fills the entire box. Crops if necessary to maintain aspect ratio */
-            object-fit: cover; 
-            object-position: center center; 
-            display: block;
-            mix-blend-mode: multiply; 
-            filter: contrast(1.05) sepia(0.1);
-        }
-
-        /* 
-           TEXT BLOCK (BOTTOM)
-           - flex: 1 (Takes approx 33% of height)
-           - Padding applied here to keep text away from edges.
-        */
-        .page-text {
-            flex: 1; 
-            font-family: 'Lora', serif; 
-            font-size: 1.3rem; 
-            line-height: 1.5; 
-            text-align: justify;
-            font-weight: 500;
-            
-            /* Padding only for text */
-            padding: 20px 35px 30px 35px; 
-            
-            /* Center text vertically in its block */
-            display: flex;
-            align-items: center; 
-            
-            overflow-y: auto; 
-        }
-
-        .page-footer { 
-            position: absolute;
-            bottom: 10px; left: 0; width: 100%;
-            text-align: center; font-size: 0.9rem; color: #998; 
-            font-family: 'Fredoka', sans-serif; 
-            pointer-events: none;
-        }
-
-        /* Title Page Specifics */
-        .title-content {
-            justify-content: center; text-align: center; 
-            border: 3px double #d4a5a5; border-radius: 10px;
-            margin: 20px; height: calc(100% - 40px);
-            display: flex; flex-direction: column; padding: 20px;
-        }
-
-        /* =========================================
-           6. KARAOKE HIGHLIGHTING
-           ========================================= */
-        .word-span {
-            border-radius: 3px;
-            transition: background-color 0.1s;
-            cursor: default;
-        }
-
-        .word-active {
-            background-color: #fffd7e; /* Yellow highlight */
-            color: #d63031;             /* Red text */
-            font-weight: 600;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 0 2px;
-        }
-
-        /* =========================================
-           7. CONTROLS
-           ========================================= */
-        .top-controls {
-            position: absolute; top: 20px; right: 20px; display: flex; gap: 15px; z-index: 200;
-        }
-
-        .control-btn {
-            background: #fff; color: var(--text-dark);
-            border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px;
-            font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 1rem;
-            display: flex; align-items: center; gap: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); transition: 0.2s;
-        }
-        .control-btn:hover { transform: translateY(-3px) scale(1.05); }
-        .close-btn { background: #ff7675; color: white; }
-        .video-btn { background: #74b9ff; color: white; }
-
-        .nav-arrow {
-            position: absolute; top: 50%; transform: translateY(-50%);
-            width: 80px; height: 80px; background: rgba(255,255,255,0.2); border-radius: 50%;
-            cursor: pointer; user-select: none; z-index: 150; transition: 0.2s;
-            display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.8);
-        }
-        .nav-arrow svg { width: 50px; height: 50px; fill: currentColor; }
-        .nav-arrow:hover { background: #fff; color: var(--text-accent); box-shadow: 0 0 20px #fff; }
-        .nav-arrow.prev { left: 40px; }
-        .nav-arrow.next { right: 40px; }
-
-        #audio-controls {
-            position: absolute; bottom: 30px;
-            background: rgba(255, 255, 255, 0.15); backdrop-filter: blur(15px);
-            padding: 10px 30px; border-radius: 50px;
-            border: 2px solid rgba(255,255,255,0.3);
-            display: flex; flex-direction: column; align-items: center;
-            z-index: 200; box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        .audio-title { color: #fff; font-family: 'Fredoka', sans-serif; margin-bottom: 5px; letter-spacing: 1px;}
-        audio { height: 35px; width: 300px; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.3)); }
-
-        #video-modal {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.9); z-index: 2000;
-            display: flex; align-items: center; justify-content: center; flex-direction: column;
-        }
-        .video-container {
-            position: relative; width: 80%; max-width: 900px; aspect-ratio: 16/9;
-            border-radius: 20px; overflow: hidden; box-shadow: 0 0 50px rgba(116, 185, 255, 0.5);
-            border: 4px solid #fff; background: #000;
-        }
-        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-        .close-video-btn {
-            margin-top: 20px; padding: 12px 40px; font-size: 1.2rem;
-            background: #fff; color: var(--text-dark); border: none; cursor: pointer; border-radius: 30px;
-            font-family: 'Fredoka', sans-serif; font-weight: bold;
-        }
-
-        .hidden { display: none !important; }
-
-        /* =========================================
-           8. MOBILE RESPONSIVE
-           ========================================= */
-        @media (max-width: 768px) {
-            body { overflow: auto; }
-            h1 { font-size: 2.5rem; }
-            
-            #reader-view {
-                position: fixed; inset: 0; display: block; 
-                overflow-y: auto; overflow-x: hidden;
-                padding-top: 80px; padding-bottom: 140px;
-                background-color: #fffbf0; background-image: none;
-            }
-            
-            .book-stage { display: block; width: 100%; height: auto; padding: 10px; }
-            .nav-arrow { display: none; }
-            .stf__wrapper { filter: none; }
-            
-            .top-controls { position: fixed; top: 10px; right: 10px; width: 100%; justify-content: flex-end; padding-right: 10px; }
-            
-            #audio-controls {
-                position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 95%; background: #333;
-            }
-            audio { width: 100%; filter: invert(1); }
-            
-            .page {
-                position: relative !important; display: block !important; 
-                transform: none !important; width: 92% !important; 
-                margin: 0 auto 30px auto; height: auto !important;
-                min-height: 400px; box-shadow: 0 8px 20px rgba(0,0,0,0.1) !important;
-                border-radius: 15px; border: none; background: #fff;
-            }
-            .page.--left, .page.--right { box-shadow: none; border-radius: 15px; }
-            
-            .page-img-box { height: 250px; flex: none; }
-            .page-text { font-size: 1.3rem; padding: 20px; flex: none; display: block; }
-            .title-content { height: 350px; border-color: #fab1a0; }
-            .video-container { width: 95%; }
-        }
-    </style>
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- Background Decorations -->
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
     <div class="bg-shape shape-3"></div>
 
-    <!-- LIBRARY -->
+    <!-- VIEW 1: LIBRARY (Grid of Books) -->
     <div id="library-view">
         <header>
             <h1>🏰 Magic Fairy Tales 🏰</h1>
@@ -368,8 +34,9 @@
         <p id="loading-msg" style="margin-top:20px; font-family:'Quicksand'; font-size:1.2rem;">✨ Summoning stories... ✨</p>
     </div>
 
-    <!-- READER -->
+    <!-- VIEW 2: READER (The Book) -->
     <div id="reader-view" class="hidden">
+        <!-- Top Buttons -->
         <div class="top-controls">
             <button id="watch-btn" class="control-btn video-btn hidden" onclick="openVideo()">
                 <span>📺</span> Watch Movie
@@ -379,6 +46,7 @@
             </button>
         </div>
         
+        <!-- Navigation Arrows -->
         <div class="nav-arrow prev" onclick="flipPrev()">
             <svg viewBox="0 0 24 24"><path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg>
         </div>
@@ -386,17 +54,19 @@
             <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg>
         </div>
 
+        <!-- The Book Container -->
         <div class="book-stage">
             <div id="flip-book"></div>
         </div>
 
+        <!-- Audio Player -->
         <div id="audio-controls" class="hidden">
             <div class="audio-title">🎧 Listen Together</div>
             <audio id="audio-player" controls controlsList="nodownload"></audio>
         </div>
     </div>
 
-    <!-- VIDEO MODAL -->
+    <!-- VIDEO POPUP (Modal) -->
     <div id="video-modal" class="hidden">
         <div class="video-container">
             <div id="yt-player-container"></div>
@@ -404,74 +74,83 @@
         <button class="close-video-btn" onclick="closeVideo()">Close Video</button>
     </div>
 
-    <!-- Scripts -->
+    <!-- External Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 
+    <!-- Main Logic -->
     <script>
         let allTales = [];
         let bookInstance = null;
         let isMobile = window.innerWidth <= 768;
         let currentVideoId = null;
-        let currentSyncData = [];
+        let currentSyncData = []; // Stores word timings for the active book
 
+        // Handle window resize
         window.addEventListener('resize', () => {
             const newIsMobile = window.innerWidth <= 768;
             if (newIsMobile !== isMobile) {
                 isMobile = newIsMobile;
+                // Reload if reader is open to reset layout
                 if (!document.getElementById('reader-view').classList.contains('hidden')) {
                     location.reload();
                 }
             }
         });
 
+        // Start app
         document.addEventListener('DOMContentLoaded', () => {
             loadTales();
         });
 
+        // 1. Load Data
         async function loadTales() {
             try {
-                // Attempt to fetch from server
-                const res = await fetch('/tales-index.json');
-                if(!res.ok) throw new Error("No index");
+                // Try to fetch 'tales.json' from your server
+                const res = await fetch('tales.json'); 
+                if(!res.ok) throw new Error("No index file found");
                 allTales = await res.json();
                 renderLibrary(allTales);
             } catch(e) {
-                console.warn("Using demo data");
-                // DEMO DATA (The Three Bears with word timings)
+                console.warn("Using DEMO data because tales.json was not found.");
+                
+                // --- DEMO DATA ---
                 allTales = [
                     {
                         id: 'demo_bears', 
                         title: 'Goldilocks & 3 Bears', 
                         author: 'Folklore', 
                         cover: 'https://cdn.pixabay.com/photo/2023/05/29/18/59/bear-8026958_1280.jpg',
-                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Placeholder audio
-                        youtube: '',
+                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Example MP3
+                        youtube: '', // Add YouTube URL here if needed
                         content: [
                             {
-                                text: "Once upon a time, in a cozy little house...",
-                                side: "left",
+                                text: "Once upon a time, there were three bears who lived in a house in a forest.",
                                 start: 0.0,
-                                end: 14.8,
+                                end: 10.0,
                                 image: "https://cdn.pixabay.com/photo/2020/06/15/18/06/bears-5302684_1280.jpg",
                                 words: [
-                                    {"w": "Once", "s": 0.0, "e": 0.32},
-                                    {"w": "upon", "s": 0.32, "e": 0.6},
-                                    {"w": "a",    "s": 0.6, "e": 0.8},
-                                    {"w": "time,", "s": 0.8, "e": 1.12},
-                                    // Add real timings here
+                                    {"w": "Once", "s": 0.0, "e": 0.5},
+                                    {"w": "upon", "s": 0.5, "e": 1.0},
+                                    {"w": "a",    "s": 1.0, "e": 1.2},
+                                    {"w": "time,", "s": 1.2, "e": 1.8},
+                                    {"w": "there", "s": 1.8, "e": 2.2},
+                                    {"w": "were", "s": 2.2, "e": 2.5},
+                                    {"w": "three", "s": 2.5, "e": 3.0},
+                                    {"w": "bears", "s": 3.0, "e": 3.8}
                                 ]
                             },
                             {
-                                text: "One morning, Mama Bear stirred the porridge...",
-                                side: "right",
-                                start: 14.8, 
-                                end: 36.08,
+                                text: "One morning, they made porridge for breakfast but it was too hot.",
+                                start: 10.0, 
+                                end: 20.0,
                                 image: "https://cdn.pixabay.com/photo/2019/07/28/19/04/autumn-4369408_1280.jpg",
                                 words: [
-                                    {"w": "One", "s": 23.64, "e": 24.0},
-                                    {"w": "morning,", "s": 24.0, "e": 24.52},
-                                    {"w": "Mama", "s": 24.52, "e": 24.96}
+                                    {"w": "One", "s": 10.0, "e": 10.5},
+                                    {"w": "morning,", "s": 10.5, "e": 11.2},
+                                    {"w": "they", "s": 11.2, "e": 11.5},
+                                    {"w": "made", "s": 11.5, "e": 12.0},
+                                    {"w": "porridge", "s": 12.0, "e": 12.8}
                                 ]
                             }
                         ]
@@ -484,6 +163,7 @@
             setupAudioSync();
         }
 
+        // 2. Render Library Grid
         function renderLibrary(tales) {
             const grid = document.getElementById('gallery-grid');
             grid.innerHTML = '';
@@ -491,8 +171,10 @@
             tales.forEach(tale => {
                 const div = document.createElement('div');
                 div.className = 'tile';
+                
+                // Handle image path (local vs remote)
                 const imgUrl = tale.cover && !tale.cover.startsWith('http') 
-                    ? `/tales/${tale.id}/${tale.cover}` 
+                    ? `tales/${tale.id}/${tale.cover}` 
                     : (tale.cover || 'https://via.placeholder.com/300x450?text=No+Cover');
                 
                 let badges = '';
@@ -500,7 +182,7 @@
                 if (tale.youtube) badges += '<div class="badge" title="Video">🎬</div>';
 
                 div.innerHTML = `
-                    <img src="${imgUrl}">
+                    <img src="${imgUrl}" alt="${tale.title}">
                     <div class="media-badges">${badges}</div>
                     <h3>${tale.title}</h3>
                 `;
@@ -509,6 +191,7 @@
             });
         }
 
+        // 3. Search Functionality
         function setupSearch() {
             const searchInput = document.getElementById('search-input');
             searchInput.addEventListener('input', (e) => {
@@ -519,7 +202,7 @@
             });
         }
 
-        // --- SYNC LOGIC ---
+        // 4. Audio Synchronization (Karaoke Logic)
         function setupAudioSync() {
             const audioPlayer = document.getElementById('audio-player');
             let lastPageIndex = -1;
@@ -527,24 +210,25 @@
             audioPlayer.ontimeupdate = () => {
                 const currentTime = audioPlayer.currentTime;
                 
-                // Use filter to find ALL active pages (left and right)
+                // Find all pages relevant to current time
                 const activePages = currentSyncData.filter(block => currentTime >= block.start && currentTime < block.end);
 
                 if (activePages.length > 0) {
                     
-                    // 1. Page Turning (Use the first active page as trigger)
+                    // A. Page Turning
                     const primaryPage = activePages[0];
                     if (lastPageIndex !== primaryPage.pageIndex) {
                         lastPageIndex = primaryPage.pageIndex;
                         if (!isMobile && bookInstance) {
                             bookInstance.flip(primaryPage.pageIndex);
                         } else {
+                            // Mobile scroll
                             const p = document.getElementById(`page-index-${primaryPage.pageIndex}`);
                             if(p) p.scrollIntoView({behavior:'smooth', block:'center'});
                         }
                     }
 
-                    // 2. Word Highlighting (Loop through ALL active pages)
+                    // B. Word Highlighting
                     activePages.forEach(pageData => {
                         const activePageEl = document.getElementById(`page-index-${pageData.pageIndex}`);
                         if (activePageEl) {
@@ -564,7 +248,9 @@
             }
         }
 
+        // 5. Open Book & Generate HTML
         function openBook(tale) {
+            // Switch views
             document.getElementById('library-view').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
 
@@ -572,17 +258,20 @@
             const oldBook = document.getElementById('flip-book');
             if (oldBook) oldBook.remove();
 
+            // Create new book container
             const bookEl = document.createElement('div');
             bookEl.id = 'flip-book';
             stage.appendChild(bookEl);
 
+            // Reset state
             if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
             currentSyncData = [];
 
+            // Setup Audio
             const audioWrapper = document.getElementById('audio-controls');
             const audioPlayer = document.getElementById('audio-player');
             if (tale.audio) {
-                const audioSrc = tale.audio.startsWith('http') ? tale.audio : `/tales/${tale.id}/${tale.audio}`;
+                const audioSrc = tale.audio.startsWith('http') ? tale.audio : `tales/${tale.id}/${tale.audio}`;
                 audioPlayer.src = audioSrc;
                 audioWrapper.classList.remove('hidden');
             } else {
@@ -590,6 +279,7 @@
                 audioPlayer.pause();
             }
 
+            // Setup Video Button
             const videoBtn = document.getElementById('watch-btn');
             if (tale.youtube) {
                 const videoId = getYoutubeID(tale.youtube);
@@ -602,10 +292,11 @@
                 currentVideoId = null;
             }
 
-            // Title Page
+            // --- GENERATE PAGES ---
+
+            // Page 0: Title Page
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
-            titlePage.id = 'page-index-0';
             titlePage.innerHTML = `
                 <div class="title-content">
                     <h1 style="font-family:'Fredoka', sans-serif; color:#6c5ce7; font-size:2.5rem; margin-top:50px;">${tale.title}</h1>
@@ -614,6 +305,7 @@
                 </div>`;
             bookEl.appendChild(titlePage);
 
+            // Content Pages
             if (tale.content) {
                 tale.content.forEach((item, i) => {
                     const pageIndex = i + 1;
@@ -621,6 +313,7 @@
                     page.className = 'page';
                     page.id = `page-index-${pageIndex}`;
 
+                    // Store timing data for sync
                     if (item.start !== undefined) {
                         currentSyncData.push({
                             pageIndex: pageIndex,
@@ -629,19 +322,23 @@
                         });
                     }
 
-                    const img = item.image && !item.image.startsWith('http') ? `/tales/${tale.id}/${item.image}` : item.image;
+                    // Handle Image Path
+                    const img = item.image && !item.image.startsWith('http') 
+                        ? `tales/${tale.id}/${item.image}` 
+                        : item.image;
                     
-                    // Generate Word Spans
                     let textHtml = '';
                     if (item.words && item.words.length > 0) {
+                        // We map words to spans, then JOIN WITH A SPACE ' '
                         textHtml = item.words.map(w => 
                             `<span class="word-span" data-s="${w.s}" data-e="${w.e}">${w.w}</span>`
                         ).join(' '); 
                     } else {
+                        // Fallback to plain text
                         textHtml = item.text || '';
                     }
 
-                    // Render with Flexbox Structure
+                    // Render Page HTML
                     page.innerHTML = `
                         <div class="page-content">
                             ${img ? `<div class="page-img-box"><img src="${img}"></div>` : ''}
@@ -653,30 +350,38 @@
                 });
             }
 
+            // Add empty page if odd number (for desktop book feel)
             if (bookEl.children.length % 2 !== 0 && !isMobile) {
                 const emptyPage = document.createElement('div');
                 emptyPage.className = 'page';
                 bookEl.appendChild(emptyPage);
             }
 
+            // Initialize PageFlip Library (Desktop only)
             if (!isMobile) {
                 const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
                 bookInstance = new PageFlip(bookEl, {
-                    width: 550, height: 750,
-                    size: 'fixed', usePortrait: false,
-                    minWidth: 300, minHeight: 400,
-                    maxShadowOpacity: 0.5, showCover: false
+                    width: 550, 
+                    height: 750,
+                    size: 'fixed', 
+                    usePortrait: false,
+                    minWidth: 300, 
+                    minHeight: 400,
+                    maxShadowOpacity: 0.5, 
+                    showCover: false
                 });
                 bookInstance.loadFromHTML(bookEl.querySelectorAll('.page'));
             }
         }
 
+        // Helper: Extract YouTube ID
         function getYoutubeID(url) {
             const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
             const match = url.match(regExp);
             return (match && match[2].length === 11) ? match[2] : null;
         }
 
+        // Helper: Video Modal
         function openVideo() {
             if (!currentVideoId) return;
             document.getElementById('audio-player').pause();
@@ -697,6 +402,7 @@
             container.innerHTML = '';
         }
 
+        // Close Reader
         function closeBook() {
             document.getElementById('reader-view').classList.add('hidden');
             document.getElementById('library-view').classList.remove('hidden');
@@ -711,6 +417,7 @@
             if (oldBook) oldBook.remove();
         }
 
+        // Navigation Controls
         function flipNext() { if(!isMobile) bookInstance?.flipNext(); }
         function flipPrev() { if(!isMobile) bookInstance?.flipPrev(); }
     </script>
