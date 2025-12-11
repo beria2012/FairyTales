@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magic Fairy Tales Library</title>
     
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
-    <!-- Link to your CSS file -->
+    <!-- Link to your stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -70,49 +70,55 @@
         <button class="close-video-btn" onclick="closeVideo()">Close Video</button>
     </div>
 
-    <!-- Scripts -->
+    <!-- External Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 
     <script>
+        // Global State Variables
         let allTales = [];
         let bookInstance = null;
         let isMobile = window.innerWidth <= 768;
         let currentVideoId = null;
         let currentSyncData = [];
 
+        // Handle Resize
         window.addEventListener('resize', () => {
             const newIsMobile = window.innerWidth <= 768;
             if (newIsMobile !== isMobile) {
                 isMobile = newIsMobile;
+                // Reload if reader is open to reset PageFlip dimensions
                 if (!document.getElementById('reader-view').classList.contains('hidden')) {
                     location.reload();
                 }
             }
         });
 
+        // Initialize
         document.addEventListener('DOMContentLoaded', () => {
             loadTales();
         });
 
+        // Load Tales Data
         async function loadTales() {
             try {
-                // Try fetching from server
+                // Try to fetch tales-index.json
                 const res = await fetch('/tales-index.json');
-                if(!res.ok) throw new Error("No index");
+                if(!res.ok) throw new Error("No index file found");
                 allTales = await res.json();
                 renderLibrary(allTales);
             } catch(e) {
-                console.warn("Using demo data");
-                // DEMO DATA 
+                console.warn("Using internal demo data due to fetch error:", e);
+                
+                // DEMO DATA (The Three Bears)
                 allTales = [
                     {
                         id: 'demo_bears', 
                         title: 'Goldilocks & 3 Bears', 
                         author: 'Folklore', 
                         cover: 'https://cdn.pixabay.com/photo/2023/05/29/18/59/bear-8026958_1280.jpg',
-                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Placeholder audio
-                        youtube: '',
+                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Placeholder Audio
+                        youtube: '', 
                         content: [
                             {
                                 text: "Once upon a time, in a cozy little house at the edge of a great, whispering forest, there lived three bears—a great big Papa Bear, a middle-sized Mama Bear, and a tiny, wee little Baby Bear.",
@@ -127,20 +133,36 @@
                                     {"w": "time,", "s": 0.8, "e": 1.12},
                                     {"w": "in", "s": 1.12, "e": 1.5},
                                     {"w": "a", "s": 1.5, "e": 1.8},
-                                    {"w": "cozy", "s": 1.8, "e": 2.2}
+                                    {"w": "cozy", "s": 1.8, "e": 2.2},
+                                    {"w": "little", "s": 2.2, "e": 2.8},
+                                    {"w": "house", "s": 2.8, "e": 3.2}
+                                ]
+                            },
+                            {
+                                text: "They were a happy family, and every morning, they would sit down together to enjoy a steaming bowl of porridge for breakfast.",
+                                side: "right",
+                                start: 14.8, 
+                                end: 24.0,
+                                image: "https://cdn.pixabay.com/photo/2023/10/05/17/54/bear-8296342_1280.jpg",
+                                words: [
+                                    {"w": "They", "s": 14.8, "e": 15.2},
+                                    {"w": "were", "s": 15.2, "e": 15.5},
+                                    {"w": "a", "s": 15.5, "e": 15.8},
+                                    {"w": "happy", "s": 15.8, "e": 16.5},
+                                    {"w": "family,", "s": 16.5, "e": 17.5}
                                 ]
                             },
                             {
                                 text: "One morning, Mama Bear stirred the porridge in her big pot and said, \"Oh dear, this porridge is much too hot to eat! Let’s take a walk in the forest while it cools.\"",
-                                side: "right",
-                                start: 14.8, 
-                                end: 36.08,
+                                side: "right", 
+                                start: 24.0, 
+                                end: 36.0,
                                 image: "https://cdn.pixabay.com/photo/2019/07/28/19/04/autumn-4369408_1280.jpg",
                                 words: [
-                                    {"w": "One", "s": 23.64, "e": 24.0},
-                                    {"w": "morning,", "s": 24.0, "e": 24.52},
-                                    {"w": "Mama", "s": 24.52, "e": 24.96},
-                                    {"w": "Bear", "s": 24.96, "e": 25.5}
+                                    {"w": "One", "s": 24.0, "e": 24.5},
+                                    {"w": "morning,", "s": 24.5, "e": 25.0},
+                                    {"w": "Mama", "s": 25.0, "e": 25.5},
+                                    {"w": "Bear", "s": 25.5, "e": 26.0}
                                 ]
                             }
                         ]
@@ -153,6 +175,7 @@
             setupAudioSync();
         }
 
+        // Render Library Grid
         function renderLibrary(tales) {
             const grid = document.getElementById('gallery-grid');
             grid.innerHTML = '';
@@ -160,6 +183,8 @@
             tales.forEach(tale => {
                 const div = document.createElement('div');
                 div.className = 'tile';
+                
+                // Handle local vs remote images
                 const imgUrl = tale.cover && !tale.cover.startsWith('http') 
                     ? `/tales/${tale.id}/${tale.cover}` 
                     : (tale.cover || 'https://via.placeholder.com/300x450?text=No+Cover');
@@ -178,6 +203,7 @@
             });
         }
 
+        // Search Functionality
         function setupSearch() {
             const searchInput = document.getElementById('search-input');
             searchInput.addEventListener('input', (e) => {
@@ -188,7 +214,7 @@
             });
         }
 
-        // --- AUDIO SYNC & HIGHLIGHTING ---
+        // --- CORE: AUDIO SYNC & HIGHLIGHTING ---
         function setupAudioSync() {
             const audioPlayer = document.getElementById('audio-player');
             let lastPageIndex = -1;
@@ -196,24 +222,27 @@
             audioPlayer.ontimeupdate = () => {
                 const currentTime = audioPlayer.currentTime;
                 
-                // Find ALL pages (Left & Right) matching current time
+                // Use .filter() to find ALL pages active at this time (Left & Right)
                 const activePages = currentSyncData.filter(block => currentTime >= block.start && currentTime < block.end);
 
                 if (activePages.length > 0) {
                     
-                    // 1. Flip Page (Based on the first active page)
+                    // 1. Page Turning Logic
+                    // Use the first active page to determine if we need to flip
                     const primaryPage = activePages[0];
                     if (lastPageIndex !== primaryPage.pageIndex) {
                         lastPageIndex = primaryPage.pageIndex;
                         if (!isMobile && bookInstance) {
                             bookInstance.flip(primaryPage.pageIndex);
                         } else {
+                            // Mobile scroll
                             const p = document.getElementById(`page-index-${primaryPage.pageIndex}`);
                             if(p) p.scrollIntoView({behavior:'smooth', block:'center'});
                         }
                     }
 
-                    // 2. Highlight Words (Loop through all active pages)
+                    // 2. Word Highlighting Logic
+                    // Iterate through ALL active pages (both left and right)
                     activePages.forEach(pageData => {
                         const activePageEl = document.getElementById(`page-index-${pageData.pageIndex}`);
                         if (activePageEl) {
@@ -233,6 +262,7 @@
             }
         }
 
+        // --- BOOK OPENING LOGIC ---
         function openBook(tale) {
             document.getElementById('library-view').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
@@ -271,7 +301,7 @@
                 currentVideoId = null;
             }
 
-            // Title Page
+            // --- GENERATE TITLE PAGE (Page 0) ---
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
             titlePage.id = 'page-index-0';
@@ -283,13 +313,15 @@
                 </div>`;
             bookEl.appendChild(titlePage);
 
+            // --- GENERATE CONTENT PAGES ---
             if (tale.content) {
                 tale.content.forEach((item, i) => {
-                    const pageIndex = i + 1;
+                    const pageIndex = i + 1; // Start from 1 because 0 is title
                     const page = document.createElement('div');
                     page.className = 'page';
                     page.id = `page-index-${pageIndex}`;
 
+                    // Store sync data
                     if (item.start !== undefined) {
                         currentSyncData.push({
                             pageIndex: pageIndex,
@@ -300,10 +332,10 @@
 
                     const img = item.image && !item.image.startsWith('http') ? `/tales/${tale.id}/${item.image}` : item.image;
                     
-                    // --- WORD GENERATION ---
+                    // Generate Word Spans
                     let textHtml = '';
                     if (item.words && item.words.length > 0) {
-                        // FIX: Added space ' ' in join to prevent sticking words
+                        // CRITICAL FIX: .join(' ') with a space to prevent stuck words
                         textHtml = item.words.map(w => 
                             `<span class="word-span" data-s="${w.s}" data-e="${w.e}">${w.w}</span>`
                         ).join(' '); 
@@ -311,9 +343,10 @@
                         textHtml = item.text || '';
                     }
 
+                    // Flexbox Layout: Image container top (2/3), Text container bottom (1/3)
                     page.innerHTML = `
                         <div class="page-content">
-                            ${img ? `<div class="page-img-box"><img src="${img}"></div>` : ''}
+                            ${img ? `<div class="page-img-box"><img src="${img}"></div>` : '<div class="page-img-box"></div>'}
                             <div class="page-text">${textHtml}</div>
                             <div class="page-footer">${pageIndex}</div>
                         </div>
@@ -322,12 +355,14 @@
                 });
             }
 
+            // Add empty page if odd number (for proper book closing on desktop)
             if (bookEl.children.length % 2 !== 0 && !isMobile) {
                 const emptyPage = document.createElement('div');
                 emptyPage.className = 'page';
                 bookEl.appendChild(emptyPage);
             }
 
+            // Initialize PageFlip Library
             if (!isMobile) {
                 const PageFlip = window.St ? window.St.PageFlip : window.PageFlip;
                 bookInstance = new PageFlip(bookEl, {
