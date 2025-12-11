@@ -6,206 +6,199 @@
   "youtube": "",
   "content": [
     {
-      "text": "Once upon a time, in a cozy little house at the edge of a great, whispering forest, there lived three bears—a great big Papa Bear, a middle-sized Mama Bear, and a tiny, wee little Baby Bear.",
-      "side": "left",
-      "start": 0.0,
-      "end": 21.96,
-      "image": "1_left.jpg"
-    },
-    {
-      "text": "They were a happy family, and every morning, they would sit down together to enjoy a steaming bowl of porridge for breakfast.",
+      "text": "Once upon a time, in a cozy little house at the edge of a great, whispering forest, there lived three bears—a great big Papa Bear, a middle-sized Mama Bear, and a tiny, wee little Baby Bear. They were a happy family, and every morning, they would sit down together to enjoy a steaming bowl of porridge for breakfast.",
       "side": "right",
       "start": 0.0,
-      "end": 21.96,
+      "end": 21.84,
       "image": "1_right.jpg"
     },
     {
       "text": "One morning, Mama Bear stirred the porridge in her big pot and said, \"Oh dear, this porridge is much too hot to eat! Let’s take a walk in the forest while it cools.\"",
       "side": "left",
-      "start": 21.96,
-      "end": 48.16,
+      "start": 21.84,
+      "end": 49.52,
       "image": "2_left.jpg"
     },
     {
       "text": "So the three bears put on their little hats and set off through the trees, their paws crunching on the fallen leaves. Now, not far from the bears’ house lived a little girl with golden curls that bounced when she",
       "side": "right",
-      "start": 21.96,
-      "end": 48.16,
+      "start": 21.84,
+      "end": 49.52,
       "image": "2_right.jpg"
     },
     {
       "text": "ran. Her name was Goldilocks, and she was a curious and adventurous child. That very morning, as she wandered through the forest, she spotted the bears’ little house nestled among the",
       "side": "left",
-      "start": 48.16,
-      "end": 78.8,
+      "start": 49.52,
+      "end": 80.84,
       "image": "3_left.jpg"
     },
     {
       "text": "trees. The door was slightly ajar, and no one seemed to be home. \"Oh, what a charming little house!\" Goldilocks exclaimed. She tiptoed up to the door and peeked inside. \"Hello?\" she called.",
       "side": "right",
-      "start": 48.16,
-      "end": 78.8,
+      "start": 49.52,
+      "end": 80.84,
       "image": "3_right.jpg"
     },
     {
       "text": "\"Is anyone there?\" But no one answered. Goldilocks, being ever so curious, pushed the door open and stepped inside. The first thing she saw was a table set with three bowls of porridge.",
       "side": "left",
-      "start": 78.8,
-      "end": 100.6,
+      "start": 80.84,
+      "end": 106.8,
       "image": "4_left.jpg"
     },
     {
       "text": "The great big bowl belonged to Papa Bear, the middle-sized bowl to Mama Bear, and the tiny, wee bowl to Baby Bear.",
       "side": "right",
-      "start": 78.8,
-      "end": 100.6,
+      "start": 80.84,
+      "end": 106.8,
       "image": "4_right.jpg"
     },
     {
       "text": "Goldilocks was hungry after her walk, so she decided to taste the porridge. First, she dipped her spoon into Papa Bear’s great big bowl. \"Oh!\" she cried. \"This porridge is much too hot!\"",
       "side": "left",
-      "start": 100.6,
-      "end": 132.64,
+      "start": 106.8,
+      "end": 138.72,
       "image": "5_left.jpg"
     },
     {
       "text": "Next, she tried Mama Bear’s middle-sized bowl. \"Ugh,\" she said, wrinkling her nose. \"This porridge is much too cold!\" Then she tasted the porridge in Baby Bear’s tiny, wee bowl.",
       "side": "right",
-      "start": 100.6,
-      "end": 132.64,
+      "start": 106.8,
+      "end": 138.72,
       "image": "5_right.jpg"
     },
     {
       "text": "\"Mmm,\" she sighed happily. \"This porridge is just right!\" And she ate every last spoonful. After finishing the porridge, Goldilocks felt a little tired.",
       "side": "left",
-      "start": 132.64,
-      "end": 160.24,
+      "start": 138.72,
+      "end": 164.72,
       "image": "6_left.jpg"
     },
     {
       "text": "She wandered into the next room, where she found three chairs. There was a great big chair for Papa Bear, a middle-sized chair for Mama Bear, and a tiny, wee chair for Baby Bear.",
       "side": "right",
-      "start": 132.64,
-      "end": 160.24,
+      "start": 138.72,
+      "end": 164.72,
       "image": "6_right.jpg"
     },
     {
       "text": "Goldilocks climbed onto Papa Bear’s great big chair. \"Oh dear,\" she said. \"This chair is much too hard!\" Then she tried Mama Bear’s middle-sized chair. \"No, no,\" she complained.",
       "side": "left",
-      "start": 160.24,
-      "end": 187.8,
+      "start": 164.72,
+      "end": 191.96,
       "image": "7_left.jpg"
     },
     {
       "text": "\"This chair is much too soft!\" Finally, she sat in Baby Bear’s tiny, wee chair. \"Ah,\" she said, smiling. \"This chair is just right!\"",
       "side": "right",
-      "start": 160.24,
-      "end": 187.8,
+      "start": 164.72,
+      "end": 191.96,
       "image": "7_right.jpg"
     },
     {
       "text": "But as she wiggled and giggled, the tiny chair creaked—and then *CRACK!*—it broke into pieces beneath her! Goldilocks gasped. \"Oh no!\" she cried.",
       "side": "left",
-      "start": 187.8,
-      "end": 217.32,
+      "start": 191.96,
+      "end": 221.76,
       "image": "8_left.jpg"
     },
     {
       "text": "She felt a little guilty, but she was also very sleepy. So she tiptoed upstairs to the bears’ bedroom, where she found three beds. There was a great big bed for Papa Bear, a middle-sized bed for Mama",
       "side": "right",
-      "start": 187.8,
-      "end": 217.32,
+      "start": 191.96,
+      "end": 221.76,
       "image": "8_right.jpg"
     },
     {
       "text": "Bear, and a tiny, wee bed for Baby Bear. Goldilocks climbed onto Papa Bear’s great big bed. \"This bed is much too high,\" she said, stretching her arms. Then she tried Mama Bear’s middle-sized bed.",
       "side": "left",
-      "start": 217.32,
-      "end": 245.8,
+      "start": 221.76,
+      "end": 251.64,
       "image": "9_left.jpg"
     },
     {
       "text": "\"This bed is much too lumpy,\" she grumbled. Finally, she curled up in Baby Bear’s tiny, wee bed. \"Oh,\" she sighed. \"This bed is just right.\"",
       "side": "right",
-      "start": 217.32,
-      "end": 245.8,
+      "start": 221.76,
+      "end": 251.64,
       "image": "9_right.jpg"
     },
     {
       "text": "And before she knew it, her eyelids grew heavy, and she drifted off to sleep. Meanwhile, the three bears returned from their walk. They were hungry and ready for breakfast.",
       "side": "left",
-      "start": 245.8,
-      "end": 270.84,
+      "start": 251.64,
+      "end": 276.2,
       "image": "10_left.jpg"
     },
     {
       "text": "But as soon as they stepped inside, Papa Bear growled, \"SOMEONE HAS BEEN EATING MY PORRIDGE!\" Mama Bear gasped, \"And someone has been eating MY porridge too!\"",
       "side": "right",
-      "start": 245.8,
-      "end": 270.84,
+      "start": 251.64,
+      "end": 276.2,
       "image": "10_right.jpg"
     },
     {
       "text": "Then Baby Bear squeaked, \"Someone has eaten ALL of my porridge, and there’s none left for me!\" The bears looked around and noticed the chairs.",
       "side": "left",
-      "start": 270.84,
-      "end": 288.52,
+      "start": 276.2,
+      "end": 294.52,
       "image": "11_left.jpg"
     },
     {
       "text": "Papa Bear roared, \"SOMEONE HAS BEEN SITTING IN MY CHAIR!\" Mama Bear sighed, \"And someone has been sitting in MY chair too!\"",
       "side": "right",
-      "start": 270.84,
-      "end": 288.52,
+      "start": 276.2,
+      "end": 294.52,
       "image": "11_right.jpg"
     },
     {
       "text": "Then Baby Bear wailed, \"Someone has been sitting in MY chair, and they’ve BROKEN it to bits!\" The bears were very upset. They decided to check the rest of the house.",
       "side": "left",
-      "start": 288.52,
-      "end": 312.72,
+      "start": 294.52,
+      "end": 315.96,
       "image": "12_left.jpg"
     },
     {
       "text": "When they climbed the stairs to their bedroom, Papa Bear boomed, \"SOMEONE HAS BEEN SLEEPING IN MY BED!\" Mama Bear added, \"And someone has been sleeping in MY bed too!\"",
       "side": "right",
-      "start": 288.52,
-      "end": 312.72,
+      "start": 294.52,
+      "end": 315.96,
       "image": "12_right.jpg"
     },
     {
       "text": "Then Baby Bear pointed and cried, \"Someone is STILL sleeping in MY bed!\" Goldilocks woke with a start. She opened her eyes and saw three bears staring down at her—Papa Bear with his great big",
       "side": "left",
-      "start": 312.72,
-      "end": 339.48,
+      "start": 315.96,
+      "end": 339.4,
       "image": "13_left.jpg"
     },
     {
       "text": "frown, Mama Bear with her hands on her hips, and Baby Bear with wide, surprised eyes. Goldilocks let out a shriek and leaped out of the bed.",
       "side": "right",
-      "start": 312.72,
-      "end": 339.48,
+      "start": 315.96,
+      "end": 339.4,
       "image": "13_right.jpg"
     },
     {
       "text": "She dashed down the stairs, past the broken chair, and out the front door, never to return to the bears’ house again.",
       "side": "left",
-      "start": 339.48,
-      "end": 361.44,
+      "start": 339.4,
+      "end": 363.4,
       "image": "14_left.jpg"
     },
     {
       "text": "And from that day on, Goldilocks was much more careful about wandering into houses that didn’t belong to her. As for the three bears, they fixed Baby Bear’s chair and enjoyed their porridge—making",
       "side": "right",
-      "start": 339.48,
-      "end": 361.44,
+      "start": 339.4,
+      "end": 363.4,
       "image": "14_right.jpg"
     },
     {
       "text": "sure it was just the right temperature this time! The end.",
       "side": "left",
-      "start": 361.44,
-      "end": 365.96,
+      "start": 363.4,
+      "end": 369.08,
       "image": "15_left.jpg"
     }
   ]
