@@ -132,58 +132,53 @@ h1 {
     background-color: var(--page-color); overflow: hidden;
     border: 1px solid #e3d0b5;
     background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-    /* Reset padding for the page container itself */
     padding: 0 !important;
 }
 .page.--left { border-radius: 5px 0 0 5px; border-right: none; box-shadow: inset -20px 0 40px -10px rgba(0,0,0,0.15); }
 .page.--right { border-radius: 0 5px 5px 0; border-left: none; box-shadow: inset 20px 0 40px -10px rgba(0,0,0,0.15); }
 
 /* 
-   MAIN CONTENT CONTAINER
-   - Uses Flexbox to split height vertically.
-   - Padding is 0 to ensure image touches edges.
+   MAIN CONTAINER
+   - Padding added here creates the margin for BOTH image and text from the paper edge.
 */
 .page-content {
     height: 100%; 
     width: 100%;
-    padding: 0 !important; 
+    padding: 25px 35px !important; /* Margins for content */
     display: flex; 
     flex-direction: column; 
+    gap: 15px; /* Space between image and text */
     color: var(--book-text-color);
 }
 
 /* 
-   IMAGE BLOCK (TOP)
-   - flex: 2 (Takes approx 66% of height)
-   - No padding, no margin.
+   IMAGE BLOCK (Takes 2/3 height)
 */
 .page-img-box {
     flex: 2; 
     width: 100%; 
-    margin: 0 !important; 
-    padding: 0 !important; 
     overflow: hidden; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 0 !important;
+    padding: 0 !important;
     display: flex;
-    align-items: flex-end; /* Aligns image to bottom of box if aspect ratio differs */
+    align-items: center;
     justify-content: center;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .page-img-box img { 
     width: 100%;      
     height: 100%;     
-    /* cover: Fills the entire box. Crops if necessary to maintain aspect ratio */
     object-fit: cover; 
-    object-position: center bottom; 
+    object-position: center center; 
     display: block;
     mix-blend-mode: multiply; 
     filter: contrast(1.05) sepia(0.1);
 }
 
 /* 
-   TEXT BLOCK (BOTTOM)
-   - flex: 1 (Takes approx 33% of height)
-   - Padding applied here to keep text away from edges.
+   TEXT BLOCK (Takes 1/3 height)
 */
 .page-text {
     flex: 1; 
@@ -193,20 +188,20 @@ h1 {
     text-align: justify;
     font-weight: 500;
     
-    /* Padding only for text */
-    padding: 20px 35px 30px 35px; 
+    padding: 0 !important; /* Padding handled by parent */
     
-    /* Center text vertically in its block */
     display: flex;
     align-items: center; 
+    align-content: center;
+    flex-wrap: wrap; /* Fix for words running off screen */
     
     overflow-y: auto; 
 }
 
 .page-footer { 
     position: absolute;
-    bottom: 10px; left: 0; width: 100%;
-    text-align: center; font-size: 0.9rem; color: #998; 
+    bottom: 5px; left: 0; width: 100%;
+    text-align: center; font-size: 0.8rem; color: #998; 
     font-family: 'Fredoka', sans-serif; 
     pointer-events: none;
 }
