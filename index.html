@@ -18,7 +18,7 @@
             --text-accent: #ff6b6b;
             --page-color: #fffbf0;
             --reader-bg: rgba(45, 52, 54, 0.95);
-            /* Цвет текста в книге (темно-коричневый для контраста) */
+            /* Цвет текста в книге */
             --book-text-color: #2c1810; 
         }
 
@@ -143,12 +143,10 @@
             flex-direction: column; color: var(--book-text-color);
         }
 
-        /* Изображение внутри книги - БЕЗ белой рамки */
         .page-img-box {
             width: 100%; height: 65%; 
             display: flex; align-items: center; justify-content: center;
             margin-bottom: 25px; 
-            /* Убрали фон и тень контейнера */
             background: transparent; 
             box-shadow: none;
             padding: 0;
@@ -157,18 +155,16 @@
         .page-img-box img { 
             max-width: 100%; max-height: 100%; object-fit: contain; 
             border-radius: 8px;
-            /* Эффект печати: белое на картинке становится прозрачным */
             mix-blend-mode: multiply; 
-            filter: contrast(1.05) sepia(0.1); /* Немного состариваем цвета */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* Тень у самой картинки */
+            filter: contrast(1.05) sepia(0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        /* Текст книги - Шрифт Lora */
         .page-text {
-            font-family: 'Lora', serif; /* Книжный шрифт */
-            font-size: 1.5rem; /* Размер для комфортного чтения */
-            line-height: 1.4; /* Межстрочный интервал */
-            text-align: justify; /* Выравнивание по ширине */
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            line-height: 1.4;
+            text-align: justify;
             flex-grow: 1;
             font-weight: 500;
         }
@@ -340,19 +336,24 @@
         let bookInstance = null;
         let isMobile = window.innerWidth <= 768;
         let currentVideoId = null;
+        
+        // НОВОЕ: массив для хранения таймингов текущей книги
+        let currentSyncData = [];
 
         window.addEventListener('resize', () => {
             const newIsMobile = window.innerWidth <= 768;
             if (newIsMobile !== isMobile) {
                 isMobile = newIsMobile;
                 if (!document.getElementById('reader-view').classList.contains('hidden')) {
-                    location.reload();
+                    // При смене ориентации пересобираем книгу
+                    location.reload(); 
                 }
             }
         });
 
         document.addEventListener('DOMContentLoaded', () => {
             loadTales();
+            setupAudioSync(); // Инициализация синхронизации аудио
         });
 
         async function loadTales() {
@@ -369,11 +370,21 @@
                         title: 'The Gingerbread Man', 
                         author: 'Folklore', 
                         cover: 'https://cdn.pixabay.com/photo/2019/04/10/16/27/book-4117282_960_720.jpg',
-                        audio: '',
+                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Пример аудио
                         youtube: 'https://www.youtube.com/watch?v=YoQ8-7l9i9o',
                         content: [
-                            { text: "Once upon a time there was an old man and an old woman.", image: "https://cdn.pixabay.com/photo/2012/10/26/02/44/pancakes-63108_960_720.jpg" },
-                            { text: "Run, run, as fast as you can! You can't catch me!", image: "" }
+                            { 
+                                text: "Once upon a time there was an old man and an old woman.", 
+                                image: "https://cdn.pixabay.com/photo/2012/10/26/02/44/pancakes-63108_960_720.jpg",
+                                start: 0.0,
+                                end: 10.0
+                            },
+                            { 
+                                text: "Run, run, as fast as you can! You can't catch me!", 
+                                image: "",
+                                start: 10.1,
+                                end: 20.0
+                            }
                         ]
                     }
                 ];
@@ -418,6 +429,41 @@
             });
         }
 
+        // НОВОЕ: Функция настройки синхронизации
+        function setupAudioSync() {
+            const audioPlayer = document.getElementById('audio-player');
+            let lastPageIndex = -1;
+
+            audioPlayer.ontimeupdate = () => {
+                if (!currentSyncData.length) return;
+
+                const currentTime = audioPlayer.currentTime;
+                // Ищем страницу, время которой соответствует текущему времени аудио
+                const activeData = currentSyncData.find(block => currentTime >= block.start && currentTime < block.end);
+
+                if (activeData) {
+                    // Если нашли блок и мы еще не на этой странице (чтобы не спамить)
+                    if (lastPageIndex !== activeData.pageIndex) {
+                        lastPageIndex = activeData.pageIndex;
+                        
+                        if (!isMobile && bookInstance) {
+                            // Для десктопа: используем API книги
+                            // flip требует индекса страницы.
+                            // PageFlip часто показывает 2 страницы (например 1 и 2).
+                            // Метод flip перелистнет к указанному индексу.
+                            bookInstance.flip(activeData.pageIndex);
+                        } else {
+                            // Для мобильного: скроллим к элементу
+                            const targetPage = document.getElementById(`page-index-${activeData.pageIndex}`);
+                            if (targetPage) {
+                                targetPage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
+                        }
+                    }
+                }
+            };
+        }
+
         function openBook(tale) {
             document.getElementById('library-view').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
@@ -431,6 +477,9 @@
             stage.appendChild(bookEl);
 
             if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
+
+            // Очищаем старые данные синхронизации
+            currentSyncData = [];
 
             const audioWrapper = document.getElementById('audio-controls');
             const audioPlayer = document.getElementById('audio-player');
@@ -455,9 +504,13 @@
                 currentVideoId = null;
             }
 
-            // Title Page
+            // --- Генерация страниц ---
+
+            // Страница 0: Обложка/Титул (без аудио синхронизации, или можно добавить фейковую)
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
+            // Добавим ID для мобильного скролла
+            titlePage.id = 'page-index-0'; 
             titlePage.innerHTML = `
                 <div class="title-content">
                     <h1 style="font-family:'Fredoka', sans-serif; color:#6c5ce7; font-size:2.5rem; margin-top:50px;">${tale.title}</h1>
@@ -466,16 +519,29 @@
                 </div>`;
             bookEl.appendChild(titlePage);
 
+            // Контентные страницы (Начинаются с индекса 1)
             if (tale.content) {
                 tale.content.forEach((item, i) => {
+                    const pageIndex = i + 1; // 0 занят титульником
                     const page = document.createElement('div');
                     page.className = 'page';
+                    page.id = `page-index-${pageIndex}`;
+                    
+                    // Сохраняем данные для синхронизации, если они есть в JSON
+                    if (item.start !== undefined && item.end !== undefined) {
+                        currentSyncData.push({
+                            pageIndex: pageIndex,
+                            start: parseFloat(item.start),
+                            end: parseFloat(item.end)
+                        });
+                    }
+
                     const img = item.image && !item.image.startsWith('http') ? `/tales/${tale.id}/${item.image}` : item.image;
                     page.innerHTML = `
                         <div class="page-content">
                             ${img ? `<div class="page-img-box"><img src="${img}"></div>` : ''}
                             <div class="page-text">${item.text || ''}</div>
-                            <div class="page-footer">${i+1}</div>
+                            <div class="page-footer">${pageIndex}</div>
                         </div>
                     `;
                     bookEl.appendChild(page);
@@ -533,6 +599,7 @@
             const audioPlayer = document.getElementById('audio-player');
             audioPlayer.pause();
             audioPlayer.currentTime = 0;
+            currentSyncData = []; // Очистка данных синхронизации
 
             if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
             const oldBook = document.getElementById('flip-book');
