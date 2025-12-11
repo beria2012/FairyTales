@@ -260,3 +260,33 @@ header {
     overflow: hidden;
 }
 .page img { width: 100%; height: 100%; object-fit: contain; mix-blend-mode: multiply; }
+
+
+/* Контейнер текста на странице */
+.page-text-container {
+    padding: 20px 30px;
+    font-family: 'Cormorant Garamond', serif; /* Ваш шрифт */
+    font-size: 1.3rem;
+    line-height: 1.6;
+    color: var(--wood-dark); /* Темно-коричневый текст на пергаменте */
+    text-align: justify;
+}
+
+/* Обычное слово (неактивное) */
+.word-span {
+    display: inline-block; /* Чтобы трансформации работали */
+    padding: 0 2px;
+    border-radius: 4px;
+    transition: all 0.1s ease;
+    cursor: default;
+}
+
+/* --- МАГИЧЕСКАЯ ПОДСВЕТКА (АКТИВНОЕ СЛОВО) --- */
+.word-active {
+    color: var(--book-red);       /* Текст становится красным */
+    background: rgba(255, 215, 0, 0.3); /* Легкий золотой фон */
+    text-shadow: 0 0 1px var(--gold-dark); /* Четкость */
+    transform: scale(1.1);        /* Слегка увеличивается */
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); /* Свечение */
+}
