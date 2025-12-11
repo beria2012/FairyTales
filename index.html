@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Magic Fairy Tales Library</title>
+    <title>Magic Fairy Tales</title>
     
-    <!-- Шрифты -->
+    <!-- Fonts: Добавлен Lora -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
-        /* =========================================
-           ВСТАВЛЕННЫЙ CSS (СТИЛИ)
-           ========================================= */
         :root {
             --bg-gradient: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
             --card-bg: #ffffff;
@@ -21,7 +18,8 @@
             --text-accent: #ff6b6b;
             --page-color: #fffbf0;
             --reader-bg: rgba(45, 52, 54, 0.95);
-            --book-text-color: #2c1810;
+            /* Цвет текста в книге */
+            --book-text-color: #2c1810; 
         }
 
         * { box-sizing: border-box; }
@@ -36,7 +34,7 @@
             overflow: hidden; 
         }
 
-        /* Декор фона */
+        /* --- BACKGROUND SHAPES --- */
         .bg-shape {
             position: fixed; border-radius: 50%;
             filter: blur(50px); z-index: -1; opacity: 0.5;
@@ -51,7 +49,7 @@
             100% { transform: translate(30px, 30px) scale(1.1); }
         }
 
-        /* Библиотека (Сетка книг) */
+        /* --- LIBRARY --- */
         #library-view {
             padding: 20px; height: 100vh; overflow-y: auto; text-align: center;
             scrollbar-width: thin; scrollbar-color: #fff rgba(255,255,255,0.3);
@@ -84,6 +82,7 @@
         .search-icon { font-size: 1.5rem; animation: bounce 2s infinite; }
         @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
 
+        /* GRID */
         .grid {
             display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 40px; max-width: 1200px; margin: 0 auto; padding-bottom: 50px;
@@ -100,12 +99,12 @@
             width: 100%; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             aspect-ratio: 2/3; object-fit: cover;
         }
-
+        
         .tile h3 { 
             font-family: 'Fredoka', sans-serif; font-size: 1.4rem; margin-top: 15px; 
             color: var(--text-dark); line-height: 1.2;
         }
-
+        
         .media-badges {
             position: absolute; top: 25px; right: 25px; display: flex; gap: 5px;
         }
@@ -115,7 +114,7 @@
             box-shadow: 0 3px 8px rgba(0,0,0,0.15); font-size: 1rem; border: 2px solid #f0f0f0;
         }
 
-        /* Режим чтения */
+        /* --- READER --- */
         #reader-view {
             position: fixed; inset: 0; background-color: var(--reader-bg);
             background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1h2v2H1V1zm4 4h2v2H5V5zm4 4h2v2H9V9zm4 4h2v2h-2v-2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
@@ -130,53 +129,51 @@
 
         .stf__wrapper { filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5)); }
 
-        /* === СТИЛИ СТРАНИЦЫ (ИСПРАВЛЕННЫЕ) === */
+        /* --- PAGES (DESIGN UPDATE) --- */
         .page {
             background-color: var(--page-color); overflow: hidden;
             border: 1px solid #e3d0b5;
             background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
-            padding: 0 !important;
         }
         .page.--left { border-radius: 5px 0 0 5px; border-right: none; box-shadow: inset -20px 0 40px -10px rgba(0,0,0,0.15); }
         .page.--right { border-radius: 0 5px 5px 0; border-left: none; box-shadow: inset 20px 0 40px -10px rgba(0,0,0,0.15); }
 
         .page-content {
-            height: 100%; width: 100%;
-            /* ОТСТУПЫ ДЛЯ КАРТИНКИ И ТЕКСТА */
-            padding: 35px 45px !important; 
-            display: flex; flex-direction: column; justify-content: flex-start;
-            gap: 25px; 
-            color: var(--book-text-color); box-sizing: border-box;
+            height: 100%; padding: 40px 50px; display: flex;
+            flex-direction: column; color: var(--book-text-color);
         }
 
         .page-img-box {
-            flex: 1 1 auto; width: 100%; 
-            margin: 0 !important; padding: 0 !important; 
-            border-radius: 12px; border: 1px solid rgba(0,0,0,0.05);
-            overflow: hidden; display: flex; align-items: center; justify-content: center;
-            background-color: rgba(0,0,0,0.02);
+            width: 100%; height: 65%; 
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 25px; 
+            background: transparent; 
+            box-shadow: none;
+            padding: 0;
         }
-
+        
         .page-img-box img { 
-            width: 100%; height: 100%; object-fit: cover; object-position: center; 
-            display: block; mix-blend-mode: multiply; 
+            max-width: 100%; max-height: 100%; object-fit: contain; 
+            border-radius: 8px;
+            mix-blend-mode: multiply; 
+            filter: contrast(1.05) sepia(0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
         .page-text {
-            flex: 0 0 auto;
-            font-family: 'Lora', serif; font-size: 1.25rem; line-height: 1.6; font-weight: 500;
-            display: block; text-align: justify; text-align-last: left;
-            padding: 0 !important; margin: 0 !important;
-            max-height: 45%; overflow-y: auto; 
-            scrollbar-width: thin; scrollbar-color: #d4a5a5 transparent;
+            font-family: 'Lora', serif;
+            font-size: 1.5rem;
+            line-height: 1.4;
+            text-align: justify;
+            flex-grow: 1;
+            font-weight: 500;
         }
-
+        
         .page-footer { 
-            position: absolute; bottom: 8px; left: 0; width: 100%;
             text-align: center; font-size: 0.9rem; color: #998; 
-            font-family: 'Fredoka', sans-serif; pointer-events: none;
+            margin-top: 15px; font-family: 'Fredoka', sans-serif; 
         }
-
+        
         .title-content {
             justify-content: center; text-align: center; 
             border: 3px double #d4a5a5; border-radius: 10px;
@@ -184,20 +181,11 @@
             display: flex; flex-direction: column; padding: 20px;
         }
 
-        /* Караоке слова */
-        .word-span {
-            border-radius: 3px; transition: background-color 0.1s; cursor: default;
-            display: inline; /* Чтобы слова шли подряд */
-        }
-        .word-active {
-            background-color: #fffd7e; color: #d63031; font-weight: 600;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 0 2px;
-        }
-
-        /* Кнопки управления */
+        /* CONTROLS */
         .top-controls {
             position: absolute; top: 20px; right: 20px; display: flex; gap: 15px; z-index: 200;
         }
+
         .control-btn {
             background: #fff; color: var(--text-dark);
             border: none; padding: 10px 20px; cursor: pointer; border-radius: 30px;
@@ -246,31 +234,28 @@
             background: #fff; color: var(--text-dark); border: none; cursor: pointer; border-radius: 30px;
             font-family: 'Fredoka', sans-serif; font-weight: bold;
         }
+        .close-video-btn:hover { background: #ff7675; color: white; }
 
         .hidden { display: none !important; }
 
+        /* --- MOBILE --- */
         @media (max-width: 768px) {
             body { overflow: auto; }
             h1 { font-size: 2.5rem; }
-            
             #reader-view {
                 position: fixed; inset: 0; display: block; 
                 overflow-y: auto; overflow-x: hidden;
                 padding-top: 80px; padding-bottom: 140px;
                 background-color: #fffbf0; background-image: none;
             }
-            
             .book-stage { display: block; width: 100%; height: auto; padding: 10px; }
             .nav-arrow { display: none; }
             .stf__wrapper { filter: none; }
-            
             .top-controls { position: fixed; top: 10px; right: 10px; width: 100%; justify-content: flex-end; padding-right: 10px; }
-            
             #audio-controls {
                 position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%); width: 95%; background: #333;
             }
             audio { width: 100%; filter: invert(1); }
-            
             .page {
                 position: relative !important; display: block !important; 
                 transform: none !important; width: 92% !important; 
@@ -279,9 +264,8 @@
                 border-radius: 15px; border: none; background: #fff;
             }
             .page.--left, .page.--right { box-shadow: none; border-radius: 15px; }
-            .page-content { padding: 25px !important; gap: 15px; }
-            .page-img-box { height: 250px; flex: none; }
-            .page-text { font-size: 1.3rem; padding: 0; flex: none; display: block; max-height: none; }
+            .page-img-box { height: 250px; }
+            .page-text { font-size: 1.3rem; }
             .title-content { height: 350px; border-color: #fab1a0; }
             .video-container { width: 95%; }
         }
@@ -293,7 +277,7 @@
     <div class="bg-shape shape-2"></div>
     <div class="bg-shape shape-3"></div>
 
-    <!-- VIEW 1: LIBRARY (Grid of Books) -->
+    <!-- LIBRARY -->
     <div id="library-view">
         <header>
             <h1>🏰 Magic Fairy Tales 🏰</h1>
@@ -307,7 +291,7 @@
         <p id="loading-msg" style="margin-top:20px; font-family:'Quicksand'; font-size:1.2rem;">✨ Summoning stories... ✨</p>
     </div>
 
-    <!-- VIEW 2: READER (The Book) -->
+    <!-- READER -->
     <div id="reader-view" class="hidden">
         <div class="top-controls">
             <button id="watch-btn" class="control-btn video-btn hidden" onclick="openVideo()">
@@ -335,7 +319,7 @@
         </div>
     </div>
 
-    <!-- VIDEO POPUP (Modal) -->
+    <!-- VIDEO MODAL -->
     <div id="video-modal" class="hidden">
         <div class="video-container">
             <div id="yt-player-container"></div>
@@ -352,6 +336,8 @@
         let bookInstance = null;
         let isMobile = window.innerWidth <= 768;
         let currentVideoId = null;
+        
+        // НОВОЕ: массив для хранения таймингов текущей книги
         let currentSyncData = [];
 
         window.addEventListener('resize', () => {
@@ -359,61 +345,45 @@
             if (newIsMobile !== isMobile) {
                 isMobile = newIsMobile;
                 if (!document.getElementById('reader-view').classList.contains('hidden')) {
-                    location.reload();
+                    // При смене ориентации пересобираем книгу
+                    location.reload(); 
                 }
             }
         });
 
         document.addEventListener('DOMContentLoaded', () => {
             loadTales();
+            setupAudioSync(); // Инициализация синхронизации аудио
         });
 
         async function loadTales() {
             try {
-                // Пытаемся загрузить данные
-                const res = await fetch('tales.json'); 
-                if(!res.ok) throw new Error("No index file found");
+                const res = await fetch('/tales-index.json');
+                if(!res.ok) throw new Error("No index");
                 allTales = await res.json();
                 renderLibrary(allTales);
             } catch(e) {
-                console.warn("Используем демо-данные");
-                // DEMO DATA
+                console.warn("Using demo data");
                 allTales = [
                     {
-                        id: 'demo_bears', 
-                        title: 'Goldilocks & 3 Bears', 
+                        id: 'demo', 
+                        title: 'The Gingerbread Man', 
                         author: 'Folklore', 
-                        cover: 'https://cdn.pixabay.com/photo/2023/05/29/18/59/bear-8026958_1280.jpg',
-                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
+                        cover: 'https://cdn.pixabay.com/photo/2019/04/10/16/27/book-4117282_960_720.jpg',
+                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Пример аудио
+                        youtube: 'https://www.youtube.com/watch?v=YoQ8-7l9i9o',
                         content: [
-                            {
-                                text: "Once upon a time, there were three bears who lived in a house in a forest.",
+                            { 
+                                text: "Once upon a time there was an old man and an old woman.", 
+                                image: "https://cdn.pixabay.com/photo/2012/10/26/02/44/pancakes-63108_960_720.jpg",
                                 start: 0.0,
-                                end: 10.0,
-                                image: "https://cdn.pixabay.com/photo/2020/06/15/18/06/bears-5302684_1280.jpg",
-                                words: [
-                                    {"w": "Once", "s": 0.0, "e": 0.5},
-                                    {"w": "upon", "s": 0.5, "e": 1.0},
-                                    {"w": "a",    "s": 1.0, "e": 1.2},
-                                    {"w": "time,", "s": 1.2, "e": 1.8},
-                                    {"w": "there", "s": 1.8, "e": 2.2},
-                                    {"w": "were", "s": 2.2, "e": 2.5},
-                                    {"w": "three", "s": 2.5, "e": 3.0},
-                                    {"w": "bears", "s": 3.0, "e": 3.8}
-                                ]
+                                end: 10.0
                             },
-                            {
-                                text: "One morning, they made porridge for breakfast but it was too hot.",
-                                start: 10.0, 
-                                end: 20.0,
-                                image: "https://cdn.pixabay.com/photo/2019/07/28/19/04/autumn-4369408_1280.jpg",
-                                words: [
-                                    {"w": "One", "s": 10.0, "e": 10.5},
-                                    {"w": "morning,", "s": 10.5, "e": 11.2},
-                                    {"w": "they", "s": 11.2, "e": 11.5},
-                                    {"w": "made", "s": 11.5, "e": 12.0},
-                                    {"w": "porridge", "s": 12.0, "e": 12.8}
-                                ]
+                            { 
+                                text: "Run, run, as fast as you can! You can't catch me!", 
+                                image: "",
+                                start: 10.1,
+                                end: 20.0
                             }
                         ]
                     }
@@ -422,7 +392,6 @@
             }
             document.getElementById('loading-msg').style.display = 'none';
             setupSearch();
-            setupAudioSync();
         }
 
         function renderLibrary(tales) {
@@ -433,7 +402,7 @@
                 const div = document.createElement('div');
                 div.className = 'tile';
                 const imgUrl = tale.cover && !tale.cover.startsWith('http') 
-                    ? `tales/${tale.id}/${tale.cover}` 
+                    ? `/tales/${tale.id}/${tale.cover}` 
                     : (tale.cover || 'https://via.placeholder.com/300x450?text=No+Cover');
                 
                 let badges = '';
@@ -441,7 +410,7 @@
                 if (tale.youtube) badges += '<div class="badge" title="Video">🎬</div>';
 
                 div.innerHTML = `
-                    <img src="${imgUrl}" alt="${tale.title}">
+                    <img src="${imgUrl}">
                     <div class="media-badges">${badges}</div>
                     <h3>${tale.title}</h3>
                 `;
@@ -460,43 +429,39 @@
             });
         }
 
+        // НОВОЕ: Функция настройки синхронизации
         function setupAudioSync() {
             const audioPlayer = document.getElementById('audio-player');
             let lastPageIndex = -1;
 
             audioPlayer.ontimeupdate = () => {
-                const currentTime = audioPlayer.currentTime;
-                const activePages = currentSyncData.filter(block => currentTime >= block.start && currentTime < block.end);
+                if (!currentSyncData.length) return;
 
-                if (activePages.length > 0) {
-                    const primaryPage = activePages[0];
-                    if (lastPageIndex !== primaryPage.pageIndex) {
-                        lastPageIndex = primaryPage.pageIndex;
+                const currentTime = audioPlayer.currentTime;
+                // Ищем страницу, время которой соответствует текущему времени аудио
+                const activeData = currentSyncData.find(block => currentTime >= block.start && currentTime < block.end);
+
+                if (activeData) {
+                    // Если нашли блок и мы еще не на этой странице (чтобы не спамить)
+                    if (lastPageIndex !== activeData.pageIndex) {
+                        lastPageIndex = activeData.pageIndex;
+                        
                         if (!isMobile && bookInstance) {
-                            bookInstance.flip(primaryPage.pageIndex);
+                            // Для десктопа: используем API книги
+                            // flip требует индекса страницы.
+                            // PageFlip часто показывает 2 страницы (например 1 и 2).
+                            // Метод flip перелистнет к указанному индексу.
+                            bookInstance.flip(activeData.pageIndex);
                         } else {
-                            const p = document.getElementById(`page-index-${primaryPage.pageIndex}`);
-                            if(p) p.scrollIntoView({behavior:'smooth', block:'center'});
+                            // Для мобильного: скроллим к элементу
+                            const targetPage = document.getElementById(`page-index-${activeData.pageIndex}`);
+                            if (targetPage) {
+                                targetPage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                            }
                         }
                     }
-
-                    activePages.forEach(pageData => {
-                        const activePageEl = document.getElementById(`page-index-${pageData.pageIndex}`);
-                        if (activePageEl) {
-                            const spans = activePageEl.querySelectorAll('.word-span');
-                            spans.forEach(span => {
-                                const start = parseFloat(span.dataset.s);
-                                const end = parseFloat(span.dataset.e);
-                                if (currentTime >= start && currentTime < end) {
-                                    span.classList.add('word-active');
-                                } else {
-                                    span.classList.remove('word-active');
-                                }
-                            });
-                        }
-                    });
                 }
-            }
+            };
         }
 
         function openBook(tale) {
@@ -512,12 +477,14 @@
             stage.appendChild(bookEl);
 
             if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
+
+            // Очищаем старые данные синхронизации
             currentSyncData = [];
 
             const audioWrapper = document.getElementById('audio-controls');
             const audioPlayer = document.getElementById('audio-player');
             if (tale.audio) {
-                const audioSrc = tale.audio.startsWith('http') ? tale.audio : `tales/${tale.id}/${tale.audio}`;
+                const audioSrc = tale.audio.startsWith('http') ? tale.audio : `/tales/${tale.id}/${tale.audio}`;
                 audioPlayer.src = audioSrc;
                 audioWrapper.classList.remove('hidden');
             } else {
@@ -537,9 +504,13 @@
                 currentVideoId = null;
             }
 
-            // Title Page
+            // --- Генерация страниц ---
+
+            // Страница 0: Обложка/Титул (без аудио синхронизации, или можно добавить фейковую)
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
+            // Добавим ID для мобильного скролла
+            titlePage.id = 'page-index-0'; 
             titlePage.innerHTML = `
                 <div class="title-content">
                     <h1 style="font-family:'Fredoka', sans-serif; color:#6c5ce7; font-size:2.5rem; margin-top:50px;">${tale.title}</h1>
@@ -548,15 +519,16 @@
                 </div>`;
             bookEl.appendChild(titlePage);
 
-            // Content Pages
+            // Контентные страницы (Начинаются с индекса 1)
             if (tale.content) {
                 tale.content.forEach((item, i) => {
-                    const pageIndex = i + 1;
+                    const pageIndex = i + 1; // 0 занят титульником
                     const page = document.createElement('div');
                     page.className = 'page';
                     page.id = `page-index-${pageIndex}`;
-
-                    if (item.start !== undefined) {
+                    
+                    // Сохраняем данные для синхронизации, если они есть в JSON
+                    if (item.start !== undefined && item.end !== undefined) {
                         currentSyncData.push({
                             pageIndex: pageIndex,
                             start: parseFloat(item.start),
@@ -564,24 +536,11 @@
                         });
                     }
 
-                    const img = item.image && !item.image.startsWith('http') 
-                        ? `tales/${tale.id}/${item.image}` 
-                        : item.image;
-                    
-                    // === ВОТ ЗДЕСЬ ИСПРАВЛЕНИЕ ТЕКСТА (ПРОБЕЛЫ) ===
-                    let textHtml = '';
-                    if (item.words && item.words.length > 0) {
-                        textHtml = item.words.map(w => 
-                            `<span class="word-span" data-s="${w.s}" data-e="${w.e}">${w.w}</span>`
-                        ).join(' '); // <--- ПРОБЕЛ ДОБАВЛЕН ЗДЕСЬ
-                    } else {
-                        textHtml = item.text || '';
-                    }
-
+                    const img = item.image && !item.image.startsWith('http') ? `/tales/${tale.id}/${item.image}` : item.image;
                     page.innerHTML = `
                         <div class="page-content">
                             ${img ? `<div class="page-img-box"><img src="${img}"></div>` : ''}
-                            <div class="page-text">${textHtml}</div>
+                            <div class="page-text">${item.text || ''}</div>
                             <div class="page-footer">${pageIndex}</div>
                         </div>
                     `;
@@ -636,10 +595,12 @@
         function closeBook() {
             document.getElementById('reader-view').classList.add('hidden');
             document.getElementById('library-view').classList.remove('hidden');
+            
             const audioPlayer = document.getElementById('audio-player');
             audioPlayer.pause();
             audioPlayer.currentTime = 0;
-            currentSyncData = [];
+            currentSyncData = []; // Очистка данных синхронизации
+
             if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
             const oldBook = document.getElementById('flip-book');
             if (oldBook) oldBook.remove();
