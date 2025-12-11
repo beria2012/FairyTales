@@ -125,14 +125,6 @@ h1 {
 
 .stf__wrapper { filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5)); }
 
-.word {
-    transition: color 0.1s, background-color 0.1s;
-}
-.word.highlight {
-    color: #fff800;
-    font-weight: bold;
-}
-
 /* =========================================
    5. PAGE STYLES (LAYOUT & CONTENT)
    ========================================= */
