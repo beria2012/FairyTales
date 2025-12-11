@@ -167,6 +167,18 @@
             text-align: justify;
             flex-grow: 1;
             font-weight: 500;
+            white-space: pre-wrap;
+        }
+
+        /* --- СТИЛИ ДЛЯ СЛОВ (КАРАОКЕ) --- */
+        .word {
+            transition: color 0.1s, background-color 0.1s, text-shadow 0.1s;
+            cursor: default;
+        }
+        .word.highlight {
+            color: var(--text-accent);
+            font-weight: bold;
+            text-shadow: 0 0 4px rgba(255, 107, 107, 0.5);
         }
         
         .page-footer { 
@@ -335,17 +347,51 @@
         let allTales = [];
         let bookInstance = null;
         let isMobile = window.innerWidth <= 768;
-        let currentVideoId = null;
-        
-        // НОВОЕ: массив для хранения таймингов текущей книги
         let currentSyncData = [];
+        let lastPageIndex = -1;
+
+        // Escape HTML для безопасности
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // Оборачивает слова в <span class="word"> с таймингами
+        function wrapWordsWithTiming(paragraph, wordsArray) {
+            if (!wordsArray || wordsArray.length === 0) {
+                return escapeHtml(paragraph);
+            }
+
+            // Разбиваем текст на токены (сохраняя пробелы)
+            const tokens = paragraph.split(/(\s+)/);
+            let wordIndex = 0;
+            const result = [];
+
+            for (const token of tokens) {
+                if (/\S/.test(token)) { // непробельный токен
+                    const timing = wordsArray[wordIndex];
+                    if (timing) {
+                        result.push(
+                            `<span class="word" data-start="${timing.s}" data-end="${timing.e}">${escapeHtml(token)}</span>`
+                        );
+                        wordIndex++;
+                    } else {
+                        result.push(escapeHtml(token));
+                    }
+                } else {
+                    result.push(escapeHtml(token));
+                }
+            }
+
+            return result.join('');
+        }
 
         window.addEventListener('resize', () => {
             const newIsMobile = window.innerWidth <= 768;
             if (newIsMobile !== isMobile) {
                 isMobile = newIsMobile;
                 if (!document.getElementById('reader-view').classList.contains('hidden')) {
-                    // При смене ориентации пересобираем книгу
                     location.reload(); 
                 }
             }
@@ -353,7 +399,7 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             loadTales();
-            setupAudioSync(); // Инициализация синхронизации аудио
+            setupAudioSync();
         });
 
         async function loadTales() {
@@ -370,20 +416,21 @@
                         title: 'The Gingerbread Man', 
                         author: 'Folklore', 
                         cover: 'https://cdn.pixabay.com/photo/2019/04/10/16/27/book-4117282_960_720.jpg',
-                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Пример аудио
+                        audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
                         youtube: 'https://www.youtube.com/watch?v=YoQ8-7l9i9o',
                         content: [
                             { 
                                 text: "Once upon a time there was an old man and an old woman.", 
                                 image: "https://cdn.pixabay.com/photo/2012/10/26/02/44/pancakes-63108_960_720.jpg",
                                 start: 0.0,
-                                end: 10.0
-                            },
-                            { 
-                                text: "Run, run, as fast as you can! You can't catch me!", 
-                                image: "",
-                                start: 10.1,
-                                end: 20.0
+                                end: 10.0,
+                                words: [
+                                    { "w": "Once", "s": 0.0, "e": 0.3 },
+                                    { "w": "upon", "s": 0.3, "e": 0.6 },
+                                    { "w": "a", "s": 0.6, "e": 0.8 },
+                                    { "w": "time", "s": 0.8, "e": 1.1 },
+                                    // ... остальные слова
+                                ]
                             }
                         ]
                     }
@@ -429,35 +476,45 @@
             });
         }
 
-        // НОВОЕ: Функция настройки синхронизации
         function setupAudioSync() {
             const audioPlayer = document.getElementById('audio-player');
-            let lastPageIndex = -1;
+            let lastHighlighted = null;
 
             audioPlayer.ontimeupdate = () => {
+                const currentTime = audioPlayer.currentTime;
+
+                // --- Подсветка текущего слова ---
+                if (lastHighlighted) {
+                    lastHighlighted.classList.remove('highlight');
+                    lastHighlighted = null;
+                }
+
+                const allWords = document.querySelectorAll('.word');
+                for (const word of allWords) {
+                    const start = parseFloat(word.dataset.start);
+                    const end = parseFloat(word.dataset.end);
+                    if (!isNaN(start) && !isNaN(end) && currentTime >= start && currentTime < end) {
+                        word.classList.add('highlight');
+                        lastHighlighted = word;
+                        break;
+                    }
+                }
+
+                // --- Перелистывание страниц ---
                 if (!currentSyncData.length) return;
 
-                const currentTime = audioPlayer.currentTime;
-                // Ищем страницу, время которой соответствует текущему времени аудио
-                const activeData = currentSyncData.find(block => currentTime >= block.start && currentTime < block.end);
+                const activeData = currentSyncData.find(block => 
+                    currentTime >= block.start && currentTime < block.end
+                );
 
-                if (activeData) {
-                    // Если нашли блок и мы еще не на этой странице (чтобы не спамить)
-                    if (lastPageIndex !== activeData.pageIndex) {
-                        lastPageIndex = activeData.pageIndex;
-                        
-                        if (!isMobile && bookInstance) {
-                            // Для десктопа: используем API книги
-                            // flip требует индекса страницы.
-                            // PageFlip часто показывает 2 страницы (например 1 и 2).
-                            // Метод flip перелистнет к указанному индексу.
-                            bookInstance.flip(activeData.pageIndex);
-                        } else {
-                            // Для мобильного: скроллим к элементу
-                            const targetPage = document.getElementById(`page-index-${activeData.pageIndex}`);
-                            if (targetPage) {
-                                targetPage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            }
+                if (activeData && lastPageIndex !== activeData.pageIndex) {
+                    lastPageIndex = activeData.pageIndex;
+                    if (!isMobile && bookInstance) {
+                        bookInstance.flip(activeData.pageIndex);
+                    } else {
+                        const targetPage = document.getElementById(`page-index-${activeData.pageIndex}`);
+                        if (targetPage) {
+                            targetPage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                         }
                     }
                 }
@@ -478,8 +535,8 @@
 
             if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
 
-            // Очищаем старые данные синхронизации
             currentSyncData = [];
+            lastPageIndex = -1;
 
             const audioWrapper = document.getElementById('audio-controls');
             const audioPlayer = document.getElementById('audio-player');
@@ -504,30 +561,26 @@
                 currentVideoId = null;
             }
 
-            // --- Генерация страниц ---
-
-            // Страница 0: Обложка/Титул (без аудио синхронизации, или можно добавить фейковую)
+            // Страница 0: Титульник
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
-            // Добавим ID для мобильного скролла
             titlePage.id = 'page-index-0'; 
             titlePage.innerHTML = `
                 <div class="title-content">
-                    <h1 style="font-family:'Fredoka', sans-serif; color:#6c5ce7; font-size:2.5rem; margin-top:50px;">${tale.title}</h1>
-                    <p style="font-family:'Quicksand'; font-weight:bold; font-size:1.2rem; color:#b2bec3;">${tale.author || 'Folklore'}</p>
+                    <h1 style="font-family:'Fredoka', sans-serif; color:#6c5ce7; font-size:2.5rem; margin-top:50px;">${escapeHtml(tale.title)}</h1>
+                    <p style="font-family:'Quicksand'; font-weight:bold; font-size:1.2rem; color:#b2bec3;">${escapeHtml(tale.author || 'Folklore')}</p>
                     <div style="margin-top:auto; font-size:4rem;">🦄</div>
                 </div>`;
             bookEl.appendChild(titlePage);
 
-            // Контентные страницы (Начинаются с индекса 1)
+            // Контентные страницы
             if (tale.content) {
                 tale.content.forEach((item, i) => {
-                    const pageIndex = i + 1; // 0 занят титульником
+                    const pageIndex = i + 1;
                     const page = document.createElement('div');
                     page.className = 'page';
                     page.id = `page-index-${pageIndex}`;
                     
-                    // Сохраняем данные для синхронизации, если они есть в JSON
                     if (item.start !== undefined && item.end !== undefined) {
                         currentSyncData.push({
                             pageIndex: pageIndex,
@@ -537,13 +590,34 @@
                     }
 
                     const img = item.image && !item.image.startsWith('http') ? `/tales/${tale.id}/${item.image}` : item.image;
-                    page.innerHTML = `
-                        <div class="page-content">
-                            ${img ? `<div class="page-img-box"><img src="${img}"></div>` : ''}
-                            <div class="page-text">${item.text || ''}</div>
-                            <div class="page-footer">${pageIndex}</div>
-                        </div>
-                    `;
+
+                    const pageContent = document.createElement('div');
+                    pageContent.className = 'page-content';
+                    
+                    if (img) {
+                        const imgBox = document.createElement('div');
+                        imgBox.className = 'page-img-box';
+                        const imgEl = document.createElement('img');
+                        imgEl.src = img;
+                        imgBox.appendChild(imgEl);
+                        pageContent.appendChild(imgBox);
+                    }
+
+                    const pageText = document.createElement('div');
+                    pageText.className = 'page-text';
+                    if (item.words && item.words.length) {
+                        pageText.innerHTML = wrapWordsWithTiming(item.text, item.words);
+                    } else {
+                        pageText.textContent = item.text || '';
+                    }
+                    pageContent.appendChild(pageText);
+
+                    const footer = document.createElement('div');
+                    footer.className = 'page-footer';
+                    footer.textContent = pageIndex;
+                    pageContent.appendChild(footer);
+
+                    page.appendChild(pageContent);
                     bookEl.appendChild(page);
                 });
             }
@@ -599,7 +673,8 @@
             const audioPlayer = document.getElementById('audio-player');
             audioPlayer.pause();
             audioPlayer.currentTime = 0;
-            currentSyncData = []; // Очистка данных синхронизации
+            currentSyncData = [];
+            lastPageIndex = -1;
 
             if (bookInstance) { bookInstance.destroy(); bookInstance = null; }
             const oldBook = document.getElementById('flip-book');
