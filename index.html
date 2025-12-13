@@ -384,6 +384,37 @@
             .carousel-card { width: 100px; height: 80px; left: 30px; }
             .carousel-wrapper { width: 160px; height: 80px; }
         }
+        
+        /* --- MOBILE LANDSCAPE FIX (Горизонтальный режим) --- */
+	@media screen and (max-width: 900px) and (orientation: landscape) {
+	    /* Скрываем карусель, чтобы освободить место */
+	    .carousel-scene {
+		display: none !important;
+	    }
+	    
+	    /* Уменьшаем шапку */
+	    .game-header {
+		height: 40px;
+		padding: 0 10px;
+	    }
+	    
+	    .game-header h2 {
+		font-size: 1rem;
+		margin-right: 10px;
+	    }
+
+	    /* Уменьшаем кнопки */
+	    .control-btn {
+		padding: 4px 10px;
+		font-size: 0.75rem;
+		height: 30px;
+	    }
+	    
+	    /* Убираем отступы у модального окна, если есть */
+	    #game-modal {
+		padding-bottom: 0;
+	    }
+	}
     </style>
 </head>
 <body>
@@ -1520,6 +1551,20 @@
 
             fireworks = fireworks.filter(fw => !fw.dead);
         }
+        
+        // --- АВТО-РЕСАЙЗ ПРИ ПОВОРОТЕ ЭКРАНА ---
+	    let resizeTimeout;
+	    window.addEventListener('resize', () => {
+		// Проверяем, открыто ли окно с игрой
+		if (!document.getElementById('game-modal').classList.contains('hidden')) {
+		    // Делаем небольшую задержку, чтобы экран успел перевернуться
+		    clearTimeout(resizeTimeout);
+		    resizeTimeout = setTimeout(() => {
+		        // Перезапускаем раскладку пазла под новые размеры
+		        initGame(rows); 
+		    }, 200);
+		}
+	    });
     </script>
 </body>
 </html>
