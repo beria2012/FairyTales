@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Magic Fairy Tales</title>
     
-    <!-- Fonts: Добавлен Lora -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Quicksand:wght@500;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
@@ -18,11 +18,10 @@
             --text-accent: #ff6b6b;
             --page-color: #fffbf0;
             --reader-bg: rgba(45, 52, 54, 0.95);
-            /* Цвет текста в книге */
             --book-text-color: #2c1810; 
         }
 
-        * { box-sizing: border-box; }
+        * { box-sizing: border-box; touch-action: manipulation; }
 
         body {
             margin: 0; padding: 0;
@@ -129,7 +128,7 @@
 
         .stf__wrapper { filter: drop-shadow(0 20px 60px rgba(0,0,0,0.5)); }
 
-        /* --- PAGES (DESIGN UPDATE) --- */
+        /* --- PAGES --- */
         .page {
             background-color: var(--page-color); overflow: hidden;
             border: 1px solid #e3d0b5;
@@ -161,24 +160,15 @@
         }
 
         .page-text {
-            font-family: 'Lora', serif;
-            font-size: 1.5rem;
-            line-height: 1.4;
-            text-align: justify;
-            flex-grow: 1;
-            font-weight: 500;
-            white-space: pre-wrap;
+            font-family: 'Lora', serif; font-size: 1.5rem; line-height: 1.4;
+            text-align: justify; flex-grow: 1; font-weight: 500; white-space: pre-wrap;
         }
 
-        /* --- СТИЛИ ДЛЯ СЛОВ (КАРАОКЕ) --- */
         .word {
             transition: color 0.1s, background-color 0.1s, text-shadow 0.1s;
             cursor: default;
         }
-        .word.highlight {
-            color: #eb9538;
-            font-weight: bold;
-        }
+        .word.highlight { color: #eb9538; font-weight: bold; }
         
         .page-footer { 
             text-align: center; font-size: 0.9rem; color: #998; 
@@ -207,6 +197,10 @@
         .control-btn:hover { transform: translateY(-3px) scale(1.05); }
         .close-btn { background: #ff7675; color: white; }
         .video-btn { background: #74b9ff; color: white; }
+        
+        /* КНОПКА ПАЗЛА */
+        .puzzle-btn { background: #fdcb6e; color: #2d3436; }
+        .puzzle-btn:hover { background: #ffeaa7; }
 
         .nav-arrow {
             position: absolute; top: 50%; transform: translateY(-50%);
@@ -249,6 +243,111 @@
 
         .hidden { display: none !important; }
 
+        /* --- GAME MODAL (CANVAS) --- */
+        #game-modal {
+            position: fixed; inset: 0; background: #2d3436; z-index: 3000;
+            display: flex; flex-direction: column;
+        }
+        .game-header {
+            height: 60px; background: rgba(0,0,0,0.3); padding: 0 20px;
+            display: flex; justify-content: space-between; align-items: center; color: #fff;
+            flex-shrink: 0; z-index: 3010; position: relative;
+        }
+        .game-controls { display: flex; gap: 10px; }
+        
+        /* --- 3D CAROUSEL --- */
+        .carousel-scene {
+            width: 100%; height: 140px;
+            perspective: 1000px;
+            display: flex; align-items: center; justify-content: center;
+            overflow: hidden;
+            background: radial-gradient(ellipse at center, rgba(100,100,100,0.3) 0%, rgba(0,0,0,0.5) 100%);
+            position: relative; z-index: 3005;
+        }
+        
+        .carousel-wrapper {
+            width: 160px; height: 100px;
+            position: absolute;
+            transform-style: preserve-3d;
+            transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+        }
+
+        .carousel-card {
+            position: absolute;
+            width: 150px; height: 100px;
+            left: 5px; top: 0;
+            border-radius: 10px;
+            border: 3px solid #fff;
+            overflow: hidden;
+            background: #000;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: filter 0.3s, border-color 0.3s;
+            /* Backface visibility allows seeing items on the back of the cylinder */
+            backface-visibility: hidden; 
+        }
+        
+        .carousel-card img {
+            width: 100%; height: 100%; object-fit: cover;
+            pointer-events: none;
+        }
+        
+        .carousel-card.active {
+            border-color: #fdcb6e;
+            box-shadow: 0 0 20px #fdcb6e;
+        }
+        .carousel-card:not(.active) {
+            filter: brightness(0.5);
+        }
+
+        #canvas-wrapper {
+            flex-grow: 1; position: relative; overflow: hidden;
+            background-image: radial-gradient(#636e72 1px, transparent 1px);
+            background-size: 30px 30px;
+            cursor: grab;
+        }
+        #canvas-wrapper:active { cursor: grabbing; }
+        canvas { display: block; touch-action: none; }
+        
+        /* --- WIN OVERLAY --- */
+        #win-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            display: flex; flex-direction: column; 
+            align-items: center; justify-content: center;
+            z-index: 4000; opacity: 0; pointer-events: none; 
+            transition: opacity 0.8s ease-in-out;
+        }
+        #win-overlay.visible { opacity: 1; pointer-events: auto; }
+        
+        .win-title {
+            font-family: 'Fredoka', sans-serif; font-size: 5rem;
+            color: #ffd700; text-shadow: 0 0 30px #ff0055, 0 0 10px #fff;
+            margin-bottom: 20px; transform: scale(0);
+            animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+            animation-delay: 0.2s;
+        }
+        .win-subtitle {
+            font-family: 'Quicksand', sans-serif; font-size: 1.5rem;
+            color: #fff; margin-bottom: 40px; opacity: 0;
+            animation: fadeIn 1s ease forwards; animation-delay: 0.8s;
+        }
+        .win-btn {
+            padding: 15px 40px; font-size: 1.5rem; background: linear-gradient(45deg, #00b894, #0984e3);
+            border: none; color: white; border-radius: 50px; cursor: pointer;
+            font-family: 'Fredoka', sans-serif; box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: transform 0.2s, box-shadow 0.2s; opacity: 0;
+            animation: fadeIn 1s ease forwards; animation-delay: 1s;
+        }
+        .win-btn:hover { transform: scale(1.1); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
+
+        @keyframes popIn {
+            0% { transform: scale(0); }
+            80% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
         /* --- MOBILE --- */
         @media (max-width: 768px) {
             body { overflow: auto; }
@@ -279,6 +378,11 @@
             .page-text { font-size: 1.3rem; }
             .title-content { height: 350px; border-color: #fab1a0; }
             .video-container { width: 95%; }
+            .win-title { font-size: 3rem; }
+            
+            .carousel-scene { height: 110px; }
+            .carousel-card { width: 100px; height: 80px; left: 30px; }
+            .carousel-wrapper { width: 160px; height: 80px; }
         }
     </style>
 </head>
@@ -305,6 +409,10 @@
     <!-- READER -->
     <div id="reader-view" class="hidden">
         <div class="top-controls">
+            <!-- PUZZLE BUTTON -->
+            <button id="puzzle-btn" class="control-btn puzzle-btn hidden" onclick="startPuzzleGame()">
+                <span>🧩</span> Play Puzzle
+            </button>
             <button id="watch-btn" class="control-btn video-btn hidden" onclick="openVideo()">
                 <span>📺</span> Watch Movie
             </button>
@@ -338,42 +446,69 @@
         <button class="close-video-btn" onclick="closeVideo()">Close Video</button>
     </div>
 
+    <!-- GAME MODAL (CANVAS) -->
+    <div id="game-modal" class="hidden">
+        <div class="game-header">
+            <h2>🧩 Jigsaw Puzzle</h2>
+	     	<div class="game-controls">
+	     		<button class="control-btn" onclick="initGame(3)">Easy</button>
+	     		<button class="control-btn" onclick="initGame(4)">Medium</button>
+	     		<button class="control-btn" onclick="initGame(5)">Hard</button>
+	     		<button class="control-btn" onclick="initGame(10)">👹 Memory Monster 👹</button>
+		        <button class="control-btn close-btn" onclick="closePuzzle()">Quit</button>
+            </div>
+        </div>
+        
+        <!-- 3D CAROUSEL CONTAINER -->
+        <div class="carousel-scene" id="carousel-scene">
+            <div class="carousel-wrapper" id="carousel-wrapper">
+                <!-- Cards injected via JS -->
+            </div>
+        </div>
+        
+        <div id="canvas-wrapper">
+            <canvas id="puzzle-canvas"></canvas>
+            
+            <!-- NEW FULL SCREEN WIN OVERLAY -->
+            <div id="win-overlay">
+                <div class="win-title">Awesome!</div>
+                <button class="win-btn" onclick="initGame(rows)">Play Again</button>
+            </div>
+        </div>
+    </div>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2/dist/fuse.min.js"></script>
 
     <script>
+        // --- GLOBAL VARIABLES ---
         let allTales = [];
         let bookInstance = null;
         let isMobile = window.innerWidth <= 768;
         let currentSyncData = [];
         let lastPageIndex = -1;
+        let currentVideoId = null;
+        let currentTale = null; 
 
-        // Escape HTML для безопасности
+        // Escape HTML
         function escapeHtml(text) {
             const div = document.createElement('div');
             div.textContent = text;
             return div.innerHTML;
         }
 
-        // Оборачивает слова в <span class="word"> с таймингами
+        // Word Wrapper
         function wrapWordsWithTiming(paragraph, wordsArray) {
-            if (!wordsArray || wordsArray.length === 0) {
-                return escapeHtml(paragraph);
-            }
-
-            // Разбиваем текст на токены (сохраняя пробелы)
+            if (!wordsArray || wordsArray.length === 0) return escapeHtml(paragraph);
             const tokens = paragraph.split(/(\s+)/);
             let wordIndex = 0;
             const result = [];
-
             for (const token of tokens) {
-                if (/\S/.test(token)) { // непробельный токен
+                if (/\S/.test(token)) { 
                     const timing = wordsArray[wordIndex];
                     if (timing) {
-                        result.push(
-                            `<span class="word" data-start="${timing.s}" data-end="${timing.e}">${escapeHtml(token)}</span>`
-                        );
+                        result.push(`<span class="word" data-start="${timing.s}" data-end="${timing.e}">${escapeHtml(token)}</span>`);
                         wordIndex++;
                     } else {
                         result.push(escapeHtml(token));
@@ -382,7 +517,6 @@
                     result.push(escapeHtml(token));
                 }
             }
-
             return result.join('');
         }
 
@@ -401,6 +535,7 @@
             setupAudioSync();
         });
 
+        // --- LOAD TALES ---
         async function loadTales() {
             try {
                 const res = await fetch('/tales-index.json');
@@ -408,30 +543,13 @@
                 allTales = await res.json();
                 renderLibrary(allTales);
             } catch(e) {
-                console.warn("Using demo data");
+                console.warn("Using demo data due to fetch error:", e);
                 allTales = [
                     {
-                        id: 'demo', 
-                        title: 'The Gingerbread Man', 
-                        author: 'Folklore', 
+                        id: 'demo', title: 'The Gingerbread Man', author: 'Folklore', 
                         cover: 'https://cdn.pixabay.com/photo/2019/04/10/16/27/book-4117282_960_720.jpg',
                         audio: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3',
-                        youtube: 'https://www.youtube.com/watch?v=YoQ8-7l9i9o',
-                        content: [
-                            { 
-                                text: "Once upon a time there was an old man and an old woman.", 
-                                image: "https://cdn.pixabay.com/photo/2012/10/26/02/44/pancakes-63108_960_720.jpg",
-                                start: 0.0,
-                                end: 10.0,
-                                words: [
-                                    { "w": "Once", "s": 0.0, "e": 0.3 },
-                                    { "w": "upon", "s": 0.3, "e": 0.6 },
-                                    { "w": "a", "s": 0.6, "e": 0.8 },
-                                    { "w": "time", "s": 0.8, "e": 1.1 },
-                                    // ... остальные слова
-                                ]
-                            }
-                        ]
+                        content: [{ text: "Once upon a time there was an old man and an old woman.", image: "https://cdn.pixabay.com/photo/2012/10/26/02/44/pancakes-63108_960_720.jpg" }]
                     }
                 ];
                 renderLibrary(allTales);
@@ -443,23 +561,16 @@
         function renderLibrary(tales) {
             const grid = document.getElementById('gallery-grid');
             grid.innerHTML = '';
-            
             tales.forEach(tale => {
                 const div = document.createElement('div');
                 div.className = 'tile';
                 const imgUrl = tale.cover && !tale.cover.startsWith('http') 
                     ? `/tales/${tale.id}/${tale.cover}` 
                     : (tale.cover || 'https://via.placeholder.com/300x450?text=No+Cover');
-                
                 let badges = '';
                 if (tale.audio) badges += '<div class="badge" title="Audio">🎵</div>';
                 if (tale.youtube) badges += '<div class="badge" title="Video">🎬</div>';
-
-                div.innerHTML = `
-                    <img src="${imgUrl}">
-                    <div class="media-badges">${badges}</div>
-                    <h3>${tale.title}</h3>
-                `;
+                div.innerHTML = `<img src="${imgUrl}"><div class="media-badges">${badges}</div><h3>${tale.title}</h3>`;
                 div.onclick = () => openBook(tale);
                 grid.appendChild(div);
             });
@@ -481,13 +592,10 @@
 
             audioPlayer.ontimeupdate = () => {
                 const currentTime = audioPlayer.currentTime;
-
-                // --- Подсветка текущего слова ---
                 if (lastHighlighted) {
                     lastHighlighted.classList.remove('highlight');
                     lastHighlighted = null;
                 }
-
                 const allWords = document.querySelectorAll('.word');
                 for (const word of allWords) {
                     const start = parseFloat(word.dataset.start);
@@ -498,29 +606,23 @@
                         break;
                     }
                 }
-
-                // --- Перелистывание страниц ---
                 if (!currentSyncData.length) return;
-
-                const activeData = currentSyncData.find(block => 
-                    currentTime >= block.start && currentTime < block.end
-                );
-
+                const activeData = currentSyncData.find(block => currentTime >= block.start && currentTime < block.end);
                 if (activeData && lastPageIndex !== activeData.pageIndex) {
                     lastPageIndex = activeData.pageIndex;
                     if (!isMobile && bookInstance) {
                         bookInstance.flip(activeData.pageIndex);
                     } else {
                         const targetPage = document.getElementById(`page-index-${activeData.pageIndex}`);
-                        if (targetPage) {
-                            targetPage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }
+                        if (targetPage) targetPage.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     }
                 }
             };
         }
 
+        // --- OPEN BOOK ---
         function openBook(tale) {
+            currentTale = tale; 
             document.getElementById('library-view').classList.add('hidden');
             document.getElementById('reader-view').classList.remove('hidden');
 
@@ -560,7 +662,9 @@
                 currentVideoId = null;
             }
 
-            // Страница 0: Титульник
+            document.getElementById('puzzle-btn').classList.remove('hidden');
+
+            // Pages
             const titlePage = document.createElement('div');
             titlePage.className = 'page';
             titlePage.id = 'page-index-0'; 
@@ -572,7 +676,6 @@
                 </div>`;
             bookEl.appendChild(titlePage);
 
-            // Контентные страницы
             if (tale.content) {
                 tale.content.forEach((item, i) => {
                     const pageIndex = i + 1;
@@ -581,11 +684,7 @@
                     page.id = `page-index-${pageIndex}`;
                     
                     if (item.start !== undefined && item.end !== undefined) {
-                        currentSyncData.push({
-                            pageIndex: pageIndex,
-                            start: parseFloat(item.start),
-                            end: parseFloat(item.end)
-                        });
+                        currentSyncData.push({ pageIndex: pageIndex, start: parseFloat(item.start), end: parseFloat(item.end) });
                     }
 
                     const img = item.image && !item.image.startsWith('http') ? `/tales/${tale.id}/${item.image}` : item.image;
@@ -668,6 +767,7 @@
         function closeBook() {
             document.getElementById('reader-view').classList.add('hidden');
             document.getElementById('library-view').classList.remove('hidden');
+            document.getElementById('puzzle-btn').classList.add('hidden');
             
             const audioPlayer = document.getElementById('audio-player');
             audioPlayer.pause();
@@ -682,6 +782,744 @@
 
         function flipNext() { if(!isMobile) bookInstance?.flipNext(); }
         function flipPrev() { if(!isMobile) bookInstance?.flipPrev(); }
+
+
+        /* ===============================================================
+           🧩 JIGSAW ENGINE & 3D CAROUSEL
+           =============================================================== */
+        
+        const canvas = document.getElementById('puzzle-canvas');
+        const ctx = canvas.getContext('2d');
+        const wrapper = document.getElementById('canvas-wrapper');
+        
+        let puzzleImg = null;
+        let fadeStartTime = 0; 
+	const FADE_DURATION = 1000; // 1 секунды
+	const FINAL_OPACITY = 0.1;  // Конечная прозрачность 
+        let pieces = [];
+        let rows = 3, cols = 3;
+        let pieceWidth, pieceHeight;
+        let boardX, boardY, boardW, boardH;
+        let selectedPiece = null;
+        let touchOffset = { x: 0, y: 0 };
+        let isWin = false;
+
+        // Carousel State
+        let carouselImages = [];
+        let theta = 0;
+        let radius = 0;
+        let currIndex = 0;
+        let carouselAngle = 0;
+        
+        // --- START GAME & CAROUSEL SETUP ---
+        function startPuzzleGame() {
+            // 1. Identify "Current Page Image" Logic
+            let targetImageSrc = null;
+            let currentPageIndex = 0;
+            
+            if (!isMobile && bookInstance) {
+                // PageFlip uses index 0 for cover (usually), 1 for first page
+                currentPageIndex = bookInstance.getCurrentPageIndex(); 
+            } else {
+                // On mobile we scroll, find logic or default to 0
+                // For simplicity, let's use global lastPageIndex which tracks audio/scroll
+                if(lastPageIndex > 0) currentPageIndex = lastPageIndex;
+            }
+
+            // Map page index to content image
+            // Note: Our content array index 0 corresponds to Page 1.
+            // So content[currentPageIndex - 1] is the content for current page.
+            if (currentPageIndex === 0) {
+                // Title page -> Cover
+                targetImageSrc = currentTale.cover;
+            } else if (currentTale.content && currentTale.content[currentPageIndex - 1]) {
+                targetImageSrc = currentTale.content[currentPageIndex - 1].image;
+                // If current page has no image, fallback to cover or previous?
+                if (!targetImageSrc) targetImageSrc = currentTale.cover;
+            } else {
+                targetImageSrc = currentTale.cover;
+            }
+            
+            if(targetImageSrc && !targetImageSrc.startsWith('http')) {
+                targetImageSrc = `/tales/${currentTale.id}/${targetImageSrc}`;
+            }
+
+            // 2. Build Carousel Data
+            const rawImages = [];
+            if(currentTale.cover) rawImages.push(currentTale.cover);
+            if(currentTale.content) {
+                currentTale.content.forEach(p => { if(p.image) rawImages.push(p.image); });
+            }
+            if(rawImages.length === 0) rawImages.push('https://via.placeholder.com/600x400');
+            
+            // Dedupe and Normalize
+            carouselImages = [...new Set(rawImages)].map(src => {
+                return src.startsWith('http') ? src : `/tales/${currentTale.id}/${src}`;
+            });
+
+            // If few images, duplicate them to make a nice circle
+            while (carouselImages.length < 6) {
+                carouselImages = carouselImages.concat(carouselImages);
+            }
+
+            // 3. Find initial Index based on Target
+            let initialIndex = 0;
+            if(targetImageSrc) {
+                const found = carouselImages.findIndex(s => s === targetImageSrc);
+                if(found !== -1) initialIndex = found;
+            }
+
+            // 4. Render Carousel
+            buildCarousel3D(initialIndex);
+
+            document.getElementById('game-modal').classList.remove('hidden');
+            document.getElementById('win-overlay').classList.remove('visible');
+            
+            // Load the initial image into the game immediately
+            loadPuzzleImage(carouselImages[initialIndex]);
+        }
+
+        function buildCarousel3D(startIndex) {
+            const wrapperEl = document.getElementById('carousel-wrapper');
+            wrapperEl.innerHTML = '';
+            
+            const count = carouselImages.length;
+            theta = 360 / count;
+            const cardWidth = isMobile ? 120 : 160; 
+            // Calculate radius to fit cards without overlapping too much
+            // r = (w / 2) / tan(PI / count)
+            radius = Math.round( (cardWidth / 2) / Math.tan( Math.PI / count ) );
+            if(radius < cardWidth) radius = cardWidth; // prevent too tight
+            
+            carouselImages.forEach((src, i) => {
+                const card = document.createElement('div');
+                card.className = 'carousel-card';
+                card.style.transform = `rotateY(${i * theta}deg) translateZ(${radius}px)`;
+                
+                const img = document.createElement('img');
+                img.src = src;
+                card.appendChild(img);
+                
+                // Click to select
+                card.onclick = () => {
+                   rotateToindex(i);
+                };
+                
+                wrapperEl.appendChild(card);
+            });
+
+            // Set initial rotation
+            currIndex = startIndex;
+            rotateToindex(startIndex);
+            setupCarouselEvents();
+        }
+
+        function rotateToindex(index) {
+            currIndex = index;
+            carouselAngle = -1 * theta * index;
+            updateCarouselTransform();
+            
+            // Load Image
+            // We use modulo just in case, though logic should keep it clean
+            const actualSrc = carouselImages[index]; 
+            loadPuzzleImage(actualSrc);
+        }
+
+        function updateCarouselTransform() {
+            const wrapperEl = document.getElementById('carousel-wrapper');
+            wrapperEl.style.transform = `translateZ(${-radius}px) rotateY(${carouselAngle}deg)`;
+            
+            // Update active class for visual pop
+            // Normalize current angle to find the 'front' item
+            // This is a bit tricky with free rotation, but for indexed rotation:
+            document.querySelectorAll('.carousel-card').forEach((card, i) => {
+               if(i === currIndex) card.classList.add('active');
+               else card.classList.remove('active');
+            });
+        }
+        
+        // --- CAROUSEL DRAGGING LOGIC ---
+        let isDraggingCarousel = false;
+        let startX = 0;
+        let currentRotation = 0;
+
+        function setupCarouselEvents() {
+            const scene = document.getElementById('carousel-scene');
+            
+            // Mouse
+            scene.onmousedown = (e) => {
+                isDraggingCarousel = true;
+                startX = e.pageX;
+                // Disable transition for instant drag feel
+                document.getElementById('carousel-wrapper').style.transition = 'none';
+                currentRotation = carouselAngle;
+            };
+            
+            window.onmousemove = (e) => {
+                if(!isDraggingCarousel) return;
+                const dx = e.pageX - startX;
+                // Sensitivity: 0.5 deg per pixel
+                carouselAngle = currentRotation + (dx * 0.5);
+                document.getElementById('carousel-wrapper').style.transform = `translateZ(${-radius}px) rotateY(${carouselAngle}deg)`;
+            };
+            
+            window.onmouseup = endDrag;
+            
+            // Touch
+            scene.ontouchstart = (e) => {
+                isDraggingCarousel = true;
+                startX = e.touches[0].pageX;
+                document.getElementById('carousel-wrapper').style.transition = 'none';
+                currentRotation = carouselAngle;
+            };
+            
+            window.ontouchmove = (e) => {
+                if(!isDraggingCarousel) return;
+                const dx = e.touches[0].pageX - startX;
+                carouselAngle = currentRotation + (dx * 0.5);
+                document.getElementById('carousel-wrapper').style.transform = `translateZ(${-radius}px) rotateY(${carouselAngle}deg)`;
+            };
+            
+            window.ontouchend = endDrag;
+        }
+
+        function endDrag() {
+            if(!isDraggingCarousel) return;
+            isDraggingCarousel = false;
+            
+            // Restore transition for snap
+            const wrap = document.getElementById('carousel-wrapper');
+            wrap.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)';
+            
+            // Snap to nearest
+            const indexFloat = -carouselAngle / theta;
+            let index = Math.round(indexFloat);
+            
+            // Normalize index to array bounds (circular)
+            // But we actually just want to snap rotation, finding the array index is slightly complex due to infinity
+            // Simplified: snap to angle, calculate modulo index for image loading
+            
+            carouselAngle = -index * theta;
+            wrap.style.transform = `translateZ(${-radius}px) rotateY(${carouselAngle}deg)`;
+            
+            // Normalize index for array lookup
+            let realIndex = index % carouselImages.length;
+            if(realIndex < 0) realIndex += carouselImages.length;
+            
+            currIndex = realIndex; // Update tracked index
+            
+            // Update active styling
+            document.querySelectorAll('.carousel-card').forEach((card, i) => {
+               card.classList.remove('active');
+            });
+            // Since we might have spun multiple loops, finding the specific DOM node is harder via index directly
+            // Easier: just set the logic index
+            const cards = document.querySelectorAll('.carousel-card');
+            if(cards[realIndex]) cards[realIndex].classList.add('active');
+            
+            // Load the puzzle
+            loadPuzzleImage(carouselImages[realIndex]);
+        }
+
+
+        // --- PUZZLE LOGIC ---
+	function loadPuzzleImage(src) {
+            const img = new Image();
+            img.crossOrigin = "Anonymous";
+            img.src = src;
+            img.onload = () => {
+                puzzleImg = img;
+                
+                // <--- Засекаем время начала анимации затухания
+                fadeStartTime = Date.now(); 
+                
+                // Restart game with current difficulty settings
+                initGame(rows); 
+            };
+        }
+
+        function closePuzzle() {
+            document.getElementById('game-modal').classList.add('hidden');
+            isWin = false;
+        }
+
+       function initGame(difficulty) {
+            rows = difficulty || 3;
+            cols = difficulty || 3;
+            pieces = [];
+            isWin = false;
+            document.getElementById('win-overlay').classList.remove('visible');
+
+            // Устанавливаем размер канваса под контейнер
+            canvas.width = wrapper.clientWidth;
+            canvas.height = wrapper.clientHeight;
+
+            if(!puzzleImg) return;
+
+            // --- НАСТРОЙКИ РАЗМЕРА (МАКСИМАЛЬНОЕ ЗАПОЛНЕНИЕ) ---
+            const pad = 10; // Минимальный отступ от краев (было 40)
+            
+            const availW = canvas.width - pad * 2;
+            const availH = canvas.height - pad * 2;
+            const imgRatio = puzzleImg.width / puzzleImg.height;
+
+            // Увеличиваем коэффициент до 0.95 (занимаем 95% пространства)
+            if (availW / availH > imgRatio) {
+                boardH = availH * 0.95; 
+                boardW = boardH * imgRatio;
+            } else {
+                boardW = availW * 0.95;
+                boardH = boardW / imgRatio;
+            }
+            
+            // Центрируем доску
+            boardX = (canvas.width - boardW) / 2;
+            boardY = (canvas.height - boardH) / 2;
+            
+            pieceWidth = boardW / cols;
+            pieceHeight = boardH / rows;
+
+            // Создаем кусочки (логическая нарезка)
+            buildPieces();
+
+            // Раскидываем кусочки
+            pieces.forEach(p => {
+                let attempts = 0;
+                let placedSuccessfully = false;
+                // Так как поле теперь огромное, найти место "снаружи" почти невозможно.
+                // Ставим мало попыток, чтобы они быстро раскидались случайно (даже поверх поля)
+                const maxAttempts = 10;
+
+                while (!placedSuccessfully && attempts < maxAttempts) {
+                    p.currentX = Math.random() * (canvas.width - pieceWidth);
+                    p.currentY = Math.random() * (canvas.height - pieceHeight);
+
+                    // Координаты текущего куска
+                    const pLeft = p.currentX;
+                    const pRight = p.currentX + pieceWidth;
+                    const pTop = p.currentY;
+                    const pBottom = p.currentY + pieceHeight;
+
+                    // Координаты доски (куда стараемся НЕ ставить)
+                    const margin = 5; 
+                    const bLeft = boardX - margin;
+                    const bRight = boardX + boardW + margin;
+                    const bTop = boardY - margin;
+                    const bBottom = boardY + boardH + margin;
+
+                    const isOverlapping = (
+                        pRight > bLeft &&
+                        pLeft < bRight &&
+                        pBottom > bTop &&
+                        pTop < bBottom
+                    );
+
+                    if (!isOverlapping) {
+                        placedSuccessfully = true;
+                    }
+                    attempts++;
+                }
+
+                // Защита от вылета за границы экрана
+                if (p.currentX < 0) p.currentX = 0;
+                if (p.currentY < 0) p.currentY = 0;
+                if (p.currentX > canvas.width - pieceWidth) p.currentX = canvas.width - pieceWidth;
+                if (p.currentY > canvas.height - pieceHeight) p.currentY = canvas.height - pieceHeight;
+            });
+
+            requestAnimationFrame(gameLoop);
+        }
+
+	function buildPieces() {
+            for (let r = 0; r < rows; r++) {
+                for (let c = 0; c < cols; c++) {
+                    const piece = {
+                        r: r, c: c,
+                        correctX: boardX + c * pieceWidth,
+                        correctY: boardY + r * pieceHeight,
+                        currentX: 0, currentY: 0,
+                        isSnapped: false,
+                        snapTime: 0, // <--- НОВОЕ: Время сборки для таймера
+                        isError: false,
+                        // errorTime убираем, он больше не нужен для логики
+                        top: 0, right: 0, bottom: 0, left: 0
+                    };
+
+                    if (r > 0) piece.top = -pieces[(r - 1) * cols + c].bottom;
+                    if (r < rows - 1) piece.bottom = Math.random() > 0.5 ? 1 : -1;
+                    if (c > 0) piece.left = -pieces[r * cols + (c - 1)].right;
+                    if (c < cols - 1) piece.right = Math.random() > 0.5 ? 1 : -1;
+
+                    pieces.push(piece);
+                }
+            }
+        }
+
+        function gameLoop() {
+            if(document.getElementById('game-modal').classList.contains('hidden')) return;
+
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            if(!puzzleImg) return;
+
+            // --- РАСЧЕТ ПРОЗРАЧНОСТИ (АНИМАЦИЯ) ---
+            const now = Date.now();
+            const elapsed = now - fadeStartTime;
+            let currentAlpha = FINAL_OPACITY;
+
+            if (elapsed < FADE_DURATION) {
+                // Вычисляем прогресс от 0.0 до 1.0
+                const progress = elapsed / FADE_DURATION;
+                // Линейная интерполяция от 1.0 (полная видимость) до FINAL_OPACITY (0.2)
+                // Формула: Начало - (Разница * прогресс)
+                currentAlpha = 1.0 - ((1.0 - FINAL_OPACITY) * progress);
+            }
+            // ---------------------------------------
+
+            // Ghost Board (Подложка)
+            ctx.save();
+            ctx.globalAlpha = currentAlpha; // <--- Применяем динамическую прозрачность
+            ctx.drawImage(puzzleImg, boardX, boardY, boardW, boardH);
+            
+            // Рамка вокруг подложки тоже пусть затухает вместе с картинкой, 
+            // или оставьте фиксированной (здесь сделаем фиксированной 0.2 для рамки, чтобы границы было видно)
+            ctx.globalAlpha = 0.2; 
+            ctx.strokeStyle = "rgba(255,255,255,0.8)"; 
+            ctx.lineWidth = 1;
+            ctx.strokeRect(boardX, boardY, boardW, boardH);
+            ctx.restore();
+
+            const renderOrder = [...pieces].sort((a, b) => {
+                if(a === selectedPiece) return 1;
+                if(b === selectedPiece) return -1;
+                if(a.isSnapped && !b.isSnapped) return -1;
+                if(!a.isSnapped && b.isSnapped) return 1;
+                return 0;
+            });
+
+            renderOrder.forEach(p => drawPiece(p));
+            if(isWin) drawFireworks();
+            requestAnimationFrame(gameLoop);
+        }
+
+        function drawPiece(p) {
+            ctx.save();
+            
+            // 1. Path
+            ctx.beginPath();
+            const x = p.currentX, y = p.currentY, w = pieceWidth, h = pieceHeight;
+            ctx.moveTo(x, y);
+            drawSide(x, y, x + w, y, p.top);
+            drawSide(x + w, y, x + w, y + h, p.right);
+            drawSide(x + w, y + h, x, y + h, p.bottom);
+            drawSide(x, y + h, x, y, p.left);
+            ctx.closePath();
+
+            // 2. Drop Shadow (Тень)
+            if (!p.isSnapped && p !== selectedPiece) {
+                ctx.shadowColor = "rgba(0, 0, 0, 0.3)";
+                ctx.shadowBlur = 8;
+                ctx.shadowOffsetX = 4;
+                ctx.shadowOffsetY = 4;
+                ctx.stroke(); 
+                ctx.shadowColor = "transparent"; 
+            } else if (p === selectedPiece) {
+                ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+                ctx.shadowBlur = 15;
+                ctx.shadowOffsetX = 8;
+                ctx.shadowOffsetY = 8;
+                ctx.stroke(); 
+                ctx.shadowColor = "transparent";
+            }
+
+            // 3. Draw Image
+            ctx.save();
+            ctx.clip();
+            ctx.drawImage(puzzleImg, x - p.c * pieceWidth, y - p.r * pieceHeight, boardW, boardH);
+            
+            // 4. Bevel (Объем)
+            ctx.globalCompositeOperation = 'source-over';
+            ctx.shadowColor = 'rgba(255, 255, 255, 0.7)';
+            ctx.shadowBlur = 2;
+            ctx.shadowOffsetX = -1.5;
+            ctx.shadowOffsetY = -1.5;
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+            ctx.stroke();
+
+            ctx.shadowColor = 'rgba(0, 0, 0, 0.5)';
+            ctx.shadowBlur = 2;
+            ctx.shadowOffsetX = 1.5;
+            ctx.shadowOffsetY = 1.5;
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = 'rgba(0, 0, 0, 0.2)'; 
+            ctx.stroke();
+            
+            ctx.restore(); 
+
+            // 5. COLOR FEEDBACK (НОВАЯ ЛОГИКА)
+            
+            if (p.isSnapped) {
+                // Если победа еще не наступила ИЛИ прошло меньше 1 секунд с момента стыковки
+                if(!isWin && (Date.now() - p.snapTime < 500)) { 
+                    ctx.lineWidth = 3; // Чуть жирнее
+                    ctx.strokeStyle = "#00e676"; // Зеленый
+                    ctx.stroke();
+                }
+            } else if (p.isError) {
+                // Если ошибка (и мы не держим деталь в руках) - КРАСНЫЙ ГРИТ ВСЕГДА
+                if (p !== selectedPiece) {
+                    ctx.lineWidth = 3;
+                    ctx.strokeStyle = "#ff1744"; // Красный
+                    ctx.stroke();
+                }
+            } else if (p === selectedPiece) {
+                // Если держим в руках - Золотой
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "#ffd700";
+                ctx.stroke();
+            }
+            
+            ctx.restore();
+        }
+
+        // Fat neck side drawing
+        function drawSide(x1, y1, x2, y2, type) {
+            if (type === 0) {
+                ctx.lineTo(x2, y2);
+                return;
+            }
+
+            const dx = x2 - x1;
+            const dy = y2 - y1;
+            const len = Math.hypot(dx, dy);
+            
+            const ux = dx / len;
+            const uy = dy / len;
+
+            const perpX = -uy * type; 
+            const perpY = ux * type;  
+
+            const neckW = len * 0.20; 
+            const headW = len * 0.35; 
+            const tabH  = len * 0.25; 
+            
+            const p1 = 0.35; 
+            const p2 = 0.5;  
+            const p3 = 0.65; 
+
+            const b1x = x1 + dx * p1;
+            const b1y = y1 + dy * p1;
+            
+            const b2x = x1 + dx * p2;
+            const b2y = y1 + dy * p2;
+            
+            const b3x = x1 + dx * p3;
+            const b3y = y1 + dy * p3;
+
+            ctx.bezierCurveTo(
+                x1 + dx * (p1 * 0.8), 
+                y1 + dy * (p1 * 0.8), 
+                b1x - perpX * (len * 0.05), 
+                b1y - perpY * (len * 0.05),
+                b1x, b1y
+            );
+
+            const headX = b2x + perpX * tabH;
+            const headY = b2y + perpY * tabH;
+
+            ctx.bezierCurveTo(
+                b1x + perpX * (tabH * 0.4), 
+                b1y + perpY * (tabH * 0.4),
+                headX - ux * (headW * 0.5), 
+                headY - uy * (headW * 0.5),
+                headX, headY                
+            );
+
+             ctx.bezierCurveTo(
+                headX + ux * (headW * 0.5), 
+                headY + uy * (headW * 0.5),
+                b3x + perpX * (tabH * 0.4), 
+                b3y + perpY * (tabH * 0.4),
+                b3x, b3y                    
+            );
+
+            ctx.bezierCurveTo(
+                b3x - perpX * (len * 0.05), 
+                b3y - perpY * (len * 0.05),
+                x2 - dx * (p1 * 0.8),
+                y2 - dy * (p1 * 0.8),
+                x2, y2
+            );
+        }
+
+        // --- INTERACTION ---
+        canvas.addEventListener('mousedown', e => inputStart(e.offsetX, e.offsetY));
+        canvas.addEventListener('mousemove', e => inputMove(e.offsetX, e.offsetY));
+        window.addEventListener('mouseup', inputEnd);
+
+        canvas.addEventListener('touchstart', e => {
+            const r = canvas.getBoundingClientRect();
+            inputStart(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
+        }, {passive: false});
+        canvas.addEventListener('touchmove', e => {
+            e.preventDefault();
+            const r = canvas.getBoundingClientRect();
+            inputMove(e.touches[0].clientX - r.left, e.touches[0].clientY - r.top);
+        }, {passive: false});
+        window.addEventListener('touchend', inputEnd);
+
+	function inputStart(x, y) {
+            if(isWin) return;
+            for(let i=pieces.length-1; i>=0; i--) {
+                const p = pieces[i];
+                if(p.isSnapped) continue;
+                if(x>p.currentX && x<p.currentX+pieceWidth && y>p.currentY && y<p.currentY+pieceHeight) {
+                    selectedPiece = p;
+                    
+                    selectedPiece.isError = false; 
+                    
+                    touchOffset.x = x - p.currentX;
+                    touchOffset.y = y - p.currentY;
+                    pieces.splice(i, 1);
+                    pieces.push(p);
+                    return;
+                }
+            }
+        }
+        function inputMove(x, y) {
+            if(!selectedPiece) return;
+            selectedPiece.currentX = x - touchOffset.x;
+            selectedPiece.currentY = y - touchOffset.y;
+        }
+        
+       function inputEnd() {
+            if(!selectedPiece) return;
+            
+            const dist = Math.hypot(
+                selectedPiece.currentX - selectedPiece.correctX,
+                selectedPiece.currentY - selectedPiece.correctY
+            );
+            
+            if(dist < 30) {
+                // --- УСПЕХ ---
+                selectedPiece.currentX = selectedPiece.correctX;
+                selectedPiece.currentY = selectedPiece.correctY;
+                selectedPiece.isSnapped = true;
+                selectedPiece.isError = false;
+                
+                // <--- Запоминаем время стыковки
+                selectedPiece.snapTime = Date.now(); 
+                
+                if(pieces.every(p => p.isSnapped)) {
+                    isWin = true;
+                    document.getElementById('win-overlay').classList.add('visible');
+                    initFireworks();
+                }
+            } else {
+                // --- НЕУДАЧА ---
+                
+                // <--- НОВОЕ: Проверяем, бросил ли игрок деталь НА доску
+                // Координаты детали
+                const pX = selectedPiece.currentX;
+                const pY = selectedPiece.currentY;
+                
+                // Простая проверка пересечения: если деталь касается области доски
+                const isOverBoard = (
+                    pX < boardX + boardW &&
+                    pX + pieceWidth > boardX &&
+                    pY < boardY + boardH &&
+                    pY + pieceHeight > boardY
+                );
+
+                if (isOverBoard) {
+                    // Если бросили на доску, но неправильно -> ВЕЧНЫЙ КРАСНЫЙ
+                    selectedPiece.isError = true;
+                } else {
+                    // Если бросили мимо доски -> просто лежит, без красного
+                    selectedPiece.isError = false;
+                }
+                
+                // Легкий отскок, чтобы было видно, что не встало
+                const angle = Math.atan2(
+                    selectedPiece.currentY - selectedPiece.correctY,
+                    selectedPiece.currentX - selectedPiece.correctX
+                );
+                selectedPiece.currentX += Math.cos(angle) * 20;
+                selectedPiece.currentY += Math.sin(angle) * 20;
+                
+                // Границы экрана
+                if(selectedPiece.currentX < 0) selectedPiece.currentX = 0;
+                if(selectedPiece.currentY < 0) selectedPiece.currentY = 0;
+                if(selectedPiece.currentX > canvas.width - pieceWidth) selectedPiece.currentX = canvas.width - pieceWidth;
+                if(selectedPiece.currentY > canvas.height - pieceHeight) selectedPiece.currentY = canvas.height - pieceHeight;
+            }
+            
+            selectedPiece = null;
+        }
+        
+        // --- FIREWORKS ANIMATION ---
+        let fireworks = [];
+        
+        function initFireworks() {
+            fireworks = [];
+        }
+
+        function drawFireworks() {
+            if(Math.random() < 0.05) {
+                fireworks.push({
+                    x: Math.random() * canvas.width,
+                    y: canvas.height,
+                    tx: Math.random() * canvas.width,
+                    ty: Math.random() * (canvas.height/2),
+                    vx: 0, vy: -15, 
+                    hue: Math.random()*360,
+                    particles: [],
+                    exploded: false,
+                    dead: false
+                });
+            }
+
+            fireworks.forEach(fw => {
+                if(!fw.exploded) {
+                    fw.x += (fw.tx - fw.x) * 0.05;
+                    fw.y += (fw.ty - fw.y) * 0.05;
+                    ctx.fillStyle = `hsl(${fw.hue}, 100%, 50%)`;
+                    ctx.fillRect(fw.x, fw.y, 4, 4);
+
+                    if(Math.abs(fw.y - fw.ty) < 10) {
+                        fw.exploded = true;
+                        for(let i=0; i<50; i++) {
+                            const angle = Math.random() * Math.PI * 2;
+                            const speed = Math.random() * 5 + 2;
+                            fw.particles.push({
+                                x: fw.x, y: fw.y,
+                                vx: Math.cos(angle) * speed,
+                                vy: Math.sin(angle) * speed,
+                                alpha: 1
+                            });
+                        }
+                    }
+                } else {
+                    fw.particles.forEach(p => {
+                        p.x += p.vx; p.y += p.vy;
+                        p.vy += 0.1;
+                        p.alpha -= 0.02;
+                        
+                        ctx.save();
+                        ctx.globalAlpha = p.alpha;
+                        ctx.fillStyle = `hsl(${fw.hue}, 100%, 60%)`;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, 3, 0, Math.PI*2);
+                        ctx.fill();
+                        ctx.restore();
+                    });
+                    if(fw.particles.every(p => p.alpha <= 0)) fw.dead = true;
+                }
+            });
+
+            fireworks = fireworks.filter(fw => !fw.dead);
+        }
     </script>
 </body>
 </html>
