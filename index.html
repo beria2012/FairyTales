@@ -415,9 +415,140 @@
 		padding-bottom: 0;
 	    }
 	}
+	/* --- SENTENCE GAME MODE --- */
+	#sentence-view {
+	    position: fixed; inset: 0; 
+	    background-color: rgba(45, 52, 54, 0.98);
+	    z-index: 2500; display: flex; flex-direction: column; align-items: center;
+	}
+
+	.sentence-stage {
+	    flex-grow: 1; width: 100%; max-width: 800px;
+	    display: flex; flex-direction: column; align-items: center;
+	    padding: 20px; overflow-y: auto;
+	}
+
+	/* Имитация страницы книги */
+	.game-book-page {
+	    background: #fffbf0;
+	    background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+	    width: 100%; border-radius: 15px;
+	    padding: 30px; margin-top: 50px;
+	    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+	    display: flex; flex-direction: column;
+	    min-height: 50vh;
+	}
+
+	/* Контейнер слотов (строки) */
+	#game-slots-container {
+	    display: flex; flex-wrap: wrap; gap: 8px; align-content: flex-start;
+	    line-height: 2.2; /* Увеличим высоту строк для слотов */
+	}
+
+	/* Пустой слот */
+	.word-slot {
+	    display: inline-flex; align-items: center; justify-content: center;
+	    min-width: 60px; height: 36px;
+	    border-bottom: 2px dashed #b2bec3;
+	    margin: 0 4px; color: #2d3436;
+	    font-family: 'Lora', serif; font-weight: 600; font-size: 1.2rem;
+	    transition: 0.3s; padding: 0 5px;
+	    cursor: pointer;
+	}
+
+	/* Слот, в который уже поставили слово */
+	.word-slot.filled {
+	    border-bottom: 2px solid #6c5ce7;
+	    background: rgba(108, 92, 231, 0.1);
+	    border-radius: 5px;
+	}
+	.word-slot.active-hint {
+	    border-color: #fdcb6e;
+	    animation: pulseBorder 1s infinite;
+	}
+
+	/* Текст подсказки внутри слота (серый) */
+	.hint-text {
+	    color: #b2bec3; font-style: italic; pointer-events: none;
+	}
+
+	/* Нижняя панель с кнопками-словами */
+	#word-bank-wrapper {
+	    width: 100%; padding: 20px; margin-top: 20px;
+	    background: rgba(255,255,255,0.1); border-radius: 20px;
+	    border: 1px solid rgba(255,255,255,0.2);
+	}
+
+	#word-bank {
+	    display: flex; flex-wrap: wrap; justify-content: center; gap: 12px;
+	}
+
+	.word-chip {
+	    background: #fff; padding: 10px 18px; border-radius: 12px;
+	    font-family: 'Quicksand', sans-serif; font-weight: bold; color: #2d3436;
+	    box-shadow: 0 4px 0 #dfe6e9; cursor: pointer;
+	    transition: transform 0.1s; user-select: none;
+	}
+	.word-chip:active { transform: translateY(3px); box-shadow: 0 1px 0 #b2bec3; }
+	.word-chip.used { opacity: 0.3; pointer-events: none; transform: scale(0.9); box-shadow: none; }
+
+	#sentence-overlay {
+	    position: absolute; inset: 0; background: rgba(0,0,0,0.8);
+	    display: flex; flex-direction: column; align-items: center; justify-content: center;
+	    z-index: 2600;
+	}
+
+	@keyframes pulseBorder { 0% { border-color: #b2bec3; } 50% { border-color: #e17055; } 100% { border-color: #b2bec3; } }
+
+	@media (max-width: 768px) {
+	    .game-book-page { padding: 15px; margin-top: 60px; min-height: 40vh; }
+	    #game-img-container { height: 200px; }
+	    .word-slot { font-size: 1rem; height: 30px; min-width: 40px; }
+	    .word-chip { padding: 8px 12px; font-size: 0.9rem; }
+	}
+	/* Анимация магических частиц */
+	/* Контейнер для частиц - занимает весь экран */
+	#magic-scene {
+	    position: absolute;
+	    inset: 0; /* Растянуть на весь родительский блок */
+	    width: 100%;
+	    height: 100%;
+	    pointer-events: none; /* Чтобы сквозь него можно было кликать */
+	    overflow: hidden;
+	    z-index: 1; /* Лежит под текстом, но над фоном */
+	}
+
+	/* Сама частица */
+	.magic-particle {
+	    position: absolute;
+	    bottom: -10vh; /* Старт ниже экрана */
+	    opacity: 0;
+	    user-select: none;
+	    will-change: transform, opacity;
+	    /* Анимация определяется в JS для каждой частицы, но база здесь */
+	    animation-name: floatUp;
+	    animation-timing-function: ease-out;
+	    animation-fill-mode: forwards;
+	}
+
+	@keyframes floatUp {
+	    0% {
+		transform: translateY(0) scale(0.5) rotate(0deg);
+		opacity: 0;
+	    }
+	    10% {
+		opacity: 1;
+	    }
+	    100% {
+		/* Улетают вверх за пределы экрана */
+		transform: translateY(-120vh) scale(1.2) rotate(360deg);
+		opacity: 0;
+	    }
+	}
     </style>
 </head>
 <body>
+    <audio id="win-sound" src="/win-sound.mp3" preload="auto"></audio>	
 
     <div class="bg-shape shape-1"></div>
     <div class="bg-shape shape-2"></div>
@@ -442,10 +573,13 @@
         <div class="top-controls">
             <!-- PUZZLE BUTTON -->
             <button id="puzzle-btn" class="control-btn puzzle-btn hidden" onclick="startPuzzleGame()">
-                <span>🧩</span> Play Puzzle
+                <span>🧩</span> Puzzle
             </button>
+            <button id="sentence-btn" class="control-btn puzzle-btn hidden" onclick="initSentenceGame()">
+	        <span>📝</span> Words
+	    </button>
             <button id="watch-btn" class="control-btn video-btn hidden" onclick="openVideo()">
-                <span>📺</span> Watch Movie
+                <span>📺</span> Video
             </button>
             <button class="control-btn close-btn" onclick="closeBook()">
                 <span>✖</span> Close
@@ -507,6 +641,54 @@
             </div>
         </div>
     </div>
+	<!-- SENTENCE BUILDER GAME VIEW -->
+	<div id="sentence-view" class="hidden">
+	    <!-- Шапка игры -->
+	    <div class="top-controls" style="justify-content: space-between; width: 95%;">
+		<div class="game-score" style="font-family:'Fredoka'; color:#fff; font-size:1.5rem; background:rgba(0,0,0,0.3); padding:5px 20px; border-radius:20px;">
+		    📝 Magic Writer
+		</div>
+		<div style="display:flex; gap:10px;">
+		 <button class="control-btn" onclick="resetSentenceGame()" style="background: #ff7675; color: white;">
+        <span>🔄</span> Reset
+    </button>
+		    <button class="control-btn video-btn" onclick="useHint()">
+		        <span>💡</span> Hint
+		    </button>
+		    <button class="control-btn close-btn" onclick="closeSentenceGame()">
+		        <span>✖</span> Exit
+		    </button>
+		</div>
+	    </div>
+
+	    <!-- Игровая зона (выглядит как страница) -->
+	    <div class="sentence-stage">
+		<div class="game-book-page">
+		    <!-- Сюда вставим картинку -->
+		    <div id="game-img-container" class="page-img-box" style="height: 45%; flex-shrink: 0;"></div>
+		    
+		    <!-- Сюда вставим пустые слоты для слов -->
+		    <div id="game-slots-container" class="page-text" style="position: relative;"></div>
+		</div>
+
+		<!-- Банк слов (внизу) -->
+		<div id="word-bank-wrapper">
+		    <div id="word-bank"></div>
+		</div>
+	    </div>
+	    
+	    <!-- Победное сообщение -->
+		<div id="sentence-overlay" class="hidden">
+		    <!-- Сюда будут падать частицы, не мешая кнопкам -->
+		    <div id="magic-scene"></div>
+
+		    <!-- контент останется по центру -->
+		    <div style="position: relative; z-index: 10; display: flex; flex-direction: column; align-items: center;">
+			<h2 class="win-title" style="font-size: 3rem;">Well Done!</h2>
+			<button class="win-btn" style="opacity:1; animation:none;" onclick="nextSentenceLevel()">Next ➡</button>
+		    </div>
+		</div>
+	</div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/page-flip@2.0.7/dist/js/page-flip.browser.min.js"></script>
@@ -521,6 +703,14 @@
         let lastPageIndex = -1;
         let currentVideoId = null;
         let currentTale = null; 
+        
+        function playWinSound() {
+	    const sound = document.getElementById('win-sound');
+	    if (sound) {
+		sound.currentTime = 0;
+		sound.play().catch(e => console.log("Audio play prevented:", e));
+	    }
+	}
 
         // Escape HTML
         function escapeHtml(text) {
@@ -694,6 +884,8 @@
             }
 
             document.getElementById('puzzle-btn').classList.remove('hidden');
+            
+            document.getElementById('sentence-btn').classList.remove('hidden');
 
             // Pages
             const titlePage = document.createElement('div');
@@ -799,6 +991,7 @@
             document.getElementById('reader-view').classList.add('hidden');
             document.getElementById('library-view').classList.remove('hidden');
             document.getElementById('puzzle-btn').classList.add('hidden');
+            document.getElementById('sentence-btn').classList.add('hidden');
             
             const audioPlayer = document.getElementById('audio-player');
             audioPlayer.pause();
@@ -1446,6 +1639,7 @@
                     isWin = true;
                     document.getElementById('win-overlay').classList.add('visible');
                     initFireworks();
+                    playWinSound();
                 }
             } else {
                 // --- НЕУДАЧА ---
@@ -1565,6 +1759,311 @@
 		    }, 200);
 		}
 	    });
+	    
+	    /* =========================================
+	   📝 SENTENCE BUILDER GAME ENGINE
+	   ========================================= */
+	// Текущий индекс страницы для игры в слова
+        let sentenceGameCurrentIndex = 0;
+	let sentenceGameData = {
+	    fullText: "",
+	    words: [], // { text: "Word", clean: "word" }
+	    userState: [], // Массив, что поставил юзер (или null)
+	    shuffledBank: [], // Индексы слов
+	    hintState: { slotIndex: -1, lettersShown: 0 } // Состояние подсказки
+	};
+
+	function initSentenceGame(isNextLevel = false) {
+	    // Если это НЕ переход по кнопке "Далее" (то есть мы открыли игру из меню),
+	    // то синхронизируемся с текущей открытой страницей книги.
+	    if (!isNextLevel) {
+		let pageIdx = 0;
+		if (!isMobile && bookInstance) {
+		    pageIdx = bookInstance.getCurrentPageIndex();
+		} else if (lastPageIndex > 0) {
+		    pageIdx = lastPageIndex;
+		}
+		
+		// Корректировка: в массиве content индекс 0 — это 1-я страница текста.
+		// PageFlip: 0 = Обложка, 1 = 1-я страница.
+		// Поэтому для массива контента делаем -1, если это не обложка.
+		sentenceGameCurrentIndex = (pageIdx === 0) ? 0 : pageIdx - 1;
+	    }
+
+	    // Проверяем, есть ли такой контент (не конец ли книги?)
+	    if (!currentTale.content || !currentTale.content[sentenceGameCurrentIndex]) {
+		// Если вышли за пределы массива - значит книга кончилась
+		alert("🎉 The End! You fixed the whole story!");
+		closeSentenceGame();
+		return;
+	    }
+
+	    // Берем данные из нашего внутреннего счетчика
+	    let pageContent = currentTale.content[sentenceGameCurrentIndex];
+
+	    // --- ДАЛЕЕ ВАШ СТАРЫЙ КОД UI ---
+	    
+	    // 2. Настраиваем UI
+	    const view = document.getElementById('sentence-view');
+	    view.classList.remove('hidden');
+	    document.getElementById('sentence-overlay').classList.add('hidden');
+	    
+	    // Скрываем магические частицы, если они остались
+	    const magicScene = document.getElementById('magic-scene');
+	    if (magicScene) magicScene.innerHTML = '';
+	    
+	    // Картинка
+	    const imgContainer = document.getElementById('game-img-container');
+	    imgContainer.innerHTML = '';
+	    if (pageContent.image) {
+		const img = document.createElement('img');
+		const src = pageContent.image.startsWith('http') ? pageContent.image : `/tales/${currentTale.id}/${pageContent.image}`;
+		img.src = src;
+		imgContainer.appendChild(img);
+	    }
+
+	    // 3. Подготовка текста
+	    let rawText = pageContent.text;
+	    let sentences = rawText.match(/[^\.!\?]+[\.!\?]+/g);
+	    let targetText = (sentences && sentences.length > 0) ? sentences[0] : rawText;
+	    
+	    let wordsRaw = targetText.trim().split(/\s+/);
+	    
+	    sentenceGameData.words = wordsRaw.map((w, i) => ({
+		original: w,
+		clean: w.replace(/[^\w\u0400-\u04FF]/g, "").toLowerCase(),
+		id: i
+	    }));
+
+	    sentenceGameData.userState = new Array(sentenceGameData.words.length).fill(null);
+	    sentenceGameData.hintState = { slotIndex: -1, lettersShown: 0 };
+	    sentenceGameData.shuffledBank = [...sentenceGameData.words].sort(() => Math.random() - 0.5);
+
+	    renderSentenceBoard();
+	}
+
+	function closeSentenceGame() {
+	    document.getElementById('sentence-view').classList.add('hidden');
+	}
+
+	function renderSentenceBoard() {
+	    const slotsContainer = document.getElementById('game-slots-container');
+	    const bankContainer = document.getElementById('word-bank');
+	    
+	    slotsContainer.innerHTML = '';
+	    bankContainer.innerHTML = '';
+
+	    // --- РЕНДЕР СЛОТОВ (КНИГА) ---
+	    sentenceGameData.words.forEach((wordObj, i) => {
+		const slot = document.createElement('div');
+		slot.className = 'word-slot';
+		
+		const placedWord = sentenceGameData.userState[i];
+		
+		if (placedWord) {
+		    // Если слово стоит
+		    slot.textContent = placedWord.original;
+		    slot.classList.add('filled');
+		    slot.onclick = () => removeWordFromSlot(i);
+		} else {
+		    // Если слот пустой
+		    slot.classList.remove('filled');
+		    
+		    // ПРОВЕРКА ПОДСКАЗКИ
+		    if (sentenceGameData.hintState.slotIndex === i && sentenceGameData.hintState.lettersShown > 0) {
+		        // Показываем часть слова серым
+		        const hintStr = wordObj.original.substring(0, sentenceGameData.hintState.lettersShown) + "...";
+		        const hintSpan = document.createElement('span');
+		        hintSpan.className = 'hint-text';
+		        hintSpan.textContent = hintStr;
+		        slot.appendChild(hintSpan);
+		        slot.classList.add('active-hint');
+		    } else {
+		        // Просто пустая линия
+		        slot.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;"; 
+		    }
+		}
+		slotsContainer.appendChild(slot);
+	    });
+
+	    // --- РЕНДЕР БАНКА СЛОВ (КНОПКИ) ---
+	    sentenceGameData.shuffledBank.forEach((wordObj) => {
+		const chip = document.createElement('div');
+		chip.className = 'word-chip';
+		chip.textContent = wordObj.original;
+		
+		// Проверяем, использовано ли это слово уже
+		const isUsed = sentenceGameData.userState.some(u => u && u.id === wordObj.id);
+		
+		if (isUsed) {
+		    chip.classList.add('used');
+		} else {
+		    chip.onclick = () => placeWordFirstAvailable(wordObj);
+		}
+		
+		bankContainer.appendChild(chip);
+	    });
+	}
+
+	// Поместить слово в первый свободный слот
+	function placeWordFirstAvailable(wordObj) {
+	    // Ищем первый `null` в userState
+	    const emptyIndex = sentenceGameData.userState.indexOf(null);
+	    if (emptyIndex !== -1) {
+		sentenceGameData.userState[emptyIndex] = wordObj;
+		
+		// Сброс подсказки, если заполнили именно тот слот, где она была
+		if (sentenceGameData.hintState.slotIndex === emptyIndex) {
+		    sentenceGameData.hintState = { slotIndex: -1, lettersShown: 0 };
+		}
+		
+		renderSentenceBoard();
+		checkSentenceWin();
+	    }
+	}
+
+	// Убрать слово из слота обратно в банк
+	function removeWordFromSlot(index) {
+	    sentenceGameData.userState[index] = null;
+	    renderSentenceBoard();
+	}
+
+	// ЛОГИКА ПОДСКАЗКИ
+	function useHint() {
+	    // 1. Ищем первый слот, где ПУСТО или слово НЕ СОВПАДАЕТ по тексту
+	    let targetIndex = -1;
+	    
+	    for (let i = 0; i < sentenceGameData.words.length; i++) {
+		const correct = sentenceGameData.words[i];
+		const user = sentenceGameData.userState[i];
+		
+		// Логика изменилась здесь: сравниваем .original вместо .id
+		if (!user || user.original !== correct.original) {
+		    targetIndex = i;
+		    break;
+		}
+	    }
+	    
+	    if (targetIndex === -1) return; // Всё собрано верно
+
+	    // 2. Логика показа букв (без изменений)
+	    if (sentenceGameData.hintState.slotIndex === targetIndex) {
+		const correctWord = sentenceGameData.words[targetIndex].original;
+		if (sentenceGameData.hintState.lettersShown < correctWord.length) {
+		    sentenceGameData.hintState.lettersShown++;
+		}
+	    } else {
+		sentenceGameData.hintState = { slotIndex: targetIndex, lettersShown: 1 };
+		
+		// Если слово стоит неправильное - убираем его, чтобы показать подсказку
+		if (sentenceGameData.userState[targetIndex]) {
+		    sentenceGameData.userState[targetIndex] = null;
+		}
+	    }
+	    
+	    renderSentenceBoard();
+	}
+
+	function checkSentenceWin() {
+	    // 1. Проверяем, все ли слоты заполнены
+	    if (sentenceGameData.userState.includes(null)) return;
+	    
+	    // 2. Проверяем текст слов (БЫЛО: comparison по .id, СТАЛО: по .original)
+	    const isCorrect = sentenceGameData.userState.every((userWord, i) => {
+		const correctWord = sentenceGameData.words[i];
+		return userWord.original === correctWord.original;
+	    });
+	    
+	    if (isCorrect) {
+		if(typeof initFireworks === 'function') initFireworks();
+		isWin = true; 
+		document.getElementById('sentence-overlay').classList.remove('hidden');
+	    } else {
+		// Подсветка ошибок (тоже сравниваем текст)
+		const slots = document.querySelectorAll('.word-slot');
+		sentenceGameData.userState.forEach((userWord, i) => {
+		    const correctWord = sentenceGameData.words[i];
+		    if (userWord.original !== correctWord.original) {
+		        slots[i].style.borderColor = '#ff7675';
+		        setTimeout(() => slots[i].style.borderColor = '', 500);
+		    }
+		});
+	    }
+	    if (isCorrect) {
+		document.getElementById('sentence-overlay').classList.remove('hidden');
+
+		startMagicRain();
+		playWinSound(); 
+	    }
+	}
+
+	function nextSentenceLevel() {
+	    // 1. Увеличиваем индекс (идем к следующему куску текста)
+	    sentenceGameCurrentIndex++;
+	    
+	    // 2. Очищаем поле (останавливаем салюты)
+	    if(typeof stopSentenceFireworks === 'function') stopSentenceFireworks(); 
+	    
+	    // 3. (Опционально) Перелистываем реальную книгу на фоне, 
+	    // чтобы если игрок выйдет, он оказался на новой странице.
+	    if (!isMobile && bookInstance) {
+		// +1 потому что в PageFlip индексы сдвинуты (0 - обложка)
+		try { bookInstance.flip(sentenceGameCurrentIndex + 1); } catch(e){}
+	    }
+	    
+	    // 4. Запускаем игру с флагом isNextLevel = true
+	    initSentenceGame(true); 
+	}
+	function resetSentenceGame() {
+	    // Очищаем массив, куда пользователь ставил слова
+	    sentenceGameData.userState.fill(null);
+	    
+	    // Сбрасываем прогресс подсказки
+	    sentenceGameData.hintState = { slotIndex: -1, lettersShown: 0 };
+	    
+	    // Перерисовываем доску (все слова вернутся в банк)
+	    renderSentenceBoard();
+	    
+	    // Скрываем окно победы, если оно вдруг открыто
+	    document.getElementById('sentence-overlay').classList.add('hidden');
+	}
+	function startMagicRain() {
+	    const scene = document.getElementById('magic-scene');
+	    
+	    // Очищаем старые частицы, если вдруг остались
+	    scene.innerHTML = '';
+
+	    const icons = ['✨', '⭐', '🦄', '💖', '📚', '🍄', '🧚', '🏰', '🌈'];
+	    
+	    // Создаем 30 частиц
+	    for (let i = 0; i < 30; i++) {
+		const particle = document.createElement('div');
+		particle.className = 'magic-particle';
+		particle.textContent = icons[Math.floor(Math.random() * icons.length)];
+		
+		// 1. Позиция по горизонтали (случайно от 0 до 100%)
+		particle.style.left = Math.random() * 100 + '%';
+		
+		// 2. Размер шрифта (разные размеры)
+		const size = (Math.random() * 2 + 1.5) + 'rem'; // от 1.5rem до 3.5rem
+		particle.style.fontSize = size;
+		
+		// 3. Длительность полета (чтобы летели с разной скоростью)
+		const duration = (Math.random() * 2 + 3) + 's'; // от 3 до 5 секунд
+		particle.style.animationDuration = duration;
+		
+		// 4. Задержка (чтобы не все сразу вылетели)
+		const delay = (Math.random() * 2) + 's';
+		particle.style.animationDelay = delay;
+		
+		scene.appendChild(particle);
+		
+		// Удаляем из DOM после завершения анимации
+		setTimeout(() => {
+		    particle.remove();
+		}, 6000); 
+	    }
+	}
     </script>
 </body>
 </html>
