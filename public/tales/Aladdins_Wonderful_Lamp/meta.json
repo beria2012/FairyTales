@@ -1,0 +1,8317 @@
+{
+  "title": "Aladdin's Wonderful Lamp",
+  "author": "Traditional",
+  "cover": "cover.jpeg",
+  "audio": "audio.mp3",
+  "youtube": "https://youtu.be/Og4VfIqTtLw",
+  "content": [
+    {
+      "text": "Narrator: In the scorching deserts of Arabia, where golden sands stretched as far as the eye could see, and the blistering sun beat down relentlessly, the city of Baghdad bustled with life.",
+      "side": "right",
+      "start": 0.0,
+      "end": 13.74,
+      "image": "1_right.jpg",
+      "words": [
+        {
+          "w": "In",
+          "s": 0.0,
+          "e": 0.16
+        },
+        {
+          "w": "the",
+          "s": 0.16,
+          "e": 0.24
+        },
+        {
+          "w": "scorching",
+          "s": 0.24,
+          "e": 1.08
+        },
+        {
+          "w": "deserts",
+          "s": 1.08,
+          "e": 1.64
+        },
+        {
+          "w": "of",
+          "s": 1.64,
+          "e": 1.68
+        },
+        {
+          "w": "Arabia",
+          "s": 1.68,
+          "e": 2.16
+        },
+        {
+          "w": "where",
+          "s": 2.16,
+          "e": 2.76
+        },
+        {
+          "w": "golden",
+          "s": 2.76,
+          "e": 3.44
+        },
+        {
+          "w": "sands",
+          "s": 3.44,
+          "e": 4.0
+        },
+        {
+          "w": "stretched",
+          "s": 4.0,
+          "e": 4.88
+        },
+        {
+          "w": "as",
+          "s": 4.88,
+          "e": 5.28
+        },
+        {
+          "w": "far",
+          "s": 5.28,
+          "e": 5.56
+        },
+        {
+          "w": "as",
+          "s": 5.56,
+          "e": 5.56
+        },
+        {
+          "w": "the",
+          "s": 5.56,
+          "e": 5.56
+        },
+        {
+          "w": "eye",
+          "s": 5.56,
+          "e": 5.56
+        },
+        {
+          "w": "could",
+          "s": 5.56,
+          "e": 5.72
+        },
+        {
+          "w": "see",
+          "s": 5.72,
+          "e": 6.64
+        },
+        {
+          "w": "and",
+          "s": 6.64,
+          "e": 6.84
+        },
+        {
+          "w": "the",
+          "s": 6.84,
+          "e": 7.2
+        },
+        {
+          "w": "blistering",
+          "s": 7.2,
+          "e": 7.8
+        },
+        {
+          "w": "sun",
+          "s": 7.8,
+          "e": 8.52
+        },
+        {
+          "w": "beat",
+          "s": 8.52,
+          "e": 8.8
+        },
+        {
+          "w": "down",
+          "s": 8.8,
+          "e": 9.36
+        },
+        {
+          "w": "relentlessly",
+          "s": 9.36,
+          "e": 10.24
+        },
+        {
+          "w": "the",
+          "s": 10.24,
+          "e": 10.6
+        },
+        {
+          "w": "city",
+          "s": 10.6,
+          "e": 11.28
+        },
+        {
+          "w": "of",
+          "s": 11.28,
+          "e": 11.32
+        },
+        {
+          "w": "Baghdad",
+          "s": 11.32,
+          "e": 12.12
+        },
+        {
+          "w": "bustled",
+          "s": 12.12,
+          "e": 12.6
+        },
+        {
+          "w": "with",
+          "s": 12.6,
+          "e": 12.88
+        },
+        {
+          "w": "life",
+          "s": 12.88,
+          "e": 13.8
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Merchants hawked their wares, from precious spices to glittering jewels, while the aroma of exotic foods wafted through the crowded streets.",
+      "side": "left",
+      "start": 13.74,
+      "end": 22.98,
+      "image": "2_left.jpg",
+      "words": [
+        {
+          "w": "Merchants",
+          "s": 13.8,
+          "e": 14.28
+        },
+        {
+          "w": "hawked",
+          "s": 14.28,
+          "e": 14.48
+        },
+        {
+          "w": "their",
+          "s": 14.48,
+          "e": 14.84
+        },
+        {
+          "w": "wares",
+          "s": 14.84,
+          "e": 15.36
+        },
+        {
+          "w": "from",
+          "s": 15.36,
+          "e": 15.64
+        },
+        {
+          "w": "precious",
+          "s": 15.64,
+          "e": 16.12
+        },
+        {
+          "w": "spices",
+          "s": 16.12,
+          "e": 16.88
+        },
+        {
+          "w": "to",
+          "s": 16.88,
+          "e": 16.96
+        },
+        {
+          "w": "glittering",
+          "s": 16.96,
+          "e": 17.52
+        },
+        {
+          "w": "jewels",
+          "s": 17.52,
+          "e": 18.36
+        },
+        {
+          "w": "while",
+          "s": 18.36,
+          "e": 18.68
+        },
+        {
+          "w": "the",
+          "s": 18.68,
+          "e": 18.84
+        },
+        {
+          "w": "aroma",
+          "s": 18.84,
+          "e": 19.12
+        },
+        {
+          "w": "of",
+          "s": 19.12,
+          "e": 19.44
+        },
+        {
+          "w": "exotic",
+          "s": 19.44,
+          "e": 20.0
+        },
+        {
+          "w": "foods",
+          "s": 20.0,
+          "e": 20.6
+        },
+        {
+          "w": "wafted",
+          "s": 20.6,
+          "e": 21.08
+        },
+        {
+          "w": "through",
+          "s": 21.08,
+          "e": 21.24
+        },
+        {
+          "w": "the",
+          "s": 21.24,
+          "e": 21.36
+        },
+        {
+          "w": "crowded",
+          "s": 21.36,
+          "e": 21.88
+        },
+        {
+          "w": "streets",
+          "s": 21.88,
+          "e": 23.0
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Amidst this vibrant tapestry, a young man named Aladdin lived a humble life with his mother.",
+      "side": "right",
+      "start": 22.98,
+      "end": 29.99,
+      "image": "3_right.jpg",
+      "words": [
+        {
+          "w": "Amidst",
+          "s": 23.0,
+          "e": 23.48
+        },
+        {
+          "w": "this",
+          "s": 23.48,
+          "e": 23.8
+        },
+        {
+          "w": "vibrant",
+          "s": 23.8,
+          "e": 24.28
+        },
+        {
+          "w": "tapestry",
+          "s": 24.28,
+          "e": 24.88
+        },
+        {
+          "w": "a",
+          "s": 24.88,
+          "e": 25.6
+        },
+        {
+          "w": "young",
+          "s": 25.6,
+          "e": 25.96
+        },
+        {
+          "w": "man",
+          "s": 25.96,
+          "e": 26.32
+        },
+        {
+          "w": "named",
+          "s": 26.32,
+          "e": 26.6
+        },
+        {
+          "w": "Aladdin",
+          "s": 26.6,
+          "e": 27.0
+        },
+        {
+          "w": "lived",
+          "s": 27.0,
+          "e": 27.6
+        },
+        {
+          "w": "a",
+          "s": 27.6,
+          "e": 27.76
+        },
+        {
+          "w": "humble",
+          "s": 27.76,
+          "e": 28.36
+        },
+        {
+          "w": "life",
+          "s": 28.36,
+          "e": 28.68
+        },
+        {
+          "w": "with",
+          "s": 28.68,
+          "e": 28.76
+        },
+        {
+          "w": "his",
+          "s": 28.76,
+          "e": 29.04
+        },
+        {
+          "w": "mother",
+          "s": 29.04,
+          "e": 29.2
+        }
+      ]
+    },
+    {
+      "text": "Aladdin's Mother: Aladdin, my son, I'm worried about our future. Your father passed away, and we're struggling to make ends meet.",
+      "side": "left",
+      "start": 29.99,
+      "end": 37.42,
+      "image": "4_left.jpg",
+      "words": [
+        {
+          "w": "Aladdin",
+          "s": 29.2,
+          "e": 30.0
+        },
+        {
+          "w": "my",
+          "s": 30.0,
+          "e": 31.2
+        },
+        {
+          "w": "son",
+          "s": 31.2,
+          "e": 31.56
+        },
+        {
+          "w": "I'm",
+          "s": 31.56,
+          "e": 31.64
+        },
+        {
+          "w": "worried",
+          "s": 31.64,
+          "e": 32.04
+        },
+        {
+          "w": "about",
+          "s": 32.04,
+          "e": 32.48
+        },
+        {
+          "w": "our",
+          "s": 32.48,
+          "e": 32.76
+        },
+        {
+          "w": "future",
+          "s": 32.76,
+          "e": 33.84
+        },
+        {
+          "w": "Your",
+          "s": 33.84,
+          "e": 33.96
+        },
+        {
+          "w": "father",
+          "s": 33.96,
+          "e": 34.28
+        },
+        {
+          "w": "passed",
+          "s": 34.28,
+          "e": 34.6
+        },
+        {
+          "w": "away",
+          "s": 34.6,
+          "e": 35.0
+        },
+        {
+          "w": "and",
+          "s": 35.0,
+          "e": 35.36
+        },
+        {
+          "w": "we're",
+          "s": 35.36,
+          "e": 35.6
+        },
+        {
+          "w": "struggling",
+          "s": 35.6,
+          "e": 36.12
+        },
+        {
+          "w": "to",
+          "s": 36.12,
+          "e": 36.24
+        },
+        {
+          "w": "make",
+          "s": 36.24,
+          "e": 36.4
+        },
+        {
+          "w": "ends",
+          "s": 36.4,
+          "e": 36.64
+        },
+        {
+          "w": "meet",
+          "s": 36.64,
+          "e": 37.44
+        }
+      ]
+    },
+    {
+      "text": "Aladdin's Mother: I fear we'll be forced to live on the streets if we don't find a way to improve our situation.",
+      "side": "right",
+      "start": 37.42,
+      "end": 43.17,
+      "image": "5_right.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 37.44,
+          "e": 37.6
+        },
+        {
+          "w": "fear",
+          "s": 37.6,
+          "e": 38.16
+        },
+        {
+          "w": "we'll",
+          "s": 38.16,
+          "e": 38.2
+        },
+        {
+          "w": "be",
+          "s": 38.2,
+          "e": 38.4
+        },
+        {
+          "w": "forced",
+          "s": 38.4,
+          "e": 38.96
+        },
+        {
+          "w": "to",
+          "s": 38.96,
+          "e": 38.96
+        },
+        {
+          "w": "live",
+          "s": 38.96,
+          "e": 38.96
+        },
+        {
+          "w": "on",
+          "s": 38.96,
+          "e": 38.96
+        },
+        {
+          "w": "the",
+          "s": 38.96,
+          "e": 39.2
+        },
+        {
+          "w": "streets",
+          "s": 39.2,
+          "e": 39.84
+        },
+        {
+          "w": "if",
+          "s": 39.84,
+          "e": 39.84
+        },
+        {
+          "w": "we",
+          "s": 39.84,
+          "e": 39.84
+        },
+        {
+          "w": "don't",
+          "s": 39.84,
+          "e": 40.16
+        },
+        {
+          "w": "find",
+          "s": 40.16,
+          "e": 40.48
+        },
+        {
+          "w": "a",
+          "s": 40.48,
+          "e": 40.64
+        },
+        {
+          "w": "way",
+          "s": 40.64,
+          "e": 41.0
+        },
+        {
+          "w": "to",
+          "s": 41.0,
+          "e": 41.28
+        },
+        {
+          "w": "improve",
+          "s": 41.28,
+          "e": 41.6
+        },
+        {
+          "w": "our",
+          "s": 41.6,
+          "e": 41.8
+        },
+        {
+          "w": "situation",
+          "s": 41.8,
+          "e": 42.6
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: Don't worry, Mother. I'll find a way to take care of us. I promise.",
+      "side": "left",
+      "start": 43.17,
+      "end": 50.35,
+      "image": "6_left.jpg",
+      "words": [
+        {
+          "w": "Don't",
+          "s": 42.6,
+          "e": 43.28
+        },
+        {
+          "w": "worry",
+          "s": 43.28,
+          "e": 44.04
+        },
+        {
+          "w": "Mother",
+          "s": 44.04,
+          "e": 45.16
+        },
+        {
+          "w": "I'll",
+          "s": 45.16,
+          "e": 45.56
+        },
+        {
+          "w": "find",
+          "s": 45.56,
+          "e": 46.16
+        },
+        {
+          "w": "a",
+          "s": 46.16,
+          "e": 46.28
+        },
+        {
+          "w": "way",
+          "s": 46.28,
+          "e": 46.76
+        },
+        {
+          "w": "to",
+          "s": 46.76,
+          "e": 46.8
+        },
+        {
+          "w": "take",
+          "s": 46.8,
+          "e": 47.08
+        },
+        {
+          "w": "care",
+          "s": 47.08,
+          "e": 47.56
+        },
+        {
+          "w": "of",
+          "s": 47.56,
+          "e": 47.56
+        },
+        {
+          "w": "us",
+          "s": 47.56,
+          "e": 48.16
+        },
+        {
+          "w": "I",
+          "s": 48.16,
+          "e": 48.92
+        },
+        {
+          "w": "promise",
+          "s": 48.92,
+          "e": 49.76
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As Aladdin and his mother sat in their small, dimly lit home, a knock at the door interrupted their conversation.",
+      "side": "right",
+      "start": 50.35,
+      "end": 57.91,
+      "image": "7_right.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 49.76,
+          "e": 50.56
+        },
+        {
+          "w": "Aladdin",
+          "s": 50.56,
+          "e": 51.0
+        },
+        {
+          "w": "and",
+          "s": 51.0,
+          "e": 51.2
+        },
+        {
+          "w": "his",
+          "s": 51.2,
+          "e": 51.44
+        },
+        {
+          "w": "mother",
+          "s": 51.44,
+          "e": 51.8
+        },
+        {
+          "w": "sat",
+          "s": 51.8,
+          "e": 52.24
+        },
+        {
+          "w": "in",
+          "s": 52.24,
+          "e": 52.24
+        },
+        {
+          "w": "their",
+          "s": 52.24,
+          "e": 52.4
+        },
+        {
+          "w": "small",
+          "s": 52.4,
+          "e": 53.16
+        },
+        {
+          "w": "dimly",
+          "s": 53.16,
+          "e": 53.4
+        },
+        {
+          "w": "lit",
+          "s": 53.4,
+          "e": 53.84
+        },
+        {
+          "w": "home",
+          "s": 53.84,
+          "e": 54.56
+        },
+        {
+          "w": "a",
+          "s": 54.56,
+          "e": 54.88
+        },
+        {
+          "w": "knock",
+          "s": 54.88,
+          "e": 55.24
+        },
+        {
+          "w": "at",
+          "s": 55.24,
+          "e": 55.36
+        },
+        {
+          "w": "the",
+          "s": 55.36,
+          "e": 55.52
+        },
+        {
+          "w": "door",
+          "s": 55.52,
+          "e": 55.96
+        },
+        {
+          "w": "interrupted",
+          "s": 55.96,
+          "e": 56.44
+        },
+        {
+          "w": "their",
+          "s": 56.44,
+          "e": 56.6
+        },
+        {
+          "w": "conversation",
+          "s": 56.6,
+          "e": 57.36
+        }
+      ]
+    },
+    {
+      "text": "Narrator: It was a mysterious stranger, dressed in long, flowing robes, with a wispy beard and piercing eyes.",
+      "side": "left",
+      "start": 57.91,
+      "end": 64.82,
+      "image": "8_left.jpg",
+      "words": [
+        {
+          "w": "It",
+          "s": 57.36,
+          "e": 58.2
+        },
+        {
+          "w": "was",
+          "s": 58.2,
+          "e": 58.52
+        },
+        {
+          "w": "a",
+          "s": 58.52,
+          "e": 58.52
+        },
+        {
+          "w": "mysterious",
+          "s": 58.52,
+          "e": 59.04
+        },
+        {
+          "w": "stranger",
+          "s": 59.04,
+          "e": 59.72
+        },
+        {
+          "w": "dressed",
+          "s": 59.72,
+          "e": 60.28
+        },
+        {
+          "w": "in",
+          "s": 60.28,
+          "e": 60.36
+        },
+        {
+          "w": "long",
+          "s": 60.36,
+          "e": 60.88
+        },
+        {
+          "w": "flowing",
+          "s": 60.88,
+          "e": 61.28
+        },
+        {
+          "w": "robes",
+          "s": 61.28,
+          "e": 62.08
+        },
+        {
+          "w": "with",
+          "s": 62.08,
+          "e": 62.64
+        },
+        {
+          "w": "a",
+          "s": 62.64,
+          "e": 62.8
+        },
+        {
+          "w": "wispy",
+          "s": 62.8,
+          "e": 62.84
+        },
+        {
+          "w": "beard",
+          "s": 62.84,
+          "e": 63.28
+        },
+        {
+          "w": "and",
+          "s": 63.28,
+          "e": 63.32
+        },
+        {
+          "w": "piercing",
+          "s": 63.32,
+          "e": 63.76
+        },
+        {
+          "w": "eyes",
+          "s": 63.76,
+          "e": 64.4
+        }
+      ]
+    },
+    {
+      "text": "Stranger: Greetings, young Aladdin. I am a sorcerer from a far-off land. I've been searching for a worthy individual to assist me in a task of great importance.",
+      "side": "right",
+      "start": 64.82,
+      "end": 75.02,
+      "image": "9_right.jpg",
+      "words": [
+        {
+          "w": "Greetings",
+          "s": 64.4,
+          "e": 65.68
+        },
+        {
+          "w": "young",
+          "s": 65.68,
+          "e": 65.8
+        },
+        {
+          "w": "Aladdin",
+          "s": 65.8,
+          "e": 66.36
+        },
+        {
+          "w": "I",
+          "s": 66.36,
+          "e": 66.84
+        },
+        {
+          "w": "am",
+          "s": 66.84,
+          "e": 66.84
+        },
+        {
+          "w": "a",
+          "s": 66.84,
+          "e": 67.64
+        },
+        {
+          "w": "sorcerer",
+          "s": 67.64,
+          "e": 68.32
+        },
+        {
+          "w": "from",
+          "s": 68.32,
+          "e": 68.48
+        },
+        {
+          "w": "a",
+          "s": 68.48,
+          "e": 68.56
+        },
+        {
+          "w": "faroff",
+          "s": 68.56,
+          "e": 69.24
+        },
+        {
+          "w": "land",
+          "s": 69.24,
+          "e": 69.52
+        },
+        {
+          "w": "I've",
+          "s": 69.52,
+          "e": 70.24
+        },
+        {
+          "w": "been",
+          "s": 70.24,
+          "e": 70.36
+        },
+        {
+          "w": "searching",
+          "s": 70.36,
+          "e": 70.88
+        },
+        {
+          "w": "for",
+          "s": 70.88,
+          "e": 71.16
+        },
+        {
+          "w": "a",
+          "s": 71.16,
+          "e": 71.36
+        },
+        {
+          "w": "worthy",
+          "s": 71.36,
+          "e": 71.6
+        },
+        {
+          "w": "individual",
+          "s": 71.6,
+          "e": 72.12
+        },
+        {
+          "w": "to",
+          "s": 72.12,
+          "e": 72.2
+        },
+        {
+          "w": "assist",
+          "s": 72.2,
+          "e": 72.6
+        },
+        {
+          "w": "me",
+          "s": 72.6,
+          "e": 72.6
+        },
+        {
+          "w": "in",
+          "s": 72.6,
+          "e": 72.68
+        },
+        {
+          "w": "a",
+          "s": 72.68,
+          "e": 72.96
+        },
+        {
+          "w": "task",
+          "s": 72.96,
+          "e": 73.32
+        },
+        {
+          "w": "of",
+          "s": 73.32,
+          "e": 73.48
+        },
+        {
+          "w": "great",
+          "s": 73.48,
+          "e": 73.84
+        },
+        {
+          "w": "importance",
+          "s": 73.84,
+          "e": 74.48
+        }
+      ]
+    },
+    {
+      "text": "Stranger: You, Aladdin, have been chosen. Aladdin's Mother: What task could you possibly need my son for? He's just a poor, uneducated boy.",
+      "side": "left",
+      "start": 75.02,
+      "end": 83.96,
+      "image": "10_left.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 74.48,
+          "e": 75.4
+        },
+        {
+          "w": "Aladdin",
+          "s": 75.4,
+          "e": 75.72
+        },
+        {
+          "w": "have",
+          "s": 75.72,
+          "e": 75.92
+        },
+        {
+          "w": "been",
+          "s": 75.92,
+          "e": 76.04
+        },
+        {
+          "w": "chosen",
+          "s": 76.04,
+          "e": 76.52
+        },
+        {
+          "w": "What",
+          "s": 76.52,
+          "e": 77.4
+        },
+        {
+          "w": "task",
+          "s": 77.4,
+          "e": 77.96
+        },
+        {
+          "w": "could",
+          "s": 77.96,
+          "e": 78.32
+        },
+        {
+          "w": "you",
+          "s": 78.32,
+          "e": 78.32
+        },
+        {
+          "w": "possibly",
+          "s": 78.32,
+          "e": 78.72
+        },
+        {
+          "w": "need",
+          "s": 78.72,
+          "e": 78.72
+        },
+        {
+          "w": "my",
+          "s": 78.72,
+          "e": 79.28
+        },
+        {
+          "w": "son",
+          "s": 79.28,
+          "e": 79.72
+        },
+        {
+          "w": "for",
+          "s": 79.72,
+          "e": 80.24
+        },
+        {
+          "w": "He's",
+          "s": 80.24,
+          "e": 81.28
+        },
+        {
+          "w": "just",
+          "s": 81.28,
+          "e": 81.6
+        },
+        {
+          "w": "a",
+          "s": 81.6,
+          "e": 81.84
+        },
+        {
+          "w": "poor",
+          "s": 81.84,
+          "e": 82.36
+        },
+        {
+          "w": "uneducated",
+          "s": 82.36,
+          "e": 83.04
+        },
+        {
+          "w": "boy",
+          "s": 83.04,
+          "e": 83.4
+        }
+      ]
+    },
+    {
+      "text": "Stranger: Ah, but that is where you are mistaken, dear woman. Aladdin possesses a certain... spark within him.",
+      "side": "right",
+      "start": 83.96,
+      "end": 92.44,
+      "image": "11_right.jpg",
+      "words": [
+        {
+          "w": "Ah",
+          "s": 83.4,
+          "e": 84.52
+        },
+        {
+          "w": "but",
+          "s": 84.52,
+          "e": 85.08
+        },
+        {
+          "w": "that",
+          "s": 85.08,
+          "e": 85.4
+        },
+        {
+          "w": "is",
+          "s": 85.4,
+          "e": 85.64
+        },
+        {
+          "w": "where",
+          "s": 85.64,
+          "e": 85.88
+        },
+        {
+          "w": "you",
+          "s": 85.88,
+          "e": 85.88
+        },
+        {
+          "w": "are",
+          "s": 85.88,
+          "e": 86.08
+        },
+        {
+          "w": "mistaken",
+          "s": 86.08,
+          "e": 86.8
+        },
+        {
+          "w": "dear",
+          "s": 86.8,
+          "e": 87.16
+        },
+        {
+          "w": "woman",
+          "s": 87.16,
+          "e": 87.4
+        },
+        {
+          "w": "Aladdin",
+          "s": 87.4,
+          "e": 88.56
+        },
+        {
+          "w": "possesses",
+          "s": 88.56,
+          "e": 89.56
+        },
+        {
+          "w": "a",
+          "s": 89.56,
+          "e": 89.88
+        },
+        {
+          "w": "certain",
+          "s": 89.88,
+          "e": 90.84
+        },
+        {
+          "w": "spark",
+          "s": 90.84,
+          "e": 91.16
+        },
+        {
+          "w": "within",
+          "s": 91.16,
+          "e": 91.52
+        },
+        {
+          "w": "him",
+          "s": 91.52,
+          "e": 91.84
+        }
+      ]
+    },
+    {
+      "text": "Stranger: A spark that, with the right guidance, can ignite into a flame of greatness.",
+      "side": "left",
+      "start": 92.44,
+      "end": 97.12,
+      "image": "12_left.jpg",
+      "words": [
+        {
+          "w": "A",
+          "s": 91.84,
+          "e": 91.84
+        },
+        {
+          "w": "spark",
+          "s": 91.84,
+          "e": 92.64
+        },
+        {
+          "w": "that",
+          "s": 92.64,
+          "e": 93.04
+        },
+        {
+          "w": "with",
+          "s": 93.04,
+          "e": 93.04
+        },
+        {
+          "w": "the",
+          "s": 93.04,
+          "e": 93.28
+        },
+        {
+          "w": "right",
+          "s": 93.28,
+          "e": 93.88
+        },
+        {
+          "w": "guidance",
+          "s": 93.88,
+          "e": 94.44
+        },
+        {
+          "w": "can",
+          "s": 94.44,
+          "e": 94.72
+        },
+        {
+          "w": "ignite",
+          "s": 94.72,
+          "e": 95.0
+        },
+        {
+          "w": "into",
+          "s": 95.0,
+          "e": 95.36
+        },
+        {
+          "w": "a",
+          "s": 95.36,
+          "e": 95.36
+        },
+        {
+          "w": "flame",
+          "s": 95.36,
+          "e": 95.68
+        },
+        {
+          "w": "of",
+          "s": 95.68,
+          "e": 95.88
+        },
+        {
+          "w": "greatness",
+          "s": 95.88,
+          "e": 96.52
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The sorcerer's words were laced with an otherworldly charm, and Aladdin's mother, despite her initial reservations, found herself entranced by the stranger's promises.",
+      "side": "right",
+      "start": 97.12,
+      "end": 107.98,
+      "image": "13_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 96.52,
+          "e": 96.56
+        },
+        {
+          "w": "sorcerer's",
+          "s": 96.56,
+          "e": 97.92
+        },
+        {
+          "w": "words",
+          "s": 97.92,
+          "e": 98.48
+        },
+        {
+          "w": "were",
+          "s": 98.48,
+          "e": 98.64
+        },
+        {
+          "w": "laced",
+          "s": 98.64,
+          "e": 99.04
+        },
+        {
+          "w": "with",
+          "s": 99.04,
+          "e": 99.36
+        },
+        {
+          "w": "an",
+          "s": 99.36,
+          "e": 99.36
+        },
+        {
+          "w": "otherworldly",
+          "s": 99.36,
+          "e": 100.2
+        },
+        {
+          "w": "charm",
+          "s": 100.2,
+          "e": 100.6
+        },
+        {
+          "w": "and",
+          "s": 100.6,
+          "e": 100.72
+        },
+        {
+          "w": "Aladdin's",
+          "s": 100.72,
+          "e": 101.72
+        },
+        {
+          "w": "mother",
+          "s": 101.72,
+          "e": 102.16
+        },
+        {
+          "w": "despite",
+          "s": 102.16,
+          "e": 102.56
+        },
+        {
+          "w": "her",
+          "s": 102.56,
+          "e": 103.04
+        },
+        {
+          "w": "initial",
+          "s": 103.04,
+          "e": 103.36
+        },
+        {
+          "w": "reservations",
+          "s": 103.36,
+          "e": 104.32
+        },
+        {
+          "w": "found",
+          "s": 104.32,
+          "e": 104.72
+        },
+        {
+          "w": "herself",
+          "s": 104.72,
+          "e": 105.28
+        },
+        {
+          "w": "entranced",
+          "s": 105.28,
+          "e": 105.92
+        },
+        {
+          "w": "by",
+          "s": 105.92,
+          "e": 106.04
+        },
+        {
+          "w": "the",
+          "s": 106.04,
+          "e": 106.04
+        },
+        {
+          "w": "stranger's",
+          "s": 106.04,
+          "e": 106.8
+        },
+        {
+          "w": "promises",
+          "s": 106.8,
+          "e": 107.56
+        }
+      ]
+    },
+    {
+      "text": "Aladdin's Mother: Very well, take Aladdin with you. But promise me you'll keep him safe and teach him the ways of the world.",
+      "side": "left",
+      "start": 107.98,
+      "end": 116.64,
+      "image": "14_left.jpg",
+      "words": [
+        {
+          "w": "Very",
+          "s": 107.56,
+          "e": 108.2
+        },
+        {
+          "w": "well",
+          "s": 108.2,
+          "e": 108.48
+        },
+        {
+          "w": "take",
+          "s": 108.48,
+          "e": 109.4
+        },
+        {
+          "w": "Aladdin",
+          "s": 109.4,
+          "e": 109.92
+        },
+        {
+          "w": "with",
+          "s": 109.92,
+          "e": 109.92
+        },
+        {
+          "w": "you",
+          "s": 109.92,
+          "e": 109.92
+        },
+        {
+          "w": "But",
+          "s": 109.92,
+          "e": 110.8
+        },
+        {
+          "w": "promise",
+          "s": 110.8,
+          "e": 112.12
+        },
+        {
+          "w": "me",
+          "s": 112.12,
+          "e": 112.28
+        },
+        {
+          "w": "you'll",
+          "s": 112.28,
+          "e": 112.48
+        },
+        {
+          "w": "keep",
+          "s": 112.48,
+          "e": 112.72
+        },
+        {
+          "w": "him",
+          "s": 112.72,
+          "e": 112.92
+        },
+        {
+          "w": "safe",
+          "s": 112.92,
+          "e": 113.56
+        },
+        {
+          "w": "and",
+          "s": 113.56,
+          "e": 113.84
+        },
+        {
+          "w": "teach",
+          "s": 113.84,
+          "e": 114.4
+        },
+        {
+          "w": "him",
+          "s": 114.4,
+          "e": 114.68
+        },
+        {
+          "w": "the",
+          "s": 114.68,
+          "e": 114.88
+        },
+        {
+          "w": "ways",
+          "s": 114.88,
+          "e": 115.44
+        },
+        {
+          "w": "of",
+          "s": 115.44,
+          "e": 115.96
+        },
+        {
+          "w": "the",
+          "s": 115.96,
+          "e": 115.96
+        },
+        {
+          "w": "world",
+          "s": 115.96,
+          "e": 116.08
+        }
+      ]
+    },
+    {
+      "text": "Stranger: I promise you, dear woman, Aladdin will return to you a changed person, with wealth and knowledge beyond your wildest dreams.",
+      "side": "right",
+      "start": 116.64,
+      "end": 125.88,
+      "image": "15_right.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 116.08,
+          "e": 116.8
+        },
+        {
+          "w": "promise",
+          "s": 116.8,
+          "e": 117.28
+        },
+        {
+          "w": "you",
+          "s": 117.28,
+          "e": 117.52
+        },
+        {
+          "w": "dear",
+          "s": 117.52,
+          "e": 117.76
+        },
+        {
+          "w": "woman",
+          "s": 117.76,
+          "e": 118.16
+        },
+        {
+          "w": "Aladdin",
+          "s": 118.16,
+          "e": 118.96
+        },
+        {
+          "w": "will",
+          "s": 118.96,
+          "e": 119.28
+        },
+        {
+          "w": "return",
+          "s": 119.28,
+          "e": 119.6
+        },
+        {
+          "w": "to",
+          "s": 119.6,
+          "e": 119.6
+        },
+        {
+          "w": "you",
+          "s": 119.6,
+          "e": 120.12
+        },
+        {
+          "w": "a",
+          "s": 120.12,
+          "e": 120.6
+        },
+        {
+          "w": "changed",
+          "s": 120.6,
+          "e": 121.08
+        },
+        {
+          "w": "person",
+          "s": 121.08,
+          "e": 121.72
+        },
+        {
+          "w": "with",
+          "s": 121.72,
+          "e": 122.12
+        },
+        {
+          "w": "wealth",
+          "s": 122.12,
+          "e": 122.52
+        },
+        {
+          "w": "and",
+          "s": 122.52,
+          "e": 122.88
+        },
+        {
+          "w": "knowledge",
+          "s": 122.88,
+          "e": 123.52
+        },
+        {
+          "w": "beyond",
+          "s": 123.52,
+          "e": 123.88
+        },
+        {
+          "w": "your",
+          "s": 123.88,
+          "e": 124.16
+        },
+        {
+          "w": "wildest",
+          "s": 124.16,
+          "e": 124.68
+        },
+        {
+          "w": "dreams",
+          "s": 124.68,
+          "e": 125.28
+        }
+      ]
+    },
+    {
+      "text": "Narrator: And so, Aladdin bid farewell to his tearful mother and followed the sorcerer into the unknown.",
+      "side": "left",
+      "start": 125.88,
+      "end": 134.33,
+      "image": "16_left.jpg",
+      "words": [
+        {
+          "w": "And",
+          "s": 125.28,
+          "e": 126.0
+        },
+        {
+          "w": "so",
+          "s": 126.0,
+          "e": 126.64
+        },
+        {
+          "w": "Aladdin",
+          "s": 126.64,
+          "e": 127.92
+        },
+        {
+          "w": "bid",
+          "s": 127.92,
+          "e": 128.08
+        },
+        {
+          "w": "farewell",
+          "s": 128.08,
+          "e": 128.88
+        },
+        {
+          "w": "to",
+          "s": 128.88,
+          "e": 128.96
+        },
+        {
+          "w": "his",
+          "s": 128.96,
+          "e": 129.28
+        },
+        {
+          "w": "tearful",
+          "s": 129.28,
+          "e": 129.96
+        },
+        {
+          "w": "mother",
+          "s": 129.96,
+          "e": 130.24
+        },
+        {
+          "w": "and",
+          "s": 130.24,
+          "e": 130.68
+        },
+        {
+          "w": "followed",
+          "s": 130.68,
+          "e": 131.36
+        },
+        {
+          "w": "the",
+          "s": 131.36,
+          "e": 131.36
+        },
+        {
+          "w": "sorcerer",
+          "s": 131.36,
+          "e": 132.28
+        },
+        {
+          "w": "into",
+          "s": 132.28,
+          "e": 132.96
+        },
+        {
+          "w": "the",
+          "s": 132.96,
+          "e": 133.36
+        },
+        {
+          "w": "unknown",
+          "s": 133.36,
+          "e": 133.72
+        }
+      ]
+    },
+    {
+      "text": "Narrator: They journeyed through treacherous mountains and dark forests, the sorcerer teaching Aladdin the secrets of magic and the ancient arts.",
+      "side": "right",
+      "start": 134.33,
+      "end": 143.0,
+      "image": "17_right.jpg",
+      "words": [
+        {
+          "w": "They",
+          "s": 133.72,
+          "e": 134.52
+        },
+        {
+          "w": "journeyed",
+          "s": 134.52,
+          "e": 135.08
+        },
+        {
+          "w": "through",
+          "s": 135.08,
+          "e": 135.44
+        },
+        {
+          "w": "treacherous",
+          "s": 135.44,
+          "e": 136.08
+        },
+        {
+          "w": "mountains",
+          "s": 136.08,
+          "e": 136.88
+        },
+        {
+          "w": "and",
+          "s": 136.88,
+          "e": 136.88
+        },
+        {
+          "w": "dark",
+          "s": 136.88,
+          "e": 137.12
+        },
+        {
+          "w": "forests",
+          "s": 137.12,
+          "e": 137.88
+        },
+        {
+          "w": "the",
+          "s": 137.88,
+          "e": 137.88
+        },
+        {
+          "w": "sorcerer",
+          "s": 137.88,
+          "e": 138.8
+        },
+        {
+          "w": "teaching",
+          "s": 138.8,
+          "e": 139.16
+        },
+        {
+          "w": "Aladdin",
+          "s": 139.16,
+          "e": 139.52
+        },
+        {
+          "w": "the",
+          "s": 139.52,
+          "e": 139.68
+        },
+        {
+          "w": "secrets",
+          "s": 139.68,
+          "e": 140.36
+        },
+        {
+          "w": "of",
+          "s": 140.36,
+          "e": 140.36
+        },
+        {
+          "w": "magic",
+          "s": 140.36,
+          "e": 140.76
+        },
+        {
+          "w": "and",
+          "s": 140.76,
+          "e": 141.08
+        },
+        {
+          "w": "the",
+          "s": 141.08,
+          "e": 141.44
+        },
+        {
+          "w": "ancient",
+          "s": 141.44,
+          "e": 141.96
+        },
+        {
+          "w": "arts",
+          "s": 141.96,
+          "e": 142.52
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: This is amazing! I never knew I had such abilities within me.",
+      "side": "left",
+      "start": 143.0,
+      "end": 148.42,
+      "image": "18_left.jpg",
+      "words": [
+        {
+          "w": "This",
+          "s": 142.52,
+          "e": 142.52
+        },
+        {
+          "w": "is",
+          "s": 142.52,
+          "e": 143.4
+        },
+        {
+          "w": "amazing",
+          "s": 143.4,
+          "e": 143.96
+        },
+        {
+          "w": "I",
+          "s": 143.96,
+          "e": 144.8
+        },
+        {
+          "w": "never",
+          "s": 144.8,
+          "e": 145.12
+        },
+        {
+          "w": "knew",
+          "s": 145.12,
+          "e": 145.44
+        },
+        {
+          "w": "I",
+          "s": 145.44,
+          "e": 145.72
+        },
+        {
+          "w": "had",
+          "s": 145.72,
+          "e": 146.04
+        },
+        {
+          "w": "such",
+          "s": 146.04,
+          "e": 146.56
+        },
+        {
+          "w": "abilities",
+          "s": 146.56,
+          "e": 147.28
+        },
+        {
+          "w": "within",
+          "s": 147.28,
+          "e": 147.6
+        },
+        {
+          "w": "me",
+          "s": 147.6,
+          "e": 147.84
+        }
+      ]
+    },
+    {
+      "text": "Stranger: You are a quick learner, Aladdin. But our journey is far from over. We must reach the Cave of Wonders, where the treasure of the ancient ones awaits.",
+      "side": "right",
+      "start": 148.42,
+      "end": 158.3,
+      "image": "19_right.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 147.84,
+          "e": 148.84
+        },
+        {
+          "w": "are",
+          "s": 148.84,
+          "e": 149.04
+        },
+        {
+          "w": "a",
+          "s": 149.04,
+          "e": 149.04
+        },
+        {
+          "w": "quick",
+          "s": 149.04,
+          "e": 149.04
+        },
+        {
+          "w": "learner",
+          "s": 149.04,
+          "e": 149.68
+        },
+        {
+          "w": "Aladdin",
+          "s": 149.68,
+          "e": 150.32
+        },
+        {
+          "w": "But",
+          "s": 150.32,
+          "e": 150.36
+        },
+        {
+          "w": "our",
+          "s": 150.36,
+          "e": 151.2
+        },
+        {
+          "w": "journey",
+          "s": 151.2,
+          "e": 151.44
+        },
+        {
+          "w": "is",
+          "s": 151.44,
+          "e": 151.88
+        },
+        {
+          "w": "far",
+          "s": 151.88,
+          "e": 152.28
+        },
+        {
+          "w": "from",
+          "s": 152.28,
+          "e": 152.52
+        },
+        {
+          "w": "over",
+          "s": 152.52,
+          "e": 152.56
+        },
+        {
+          "w": "We",
+          "s": 152.56,
+          "e": 153.28
+        },
+        {
+          "w": "must",
+          "s": 153.28,
+          "e": 153.52
+        },
+        {
+          "w": "reach",
+          "s": 153.52,
+          "e": 153.8
+        },
+        {
+          "w": "the",
+          "s": 153.8,
+          "e": 153.88
+        },
+        {
+          "w": "Cave",
+          "s": 153.88,
+          "e": 154.2
+        },
+        {
+          "w": "of",
+          "s": 154.2,
+          "e": 154.32
+        },
+        {
+          "w": "Wonders",
+          "s": 154.32,
+          "e": 155.24
+        },
+        {
+          "w": "where",
+          "s": 155.24,
+          "e": 155.52
+        },
+        {
+          "w": "the",
+          "s": 155.52,
+          "e": 155.6
+        },
+        {
+          "w": "treasure",
+          "s": 155.6,
+          "e": 156.12
+        },
+        {
+          "w": "of",
+          "s": 156.12,
+          "e": 156.16
+        },
+        {
+          "w": "the",
+          "s": 156.16,
+          "e": 156.2
+        },
+        {
+          "w": "ancient",
+          "s": 156.2,
+          "e": 156.68
+        },
+        {
+          "w": "ones",
+          "s": 156.68,
+          "e": 157.16
+        },
+        {
+          "w": "awaits",
+          "s": 157.16,
+          "e": 157.72
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As they approached the cave, the air grew thick with an eerie, pulsating energy. The sorcerer handed Aladdin a small, intricately carved wooden box.",
+      "side": "left",
+      "start": 158.3,
+      "end": 169.99,
+      "image": "20_left.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 157.72,
+          "e": 158.52
+        },
+        {
+          "w": "they",
+          "s": 158.52,
+          "e": 158.76
+        },
+        {
+          "w": "approached",
+          "s": 158.76,
+          "e": 159.28
+        },
+        {
+          "w": "the",
+          "s": 159.28,
+          "e": 159.28
+        },
+        {
+          "w": "cave",
+          "s": 159.28,
+          "e": 159.84
+        },
+        {
+          "w": "the",
+          "s": 159.84,
+          "e": 160.56
+        },
+        {
+          "w": "air",
+          "s": 160.56,
+          "e": 160.96
+        },
+        {
+          "w": "grew",
+          "s": 160.96,
+          "e": 161.16
+        },
+        {
+          "w": "thick",
+          "s": 161.16,
+          "e": 161.6
+        },
+        {
+          "w": "with",
+          "s": 161.6,
+          "e": 161.8
+        },
+        {
+          "w": "an",
+          "s": 161.8,
+          "e": 162.56
+        },
+        {
+          "w": "eerie",
+          "s": 162.56,
+          "e": 163.08
+        },
+        {
+          "w": "pulsating",
+          "s": 163.08,
+          "e": 163.92
+        },
+        {
+          "w": "energy",
+          "s": 163.92,
+          "e": 164.44
+        },
+        {
+          "w": "The",
+          "s": 164.44,
+          "e": 164.44
+        },
+        {
+          "w": "sorcerer",
+          "s": 164.44,
+          "e": 165.52
+        },
+        {
+          "w": "handed",
+          "s": 165.52,
+          "e": 166.0
+        },
+        {
+          "w": "Aladdin",
+          "s": 166.0,
+          "e": 166.32
+        },
+        {
+          "w": "a",
+          "s": 166.32,
+          "e": 166.44
+        },
+        {
+          "w": "small",
+          "s": 166.44,
+          "e": 167.16
+        },
+        {
+          "w": "intricately",
+          "s": 167.16,
+          "e": 167.92
+        },
+        {
+          "w": "carved",
+          "s": 167.92,
+          "e": 168.56
+        },
+        {
+          "w": "wooden",
+          "s": 168.56,
+          "e": 168.96
+        },
+        {
+          "w": "box",
+          "s": 168.96,
+          "e": 169.48
+        }
+      ]
+    },
+    {
+      "text": "Stranger: Solve the riddle of the cave, Aladdin, and claim the treasure that lies within. Aladdin: But what's the riddle?",
+      "side": "right",
+      "start": 169.99,
+      "end": 177.13,
+      "image": "21_right.jpg",
+      "words": [
+        {
+          "w": "Solve",
+          "s": 169.48,
+          "e": 170.36
+        },
+        {
+          "w": "the",
+          "s": 170.36,
+          "e": 170.52
+        },
+        {
+          "w": "riddle",
+          "s": 170.52,
+          "e": 170.72
+        },
+        {
+          "w": "of",
+          "s": 170.72,
+          "e": 170.84
+        },
+        {
+          "w": "the",
+          "s": 170.84,
+          "e": 171.0
+        },
+        {
+          "w": "cave",
+          "s": 171.0,
+          "e": 171.4
+        },
+        {
+          "w": "Aladdin",
+          "s": 171.4,
+          "e": 172.2
+        },
+        {
+          "w": "and",
+          "s": 172.2,
+          "e": 172.84
+        },
+        {
+          "w": "claim",
+          "s": 172.84,
+          "e": 173.24
+        },
+        {
+          "w": "the",
+          "s": 173.24,
+          "e": 173.32
+        },
+        {
+          "w": "treasure",
+          "s": 173.32,
+          "e": 173.76
+        },
+        {
+          "w": "that",
+          "s": 173.76,
+          "e": 173.92
+        },
+        {
+          "w": "lies",
+          "s": 173.92,
+          "e": 174.36
+        },
+        {
+          "w": "within",
+          "s": 174.36,
+          "e": 174.72
+        },
+        {
+          "w": "But",
+          "s": 174.72,
+          "e": 175.4
+        },
+        {
+          "w": "what's",
+          "s": 175.4,
+          "e": 175.92
+        },
+        {
+          "w": "the",
+          "s": 175.92,
+          "e": 176.08
+        },
+        {
+          "w": "riddle",
+          "s": 176.08,
+          "e": 176.56
+        }
+      ]
+    },
+    {
+      "text": "Stranger: Ah, that would be telling. You must use your wits and your newfound magical abilities to uncover the answer.",
+      "side": "left",
+      "start": 177.13,
+      "end": 184.13,
+      "image": "22_left.jpg",
+      "words": [
+        {
+          "w": "Ah",
+          "s": 176.56,
+          "e": 177.6
+        },
+        {
+          "w": "that",
+          "s": 177.6,
+          "e": 177.92
+        },
+        {
+          "w": "would",
+          "s": 177.92,
+          "e": 178.12
+        },
+        {
+          "w": "be",
+          "s": 178.12,
+          "e": 178.32
+        },
+        {
+          "w": "telling",
+          "s": 178.32,
+          "e": 178.6
+        },
+        {
+          "w": "You",
+          "s": 178.6,
+          "e": 178.68
+        },
+        {
+          "w": "must",
+          "s": 178.68,
+          "e": 179.64
+        },
+        {
+          "w": "use",
+          "s": 179.64,
+          "e": 179.88
+        },
+        {
+          "w": "your",
+          "s": 179.88,
+          "e": 180.04
+        },
+        {
+          "w": "wits",
+          "s": 180.04,
+          "e": 180.4
+        },
+        {
+          "w": "and",
+          "s": 180.4,
+          "e": 180.48
+        },
+        {
+          "w": "your",
+          "s": 180.48,
+          "e": 180.72
+        },
+        {
+          "w": "newfound",
+          "s": 180.72,
+          "e": 181.28
+        },
+        {
+          "w": "magical",
+          "s": 181.28,
+          "e": 181.6
+        },
+        {
+          "w": "abilities",
+          "s": 181.6,
+          "e": 182.28
+        },
+        {
+          "w": "to",
+          "s": 182.28,
+          "e": 182.68
+        },
+        {
+          "w": "uncover",
+          "s": 182.68,
+          "e": 182.96
+        },
+        {
+          "w": "the",
+          "s": 182.96,
+          "e": 183.28
+        },
+        {
+          "w": "answer",
+          "s": 183.28,
+          "e": 183.56
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Aladdin, with a deep breath, stepped into the Cave of Wonders. The darkness enveloped him like a shroud, and the silence was oppressive.",
+      "side": "right",
+      "start": 184.13,
+      "end": 194.05,
+      "image": "23_right.jpg",
+      "words": [
+        {
+          "w": "Aladdin",
+          "s": 183.56,
+          "e": 184.76
+        },
+        {
+          "w": "with",
+          "s": 184.76,
+          "e": 185.12
+        },
+        {
+          "w": "a",
+          "s": 185.12,
+          "e": 185.32
+        },
+        {
+          "w": "deep",
+          "s": 185.32,
+          "e": 185.56
+        },
+        {
+          "w": "breath",
+          "s": 185.56,
+          "e": 186.04
+        },
+        {
+          "w": "stepped",
+          "s": 186.04,
+          "e": 186.68
+        },
+        {
+          "w": "into",
+          "s": 186.68,
+          "e": 187.0
+        },
+        {
+          "w": "the",
+          "s": 187.0,
+          "e": 187.12
+        },
+        {
+          "w": "Cave",
+          "s": 187.12,
+          "e": 187.48
+        },
+        {
+          "w": "of",
+          "s": 187.48,
+          "e": 187.6
+        },
+        {
+          "w": "Wonders",
+          "s": 187.6,
+          "e": 188.36
+        },
+        {
+          "w": "The",
+          "s": 188.36,
+          "e": 189.04
+        },
+        {
+          "w": "darkness",
+          "s": 189.04,
+          "e": 189.8
+        },
+        {
+          "w": "enveloped",
+          "s": 189.8,
+          "e": 190.24
+        },
+        {
+          "w": "him",
+          "s": 190.24,
+          "e": 190.44
+        },
+        {
+          "w": "like",
+          "s": 190.44,
+          "e": 190.64
+        },
+        {
+          "w": "a",
+          "s": 190.64,
+          "e": 190.64
+        },
+        {
+          "w": "shroud",
+          "s": 190.64,
+          "e": 191.36
+        },
+        {
+          "w": "and",
+          "s": 191.36,
+          "e": 191.48
+        },
+        {
+          "w": "the",
+          "s": 191.48,
+          "e": 192.0
+        },
+        {
+          "w": "silence",
+          "s": 192.0,
+          "e": 192.72
+        },
+        {
+          "w": "was",
+          "s": 192.72,
+          "e": 192.96
+        },
+        {
+          "w": "oppressive",
+          "s": 192.96,
+          "e": 193.48
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Suddenly, a low, rumbling voice boomed from the depths of the cave. Cave Voice: Who dares to disturb the rest of the ancient ones?",
+      "side": "left",
+      "start": 194.05,
+      "end": 203.79,
+      "image": "24_left.jpg",
+      "words": [
+        {
+          "w": "Suddenly",
+          "s": 193.48,
+          "e": 194.24
+        },
+        {
+          "w": "a",
+          "s": 194.24,
+          "e": 194.68
+        },
+        {
+          "w": "low",
+          "s": 194.68,
+          "e": 195.64
+        },
+        {
+          "w": "rumbling",
+          "s": 195.64,
+          "e": 196.32
+        },
+        {
+          "w": "voice",
+          "s": 196.32,
+          "e": 196.84
+        },
+        {
+          "w": "boomed",
+          "s": 196.84,
+          "e": 197.32
+        },
+        {
+          "w": "from",
+          "s": 197.32,
+          "e": 197.64
+        },
+        {
+          "w": "the",
+          "s": 197.64,
+          "e": 197.76
+        },
+        {
+          "w": "depths",
+          "s": 197.76,
+          "e": 198.16
+        },
+        {
+          "w": "of",
+          "s": 198.16,
+          "e": 198.2
+        },
+        {
+          "w": "the",
+          "s": 198.2,
+          "e": 198.32
+        },
+        {
+          "w": "cave",
+          "s": 198.32,
+          "e": 198.76
+        },
+        {
+          "w": "Who",
+          "s": 198.76,
+          "e": 199.56
+        },
+        {
+          "w": "dares",
+          "s": 199.56,
+          "e": 200.32
+        },
+        {
+          "w": "to",
+          "s": 200.32,
+          "e": 200.32
+        },
+        {
+          "w": "disturb",
+          "s": 200.32,
+          "e": 201.04
+        },
+        {
+          "w": "the",
+          "s": 201.04,
+          "e": 201.04
+        },
+        {
+          "w": "rest",
+          "s": 201.04,
+          "e": 201.72
+        },
+        {
+          "w": "of",
+          "s": 201.72,
+          "e": 202.2
+        },
+        {
+          "w": "the",
+          "s": 202.2,
+          "e": 202.2
+        },
+        {
+          "w": "ancient",
+          "s": 202.2,
+          "e": 202.52
+        },
+        {
+          "w": "ones",
+          "s": 202.52,
+          "e": 203.2
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: I am Aladdin, and I've come to claim the treasure that lies within.",
+      "side": "right",
+      "start": 203.79,
+      "end": 209.77,
+      "image": "25_right.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 203.2,
+          "e": 204.16
+        },
+        {
+          "w": "am",
+          "s": 204.16,
+          "e": 204.36
+        },
+        {
+          "w": "Aladdin",
+          "s": 204.36,
+          "e": 204.76
+        },
+        {
+          "w": "and",
+          "s": 204.76,
+          "e": 205.04
+        },
+        {
+          "w": "I've",
+          "s": 205.04,
+          "e": 206.48
+        },
+        {
+          "w": "come",
+          "s": 206.48,
+          "e": 206.76
+        },
+        {
+          "w": "to",
+          "s": 206.76,
+          "e": 206.92
+        },
+        {
+          "w": "claim",
+          "s": 206.92,
+          "e": 207.4
+        },
+        {
+          "w": "the",
+          "s": 207.4,
+          "e": 207.48
+        },
+        {
+          "w": "treasure",
+          "s": 207.48,
+          "e": 208.08
+        },
+        {
+          "w": "that",
+          "s": 208.08,
+          "e": 208.24
+        },
+        {
+          "w": "lies",
+          "s": 208.24,
+          "e": 208.68
+        },
+        {
+          "w": "within",
+          "s": 208.68,
+          "e": 209.16
+        }
+      ]
+    },
+    {
+      "text": "Cave Voice: You shall not leave this place alive unless you answer the riddle: \"What can be broken, but never held? What can be given, but never sold?\"",
+      "side": "left",
+      "start": 209.77,
+      "end": 224.85,
+      "image": "26_left.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 209.16,
+          "e": 209.88
+        },
+        {
+          "w": "shall",
+          "s": 209.88,
+          "e": 210.2
+        },
+        {
+          "w": "not",
+          "s": 210.2,
+          "e": 210.48
+        },
+        {
+          "w": "leave",
+          "s": 210.48,
+          "e": 211.0
+        },
+        {
+          "w": "this",
+          "s": 211.0,
+          "e": 211.68
+        },
+        {
+          "w": "place",
+          "s": 211.68,
+          "e": 212.4
+        },
+        {
+          "w": "alive",
+          "s": 212.4,
+          "e": 212.84
+        },
+        {
+          "w": "unless",
+          "s": 212.84,
+          "e": 213.24
+        },
+        {
+          "w": "you",
+          "s": 213.24,
+          "e": 213.6
+        },
+        {
+          "w": "answer",
+          "s": 213.6,
+          "e": 214.36
+        },
+        {
+          "w": "the",
+          "s": 214.36,
+          "e": 215.28
+        },
+        {
+          "w": "riddle",
+          "s": 215.28,
+          "e": 215.52
+        },
+        {
+          "w": "What",
+          "s": 215.52,
+          "e": 215.88
+        },
+        {
+          "w": "can",
+          "s": 215.88,
+          "e": 216.12
+        },
+        {
+          "w": "be",
+          "s": 216.12,
+          "e": 216.28
+        },
+        {
+          "w": "broken",
+          "s": 216.28,
+          "e": 216.92
+        },
+        {
+          "w": "but",
+          "s": 216.92,
+          "e": 217.88
+        },
+        {
+          "w": "never",
+          "s": 217.88,
+          "e": 218.04
+        },
+        {
+          "w": "held",
+          "s": 218.04,
+          "e": 219.04
+        },
+        {
+          "w": "What",
+          "s": 219.04,
+          "e": 220.36
+        },
+        {
+          "w": "can",
+          "s": 220.36,
+          "e": 220.8
+        },
+        {
+          "w": "be",
+          "s": 220.8,
+          "e": 221.16
+        },
+        {
+          "w": "given",
+          "s": 221.16,
+          "e": 221.32
+        },
+        {
+          "w": "but",
+          "s": 221.32,
+          "e": 223.24
+        },
+        {
+          "w": "never",
+          "s": 223.24,
+          "e": 223.64
+        },
+        {
+          "w": "sold",
+          "s": 223.64,
+          "e": 224.28
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Aladdin's mind racing, he thought back to the sorcerer's teachings and the stories his mother used to tell him.",
+      "side": "right",
+      "start": 224.85,
+      "end": 232.14,
+      "image": "27_right.jpg",
+      "words": [
+        {
+          "w": "Aladdin's",
+          "s": 224.28,
+          "e": 225.36
+        },
+        {
+          "w": "mind",
+          "s": 225.36,
+          "e": 225.76
+        },
+        {
+          "w": "racing",
+          "s": 225.76,
+          "e": 226.44
+        },
+        {
+          "w": "he",
+          "s": 226.44,
+          "e": 226.92
+        },
+        {
+          "w": "thought",
+          "s": 226.92,
+          "e": 227.2
+        },
+        {
+          "w": "back",
+          "s": 227.2,
+          "e": 227.52
+        },
+        {
+          "w": "to",
+          "s": 227.52,
+          "e": 227.72
+        },
+        {
+          "w": "the",
+          "s": 227.72,
+          "e": 227.72
+        },
+        {
+          "w": "sorcerer's",
+          "s": 227.72,
+          "e": 228.48
+        },
+        {
+          "w": "teachings",
+          "s": 228.48,
+          "e": 229.12
+        },
+        {
+          "w": "and",
+          "s": 229.12,
+          "e": 229.4
+        },
+        {
+          "w": "the",
+          "s": 229.4,
+          "e": 229.64
+        },
+        {
+          "w": "stories",
+          "s": 229.64,
+          "e": 230.12
+        },
+        {
+          "w": "his",
+          "s": 230.12,
+          "e": 230.44
+        },
+        {
+          "w": "mother",
+          "s": 230.44,
+          "e": 230.76
+        },
+        {
+          "w": "used",
+          "s": 230.76,
+          "e": 231.08
+        },
+        {
+          "w": "to",
+          "s": 231.08,
+          "e": 231.08
+        },
+        {
+          "w": "tell",
+          "s": 231.08,
+          "e": 231.52
+        },
+        {
+          "w": "him",
+          "s": 231.52,
+          "e": 231.56
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: The answer is a promise! A promise can be broken, but it can never be physically held in one's hands.",
+      "side": "left",
+      "start": 232.14,
+      "end": 240.62,
+      "image": "28_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 231.56,
+          "e": 232.4
+        },
+        {
+          "w": "answer",
+          "s": 232.4,
+          "e": 232.72
+        },
+        {
+          "w": "is",
+          "s": 232.72,
+          "e": 233.4
+        },
+        {
+          "w": "a",
+          "s": 233.4,
+          "e": 233.44
+        },
+        {
+          "w": "promise",
+          "s": 233.44,
+          "e": 234.24
+        },
+        {
+          "w": "A",
+          "s": 234.24,
+          "e": 234.88
+        },
+        {
+          "w": "promise",
+          "s": 234.88,
+          "e": 235.4
+        },
+        {
+          "w": "can",
+          "s": 235.4,
+          "e": 235.6
+        },
+        {
+          "w": "be",
+          "s": 235.6,
+          "e": 235.72
+        },
+        {
+          "w": "broken",
+          "s": 235.72,
+          "e": 236.16
+        },
+        {
+          "w": "but",
+          "s": 236.16,
+          "e": 236.48
+        },
+        {
+          "w": "it",
+          "s": 236.48,
+          "e": 236.48
+        },
+        {
+          "w": "can",
+          "s": 236.48,
+          "e": 237.04
+        },
+        {
+          "w": "never",
+          "s": 237.04,
+          "e": 237.64
+        },
+        {
+          "w": "be",
+          "s": 237.64,
+          "e": 237.72
+        },
+        {
+          "w": "physically",
+          "s": 237.72,
+          "e": 238.24
+        },
+        {
+          "w": "held",
+          "s": 238.24,
+          "e": 238.88
+        },
+        {
+          "w": "in",
+          "s": 238.88,
+          "e": 239.04
+        },
+        {
+          "w": "one's",
+          "s": 239.04,
+          "e": 239.48
+        },
+        {
+          "w": "hands",
+          "s": 239.48,
+          "e": 240.0
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: A promise can be given, but it can never be sold like a commodity. Cave Voice: You are correct, Aladdin! The treasure of the ancient ones shall be yours!",
+      "side": "right",
+      "start": 240.62,
+      "end": 254.43,
+      "image": "29_right.jpg",
+      "words": [
+        {
+          "w": "A",
+          "s": 240.0,
+          "e": 240.72
+        },
+        {
+          "w": "promise",
+          "s": 240.72,
+          "e": 241.52
+        },
+        {
+          "w": "can",
+          "s": 241.52,
+          "e": 241.76
+        },
+        {
+          "w": "be",
+          "s": 241.76,
+          "e": 241.96
+        },
+        {
+          "w": "given",
+          "s": 241.96,
+          "e": 242.56
+        },
+        {
+          "w": "but",
+          "s": 242.56,
+          "e": 243.64
+        },
+        {
+          "w": "it",
+          "s": 243.64,
+          "e": 243.68
+        },
+        {
+          "w": "can",
+          "s": 243.68,
+          "e": 244.04
+        },
+        {
+          "w": "never",
+          "s": 244.04,
+          "e": 244.36
+        },
+        {
+          "w": "be",
+          "s": 244.36,
+          "e": 244.48
+        },
+        {
+          "w": "sold",
+          "s": 244.48,
+          "e": 245.2
+        },
+        {
+          "w": "like",
+          "s": 245.2,
+          "e": 245.48
+        },
+        {
+          "w": "a",
+          "s": 245.48,
+          "e": 245.68
+        },
+        {
+          "w": "commodity",
+          "s": 245.68,
+          "e": 246.16
+        },
+        {
+          "w": "You",
+          "s": 246.16,
+          "e": 246.28
+        },
+        {
+          "w": "are",
+          "s": 246.28,
+          "e": 247.32
+        },
+        {
+          "w": "correct",
+          "s": 247.32,
+          "e": 248.16
+        },
+        {
+          "w": "Aladdin",
+          "s": 248.16,
+          "e": 249.0
+        },
+        {
+          "w": "The",
+          "s": 249.0,
+          "e": 249.68
+        },
+        {
+          "w": "treasure",
+          "s": 249.68,
+          "e": 250.28
+        },
+        {
+          "w": "of",
+          "s": 250.28,
+          "e": 250.96
+        },
+        {
+          "w": "the",
+          "s": 250.96,
+          "e": 250.96
+        },
+        {
+          "w": "ancient",
+          "s": 250.96,
+          "e": 251.56
+        },
+        {
+          "w": "ones",
+          "s": 251.56,
+          "e": 252.32
+        },
+        {
+          "w": "shall",
+          "s": 252.32,
+          "e": 252.8
+        },
+        {
+          "w": "be",
+          "s": 252.8,
+          "e": 252.8
+        },
+        {
+          "w": "yours",
+          "s": 252.8,
+          "e": 253.84
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The cave began to shake, and the sound of rumbling rocks filled the air. A section of the wall slid open, revealing a glittering trove of jewels and gold.",
+      "side": "left",
+      "start": 254.43,
+      "end": 265.28,
+      "image": "30_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 253.84,
+          "e": 254.52
+        },
+        {
+          "w": "cave",
+          "s": 254.52,
+          "e": 254.84
+        },
+        {
+          "w": "began",
+          "s": 254.84,
+          "e": 255.16
+        },
+        {
+          "w": "to",
+          "s": 255.16,
+          "e": 255.64
+        },
+        {
+          "w": "shake",
+          "s": 255.64,
+          "e": 255.8
+        },
+        {
+          "w": "and",
+          "s": 255.8,
+          "e": 255.8
+        },
+        {
+          "w": "the",
+          "s": 255.8,
+          "e": 256.16
+        },
+        {
+          "w": "sound",
+          "s": 256.16,
+          "e": 256.6
+        },
+        {
+          "w": "of",
+          "s": 256.6,
+          "e": 256.72
+        },
+        {
+          "w": "rumbling",
+          "s": 256.72,
+          "e": 257.12
+        },
+        {
+          "w": "rocks",
+          "s": 257.12,
+          "e": 257.52
+        },
+        {
+          "w": "filled",
+          "s": 257.52,
+          "e": 257.96
+        },
+        {
+          "w": "the",
+          "s": 257.96,
+          "e": 257.96
+        },
+        {
+          "w": "air",
+          "s": 257.96,
+          "e": 258.44
+        },
+        {
+          "w": "A",
+          "s": 258.44,
+          "e": 258.48
+        },
+        {
+          "w": "section",
+          "s": 258.48,
+          "e": 259.52
+        },
+        {
+          "w": "of",
+          "s": 259.52,
+          "e": 259.64
+        },
+        {
+          "w": "the",
+          "s": 259.64,
+          "e": 259.64
+        },
+        {
+          "w": "wall",
+          "s": 259.64,
+          "e": 260.24
+        },
+        {
+          "w": "slid",
+          "s": 260.24,
+          "e": 260.68
+        },
+        {
+          "w": "open",
+          "s": 260.68,
+          "e": 261.16
+        },
+        {
+          "w": "revealing",
+          "s": 261.16,
+          "e": 262.4
+        },
+        {
+          "w": "a",
+          "s": 262.4,
+          "e": 262.4
+        },
+        {
+          "w": "glittering",
+          "s": 262.4,
+          "e": 262.96
+        },
+        {
+          "w": "trove",
+          "s": 262.96,
+          "e": 263.4
+        },
+        {
+          "w": "of",
+          "s": 263.4,
+          "e": 263.68
+        },
+        {
+          "w": "jewels",
+          "s": 263.68,
+          "e": 264.2
+        },
+        {
+          "w": "and",
+          "s": 264.2,
+          "e": 264.36
+        },
+        {
+          "w": "gold",
+          "s": 264.36,
+          "e": 264.76
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Among the treasure, a small, dusty lamp caught Aladdin's eye. Aladdin: What's this old lamp doing here?",
+      "side": "right",
+      "start": 265.28,
+      "end": 272.69,
+      "image": "31_right.jpg",
+      "words": [
+        {
+          "w": "Among",
+          "s": 264.76,
+          "e": 265.64
+        },
+        {
+          "w": "the",
+          "s": 265.64,
+          "e": 265.64
+        },
+        {
+          "w": "treasure",
+          "s": 265.64,
+          "e": 266.12
+        },
+        {
+          "w": "a",
+          "s": 266.12,
+          "e": 266.12
+        },
+        {
+          "w": "small",
+          "s": 266.12,
+          "e": 267.0
+        },
+        {
+          "w": "dusty",
+          "s": 267.0,
+          "e": 267.44
+        },
+        {
+          "w": "lamp",
+          "s": 267.44,
+          "e": 267.84
+        },
+        {
+          "w": "caught",
+          "s": 267.84,
+          "e": 268.12
+        },
+        {
+          "w": "Aladdin's",
+          "s": 268.12,
+          "e": 268.64
+        },
+        {
+          "w": "eye",
+          "s": 268.64,
+          "e": 269.0
+        },
+        {
+          "w": "What's",
+          "s": 269.0,
+          "e": 269.96
+        },
+        {
+          "w": "this",
+          "s": 269.96,
+          "e": 270.36
+        },
+        {
+          "w": "old",
+          "s": 270.36,
+          "e": 270.68
+        },
+        {
+          "w": "lamp",
+          "s": 270.68,
+          "e": 271.2
+        },
+        {
+          "w": "doing",
+          "s": 271.2,
+          "e": 271.6
+        },
+        {
+          "w": "here",
+          "s": 271.6,
+          "e": 272.12
+        }
+      ]
+    },
+    {
+      "text": "Cave Voice: Ah, the lamp. A humble vessel, but one that holds a secret beyond your wildest dreams.",
+      "side": "left",
+      "start": 272.69,
+      "end": 280.99,
+      "image": "32_left.jpg",
+      "words": [
+        {
+          "w": "Ah",
+          "s": 272.12,
+          "e": 273.44
+        },
+        {
+          "w": "the",
+          "s": 273.44,
+          "e": 273.56
+        },
+        {
+          "w": "lamp",
+          "s": 273.56,
+          "e": 274.24
+        },
+        {
+          "w": "A",
+          "s": 274.24,
+          "e": 274.4
+        },
+        {
+          "w": "humble",
+          "s": 274.4,
+          "e": 275.48
+        },
+        {
+          "w": "vessel",
+          "s": 275.48,
+          "e": 275.96
+        },
+        {
+          "w": "but",
+          "s": 275.96,
+          "e": 276.2
+        },
+        {
+          "w": "one",
+          "s": 276.2,
+          "e": 276.4
+        },
+        {
+          "w": "that",
+          "s": 276.4,
+          "e": 276.8
+        },
+        {
+          "w": "holds",
+          "s": 276.8,
+          "e": 277.6
+        },
+        {
+          "w": "a",
+          "s": 277.6,
+          "e": 277.64
+        },
+        {
+          "w": "secret",
+          "s": 277.64,
+          "e": 278.2
+        },
+        {
+          "w": "beyond",
+          "s": 278.2,
+          "e": 278.6
+        },
+        {
+          "w": "your",
+          "s": 278.6,
+          "e": 278.92
+        },
+        {
+          "w": "wildest",
+          "s": 278.92,
+          "e": 279.68
+        },
+        {
+          "w": "dreams",
+          "s": 279.68,
+          "e": 280.44
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As Aladdin reached for the lamp, the sorcerer appeared beside him, a sly grin spreading across his face.",
+      "side": "right",
+      "start": 280.99,
+      "end": 288.37,
+      "image": "33_right.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 280.44,
+          "e": 281.12
+        },
+        {
+          "w": "Aladdin",
+          "s": 281.12,
+          "e": 281.56
+        },
+        {
+          "w": "reached",
+          "s": 281.56,
+          "e": 281.76
+        },
+        {
+          "w": "for",
+          "s": 281.76,
+          "e": 282.56
+        },
+        {
+          "w": "the",
+          "s": 282.56,
+          "e": 282.68
+        },
+        {
+          "w": "lamp",
+          "s": 282.68,
+          "e": 282.68
+        },
+        {
+          "w": "the",
+          "s": 282.68,
+          "e": 282.68
+        },
+        {
+          "w": "sorcerer",
+          "s": 282.68,
+          "e": 283.84
+        },
+        {
+          "w": "appeared",
+          "s": 283.84,
+          "e": 284.2
+        },
+        {
+          "w": "beside",
+          "s": 284.2,
+          "e": 284.92
+        },
+        {
+          "w": "him",
+          "s": 284.92,
+          "e": 284.92
+        },
+        {
+          "w": "a",
+          "s": 284.92,
+          "e": 285.4
+        },
+        {
+          "w": "sly",
+          "s": 285.4,
+          "e": 286.0
+        },
+        {
+          "w": "grin",
+          "s": 286.0,
+          "e": 286.32
+        },
+        {
+          "w": "spreading",
+          "s": 286.32,
+          "e": 286.8
+        },
+        {
+          "w": "across",
+          "s": 286.8,
+          "e": 287.2
+        },
+        {
+          "w": "his",
+          "s": 287.2,
+          "e": 287.4
+        },
+        {
+          "w": "face",
+          "s": 287.4,
+          "e": 287.8
+        }
+      ]
+    },
+    {
+      "text": "Stranger: Well done, Aladdin! You've passed the test. Now, let us return to Baghdad and reap the rewards of our journey. Aladdin: But what about the lamp? What's so special about it?",
+      "side": "left",
+      "start": 288.37,
+      "end": 301.2,
+      "image": "34_left.jpg",
+      "words": [
+        {
+          "w": "Well",
+          "s": 287.8,
+          "e": 288.6
+        },
+        {
+          "w": "done",
+          "s": 288.6,
+          "e": 288.92
+        },
+        {
+          "w": "Aladdin",
+          "s": 288.92,
+          "e": 289.44
+        },
+        {
+          "w": "You've",
+          "s": 289.44,
+          "e": 290.48
+        },
+        {
+          "w": "passed",
+          "s": 290.48,
+          "e": 290.92
+        },
+        {
+          "w": "the",
+          "s": 290.92,
+          "e": 291.08
+        },
+        {
+          "w": "test",
+          "s": 291.08,
+          "e": 291.52
+        },
+        {
+          "w": "Now",
+          "s": 291.52,
+          "e": 292.6
+        },
+        {
+          "w": "let",
+          "s": 292.6,
+          "e": 292.88
+        },
+        {
+          "w": "us",
+          "s": 292.88,
+          "e": 293.08
+        },
+        {
+          "w": "return",
+          "s": 293.08,
+          "e": 293.4
+        },
+        {
+          "w": "to",
+          "s": 293.4,
+          "e": 293.56
+        },
+        {
+          "w": "Baghdad",
+          "s": 293.56,
+          "e": 294.08
+        },
+        {
+          "w": "and",
+          "s": 294.08,
+          "e": 294.28
+        },
+        {
+          "w": "reap",
+          "s": 294.28,
+          "e": 294.48
+        },
+        {
+          "w": "the",
+          "s": 294.48,
+          "e": 294.56
+        },
+        {
+          "w": "rewards",
+          "s": 294.56,
+          "e": 295.2
+        },
+        {
+          "w": "of",
+          "s": 295.2,
+          "e": 295.28
+        },
+        {
+          "w": "our",
+          "s": 295.28,
+          "e": 295.48
+        },
+        {
+          "w": "journey",
+          "s": 295.48,
+          "e": 295.88
+        },
+        {
+          "w": "But",
+          "s": 295.88,
+          "e": 296.76
+        },
+        {
+          "w": "what",
+          "s": 296.76,
+          "e": 297.6
+        },
+        {
+          "w": "about",
+          "s": 297.6,
+          "e": 298.04
+        },
+        {
+          "w": "the",
+          "s": 298.04,
+          "e": 298.04
+        },
+        {
+          "w": "lamp",
+          "s": 298.04,
+          "e": 298.52
+        },
+        {
+          "w": "What's",
+          "s": 298.52,
+          "e": 299.36
+        },
+        {
+          "w": "so",
+          "s": 299.36,
+          "e": 299.72
+        },
+        {
+          "w": "special",
+          "s": 299.72,
+          "e": 300.2
+        },
+        {
+          "w": "about",
+          "s": 300.2,
+          "e": 300.64
+        },
+        {
+          "w": "it",
+          "s": 300.64,
+          "e": 300.64
+        }
+      ]
+    },
+    {
+      "text": "Stranger: Ah, the lamp. It's just a trinket, a mere bauble. Don't worry about it.",
+      "side": "right",
+      "start": 301.2,
+      "end": 307.86,
+      "image": "35_right.jpg",
+      "words": [
+        {
+          "w": "Ah",
+          "s": 300.64,
+          "e": 301.68
+        },
+        {
+          "w": "the",
+          "s": 301.68,
+          "e": 302.6
+        },
+        {
+          "w": "lamp",
+          "s": 302.6,
+          "e": 303.08
+        },
+        {
+          "w": "It's",
+          "s": 303.08,
+          "e": 304.12
+        },
+        {
+          "w": "just",
+          "s": 304.12,
+          "e": 304.36
+        },
+        {
+          "w": "a",
+          "s": 304.36,
+          "e": 304.44
+        },
+        {
+          "w": "trinket",
+          "s": 304.44,
+          "e": 304.92
+        },
+        {
+          "w": "a",
+          "s": 304.92,
+          "e": 305.04
+        },
+        {
+          "w": "mere",
+          "s": 305.04,
+          "e": 305.28
+        },
+        {
+          "w": "bauble",
+          "s": 305.28,
+          "e": 305.8
+        },
+        {
+          "w": "Don't",
+          "s": 305.8,
+          "e": 306.6
+        },
+        {
+          "w": "worry",
+          "s": 306.6,
+          "e": 306.92
+        },
+        {
+          "w": "about",
+          "s": 306.92,
+          "e": 307.28
+        },
+        {
+          "w": "it",
+          "s": 307.28,
+          "e": 307.28
+        }
+      ]
+    },
+    {
+      "text": "Narrator: But Aladdin, sensing the sorcerer's deceit, decided to keep the lamp for himself, hiding it in his cloak.",
+      "side": "left",
+      "start": 307.86,
+      "end": 316.07,
+      "image": "36_left.jpg",
+      "words": [
+        {
+          "w": "But",
+          "s": 307.28,
+          "e": 307.28
+        },
+        {
+          "w": "Aladdin",
+          "s": 307.28,
+          "e": 308.6
+        },
+        {
+          "w": "sensing",
+          "s": 308.6,
+          "e": 309.44
+        },
+        {
+          "w": "the",
+          "s": 309.44,
+          "e": 309.48
+        },
+        {
+          "w": "sorcerer's",
+          "s": 309.48,
+          "e": 310.28
+        },
+        {
+          "w": "deceit",
+          "s": 310.28,
+          "e": 310.84
+        },
+        {
+          "w": "decided",
+          "s": 310.84,
+          "e": 311.88
+        },
+        {
+          "w": "to",
+          "s": 311.88,
+          "e": 311.96
+        },
+        {
+          "w": "keep",
+          "s": 311.96,
+          "e": 312.24
+        },
+        {
+          "w": "the",
+          "s": 312.24,
+          "e": 312.24
+        },
+        {
+          "w": "lamp",
+          "s": 312.24,
+          "e": 312.24
+        },
+        {
+          "w": "for",
+          "s": 312.24,
+          "e": 312.68
+        },
+        {
+          "w": "himself",
+          "s": 312.68,
+          "e": 313.4
+        },
+        {
+          "w": "hiding",
+          "s": 313.4,
+          "e": 314.4
+        },
+        {
+          "w": "it",
+          "s": 314.4,
+          "e": 314.68
+        },
+        {
+          "w": "in",
+          "s": 314.68,
+          "e": 314.76
+        },
+        {
+          "w": "his",
+          "s": 314.76,
+          "e": 315.04
+        },
+        {
+          "w": "cloak",
+          "s": 315.04,
+          "e": 315.4
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As they emerged from the cave, the sorcerer's demeanor changed, his eyes flashing with anger. Stranger: You foolish boy! You'll never leave this place alive!",
+      "side": "right",
+      "start": 316.07,
+      "end": 328.5,
+      "image": "37_right.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 315.4,
+          "e": 315.56
+        },
+        {
+          "w": "they",
+          "s": 315.56,
+          "e": 316.44
+        },
+        {
+          "w": "emerged",
+          "s": 316.44,
+          "e": 317.2
+        },
+        {
+          "w": "from",
+          "s": 317.2,
+          "e": 317.48
+        },
+        {
+          "w": "the",
+          "s": 317.48,
+          "e": 317.48
+        },
+        {
+          "w": "cave",
+          "s": 317.48,
+          "e": 318.08
+        },
+        {
+          "w": "the",
+          "s": 318.08,
+          "e": 318.36
+        },
+        {
+          "w": "sorcerer's",
+          "s": 318.36,
+          "e": 319.52
+        },
+        {
+          "w": "demeanor",
+          "s": 319.52,
+          "e": 320.04
+        },
+        {
+          "w": "changed",
+          "s": 320.04,
+          "e": 320.84
+        },
+        {
+          "w": "his",
+          "s": 320.84,
+          "e": 321.52
+        },
+        {
+          "w": "eyes",
+          "s": 321.52,
+          "e": 322.16
+        },
+        {
+          "w": "flashing",
+          "s": 322.16,
+          "e": 322.8
+        },
+        {
+          "w": "with",
+          "s": 322.8,
+          "e": 323.0
+        },
+        {
+          "w": "anger",
+          "s": 323.0,
+          "e": 323.44
+        },
+        {
+          "w": "You",
+          "s": 323.44,
+          "e": 324.32
+        },
+        {
+          "w": "foolish",
+          "s": 324.32,
+          "e": 325.12
+        },
+        {
+          "w": "boy",
+          "s": 325.12,
+          "e": 325.68
+        },
+        {
+          "w": "You'll",
+          "s": 325.68,
+          "e": 326.48
+        },
+        {
+          "w": "never",
+          "s": 326.48,
+          "e": 326.68
+        },
+        {
+          "w": "leave",
+          "s": 326.68,
+          "e": 327.04
+        },
+        {
+          "w": "this",
+          "s": 327.04,
+          "e": 327.2
+        },
+        {
+          "w": "place",
+          "s": 327.2,
+          "e": 327.44
+        },
+        {
+          "w": "alive",
+          "s": 327.44,
+          "e": 327.92
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The sorcerer's hands began to weave a spell, but Aladdin, quick-thinking, rubbed the lamp, releasing a puff of smoke. A deep, rumbling voice boomed from the lamp.",
+      "side": "left",
+      "start": 328.5,
+      "end": 341.12,
+      "image": "38_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 327.92,
+          "e": 328.48
+        },
+        {
+          "w": "sorcerer's",
+          "s": 328.48,
+          "e": 329.32
+        },
+        {
+          "w": "hands",
+          "s": 329.32,
+          "e": 329.88
+        },
+        {
+          "w": "began",
+          "s": 329.88,
+          "e": 329.92
+        },
+        {
+          "w": "to",
+          "s": 329.92,
+          "e": 330.04
+        },
+        {
+          "w": "weave",
+          "s": 330.04,
+          "e": 330.28
+        },
+        {
+          "w": "a",
+          "s": 330.28,
+          "e": 330.48
+        },
+        {
+          "w": "spell",
+          "s": 330.48,
+          "e": 331.2
+        },
+        {
+          "w": "but",
+          "s": 331.2,
+          "e": 331.44
+        },
+        {
+          "w": "Aladdin",
+          "s": 331.44,
+          "e": 332.4
+        },
+        {
+          "w": "quickthinking",
+          "s": 332.4,
+          "e": 333.48
+        },
+        {
+          "w": "rubbed",
+          "s": 333.48,
+          "e": 334.24
+        },
+        {
+          "w": "the",
+          "s": 334.24,
+          "e": 334.36
+        },
+        {
+          "w": "lamp",
+          "s": 334.36,
+          "e": 334.84
+        },
+        {
+          "w": "releasing",
+          "s": 334.84,
+          "e": 335.76
+        },
+        {
+          "w": "a",
+          "s": 335.76,
+          "e": 335.76
+        },
+        {
+          "w": "puff",
+          "s": 335.76,
+          "e": 336.24
+        },
+        {
+          "w": "of",
+          "s": 336.24,
+          "e": 336.68
+        },
+        {
+          "w": "smoke",
+          "s": 336.68,
+          "e": 336.68
+        },
+        {
+          "w": "A",
+          "s": 336.68,
+          "e": 337.32
+        },
+        {
+          "w": "deep",
+          "s": 337.32,
+          "e": 337.88
+        },
+        {
+          "w": "rumbling",
+          "s": 337.88,
+          "e": 338.8
+        },
+        {
+          "w": "voice",
+          "s": 338.8,
+          "e": 339.2
+        },
+        {
+          "w": "boomed",
+          "s": 339.2,
+          "e": 339.6
+        },
+        {
+          "w": "from",
+          "s": 339.6,
+          "e": 339.96
+        },
+        {
+          "w": "the",
+          "s": 339.96,
+          "e": 340.0
+        },
+        {
+          "w": "lamp",
+          "s": 340.0,
+          "e": 340.4
+        }
+      ]
+    },
+    {
+      "text": "Genie: You have freed me, Aladdin! I am the Genie of the Lamp, and I shall grant you three wishes as is the custom with my kind.",
+      "side": "right",
+      "start": 341.12,
+      "end": 348.95,
+      "image": "39_right.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 340.4,
+          "e": 340.4
+        },
+        {
+          "w": "have",
+          "s": 340.4,
+          "e": 340.56
+        },
+        {
+          "w": "freed",
+          "s": 340.56,
+          "e": 341.4
+        },
+        {
+          "w": "me",
+          "s": 341.4,
+          "e": 341.72
+        },
+        {
+          "w": "Aladdin",
+          "s": 341.72,
+          "e": 342.48
+        },
+        {
+          "w": "I",
+          "s": 342.48,
+          "e": 343.32
+        },
+        {
+          "w": "am",
+          "s": 343.32,
+          "e": 343.44
+        },
+        {
+          "w": "the",
+          "s": 343.44,
+          "e": 343.48
+        },
+        {
+          "w": "Genie",
+          "s": 343.48,
+          "e": 343.92
+        },
+        {
+          "w": "of",
+          "s": 343.92,
+          "e": 344.4
+        },
+        {
+          "w": "the",
+          "s": 344.4,
+          "e": 344.52
+        },
+        {
+          "w": "Lamp",
+          "s": 344.52,
+          "e": 344.56
+        },
+        {
+          "w": "and",
+          "s": 344.56,
+          "e": 344.56
+        },
+        {
+          "w": "I",
+          "s": 344.56,
+          "e": 344.88
+        },
+        {
+          "w": "shall",
+          "s": 344.88,
+          "e": 345.24
+        },
+        {
+          "w": "grant",
+          "s": 345.24,
+          "e": 345.52
+        },
+        {
+          "w": "you",
+          "s": 345.52,
+          "e": 345.68
+        },
+        {
+          "w": "three",
+          "s": 345.68,
+          "e": 345.96
+        },
+        {
+          "w": "wishes",
+          "s": 345.96,
+          "e": 346.48
+        },
+        {
+          "w": "as",
+          "s": 346.48,
+          "e": 346.92
+        },
+        {
+          "w": "is",
+          "s": 346.92,
+          "e": 347.08
+        },
+        {
+          "w": "the",
+          "s": 347.08,
+          "e": 347.16
+        },
+        {
+          "w": "custom",
+          "s": 347.16,
+          "e": 347.64
+        },
+        {
+          "w": "with",
+          "s": 347.64,
+          "e": 347.76
+        },
+        {
+          "w": "my",
+          "s": 347.76,
+          "e": 347.96
+        },
+        {
+          "w": "kind",
+          "s": 347.96,
+          "e": 348.32
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: A genie? This is incredible! I wish to return to Baghdad and be reunited with my mother. Genie: Your wish is granted, Aladdin.",
+      "side": "left",
+      "start": 348.95,
+      "end": 361.04,
+      "image": "40_left.jpg",
+      "words": [
+        {
+          "w": "A",
+          "s": 348.32,
+          "e": 349.16
+        },
+        {
+          "w": "genie",
+          "s": 349.16,
+          "e": 349.76
+        },
+        {
+          "w": "This",
+          "s": 349.76,
+          "e": 350.88
+        },
+        {
+          "w": "is",
+          "s": 350.88,
+          "e": 351.24
+        },
+        {
+          "w": "incredible",
+          "s": 351.24,
+          "e": 351.92
+        },
+        {
+          "w": "I",
+          "s": 351.92,
+          "e": 352.2
+        },
+        {
+          "w": "wish",
+          "s": 352.2,
+          "e": 353.12
+        },
+        {
+          "w": "to",
+          "s": 353.12,
+          "e": 353.64
+        },
+        {
+          "w": "return",
+          "s": 353.64,
+          "e": 354.08
+        },
+        {
+          "w": "to",
+          "s": 354.08,
+          "e": 354.48
+        },
+        {
+          "w": "Baghdad",
+          "s": 354.48,
+          "e": 354.84
+        },
+        {
+          "w": "and",
+          "s": 354.84,
+          "e": 355.84
+        },
+        {
+          "w": "be",
+          "s": 355.84,
+          "e": 356.0
+        },
+        {
+          "w": "reunited",
+          "s": 356.0,
+          "e": 356.92
+        },
+        {
+          "w": "with",
+          "s": 356.92,
+          "e": 357.36
+        },
+        {
+          "w": "my",
+          "s": 357.36,
+          "e": 357.64
+        },
+        {
+          "w": "mother",
+          "s": 357.64,
+          "e": 357.92
+        },
+        {
+          "w": "Your",
+          "s": 357.92,
+          "e": 358.92
+        },
+        {
+          "w": "wish",
+          "s": 358.92,
+          "e": 359.12
+        },
+        {
+          "w": "is",
+          "s": 359.12,
+          "e": 359.4
+        },
+        {
+          "w": "granted",
+          "s": 359.4,
+          "e": 359.84
+        },
+        {
+          "w": "Aladdin",
+          "s": 359.84,
+          "e": 360.32
+        }
+      ]
+    },
+    {
+      "text": "Narrator: In an instant, Aladdin found himself back in Baghdad, standing in front of his mother's small home. She flung open the door, embracing her son with tears of joy.",
+      "side": "right",
+      "start": 361.04,
+      "end": 372.4,
+      "image": "41_right.jpg",
+      "words": [
+        {
+          "w": "In",
+          "s": 360.32,
+          "e": 361.08
+        },
+        {
+          "w": "an",
+          "s": 361.08,
+          "e": 361.16
+        },
+        {
+          "w": "instant",
+          "s": 361.16,
+          "e": 361.72
+        },
+        {
+          "w": "Aladdin",
+          "s": 361.72,
+          "e": 362.52
+        },
+        {
+          "w": "found",
+          "s": 362.52,
+          "e": 362.92
+        },
+        {
+          "w": "himself",
+          "s": 362.92,
+          "e": 363.32
+        },
+        {
+          "w": "back",
+          "s": 363.32,
+          "e": 363.52
+        },
+        {
+          "w": "in",
+          "s": 363.52,
+          "e": 363.68
+        },
+        {
+          "w": "Baghdad",
+          "s": 363.68,
+          "e": 364.28
+        },
+        {
+          "w": "standing",
+          "s": 364.28,
+          "e": 365.12
+        },
+        {
+          "w": "in",
+          "s": 365.12,
+          "e": 365.24
+        },
+        {
+          "w": "front",
+          "s": 365.24,
+          "e": 365.52
+        },
+        {
+          "w": "of",
+          "s": 365.52,
+          "e": 365.64
+        },
+        {
+          "w": "his",
+          "s": 365.64,
+          "e": 365.8
+        },
+        {
+          "w": "mother's",
+          "s": 365.8,
+          "e": 366.16
+        },
+        {
+          "w": "small",
+          "s": 366.16,
+          "e": 366.76
+        },
+        {
+          "w": "home",
+          "s": 366.76,
+          "e": 366.92
+        },
+        {
+          "w": "She",
+          "s": 366.92,
+          "e": 367.6
+        },
+        {
+          "w": "flung",
+          "s": 367.6,
+          "e": 368.12
+        },
+        {
+          "w": "open",
+          "s": 368.12,
+          "e": 368.4
+        },
+        {
+          "w": "the",
+          "s": 368.4,
+          "e": 368.48
+        },
+        {
+          "w": "door",
+          "s": 368.48,
+          "e": 368.72
+        },
+        {
+          "w": "embracing",
+          "s": 368.72,
+          "e": 369.76
+        },
+        {
+          "w": "her",
+          "s": 369.76,
+          "e": 369.84
+        },
+        {
+          "w": "son",
+          "s": 369.84,
+          "e": 370.32
+        },
+        {
+          "w": "with",
+          "s": 370.32,
+          "e": 370.52
+        },
+        {
+          "w": "tears",
+          "s": 370.52,
+          "e": 371.08
+        },
+        {
+          "w": "of",
+          "s": 371.08,
+          "e": 371.24
+        },
+        {
+          "w": "joy",
+          "s": 371.24,
+          "e": 371.64
+        }
+      ]
+    },
+    {
+      "text": "Aladdin's Mother: Aladdin, my son! I was so worried about you! What happened on your journey?",
+      "side": "left",
+      "start": 372.4,
+      "end": 378.32,
+      "image": "42_left.jpg",
+      "words": [
+        {
+          "w": "Aladdin",
+          "s": 371.64,
+          "e": 372.76
+        },
+        {
+          "w": "my",
+          "s": 372.76,
+          "e": 372.92
+        },
+        {
+          "w": "son",
+          "s": 372.92,
+          "e": 373.32
+        },
+        {
+          "w": "I",
+          "s": 373.32,
+          "e": 374.12
+        },
+        {
+          "w": "was",
+          "s": 374.12,
+          "e": 374.28
+        },
+        {
+          "w": "so",
+          "s": 374.28,
+          "e": 374.72
+        },
+        {
+          "w": "worried",
+          "s": 374.72,
+          "e": 375.28
+        },
+        {
+          "w": "about",
+          "s": 375.28,
+          "e": 375.64
+        },
+        {
+          "w": "you",
+          "s": 375.64,
+          "e": 375.92
+        },
+        {
+          "w": "What",
+          "s": 375.92,
+          "e": 375.96
+        },
+        {
+          "w": "happened",
+          "s": 375.96,
+          "e": 376.88
+        },
+        {
+          "w": "on",
+          "s": 376.88,
+          "e": 376.96
+        },
+        {
+          "w": "your",
+          "s": 376.96,
+          "e": 377.2
+        },
+        {
+          "w": "journey",
+          "s": 377.2,
+          "e": 377.6
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: Mother, I have so much to tell you. But first, I must find a way to defeat the sorcerer and secure our future.",
+      "side": "right",
+      "start": 378.32,
+      "end": 388.89,
+      "image": "43_right.jpg",
+      "words": [
+        {
+          "w": "Mother",
+          "s": 377.6,
+          "e": 378.52
+        },
+        {
+          "w": "I",
+          "s": 378.52,
+          "e": 378.88
+        },
+        {
+          "w": "have",
+          "s": 378.88,
+          "e": 379.08
+        },
+        {
+          "w": "so",
+          "s": 379.08,
+          "e": 379.52
+        },
+        {
+          "w": "much",
+          "s": 379.52,
+          "e": 380.0
+        },
+        {
+          "w": "to",
+          "s": 380.0,
+          "e": 380.24
+        },
+        {
+          "w": "tell",
+          "s": 380.24,
+          "e": 380.56
+        },
+        {
+          "w": "you",
+          "s": 380.56,
+          "e": 380.88
+        },
+        {
+          "w": "But",
+          "s": 380.88,
+          "e": 381.8
+        },
+        {
+          "w": "first",
+          "s": 381.8,
+          "e": 382.24
+        },
+        {
+          "w": "I",
+          "s": 382.24,
+          "e": 383.04
+        },
+        {
+          "w": "must",
+          "s": 383.04,
+          "e": 383.36
+        },
+        {
+          "w": "find",
+          "s": 383.36,
+          "e": 383.76
+        },
+        {
+          "w": "a",
+          "s": 383.76,
+          "e": 383.8
+        },
+        {
+          "w": "way",
+          "s": 383.8,
+          "e": 384.04
+        },
+        {
+          "w": "to",
+          "s": 384.04,
+          "e": 384.28
+        },
+        {
+          "w": "defeat",
+          "s": 384.28,
+          "e": 384.68
+        },
+        {
+          "w": "the",
+          "s": 384.68,
+          "e": 384.72
+        },
+        {
+          "w": "sorcerer",
+          "s": 384.72,
+          "e": 385.44
+        },
+        {
+          "w": "and",
+          "s": 385.44,
+          "e": 386.52
+        },
+        {
+          "w": "secure",
+          "s": 386.52,
+          "e": 387.28
+        },
+        {
+          "w": "our",
+          "s": 387.28,
+          "e": 387.6
+        },
+        {
+          "w": "future",
+          "s": 387.6,
+          "e": 388.28
+        }
+      ]
+    },
+    {
+      "text": "Narrator: And so, Aladdin, with the Genie's help, devised a plan to outwit the sorcerer and win the heart of the beautiful Princess Badroulbadour.",
+      "side": "left",
+      "start": 388.89,
+      "end": 398.92,
+      "image": "44_left.jpg",
+      "words": [
+        {
+          "w": "And",
+          "s": 388.28,
+          "e": 389.04
+        },
+        {
+          "w": "so",
+          "s": 389.04,
+          "e": 389.32
+        },
+        {
+          "w": "Aladdin",
+          "s": 389.32,
+          "e": 389.72
+        },
+        {
+          "w": "with",
+          "s": 389.72,
+          "e": 390.08
+        },
+        {
+          "w": "the",
+          "s": 390.08,
+          "e": 390.28
+        },
+        {
+          "w": "Genie's",
+          "s": 390.28,
+          "e": 390.4
+        },
+        {
+          "w": "help",
+          "s": 390.4,
+          "e": 390.92
+        },
+        {
+          "w": "devised",
+          "s": 390.92,
+          "e": 391.08
+        },
+        {
+          "w": "a",
+          "s": 391.08,
+          "e": 391.24
+        },
+        {
+          "w": "plan",
+          "s": 391.24,
+          "e": 392.08
+        },
+        {
+          "w": "to",
+          "s": 392.08,
+          "e": 392.6
+        },
+        {
+          "w": "outwit",
+          "s": 392.6,
+          "e": 393.32
+        },
+        {
+          "w": "the",
+          "s": 393.32,
+          "e": 393.32
+        },
+        {
+          "w": "sorcerer",
+          "s": 393.32,
+          "e": 394.16
+        },
+        {
+          "w": "and",
+          "s": 394.16,
+          "e": 394.92
+        },
+        {
+          "w": "win",
+          "s": 394.92,
+          "e": 395.16
+        },
+        {
+          "w": "the",
+          "s": 395.16,
+          "e": 395.28
+        },
+        {
+          "w": "heart",
+          "s": 395.28,
+          "e": 395.68
+        },
+        {
+          "w": "of",
+          "s": 395.68,
+          "e": 396.0
+        },
+        {
+          "w": "the",
+          "s": 396.0,
+          "e": 396.12
+        },
+        {
+          "w": "beautiful",
+          "s": 396.12,
+          "e": 396.6
+        },
+        {
+          "w": "Princess",
+          "s": 396.6,
+          "e": 397.16
+        },
+        {
+          "w": "Badroulbadour",
+          "s": 397.16,
+          "e": 397.88
+        }
+      ]
+    },
+    {
+      "text": "Narrator: But the sorcerer's thirst for revenge would not be easily quenched, and Aladdin's greatest challenges lay ahead.",
+      "side": "right",
+      "start": 398.92,
+      "end": 405.83,
+      "image": "45_right.jpg",
+      "words": [
+        {
+          "w": "But",
+          "s": 397.88,
+          "e": 398.24
+        },
+        {
+          "w": "the",
+          "s": 398.24,
+          "e": 398.96
+        },
+        {
+          "w": "sorcerer's",
+          "s": 398.96,
+          "e": 399.36
+        },
+        {
+          "w": "thirst",
+          "s": 399.36,
+          "e": 400.04
+        },
+        {
+          "w": "for",
+          "s": 400.04,
+          "e": 400.32
+        },
+        {
+          "w": "revenge",
+          "s": 400.32,
+          "e": 400.72
+        },
+        {
+          "w": "would",
+          "s": 400.72,
+          "e": 400.92
+        },
+        {
+          "w": "not",
+          "s": 400.92,
+          "e": 401.2
+        },
+        {
+          "w": "be",
+          "s": 401.2,
+          "e": 401.32
+        },
+        {
+          "w": "easily",
+          "s": 401.32,
+          "e": 401.88
+        },
+        {
+          "w": "quenched",
+          "s": 401.88,
+          "e": 402.4
+        },
+        {
+          "w": "and",
+          "s": 402.4,
+          "e": 402.56
+        },
+        {
+          "w": "Aladdin's",
+          "s": 402.56,
+          "e": 403.36
+        },
+        {
+          "w": "greatest",
+          "s": 403.36,
+          "e": 403.84
+        },
+        {
+          "w": "challenges",
+          "s": 403.84,
+          "e": 404.4
+        },
+        {
+          "w": "lay",
+          "s": 404.4,
+          "e": 405.0
+        },
+        {
+          "w": "ahead",
+          "s": 405.0,
+          "e": 405.24
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: Genie, I have a plan. For my second wish, I desire a caravan of camels laden with jewels and a palace worthy of the Sultan's daughter.",
+      "side": "left",
+      "start": 405.83,
+      "end": 417.56,
+      "image": "46_left.jpg",
+      "words": [
+        {
+          "w": "Genie",
+          "s": 405.24,
+          "e": 406.08
+        },
+        {
+          "w": "I",
+          "s": 406.08,
+          "e": 407.2
+        },
+        {
+          "w": "have",
+          "s": 407.2,
+          "e": 407.72
+        },
+        {
+          "w": "a",
+          "s": 407.72,
+          "e": 407.88
+        },
+        {
+          "w": "plan",
+          "s": 407.88,
+          "e": 407.96
+        },
+        {
+          "w": "For",
+          "s": 407.96,
+          "e": 408.32
+        },
+        {
+          "w": "my",
+          "s": 408.32,
+          "e": 409.4
+        },
+        {
+          "w": "second",
+          "s": 409.4,
+          "e": 409.76
+        },
+        {
+          "w": "wish",
+          "s": 409.76,
+          "e": 410.24
+        },
+        {
+          "w": "I",
+          "s": 410.24,
+          "e": 410.92
+        },
+        {
+          "w": "desire",
+          "s": 410.92,
+          "e": 411.52
+        },
+        {
+          "w": "a",
+          "s": 411.52,
+          "e": 411.76
+        },
+        {
+          "w": "caravan",
+          "s": 411.76,
+          "e": 412.36
+        },
+        {
+          "w": "of",
+          "s": 412.36,
+          "e": 412.52
+        },
+        {
+          "w": "camels",
+          "s": 412.52,
+          "e": 413.04
+        },
+        {
+          "w": "laden",
+          "s": 413.04,
+          "e": 413.48
+        },
+        {
+          "w": "with",
+          "s": 413.48,
+          "e": 413.72
+        },
+        {
+          "w": "jewels",
+          "s": 413.72,
+          "e": 414.2
+        },
+        {
+          "w": "and",
+          "s": 414.2,
+          "e": 414.76
+        },
+        {
+          "w": "a",
+          "s": 414.76,
+          "e": 414.8
+        },
+        {
+          "w": "palace",
+          "s": 414.8,
+          "e": 415.16
+        },
+        {
+          "w": "worthy",
+          "s": 415.16,
+          "e": 415.56
+        },
+        {
+          "w": "of",
+          "s": 415.56,
+          "e": 415.8
+        },
+        {
+          "w": "the",
+          "s": 415.8,
+          "e": 415.8
+        },
+        {
+          "w": "Sultan's",
+          "s": 415.8,
+          "e": 416.44
+        },
+        {
+          "w": "daughter",
+          "s": 416.44,
+          "e": 416.84
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: I must become a Prince to win her hand. Genie: Consider it done, Master!",
+      "side": "right",
+      "start": 417.56,
+      "end": 423.5,
+      "image": "47_right.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 416.84,
+          "e": 417.76
+        },
+        {
+          "w": "must",
+          "s": 417.76,
+          "e": 418.24
+        },
+        {
+          "w": "become",
+          "s": 418.24,
+          "e": 418.8
+        },
+        {
+          "w": "a",
+          "s": 418.8,
+          "e": 419.0
+        },
+        {
+          "w": "Prince",
+          "s": 419.0,
+          "e": 419.4
+        },
+        {
+          "w": "to",
+          "s": 419.4,
+          "e": 419.76
+        },
+        {
+          "w": "win",
+          "s": 419.76,
+          "e": 419.92
+        },
+        {
+          "w": "her",
+          "s": 419.92,
+          "e": 420.52
+        },
+        {
+          "w": "hand",
+          "s": 420.52,
+          "e": 420.76
+        },
+        {
+          "w": "Consider",
+          "s": 420.76,
+          "e": 421.68
+        },
+        {
+          "w": "it",
+          "s": 421.68,
+          "e": 422.0
+        },
+        {
+          "w": "done",
+          "s": 422.0,
+          "e": 422.24
+        },
+        {
+          "w": "Master",
+          "s": 422.24,
+          "e": 422.68
+        }
+      ]
+    },
+    {
+      "text": "Narrator: True to his word, the Genie transformed Aladdin's reality. The humble boy dazzled the city of Baghdad and the Sultan himself.",
+      "side": "left",
+      "start": 423.5,
+      "end": 432.73,
+      "image": "48_left.jpg",
+      "words": [
+        {
+          "w": "True",
+          "s": 422.68,
+          "e": 422.84
+        },
+        {
+          "w": "to",
+          "s": 422.84,
+          "e": 423.6
+        },
+        {
+          "w": "his",
+          "s": 423.6,
+          "e": 424.16
+        },
+        {
+          "w": "word",
+          "s": 424.16,
+          "e": 424.56
+        },
+        {
+          "w": "the",
+          "s": 424.56,
+          "e": 424.72
+        },
+        {
+          "w": "Genie",
+          "s": 424.72,
+          "e": 425.68
+        },
+        {
+          "w": "transformed",
+          "s": 425.68,
+          "e": 426.56
+        },
+        {
+          "w": "Aladdin's",
+          "s": 426.56,
+          "e": 427.16
+        },
+        {
+          "w": "reality",
+          "s": 427.16,
+          "e": 427.76
+        },
+        {
+          "w": "The",
+          "s": 427.76,
+          "e": 428.0
+        },
+        {
+          "w": "humble",
+          "s": 428.0,
+          "e": 428.88
+        },
+        {
+          "w": "boy",
+          "s": 428.88,
+          "e": 429.08
+        },
+        {
+          "w": "dazzled",
+          "s": 429.08,
+          "e": 429.6
+        },
+        {
+          "w": "the",
+          "s": 429.6,
+          "e": 429.68
+        },
+        {
+          "w": "city",
+          "s": 429.68,
+          "e": 430.0
+        },
+        {
+          "w": "of",
+          "s": 430.0,
+          "e": 430.12
+        },
+        {
+          "w": "Baghdad",
+          "s": 430.12,
+          "e": 430.12
+        },
+        {
+          "w": "and",
+          "s": 430.12,
+          "e": 430.36
+        },
+        {
+          "w": "the",
+          "s": 430.36,
+          "e": 430.52
+        },
+        {
+          "w": "Sultan",
+          "s": 430.52,
+          "e": 431.36
+        },
+        {
+          "w": "himself",
+          "s": 431.36,
+          "e": 431.96
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Within a month, Aladdin and Princess Badroulbadour were married, living in a magnificent palace of marble and gold. But the Sorcerer, watching through his crystal ball from afar, saw everything.",
+      "side": "right",
+      "start": 432.73,
+      "end": 446.22,
+      "image": "49_right.jpg",
+      "words": [
+        {
+          "w": "Within",
+          "s": 431.96,
+          "e": 432.96
+        },
+        {
+          "w": "a",
+          "s": 432.96,
+          "e": 433.4
+        },
+        {
+          "w": "month",
+          "s": 433.4,
+          "e": 433.4
+        },
+        {
+          "w": "Aladdin",
+          "s": 433.4,
+          "e": 434.24
+        },
+        {
+          "w": "and",
+          "s": 434.24,
+          "e": 434.48
+        },
+        {
+          "w": "Princess",
+          "s": 434.48,
+          "e": 434.88
+        },
+        {
+          "w": "Badroulbadour",
+          "s": 434.88,
+          "e": 435.16
+        },
+        {
+          "w": "were",
+          "s": 435.16,
+          "e": 435.56
+        },
+        {
+          "w": "married",
+          "s": 435.56,
+          "e": 436.44
+        },
+        {
+          "w": "living",
+          "s": 436.44,
+          "e": 437.36
+        },
+        {
+          "w": "in",
+          "s": 437.36,
+          "e": 437.56
+        },
+        {
+          "w": "a",
+          "s": 437.56,
+          "e": 437.8
+        },
+        {
+          "w": "magnificent",
+          "s": 437.8,
+          "e": 438.44
+        },
+        {
+          "w": "palace",
+          "s": 438.44,
+          "e": 438.84
+        },
+        {
+          "w": "of",
+          "s": 438.84,
+          "e": 439.16
+        },
+        {
+          "w": "marble",
+          "s": 439.16,
+          "e": 439.64
+        },
+        {
+          "w": "and",
+          "s": 439.64,
+          "e": 440.12
+        },
+        {
+          "w": "gold",
+          "s": 440.12,
+          "e": 440.44
+        },
+        {
+          "w": "But",
+          "s": 440.44,
+          "e": 441.16
+        },
+        {
+          "w": "the",
+          "s": 441.16,
+          "e": 441.24
+        },
+        {
+          "w": "Sorcerer",
+          "s": 441.24,
+          "e": 441.76
+        },
+        {
+          "w": "watching",
+          "s": 441.76,
+          "e": 442.6
+        },
+        {
+          "w": "through",
+          "s": 442.6,
+          "e": 442.88
+        },
+        {
+          "w": "his",
+          "s": 442.88,
+          "e": 442.96
+        },
+        {
+          "w": "crystal",
+          "s": 442.96,
+          "e": 443.28
+        },
+        {
+          "w": "ball",
+          "s": 443.28,
+          "e": 443.6
+        },
+        {
+          "w": "from",
+          "s": 443.6,
+          "e": 443.84
+        },
+        {
+          "w": "afar",
+          "s": 443.84,
+          "e": 444.36
+        },
+        {
+          "w": "saw",
+          "s": 444.36,
+          "e": 444.92
+        },
+        {
+          "w": "everything",
+          "s": 444.92,
+          "e": 445.48
+        }
+      ]
+    },
+    {
+      "text": "Sorcerer: You think you have won, you ungrateful wretch? You may have the lamp, but you lack the cunning to keep it. Narrator: The Sorcerer traveled to Baghdad.",
+      "side": "left",
+      "start": 446.22,
+      "end": 457.21,
+      "image": "50_left.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 445.48,
+          "e": 446.2
+        },
+        {
+          "w": "think",
+          "s": 446.2,
+          "e": 446.6
+        },
+        {
+          "w": "you",
+          "s": 446.6,
+          "e": 446.64
+        },
+        {
+          "w": "have",
+          "s": 446.64,
+          "e": 446.88
+        },
+        {
+          "w": "won",
+          "s": 446.88,
+          "e": 447.32
+        },
+        {
+          "w": "you",
+          "s": 447.32,
+          "e": 448.48
+        },
+        {
+          "w": "ungrateful",
+          "s": 448.48,
+          "e": 449.04
+        },
+        {
+          "w": "wretch",
+          "s": 449.04,
+          "e": 449.48
+        },
+        {
+          "w": "You",
+          "s": 449.48,
+          "e": 450.48
+        },
+        {
+          "w": "may",
+          "s": 450.48,
+          "e": 450.68
+        },
+        {
+          "w": "have",
+          "s": 450.68,
+          "e": 451.16
+        },
+        {
+          "w": "the",
+          "s": 451.16,
+          "e": 451.4
+        },
+        {
+          "w": "lamp",
+          "s": 451.4,
+          "e": 451.44
+        },
+        {
+          "w": "but",
+          "s": 451.44,
+          "e": 451.48
+        },
+        {
+          "w": "you",
+          "s": 451.48,
+          "e": 452.16
+        },
+        {
+          "w": "lack",
+          "s": 452.16,
+          "e": 452.2
+        },
+        {
+          "w": "the",
+          "s": 452.2,
+          "e": 452.52
+        },
+        {
+          "w": "cunning",
+          "s": 452.52,
+          "e": 453.08
+        },
+        {
+          "w": "to",
+          "s": 453.08,
+          "e": 453.28
+        },
+        {
+          "w": "keep",
+          "s": 453.28,
+          "e": 453.48
+        },
+        {
+          "w": "it",
+          "s": 453.48,
+          "e": 453.68
+        },
+        {
+          "w": "The",
+          "s": 453.68,
+          "e": 453.92
+        },
+        {
+          "w": "Sorcerer",
+          "s": 453.92,
+          "e": 455.0
+        },
+        {
+          "w": "traveled",
+          "s": 455.0,
+          "e": 455.6
+        },
+        {
+          "w": "to",
+          "s": 455.6,
+          "e": 455.76
+        },
+        {
+          "w": "Baghdad",
+          "s": 455.76,
+          "e": 455.88
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Waiting for a day when Aladdin was away on a royal hunt, he disguised himself as a peddler and walked beneath the palace windows, shouting a strange offer.",
+      "side": "right",
+      "start": 457.21,
+      "end": 467.0,
+      "image": "51_right.jpg",
+      "words": [
+        {
+          "w": "Waiting",
+          "s": 455.88,
+          "e": 456.12
+        },
+        {
+          "w": "for",
+          "s": 456.12,
+          "e": 456.36
+        },
+        {
+          "w": "a",
+          "s": 456.36,
+          "e": 456.56
+        },
+        {
+          "w": "day",
+          "s": 456.56,
+          "e": 456.6
+        },
+        {
+          "w": "when",
+          "s": 456.6,
+          "e": 457.28
+        },
+        {
+          "w": "Aladdin",
+          "s": 457.28,
+          "e": 457.76
+        },
+        {
+          "w": "was",
+          "s": 457.76,
+          "e": 457.96
+        },
+        {
+          "w": "away",
+          "s": 457.96,
+          "e": 458.6
+        },
+        {
+          "w": "on",
+          "s": 458.6,
+          "e": 459.08
+        },
+        {
+          "w": "a",
+          "s": 459.08,
+          "e": 459.28
+        },
+        {
+          "w": "royal",
+          "s": 459.28,
+          "e": 459.8
+        },
+        {
+          "w": "hunt",
+          "s": 459.8,
+          "e": 460.16
+        },
+        {
+          "w": "he",
+          "s": 460.16,
+          "e": 460.64
+        },
+        {
+          "w": "disguised",
+          "s": 460.64,
+          "e": 461.16
+        },
+        {
+          "w": "himself",
+          "s": 461.16,
+          "e": 461.64
+        },
+        {
+          "w": "as",
+          "s": 461.64,
+          "e": 461.76
+        },
+        {
+          "w": "a",
+          "s": 461.76,
+          "e": 462.04
+        },
+        {
+          "w": "peddler",
+          "s": 462.04,
+          "e": 462.24
+        },
+        {
+          "w": "and",
+          "s": 462.24,
+          "e": 462.72
+        },
+        {
+          "w": "walked",
+          "s": 462.72,
+          "e": 463.16
+        },
+        {
+          "w": "beneath",
+          "s": 463.16,
+          "e": 463.52
+        },
+        {
+          "w": "the",
+          "s": 463.52,
+          "e": 463.8
+        },
+        {
+          "w": "palace",
+          "s": 463.8,
+          "e": 464.0
+        },
+        {
+          "w": "windows",
+          "s": 464.0,
+          "e": 464.52
+        },
+        {
+          "w": "shouting",
+          "s": 464.52,
+          "e": 465.2
+        },
+        {
+          "w": "a",
+          "s": 465.2,
+          "e": 465.24
+        },
+        {
+          "w": "strange",
+          "s": 465.24,
+          "e": 465.88
+        },
+        {
+          "w": "offer",
+          "s": 465.88,
+          "e": 466.2
+        }
+      ]
+    },
+    {
+      "text": "Sorcerer: New lamps for old! Who will exchange their old, dirty lamps for bright, shiny new ones?",
+      "side": "left",
+      "start": 467.0,
+      "end": 475.07,
+      "image": "52_left.jpg",
+      "words": [
+        {
+          "w": "New",
+          "s": 466.2,
+          "e": 467.04
+        },
+        {
+          "w": "lamps",
+          "s": 467.04,
+          "e": 467.52
+        },
+        {
+          "w": "for",
+          "s": 467.52,
+          "e": 468.04
+        },
+        {
+          "w": "old",
+          "s": 468.04,
+          "e": 468.28
+        },
+        {
+          "w": "Who",
+          "s": 468.28,
+          "e": 468.52
+        },
+        {
+          "w": "will",
+          "s": 468.52,
+          "e": 469.2
+        },
+        {
+          "w": "exchange",
+          "s": 469.2,
+          "e": 469.84
+        },
+        {
+          "w": "their",
+          "s": 469.84,
+          "e": 470.08
+        },
+        {
+          "w": "old",
+          "s": 470.08,
+          "e": 470.48
+        },
+        {
+          "w": "dirty",
+          "s": 470.48,
+          "e": 471.12
+        },
+        {
+          "w": "lamps",
+          "s": 471.12,
+          "e": 471.56
+        },
+        {
+          "w": "for",
+          "s": 471.56,
+          "e": 471.88
+        },
+        {
+          "w": "bright",
+          "s": 471.88,
+          "e": 472.2
+        },
+        {
+          "w": "shiny",
+          "s": 472.2,
+          "e": 473.48
+        },
+        {
+          "w": "new",
+          "s": 473.48,
+          "e": 473.88
+        },
+        {
+          "w": "ones",
+          "s": 473.88,
+          "e": 474.28
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Inside the palace, the Princess heard the call. She remembered the rusty old lamp Aladdin always kept on his bedside table, unaware of its power.",
+      "side": "right",
+      "start": 475.07,
+      "end": 485.36,
+      "image": "53_right.jpg",
+      "words": [
+        {
+          "w": "Inside",
+          "s": 474.28,
+          "e": 475.48
+        },
+        {
+          "w": "the",
+          "s": 475.48,
+          "e": 475.68
+        },
+        {
+          "w": "palace",
+          "s": 475.68,
+          "e": 476.04
+        },
+        {
+          "w": "the",
+          "s": 476.04,
+          "e": 476.8
+        },
+        {
+          "w": "Princess",
+          "s": 476.8,
+          "e": 477.28
+        },
+        {
+          "w": "heard",
+          "s": 477.28,
+          "e": 477.6
+        },
+        {
+          "w": "the",
+          "s": 477.6,
+          "e": 477.8
+        },
+        {
+          "w": "call",
+          "s": 477.8,
+          "e": 478.16
+        },
+        {
+          "w": "She",
+          "s": 478.16,
+          "e": 479.12
+        },
+        {
+          "w": "remembered",
+          "s": 479.12,
+          "e": 479.56
+        },
+        {
+          "w": "the",
+          "s": 479.56,
+          "e": 479.68
+        },
+        {
+          "w": "rusty",
+          "s": 479.68,
+          "e": 480.0
+        },
+        {
+          "w": "old",
+          "s": 480.0,
+          "e": 480.24
+        },
+        {
+          "w": "lamp",
+          "s": 480.24,
+          "e": 480.72
+        },
+        {
+          "w": "Aladdin",
+          "s": 480.72,
+          "e": 481.36
+        },
+        {
+          "w": "always",
+          "s": 481.36,
+          "e": 481.84
+        },
+        {
+          "w": "kept",
+          "s": 481.84,
+          "e": 482.16
+        },
+        {
+          "w": "on",
+          "s": 482.16,
+          "e": 482.24
+        },
+        {
+          "w": "his",
+          "s": 482.24,
+          "e": 482.44
+        },
+        {
+          "w": "bedside",
+          "s": 482.44,
+          "e": 482.92
+        },
+        {
+          "w": "table",
+          "s": 482.92,
+          "e": 483.28
+        },
+        {
+          "w": "unaware",
+          "s": 483.28,
+          "e": 484.04
+        },
+        {
+          "w": "of",
+          "s": 484.04,
+          "e": 484.24
+        },
+        {
+          "w": "its",
+          "s": 484.24,
+          "e": 484.32
+        },
+        {
+          "w": "power",
+          "s": 484.32,
+          "e": 484.56
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Wishing to surprise her husband, she called the peddler over and made the trade.",
+      "side": "left",
+      "start": 485.36,
+      "end": 490.32,
+      "image": "54_left.jpg",
+      "words": [
+        {
+          "w": "Wishing",
+          "s": 484.56,
+          "e": 485.52
+        },
+        {
+          "w": "to",
+          "s": 485.52,
+          "e": 485.84
+        },
+        {
+          "w": "surprise",
+          "s": 485.84,
+          "e": 486.56
+        },
+        {
+          "w": "her",
+          "s": 486.56,
+          "e": 486.8
+        },
+        {
+          "w": "husband",
+          "s": 486.8,
+          "e": 486.96
+        },
+        {
+          "w": "she",
+          "s": 486.96,
+          "e": 487.44
+        },
+        {
+          "w": "called",
+          "s": 487.44,
+          "e": 487.68
+        },
+        {
+          "w": "the",
+          "s": 487.68,
+          "e": 487.84
+        },
+        {
+          "w": "peddler",
+          "s": 487.84,
+          "e": 488.08
+        },
+        {
+          "w": "over",
+          "s": 488.08,
+          "e": 488.32
+        },
+        {
+          "w": "and",
+          "s": 488.32,
+          "e": 488.64
+        },
+        {
+          "w": "made",
+          "s": 488.64,
+          "e": 488.84
+        },
+        {
+          "w": "the",
+          "s": 488.84,
+          "e": 489.08
+        },
+        {
+          "w": "trade",
+          "s": 489.08,
+          "e": 489.44
+        }
+      ]
+    },
+    {
+      "text": "Sorcerer: (Laughing maniacally) At last! The power is mine again! Genie of the Lamp, I command you: transport this palace and everyone inside it to the desolate sands of Africa!",
+      "side": "right",
+      "start": 490.32,
+      "end": 504.65,
+      "image": "55_right.jpg",
+      "words": [
+        {
+          "w": "At",
+          "s": 489.44,
+          "e": 490.32
+        },
+        {
+          "w": "last",
+          "s": 490.32,
+          "e": 490.92
+        },
+        {
+          "w": "The",
+          "s": 490.92,
+          "e": 491.4
+        },
+        {
+          "w": "power",
+          "s": 491.4,
+          "e": 492.0
+        },
+        {
+          "w": "is",
+          "s": 492.0,
+          "e": 492.44
+        },
+        {
+          "w": "mine",
+          "s": 492.44,
+          "e": 492.84
+        },
+        {
+          "w": "again",
+          "s": 492.84,
+          "e": 493.16
+        },
+        {
+          "w": "Genie",
+          "s": 493.16,
+          "e": 494.2
+        },
+        {
+          "w": "of",
+          "s": 494.2,
+          "e": 494.8
+        },
+        {
+          "w": "the",
+          "s": 494.8,
+          "e": 494.92
+        },
+        {
+          "w": "Lamp",
+          "s": 494.92,
+          "e": 495.64
+        },
+        {
+          "w": "I",
+          "s": 495.64,
+          "e": 496.36
+        },
+        {
+          "w": "command",
+          "s": 496.36,
+          "e": 496.88
+        },
+        {
+          "w": "you",
+          "s": 496.88,
+          "e": 497.2
+        },
+        {
+          "w": "transport",
+          "s": 497.2,
+          "e": 498.64
+        },
+        {
+          "w": "this",
+          "s": 498.64,
+          "e": 498.96
+        },
+        {
+          "w": "palace",
+          "s": 498.96,
+          "e": 499.44
+        },
+        {
+          "w": "and",
+          "s": 499.44,
+          "e": 500.12
+        },
+        {
+          "w": "everyone",
+          "s": 500.12,
+          "e": 500.6
+        },
+        {
+          "w": "inside",
+          "s": 500.6,
+          "e": 501.08
+        },
+        {
+          "w": "it",
+          "s": 501.08,
+          "e": 501.68
+        },
+        {
+          "w": "to",
+          "s": 501.68,
+          "e": 501.96
+        },
+        {
+          "w": "the",
+          "s": 501.96,
+          "e": 502.04
+        },
+        {
+          "w": "desolate",
+          "s": 502.04,
+          "e": 502.32
+        },
+        {
+          "w": "sands",
+          "s": 502.32,
+          "e": 503.08
+        },
+        {
+          "w": "of",
+          "s": 503.08,
+          "e": 503.28
+        },
+        {
+          "w": "Africa",
+          "s": 503.28,
+          "e": 503.8
+        }
+      ]
+    },
+    {
+      "text": "Narrator: When Aladdin returned, he found only an empty patch of ground where his home once stood.",
+      "side": "left",
+      "start": 504.65,
+      "end": 511.29,
+      "image": "56_left.jpg",
+      "words": [
+        {
+          "w": "When",
+          "s": 503.8,
+          "e": 504.76
+        },
+        {
+          "w": "Aladdin",
+          "s": 504.76,
+          "e": 505.4
+        },
+        {
+          "w": "returned",
+          "s": 505.4,
+          "e": 506.0
+        },
+        {
+          "w": "he",
+          "s": 506.0,
+          "e": 506.2
+        },
+        {
+          "w": "found",
+          "s": 506.2,
+          "e": 507.32
+        },
+        {
+          "w": "only",
+          "s": 507.32,
+          "e": 507.52
+        },
+        {
+          "w": "an",
+          "s": 507.52,
+          "e": 507.92
+        },
+        {
+          "w": "empty",
+          "s": 507.92,
+          "e": 508.16
+        },
+        {
+          "w": "patch",
+          "s": 508.16,
+          "e": 508.44
+        },
+        {
+          "w": "of",
+          "s": 508.44,
+          "e": 508.76
+        },
+        {
+          "w": "ground",
+          "s": 508.76,
+          "e": 509.12
+        },
+        {
+          "w": "where",
+          "s": 509.12,
+          "e": 509.44
+        },
+        {
+          "w": "his",
+          "s": 509.44,
+          "e": 509.52
+        },
+        {
+          "w": "home",
+          "s": 509.52,
+          "e": 509.8
+        },
+        {
+          "w": "once",
+          "s": 509.8,
+          "e": 510.08
+        },
+        {
+          "w": "stood",
+          "s": 510.08,
+          "e": 510.44
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Distraught but determined, he remembered the magical teachings the Sorcerer had shared during their journey to the cave.",
+      "side": "right",
+      "start": 511.29,
+      "end": 519.37,
+      "image": "57_right.jpg",
+      "words": [
+        {
+          "w": "Distraught",
+          "s": 510.44,
+          "e": 511.72
+        },
+        {
+          "w": "but",
+          "s": 511.72,
+          "e": 512.36
+        },
+        {
+          "w": "determined",
+          "s": 512.36,
+          "e": 512.84
+        },
+        {
+          "w": "he",
+          "s": 512.84,
+          "e": 513.4
+        },
+        {
+          "w": "remembered",
+          "s": 513.4,
+          "e": 513.88
+        },
+        {
+          "w": "the",
+          "s": 513.88,
+          "e": 514.0
+        },
+        {
+          "w": "magical",
+          "s": 514.0,
+          "e": 514.4
+        },
+        {
+          "w": "teachings",
+          "s": 514.4,
+          "e": 514.96
+        },
+        {
+          "w": "the",
+          "s": 514.96,
+          "e": 515.28
+        },
+        {
+          "w": "Sorcerer",
+          "s": 515.28,
+          "e": 515.96
+        },
+        {
+          "w": "had",
+          "s": 515.96,
+          "e": 516.6
+        },
+        {
+          "w": "shared",
+          "s": 516.6,
+          "e": 517.0
+        },
+        {
+          "w": "during",
+          "s": 517.0,
+          "e": 517.44
+        },
+        {
+          "w": "their",
+          "s": 517.44,
+          "e": 517.76
+        },
+        {
+          "w": "journey",
+          "s": 517.76,
+          "e": 518.0
+        },
+        {
+          "w": "to",
+          "s": 518.0,
+          "e": 518.16
+        },
+        {
+          "w": "the",
+          "s": 518.16,
+          "e": 518.24
+        },
+        {
+          "w": "cave",
+          "s": 518.24,
+          "e": 518.52
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Using his wits and the Ring of the Ancients—a lesser magic trinket he had kept—he tracked the magical trail across the ocean. Aladdin: Hold on, Badroulbadour. I am coming for you.",
+      "side": "left",
+      "start": 519.37,
+      "end": 532.4,
+      "image": "58_left.jpg",
+      "words": [
+        {
+          "w": "Using",
+          "s": 518.52,
+          "e": 519.52
+        },
+        {
+          "w": "his",
+          "s": 519.52,
+          "e": 519.76
+        },
+        {
+          "w": "wits",
+          "s": 519.76,
+          "e": 520.08
+        },
+        {
+          "w": "and",
+          "s": 520.08,
+          "e": 520.56
+        },
+        {
+          "w": "the",
+          "s": 520.56,
+          "e": 520.56
+        },
+        {
+          "w": "Ring",
+          "s": 520.56,
+          "e": 520.84
+        },
+        {
+          "w": "of",
+          "s": 520.84,
+          "e": 521.04
+        },
+        {
+          "w": "the",
+          "s": 521.04,
+          "e": 521.16
+        },
+        {
+          "w": "Ancientsa",
+          "s": 521.16,
+          "e": 521.84
+        },
+        {
+          "w": "lesser",
+          "s": 521.84,
+          "e": 522.72
+        },
+        {
+          "w": "magic",
+          "s": 522.72,
+          "e": 523.16
+        },
+        {
+          "w": "trinket",
+          "s": 523.16,
+          "e": 523.64
+        },
+        {
+          "w": "he",
+          "s": 523.64,
+          "e": 523.84
+        },
+        {
+          "w": "had",
+          "s": 523.84,
+          "e": 524.44
+        },
+        {
+          "w": "kepthe",
+          "s": 524.44,
+          "e": 524.84
+        },
+        {
+          "w": "tracked",
+          "s": 524.84,
+          "e": 525.56
+        },
+        {
+          "w": "the",
+          "s": 525.56,
+          "e": 525.72
+        },
+        {
+          "w": "magical",
+          "s": 525.72,
+          "e": 526.16
+        },
+        {
+          "w": "trail",
+          "s": 526.16,
+          "e": 526.6
+        },
+        {
+          "w": "across",
+          "s": 526.6,
+          "e": 527.0
+        },
+        {
+          "w": "the",
+          "s": 527.0,
+          "e": 527.28
+        },
+        {
+          "w": "ocean",
+          "s": 527.28,
+          "e": 527.48
+        },
+        {
+          "w": "Hold",
+          "s": 527.48,
+          "e": 528.52
+        },
+        {
+          "w": "on",
+          "s": 528.52,
+          "e": 529.32
+        },
+        {
+          "w": "Badroulbadour",
+          "s": 529.32,
+          "e": 529.88
+        },
+        {
+          "w": "I",
+          "s": 529.88,
+          "e": 530.56
+        },
+        {
+          "w": "am",
+          "s": 530.56,
+          "e": 530.84
+        },
+        {
+          "w": "coming",
+          "s": 530.84,
+          "e": 531.04
+        },
+        {
+          "w": "for",
+          "s": 531.04,
+          "e": 531.36
+        },
+        {
+          "w": "you",
+          "s": 531.36,
+          "e": 531.56
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Aladdin arrived at the Sorcerer's fortress in Africa. He sneaked into the palace and found the Princess, who was being held captive. They embraced quickly, whispering a plan.",
+      "side": "right",
+      "start": 532.4,
+      "end": 545.52,
+      "image": "59_right.jpg",
+      "words": [
+        {
+          "w": "Aladdin",
+          "s": 531.56,
+          "e": 532.64
+        },
+        {
+          "w": "arrived",
+          "s": 532.64,
+          "e": 533.2
+        },
+        {
+          "w": "at",
+          "s": 533.2,
+          "e": 533.48
+        },
+        {
+          "w": "the",
+          "s": 533.48,
+          "e": 533.48
+        },
+        {
+          "w": "Sorcerer's",
+          "s": 533.48,
+          "e": 533.88
+        },
+        {
+          "w": "fortress",
+          "s": 533.88,
+          "e": 534.56
+        },
+        {
+          "w": "in",
+          "s": 534.56,
+          "e": 535.12
+        },
+        {
+          "w": "Africa",
+          "s": 535.12,
+          "e": 535.4
+        },
+        {
+          "w": "He",
+          "s": 535.4,
+          "e": 536.24
+        },
+        {
+          "w": "sneaked",
+          "s": 536.24,
+          "e": 536.8
+        },
+        {
+          "w": "into",
+          "s": 536.8,
+          "e": 537.12
+        },
+        {
+          "w": "the",
+          "s": 537.12,
+          "e": 537.32
+        },
+        {
+          "w": "palace",
+          "s": 537.32,
+          "e": 537.6
+        },
+        {
+          "w": "and",
+          "s": 537.6,
+          "e": 538.0
+        },
+        {
+          "w": "found",
+          "s": 538.0,
+          "e": 538.24
+        },
+        {
+          "w": "the",
+          "s": 538.24,
+          "e": 538.4
+        },
+        {
+          "w": "Princess",
+          "s": 538.4,
+          "e": 538.76
+        },
+        {
+          "w": "who",
+          "s": 538.76,
+          "e": 539.32
+        },
+        {
+          "w": "was",
+          "s": 539.32,
+          "e": 539.88
+        },
+        {
+          "w": "being",
+          "s": 539.88,
+          "e": 540.2
+        },
+        {
+          "w": "held",
+          "s": 540.2,
+          "e": 540.44
+        },
+        {
+          "w": "captive",
+          "s": 540.44,
+          "e": 541.0
+        },
+        {
+          "w": "They",
+          "s": 541.0,
+          "e": 541.96
+        },
+        {
+          "w": "embraced",
+          "s": 541.96,
+          "e": 542.4
+        },
+        {
+          "w": "quickly",
+          "s": 542.4,
+          "e": 542.88
+        },
+        {
+          "w": "whispering",
+          "s": 542.88,
+          "e": 543.88
+        },
+        {
+          "w": "a",
+          "s": 543.88,
+          "e": 544.36
+        },
+        {
+          "w": "plan",
+          "s": 544.36,
+          "e": 544.52
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: Listen to me. Tonight, you must pretend to welcome the Sorcerer. Pour this sleeping powder into his wine. It is the only way to get the lamp back.",
+      "side": "left",
+      "start": 545.52,
+      "end": 559.89,
+      "image": "60_left.jpg",
+      "words": [
+        {
+          "w": "Listen",
+          "s": 544.52,
+          "e": 545.64
+        },
+        {
+          "w": "to",
+          "s": 545.64,
+          "e": 546.0
+        },
+        {
+          "w": "me",
+          "s": 546.0,
+          "e": 546.16
+        },
+        {
+          "w": "Tonight",
+          "s": 546.16,
+          "e": 547.4
+        },
+        {
+          "w": "you",
+          "s": 547.4,
+          "e": 548.2
+        },
+        {
+          "w": "must",
+          "s": 548.2,
+          "e": 548.32
+        },
+        {
+          "w": "pretend",
+          "s": 548.32,
+          "e": 548.92
+        },
+        {
+          "w": "to",
+          "s": 548.92,
+          "e": 549.6
+        },
+        {
+          "w": "welcome",
+          "s": 549.6,
+          "e": 549.88
+        },
+        {
+          "w": "the",
+          "s": 549.88,
+          "e": 550.08
+        },
+        {
+          "w": "Sorcerer",
+          "s": 550.08,
+          "e": 550.8
+        },
+        {
+          "w": "Pour",
+          "s": 550.8,
+          "e": 552.0
+        },
+        {
+          "w": "this",
+          "s": 552.0,
+          "e": 552.28
+        },
+        {
+          "w": "sleeping",
+          "s": 552.28,
+          "e": 553.04
+        },
+        {
+          "w": "powder",
+          "s": 553.04,
+          "e": 553.36
+        },
+        {
+          "w": "into",
+          "s": 553.36,
+          "e": 553.88
+        },
+        {
+          "w": "his",
+          "s": 553.88,
+          "e": 554.04
+        },
+        {
+          "w": "wine",
+          "s": 554.04,
+          "e": 554.68
+        },
+        {
+          "w": "It",
+          "s": 554.68,
+          "e": 555.08
+        },
+        {
+          "w": "is",
+          "s": 555.08,
+          "e": 555.68
+        },
+        {
+          "w": "the",
+          "s": 555.68,
+          "e": 556.0
+        },
+        {
+          "w": "only",
+          "s": 556.0,
+          "e": 556.4
+        },
+        {
+          "w": "way",
+          "s": 556.4,
+          "e": 556.68
+        },
+        {
+          "w": "to",
+          "s": 556.68,
+          "e": 557.28
+        },
+        {
+          "w": "get",
+          "s": 557.28,
+          "e": 557.56
+        },
+        {
+          "w": "the",
+          "s": 557.56,
+          "e": 558.0
+        },
+        {
+          "w": "lamp",
+          "s": 558.0,
+          "e": 558.4
+        },
+        {
+          "w": "back",
+          "s": 558.4,
+          "e": 559.04
+        }
+      ]
+    },
+    {
+      "text": "Narrator: That evening, the Princess played her part perfectly. The Sorcerer, blinded by his arrogance, did not suspect a thing.",
+      "side": "right",
+      "start": 559.89,
+      "end": 569.08,
+      "image": "61_right.jpg",
+      "words": [
+        {
+          "w": "That",
+          "s": 559.04,
+          "e": 559.88
+        },
+        {
+          "w": "evening",
+          "s": 559.88,
+          "e": 560.24
+        },
+        {
+          "w": "the",
+          "s": 560.24,
+          "e": 560.68
+        },
+        {
+          "w": "Princess",
+          "s": 560.68,
+          "e": 561.36
+        },
+        {
+          "w": "played",
+          "s": 561.36,
+          "e": 561.72
+        },
+        {
+          "w": "her",
+          "s": 561.72,
+          "e": 561.76
+        },
+        {
+          "w": "part",
+          "s": 561.76,
+          "e": 562.2
+        },
+        {
+          "w": "perfectly",
+          "s": 562.2,
+          "e": 562.84
+        },
+        {
+          "w": "The",
+          "s": 562.84,
+          "e": 563.24
+        },
+        {
+          "w": "Sorcerer",
+          "s": 563.24,
+          "e": 564.08
+        },
+        {
+          "w": "blinded",
+          "s": 564.08,
+          "e": 565.16
+        },
+        {
+          "w": "by",
+          "s": 565.16,
+          "e": 565.56
+        },
+        {
+          "w": "his",
+          "s": 565.56,
+          "e": 566.04
+        },
+        {
+          "w": "arrogance",
+          "s": 566.04,
+          "e": 567.24
+        },
+        {
+          "w": "did",
+          "s": 567.24,
+          "e": 567.84
+        },
+        {
+          "w": "not",
+          "s": 567.84,
+          "e": 568.36
+        },
+        {
+          "w": "suspect",
+          "s": 568.36,
+          "e": 569.92
+        },
+        {
+          "w": "a",
+          "s": 569.92,
+          "e": 570.24
+        },
+        {
+          "w": "thing",
+          "s": 570.24,
+          "e": 570.28
+        }
+      ]
+    },
+    {
+      "text": "Sorcerer: A toast! To my eternal power and your new life as my queen!",
+      "side": "left",
+      "start": 569.08,
+      "end": 577.8,
+      "image": "62_left.jpg",
+      "words": [
+        {
+          "w": "A",
+          "s": 570.28,
+          "e": 570.32
+        },
+        {
+          "w": "toast",
+          "s": 570.32,
+          "e": 571.16
+        },
+        {
+          "w": "To",
+          "s": 571.16,
+          "e": 572.28
+        },
+        {
+          "w": "my",
+          "s": 572.28,
+          "e": 572.52
+        },
+        {
+          "w": "eternal",
+          "s": 572.52,
+          "e": 573.16
+        },
+        {
+          "w": "power",
+          "s": 573.16,
+          "e": 573.52
+        },
+        {
+          "w": "and",
+          "s": 573.52,
+          "e": 574.44
+        },
+        {
+          "w": "your",
+          "s": 574.44,
+          "e": 574.72
+        },
+        {
+          "w": "new",
+          "s": 574.72,
+          "e": 575.0
+        },
+        {
+          "w": "life",
+          "s": 575.0,
+          "e": 575.36
+        },
+        {
+          "w": "as",
+          "s": 575.36,
+          "e": 576.16
+        },
+        {
+          "w": "my",
+          "s": 576.16,
+          "e": 576.4
+        },
+        {
+          "w": "queen",
+          "s": 576.4,
+          "e": 576.84
+        }
+      ]
+    },
+    {
+      "text": "Narrator: He drained the goblet and, within moments, slumped forward onto the table, fast asleep. Aladdin burst from his hiding spot, snatching the lamp from the Sorcerer's belt.",
+      "side": "right",
+      "start": 577.8,
+      "end": 588.62,
+      "image": "63_right.jpg",
+      "words": [
+        {
+          "w": "He",
+          "s": 576.84,
+          "e": 577.24
+        },
+        {
+          "w": "drained",
+          "s": 577.24,
+          "e": 578.12
+        },
+        {
+          "w": "the",
+          "s": 578.12,
+          "e": 578.4
+        },
+        {
+          "w": "goblet",
+          "s": 578.4,
+          "e": 578.64
+        },
+        {
+          "w": "and",
+          "s": 578.64,
+          "e": 579.2
+        },
+        {
+          "w": "within",
+          "s": 579.2,
+          "e": 579.56
+        },
+        {
+          "w": "moments",
+          "s": 579.56,
+          "e": 579.92
+        },
+        {
+          "w": "slumped",
+          "s": 579.92,
+          "e": 580.52
+        },
+        {
+          "w": "forward",
+          "s": 580.52,
+          "e": 581.0
+        },
+        {
+          "w": "onto",
+          "s": 581.0,
+          "e": 581.36
+        },
+        {
+          "w": "the",
+          "s": 581.36,
+          "e": 581.56
+        },
+        {
+          "w": "table",
+          "s": 581.56,
+          "e": 581.8
+        },
+        {
+          "w": "fast",
+          "s": 581.8,
+          "e": 582.36
+        },
+        {
+          "w": "asleep",
+          "s": 582.36,
+          "e": 582.88
+        },
+        {
+          "w": "Aladdin",
+          "s": 582.88,
+          "e": 583.72
+        },
+        {
+          "w": "burst",
+          "s": 583.72,
+          "e": 584.12
+        },
+        {
+          "w": "from",
+          "s": 584.12,
+          "e": 584.76
+        },
+        {
+          "w": "his",
+          "s": 584.76,
+          "e": 585.12
+        },
+        {
+          "w": "hiding",
+          "s": 585.12,
+          "e": 585.36
+        },
+        {
+          "w": "spot",
+          "s": 585.36,
+          "e": 585.56
+        },
+        {
+          "w": "snatching",
+          "s": 585.56,
+          "e": 586.08
+        },
+        {
+          "w": "the",
+          "s": 586.08,
+          "e": 586.4
+        },
+        {
+          "w": "lamp",
+          "s": 586.4,
+          "e": 586.68
+        },
+        {
+          "w": "from",
+          "s": 586.68,
+          "e": 586.76
+        },
+        {
+          "w": "the",
+          "s": 586.76,
+          "e": 586.88
+        },
+        {
+          "w": "Sorcerer's",
+          "s": 586.88,
+          "e": 587.28
+        },
+        {
+          "w": "belt",
+          "s": 587.28,
+          "e": 587.72
+        }
+      ]
+    },
+    {
+      "text": "Narrator: He rubbed it frantically. Genie: Al! You have no idea how happy I am to see you. This guy was a terrible master!",
+      "side": "left",
+      "start": 588.62,
+      "end": 597.51,
+      "image": "64_left.jpg",
+      "words": [
+        {
+          "w": "He",
+          "s": 587.72,
+          "e": 588.08
+        },
+        {
+          "w": "rubbed",
+          "s": 588.08,
+          "e": 588.84
+        },
+        {
+          "w": "it",
+          "s": 588.84,
+          "e": 589.16
+        },
+        {
+          "w": "frantically",
+          "s": 589.16,
+          "e": 589.84
+        },
+        {
+          "w": "Al",
+          "s": 589.84,
+          "e": 589.92
+        },
+        {
+          "w": "You",
+          "s": 589.92,
+          "e": 590.12
+        },
+        {
+          "w": "have",
+          "s": 590.12,
+          "e": 590.8
+        },
+        {
+          "w": "no",
+          "s": 590.8,
+          "e": 592.0
+        },
+        {
+          "w": "idea",
+          "s": 592.0,
+          "e": 592.68
+        },
+        {
+          "w": "how",
+          "s": 592.68,
+          "e": 592.8
+        },
+        {
+          "w": "happy",
+          "s": 592.8,
+          "e": 593.36
+        },
+        {
+          "w": "I",
+          "s": 593.36,
+          "e": 593.6
+        },
+        {
+          "w": "am",
+          "s": 593.6,
+          "e": 594.0
+        },
+        {
+          "w": "to",
+          "s": 594.0,
+          "e": 594.0
+        },
+        {
+          "w": "see",
+          "s": 594.0,
+          "e": 594.16
+        },
+        {
+          "w": "you",
+          "s": 594.16,
+          "e": 594.4
+        },
+        {
+          "w": "This",
+          "s": 594.4,
+          "e": 595.12
+        },
+        {
+          "w": "guy",
+          "s": 595.12,
+          "e": 595.32
+        },
+        {
+          "w": "was",
+          "s": 595.32,
+          "e": 595.88
+        },
+        {
+          "w": "a",
+          "s": 595.88,
+          "e": 595.92
+        },
+        {
+          "w": "terrible",
+          "s": 595.92,
+          "e": 596.2
+        },
+        {
+          "w": "master",
+          "s": 596.2,
+          "e": 596.56
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: The feeling is mutual, Genie. I have one wish left. Genie: Name it.",
+      "side": "right",
+      "start": 597.51,
+      "end": 604.78,
+      "image": "65_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 596.56,
+          "e": 596.96
+        },
+        {
+          "w": "feeling",
+          "s": 596.96,
+          "e": 597.96
+        },
+        {
+          "w": "is",
+          "s": 597.96,
+          "e": 598.44
+        },
+        {
+          "w": "mutual",
+          "s": 598.44,
+          "e": 599.44
+        },
+        {
+          "w": "Genie",
+          "s": 599.44,
+          "e": 600.12
+        },
+        {
+          "w": "I",
+          "s": 600.12,
+          "e": 601.16
+        },
+        {
+          "w": "have",
+          "s": 601.16,
+          "e": 602.08
+        },
+        {
+          "w": "one",
+          "s": 602.08,
+          "e": 602.28
+        },
+        {
+          "w": "wish",
+          "s": 602.28,
+          "e": 602.52
+        },
+        {
+          "w": "left",
+          "s": 602.52,
+          "e": 602.92
+        },
+        {
+          "w": "Name",
+          "s": 602.92,
+          "e": 603.88
+        },
+        {
+          "w": "it",
+          "s": 603.88,
+          "e": 604.04
+        }
+      ]
+    },
+    {
+      "text": "Aladdin: I wish for this Sorcerer to be banished to the farthest corner of the earth, where he can never harm anyone again, and for our palace and the Princess to be returned instantly to Baghdad.",
+      "side": "left",
+      "start": 604.78,
+      "end": 619.31,
+      "image": "66_left.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 604.04,
+          "e": 604.2
+        },
+        {
+          "w": "wish",
+          "s": 604.2,
+          "e": 604.96
+        },
+        {
+          "w": "for",
+          "s": 604.96,
+          "e": 605.52
+        },
+        {
+          "w": "this",
+          "s": 605.52,
+          "e": 605.52
+        },
+        {
+          "w": "Sorcerer",
+          "s": 605.52,
+          "e": 606.36
+        },
+        {
+          "w": "to",
+          "s": 606.36,
+          "e": 606.64
+        },
+        {
+          "w": "be",
+          "s": 606.64,
+          "e": 606.88
+        },
+        {
+          "w": "banished",
+          "s": 606.88,
+          "e": 607.4
+        },
+        {
+          "w": "to",
+          "s": 607.4,
+          "e": 607.68
+        },
+        {
+          "w": "the",
+          "s": 607.68,
+          "e": 607.8
+        },
+        {
+          "w": "farthest",
+          "s": 607.8,
+          "e": 608.24
+        },
+        {
+          "w": "corner",
+          "s": 608.24,
+          "e": 608.6
+        },
+        {
+          "w": "of",
+          "s": 608.6,
+          "e": 609.16
+        },
+        {
+          "w": "the",
+          "s": 609.16,
+          "e": 609.16
+        },
+        {
+          "w": "earth",
+          "s": 609.16,
+          "e": 609.28
+        },
+        {
+          "w": "where",
+          "s": 609.28,
+          "e": 610.64
+        },
+        {
+          "w": "he",
+          "s": 610.64,
+          "e": 611.0
+        },
+        {
+          "w": "can",
+          "s": 611.0,
+          "e": 611.04
+        },
+        {
+          "w": "never",
+          "s": 611.04,
+          "e": 611.36
+        },
+        {
+          "w": "harm",
+          "s": 611.36,
+          "e": 611.56
+        },
+        {
+          "w": "anyone",
+          "s": 611.56,
+          "e": 612.08
+        },
+        {
+          "w": "again",
+          "s": 612.08,
+          "e": 612.64
+        },
+        {
+          "w": "and",
+          "s": 612.64,
+          "e": 613.0
+        },
+        {
+          "w": "for",
+          "s": 613.0,
+          "e": 614.12
+        },
+        {
+          "w": "our",
+          "s": 614.12,
+          "e": 614.36
+        },
+        {
+          "w": "palace",
+          "s": 614.36,
+          "e": 614.96
+        },
+        {
+          "w": "and",
+          "s": 614.96,
+          "e": 615.6
+        },
+        {
+          "w": "the",
+          "s": 615.6,
+          "e": 615.68
+        },
+        {
+          "w": "Princess",
+          "s": 615.68,
+          "e": 615.88
+        },
+        {
+          "w": "to",
+          "s": 615.88,
+          "e": 616.28
+        },
+        {
+          "w": "be",
+          "s": 616.28,
+          "e": 616.4
+        },
+        {
+          "w": "returned",
+          "s": 616.4,
+          "e": 616.76
+        },
+        {
+          "w": "instantly",
+          "s": 616.76,
+          "e": 617.48
+        },
+        {
+          "w": "to",
+          "s": 617.48,
+          "e": 617.76
+        },
+        {
+          "w": "Baghdad",
+          "s": 617.76,
+          "e": 617.92
+        }
+      ]
+    },
+    {
+      "text": "Genie: Your wish is my command! Narrator: In a swirl of magic dust, the Sorcerer vanished into the void.",
+      "side": "right",
+      "start": 619.31,
+      "end": 626.68,
+      "image": "67_right.jpg",
+      "words": [
+        {
+          "w": "Your",
+          "s": 617.92,
+          "e": 618.24
+        },
+        {
+          "w": "wish",
+          "s": 618.24,
+          "e": 619.24
+        },
+        {
+          "w": "is",
+          "s": 619.24,
+          "e": 619.88
+        },
+        {
+          "w": "my",
+          "s": 619.88,
+          "e": 620.08
+        },
+        {
+          "w": "command",
+          "s": 620.08,
+          "e": 620.56
+        },
+        {
+          "w": "In",
+          "s": 620.56,
+          "e": 620.92
+        },
+        {
+          "w": "a",
+          "s": 620.92,
+          "e": 620.96
+        },
+        {
+          "w": "swirl",
+          "s": 620.96,
+          "e": 621.92
+        },
+        {
+          "w": "of",
+          "s": 621.92,
+          "e": 622.52
+        },
+        {
+          "w": "magic",
+          "s": 622.52,
+          "e": 622.76
+        },
+        {
+          "w": "dust",
+          "s": 622.76,
+          "e": 623.08
+        },
+        {
+          "w": "the",
+          "s": 623.08,
+          "e": 623.64
+        },
+        {
+          "w": "Sorcerer",
+          "s": 623.64,
+          "e": 624.24
+        },
+        {
+          "w": "vanished",
+          "s": 624.24,
+          "e": 624.84
+        },
+        {
+          "w": "into",
+          "s": 624.84,
+          "e": 625.4
+        },
+        {
+          "w": "the",
+          "s": 625.4,
+          "e": 625.64
+        },
+        {
+          "w": "void",
+          "s": 625.64,
+          "e": 626.0
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The palace lifted into the air and, in the blink of an eye, settled gently back onto its foundations in Baghdad.",
+      "side": "left",
+      "start": 626.68,
+      "end": 634.52,
+      "image": "68_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 626.0,
+          "e": 626.12
+        },
+        {
+          "w": "palace",
+          "s": 626.12,
+          "e": 626.88
+        },
+        {
+          "w": "lifted",
+          "s": 626.88,
+          "e": 627.4
+        },
+        {
+          "w": "into",
+          "s": 627.4,
+          "e": 627.52
+        },
+        {
+          "w": "the",
+          "s": 627.52,
+          "e": 627.92
+        },
+        {
+          "w": "air",
+          "s": 627.92,
+          "e": 628.04
+        },
+        {
+          "w": "and",
+          "s": 628.04,
+          "e": 628.64
+        },
+        {
+          "w": "in",
+          "s": 628.64,
+          "e": 628.72
+        },
+        {
+          "w": "the",
+          "s": 628.72,
+          "e": 629.2
+        },
+        {
+          "w": "blink",
+          "s": 629.2,
+          "e": 629.44
+        },
+        {
+          "w": "of",
+          "s": 629.44,
+          "e": 629.76
+        },
+        {
+          "w": "an",
+          "s": 629.76,
+          "e": 629.8
+        },
+        {
+          "w": "eye",
+          "s": 629.8,
+          "e": 629.88
+        },
+        {
+          "w": "settled",
+          "s": 629.88,
+          "e": 630.8
+        },
+        {
+          "w": "gently",
+          "s": 630.8,
+          "e": 631.24
+        },
+        {
+          "w": "back",
+          "s": 631.24,
+          "e": 631.6
+        },
+        {
+          "w": "onto",
+          "s": 631.6,
+          "e": 631.84
+        },
+        {
+          "w": "its",
+          "s": 631.84,
+          "e": 632.32
+        },
+        {
+          "w": "foundations",
+          "s": 632.32,
+          "e": 632.92
+        },
+        {
+          "w": "in",
+          "s": 632.92,
+          "e": 633.36
+        },
+        {
+          "w": "Baghdad",
+          "s": 633.36,
+          "e": 633.36
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Sultan wept with relief to see his daughter safe.",
+      "side": "right",
+      "start": 634.52,
+      "end": 639.76,
+      "image": "69_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 633.36,
+          "e": 633.64
+        },
+        {
+          "w": "Sultan",
+          "s": 633.64,
+          "e": 634.88
+        },
+        {
+          "w": "wept",
+          "s": 634.88,
+          "e": 635.4
+        },
+        {
+          "w": "with",
+          "s": 635.4,
+          "e": 635.84
+        },
+        {
+          "w": "relief",
+          "s": 635.84,
+          "e": 636.2
+        },
+        {
+          "w": "to",
+          "s": 636.2,
+          "e": 636.92
+        },
+        {
+          "w": "see",
+          "s": 636.92,
+          "e": 636.92
+        },
+        {
+          "w": "his",
+          "s": 636.92,
+          "e": 637.64
+        },
+        {
+          "w": "daughter",
+          "s": 637.64,
+          "e": 638.04
+        },
+        {
+          "w": "safe",
+          "s": 638.04,
+          "e": 638.48
+        }
+      ]
+    },
+    {
+      "text": "Aladdin's Mother: You kept your promise, my son. You used your spark of greatness not just for wealth, but to protect those you love. Aladdin: I had a little help, Mother.",
+      "side": "left",
+      "start": 639.76,
+      "end": 651.71,
+      "image": "70_left.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 638.48,
+          "e": 639.28
+        },
+        {
+          "w": "kept",
+          "s": 639.28,
+          "e": 639.96
+        },
+        {
+          "w": "your",
+          "s": 639.96,
+          "e": 640.2
+        },
+        {
+          "w": "promise",
+          "s": 640.2,
+          "e": 640.4
+        },
+        {
+          "w": "my",
+          "s": 640.4,
+          "e": 640.8
+        },
+        {
+          "w": "son",
+          "s": 640.8,
+          "e": 640.92
+        },
+        {
+          "w": "You",
+          "s": 640.92,
+          "e": 641.32
+        },
+        {
+          "w": "used",
+          "s": 641.32,
+          "e": 641.32
+        },
+        {
+          "w": "your",
+          "s": 641.32,
+          "e": 641.96
+        },
+        {
+          "w": "spark",
+          "s": 641.96,
+          "e": 642.48
+        },
+        {
+          "w": "of",
+          "s": 642.48,
+          "e": 642.88
+        },
+        {
+          "w": "greatness",
+          "s": 642.88,
+          "e": 643.48
+        },
+        {
+          "w": "not",
+          "s": 643.48,
+          "e": 644.04
+        },
+        {
+          "w": "just",
+          "s": 644.04,
+          "e": 644.04
+        },
+        {
+          "w": "for",
+          "s": 644.04,
+          "e": 644.88
+        },
+        {
+          "w": "wealth",
+          "s": 644.88,
+          "e": 645.2
+        },
+        {
+          "w": "but",
+          "s": 645.2,
+          "e": 645.72
+        },
+        {
+          "w": "to",
+          "s": 645.72,
+          "e": 646.48
+        },
+        {
+          "w": "protect",
+          "s": 646.48,
+          "e": 646.64
+        },
+        {
+          "w": "those",
+          "s": 646.64,
+          "e": 647.04
+        },
+        {
+          "w": "you",
+          "s": 647.04,
+          "e": 647.28
+        },
+        {
+          "w": "love",
+          "s": 647.28,
+          "e": 647.4
+        },
+        {
+          "w": "I",
+          "s": 647.4,
+          "e": 647.72
+        },
+        {
+          "w": "had",
+          "s": 647.72,
+          "e": 648.6
+        },
+        {
+          "w": "a",
+          "s": 648.6,
+          "e": 649.08
+        },
+        {
+          "w": "little",
+          "s": 649.08,
+          "e": 649.8
+        },
+        {
+          "w": "help",
+          "s": 649.8,
+          "e": 650.56
+        },
+        {
+          "w": "Mother",
+          "s": 650.56,
+          "e": 650.8
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Aladdin placed the lamp in a secret vault, vowing only to use it in times of dire need.",
+      "side": "right",
+      "start": 651.71,
+      "end": 657.65,
+      "image": "71_right.jpg",
+      "words": [
+        {
+          "w": "Aladdin",
+          "s": 650.8,
+          "e": 651.8
+        },
+        {
+          "w": "placed",
+          "s": 651.8,
+          "e": 652.28
+        },
+        {
+          "w": "the",
+          "s": 652.28,
+          "e": 652.6
+        },
+        {
+          "w": "lamp",
+          "s": 652.6,
+          "e": 652.96
+        },
+        {
+          "w": "in",
+          "s": 652.96,
+          "e": 652.96
+        },
+        {
+          "w": "a",
+          "s": 652.96,
+          "e": 652.96
+        },
+        {
+          "w": "secret",
+          "s": 652.96,
+          "e": 653.4
+        },
+        {
+          "w": "vault",
+          "s": 653.4,
+          "e": 653.64
+        },
+        {
+          "w": "vowing",
+          "s": 653.64,
+          "e": 654.48
+        },
+        {
+          "w": "only",
+          "s": 654.48,
+          "e": 654.8
+        },
+        {
+          "w": "to",
+          "s": 654.8,
+          "e": 655.04
+        },
+        {
+          "w": "use",
+          "s": 655.04,
+          "e": 655.16
+        },
+        {
+          "w": "it",
+          "s": 655.16,
+          "e": 655.56
+        },
+        {
+          "w": "in",
+          "s": 655.56,
+          "e": 655.76
+        },
+        {
+          "w": "times",
+          "s": 655.76,
+          "e": 655.92
+        },
+        {
+          "w": "of",
+          "s": 655.92,
+          "e": 656.28
+        },
+        {
+          "w": "dire",
+          "s": 656.28,
+          "e": 656.28
+        },
+        {
+          "w": "need",
+          "s": 656.28,
+          "e": 656.72
+        }
+      ]
+    },
+    {
+      "text": "Narrator: He and Princess Badroulbadour ruled with kindness and wisdom, and though the desert winds shifted the sands of time, the legend of Aladdin and his Wonderful Lamp lived on forever.",
+      "side": "left",
+      "start": 657.65,
+      "end": 670.83,
+      "image": "72_left.jpg",
+      "words": [
+        {
+          "w": "He",
+          "s": 656.72,
+          "e": 657.08
+        },
+        {
+          "w": "and",
+          "s": 657.08,
+          "e": 658.08
+        },
+        {
+          "w": "Princess",
+          "s": 658.08,
+          "e": 658.28
+        },
+        {
+          "w": "Badroulbadour",
+          "s": 658.28,
+          "e": 659.12
+        },
+        {
+          "w": "ruled",
+          "s": 659.12,
+          "e": 659.72
+        },
+        {
+          "w": "with",
+          "s": 659.72,
+          "e": 660.24
+        },
+        {
+          "w": "kindness",
+          "s": 660.24,
+          "e": 660.72
+        },
+        {
+          "w": "and",
+          "s": 660.72,
+          "e": 661.32
+        },
+        {
+          "w": "wisdom",
+          "s": 661.32,
+          "e": 661.6
+        },
+        {
+          "w": "and",
+          "s": 661.6,
+          "e": 661.88
+        },
+        {
+          "w": "though",
+          "s": 661.88,
+          "e": 662.4
+        },
+        {
+          "w": "the",
+          "s": 662.4,
+          "e": 662.68
+        },
+        {
+          "w": "desert",
+          "s": 662.68,
+          "e": 662.88
+        },
+        {
+          "w": "winds",
+          "s": 662.88,
+          "e": 663.32
+        },
+        {
+          "w": "shifted",
+          "s": 663.32,
+          "e": 664.04
+        },
+        {
+          "w": "the",
+          "s": 664.04,
+          "e": 664.28
+        },
+        {
+          "w": "sands",
+          "s": 664.28,
+          "e": 664.76
+        },
+        {
+          "w": "of",
+          "s": 664.76,
+          "e": 665.28
+        },
+        {
+          "w": "time",
+          "s": 665.28,
+          "e": 665.28
+        },
+        {
+          "w": "the",
+          "s": 665.28,
+          "e": 665.84
+        },
+        {
+          "w": "legend",
+          "s": 665.84,
+          "e": 666.36
+        },
+        {
+          "w": "of",
+          "s": 666.36,
+          "e": 666.84
+        },
+        {
+          "w": "Aladdin",
+          "s": 666.84,
+          "e": 667.08
+        },
+        {
+          "w": "and",
+          "s": 667.08,
+          "e": 667.32
+        },
+        {
+          "w": "his",
+          "s": 667.32,
+          "e": 667.6
+        },
+        {
+          "w": "Wonderful",
+          "s": 667.6,
+          "e": 668.16
+        },
+        {
+          "w": "Lamp",
+          "s": 668.16,
+          "e": 668.56
+        },
+        {
+          "w": "lived",
+          "s": 668.56,
+          "e": 669.16
+        },
+        {
+          "w": "on",
+          "s": 669.16,
+          "e": 669.44
+        },
+        {
+          "w": "forever",
+          "s": 669.44,
+          "e": 670.8
+        }
+      ]
+    }
+  ]
+}
