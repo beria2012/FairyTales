@@ -1,0 +1,4810 @@
+{
+  "title": "The Monkey King",
+  "author": "Chinese Folklore",
+  "cover": "cover.jpeg",
+  "audio": "audio.mp3",
+  "youtube": "https://youtu.be/QTxDYFu0KdE",
+  "content": [
+    {
+      "text": "Narrator: In the mystical realm of the Mountain of Flowers and Fruit, where the sun dipped into the horizon and painted the sky with hues of crimson and gold, a legend was born.",
+      "side": "right",
+      "start": 0.0,
+      "end": 10.3,
+      "image": "1_right.jpg",
+      "words": [
+        {
+          "w": "In",
+          "s": 0.0,
+          "e": 0.16
+        },
+        {
+          "w": "the",
+          "s": 0.16,
+          "e": 0.28
+        },
+        {
+          "w": "mystical",
+          "s": 0.28,
+          "e": 0.84
+        },
+        {
+          "w": "realm",
+          "s": 0.84,
+          "e": 1.2
+        },
+        {
+          "w": "of",
+          "s": 1.2,
+          "e": 1.24
+        },
+        {
+          "w": "the",
+          "s": 1.24,
+          "e": 1.4
+        },
+        {
+          "w": "Mountain",
+          "s": 1.4,
+          "e": 1.6
+        },
+        {
+          "w": "of",
+          "s": 1.6,
+          "e": 1.64
+        },
+        {
+          "w": "Flowers",
+          "s": 1.64,
+          "e": 2.04
+        },
+        {
+          "w": "and",
+          "s": 2.04,
+          "e": 2.48
+        },
+        {
+          "w": "Fruit",
+          "s": 2.48,
+          "e": 2.8
+        },
+        {
+          "w": "where",
+          "s": 2.8,
+          "e": 3.16
+        },
+        {
+          "w": "the",
+          "s": 3.16,
+          "e": 3.44
+        },
+        {
+          "w": "sun",
+          "s": 3.44,
+          "e": 3.84
+        },
+        {
+          "w": "dipped",
+          "s": 3.84,
+          "e": 4.08
+        },
+        {
+          "w": "into",
+          "s": 4.08,
+          "e": 4.24
+        },
+        {
+          "w": "the",
+          "s": 4.24,
+          "e": 4.24
+        },
+        {
+          "w": "horizon",
+          "s": 4.24,
+          "e": 5.28
+        },
+        {
+          "w": "and",
+          "s": 5.28,
+          "e": 5.48
+        },
+        {
+          "w": "painted",
+          "s": 5.48,
+          "e": 5.8
+        },
+        {
+          "w": "the",
+          "s": 5.8,
+          "e": 5.96
+        },
+        {
+          "w": "sky",
+          "s": 5.96,
+          "e": 6.36
+        },
+        {
+          "w": "with",
+          "s": 6.36,
+          "e": 6.56
+        },
+        {
+          "w": "hues",
+          "s": 6.56,
+          "e": 7.12
+        },
+        {
+          "w": "of",
+          "s": 7.12,
+          "e": 7.16
+        },
+        {
+          "w": "crimson",
+          "s": 7.16,
+          "e": 7.8
+        },
+        {
+          "w": "and",
+          "s": 7.8,
+          "e": 7.8
+        },
+        {
+          "w": "gold",
+          "s": 7.8,
+          "e": 8.2
+        },
+        {
+          "w": "a",
+          "s": 8.2,
+          "e": 8.6
+        },
+        {
+          "w": "legend",
+          "s": 8.6,
+          "e": 9.12
+        },
+        {
+          "w": "was",
+          "s": 9.12,
+          "e": 9.36
+        },
+        {
+          "w": "born",
+          "s": 9.36,
+          "e": 10.32
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The wind whispered secrets to the trees, and the trees leaned in, their leaves rustling with an otherworldly language. Narrator: Amidst the whispers of the forest, a tiny, mischievous creature stirred.",
+      "side": "left",
+      "start": 10.3,
+      "end": 24.64,
+      "image": "2_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 10.32,
+          "e": 10.52
+        },
+        {
+          "w": "wind",
+          "s": 10.52,
+          "e": 11.0
+        },
+        {
+          "w": "whispered",
+          "s": 11.0,
+          "e": 11.44
+        },
+        {
+          "w": "secrets",
+          "s": 11.44,
+          "e": 12.08
+        },
+        {
+          "w": "to",
+          "s": 12.08,
+          "e": 12.36
+        },
+        {
+          "w": "the",
+          "s": 12.36,
+          "e": 12.36
+        },
+        {
+          "w": "trees",
+          "s": 12.36,
+          "e": 13.52
+        },
+        {
+          "w": "and",
+          "s": 13.52,
+          "e": 13.72
+        },
+        {
+          "w": "the",
+          "s": 13.72,
+          "e": 13.72
+        },
+        {
+          "w": "trees",
+          "s": 13.72,
+          "e": 14.28
+        },
+        {
+          "w": "leaned",
+          "s": 14.28,
+          "e": 14.6
+        },
+        {
+          "w": "in",
+          "s": 14.6,
+          "e": 15.36
+        },
+        {
+          "w": "their",
+          "s": 15.36,
+          "e": 15.68
+        },
+        {
+          "w": "leaves",
+          "s": 15.68,
+          "e": 16.2
+        },
+        {
+          "w": "rustling",
+          "s": 16.2,
+          "e": 16.76
+        },
+        {
+          "w": "with",
+          "s": 16.76,
+          "e": 17.04
+        },
+        {
+          "w": "an",
+          "s": 17.04,
+          "e": 17.24
+        },
+        {
+          "w": "otherworldly",
+          "s": 17.24,
+          "e": 18.04
+        },
+        {
+          "w": "language",
+          "s": 18.04,
+          "e": 19.2
+        },
+        {
+          "w": "Amidst",
+          "s": 19.2,
+          "e": 19.64
+        },
+        {
+          "w": "the",
+          "s": 19.64,
+          "e": 19.8
+        },
+        {
+          "w": "whispers",
+          "s": 19.8,
+          "e": 20.08
+        },
+        {
+          "w": "of",
+          "s": 20.08,
+          "e": 20.08
+        },
+        {
+          "w": "the",
+          "s": 20.08,
+          "e": 20.56
+        },
+        {
+          "w": "forest",
+          "s": 20.56,
+          "e": 21.56
+        },
+        {
+          "w": "a",
+          "s": 21.56,
+          "e": 21.68
+        },
+        {
+          "w": "tiny",
+          "s": 21.68,
+          "e": 22.16
+        },
+        {
+          "w": "mischievous",
+          "s": 22.16,
+          "e": 22.96
+        },
+        {
+          "w": "creature",
+          "s": 22.96,
+          "e": 23.24
+        },
+        {
+          "w": "stirred",
+          "s": 23.24,
+          "e": 23.64
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Monkey King, with eyes that shone like polished jade, and fur as soft as the petals of a flower, stretched his tiny frame, arching his back and extending his claws.",
+      "side": "right",
+      "start": 24.64,
+      "end": 38.75,
+      "image": "3_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 23.64,
+          "e": 24.68
+        },
+        {
+          "w": "Monkey",
+          "s": 24.68,
+          "e": 25.16
+        },
+        {
+          "w": "King",
+          "s": 25.16,
+          "e": 25.56
+        },
+        {
+          "w": "with",
+          "s": 25.56,
+          "e": 26.24
+        },
+        {
+          "w": "eyes",
+          "s": 26.24,
+          "e": 26.92
+        },
+        {
+          "w": "that",
+          "s": 26.92,
+          "e": 26.96
+        },
+        {
+          "w": "shone",
+          "s": 26.96,
+          "e": 27.48
+        },
+        {
+          "w": "like",
+          "s": 27.48,
+          "e": 27.72
+        },
+        {
+          "w": "polished",
+          "s": 27.72,
+          "e": 28.28
+        },
+        {
+          "w": "jade",
+          "s": 28.28,
+          "e": 28.72
+        },
+        {
+          "w": "and",
+          "s": 28.72,
+          "e": 28.8
+        },
+        {
+          "w": "fur",
+          "s": 28.8,
+          "e": 29.4
+        },
+        {
+          "w": "as",
+          "s": 29.4,
+          "e": 30.04
+        },
+        {
+          "w": "soft",
+          "s": 30.04,
+          "e": 30.84
+        },
+        {
+          "w": "as",
+          "s": 30.84,
+          "e": 30.84
+        },
+        {
+          "w": "the",
+          "s": 30.84,
+          "e": 30.84
+        },
+        {
+          "w": "petals",
+          "s": 30.84,
+          "e": 31.36
+        },
+        {
+          "w": "of",
+          "s": 31.36,
+          "e": 31.36
+        },
+        {
+          "w": "a",
+          "s": 31.36,
+          "e": 31.44
+        },
+        {
+          "w": "flower",
+          "s": 31.44,
+          "e": 32.52
+        },
+        {
+          "w": "stretched",
+          "s": 32.52,
+          "e": 33.32
+        },
+        {
+          "w": "his",
+          "s": 33.32,
+          "e": 33.48
+        },
+        {
+          "w": "tiny",
+          "s": 33.48,
+          "e": 33.84
+        },
+        {
+          "w": "frame",
+          "s": 33.84,
+          "e": 34.96
+        },
+        {
+          "w": "arching",
+          "s": 34.96,
+          "e": 35.44
+        },
+        {
+          "w": "his",
+          "s": 35.44,
+          "e": 35.72
+        },
+        {
+          "w": "back",
+          "s": 35.72,
+          "e": 36.24
+        },
+        {
+          "w": "and",
+          "s": 36.24,
+          "e": 36.76
+        },
+        {
+          "w": "extending",
+          "s": 36.76,
+          "e": 37.32
+        },
+        {
+          "w": "his",
+          "s": 37.32,
+          "e": 37.52
+        },
+        {
+          "w": "claws",
+          "s": 37.52,
+          "e": 38.72
+        }
+      ]
+    },
+    {
+      "text": "Narrator: He yawned, revealing a mouthful of razor-sharp teeth, and the forest trembled with anticipation.",
+      "side": "left",
+      "start": 38.75,
+      "end": 45.99,
+      "image": "4_left.jpg",
+      "words": [
+        {
+          "w": "He",
+          "s": 38.72,
+          "e": 38.88
+        },
+        {
+          "w": "yawned",
+          "s": 38.88,
+          "e": 39.36
+        },
+        {
+          "w": "revealing",
+          "s": 39.36,
+          "e": 39.52
+        },
+        {
+          "w": "a",
+          "s": 39.52,
+          "e": 40.56
+        },
+        {
+          "w": "mouthful",
+          "s": 40.56,
+          "e": 41.16
+        },
+        {
+          "w": "of",
+          "s": 41.16,
+          "e": 41.28
+        },
+        {
+          "w": "razorsharp",
+          "s": 41.28,
+          "e": 42.04
+        },
+        {
+          "w": "teeth",
+          "s": 42.04,
+          "e": 42.6
+        },
+        {
+          "w": "and",
+          "s": 42.6,
+          "e": 42.68
+        },
+        {
+          "w": "the",
+          "s": 42.68,
+          "e": 43.2
+        },
+        {
+          "w": "forest",
+          "s": 43.2,
+          "e": 43.72
+        },
+        {
+          "w": "trembled",
+          "s": 43.72,
+          "e": 44.24
+        },
+        {
+          "w": "with",
+          "s": 44.24,
+          "e": 44.6
+        },
+        {
+          "w": "anticipation",
+          "s": 44.6,
+          "e": 46.0
+        }
+      ]
+    },
+    {
+      "text": "Monkey King: Where is my mother? I'm hungry.",
+      "side": "right",
+      "start": 45.99,
+      "end": 49.1,
+      "image": "5_right.jpg",
+      "words": [
+        {
+          "w": "Where",
+          "s": 46.0,
+          "e": 46.36
+        },
+        {
+          "w": "is",
+          "s": 46.36,
+          "e": 46.56
+        },
+        {
+          "w": "my",
+          "s": 46.56,
+          "e": 46.8
+        },
+        {
+          "w": "mother",
+          "s": 46.8,
+          "e": 47.32
+        },
+        {
+          "w": "I'm",
+          "s": 47.32,
+          "e": 48.0
+        },
+        {
+          "w": "hungry",
+          "s": 48.0,
+          "e": 48.52
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The trees parted, revealing a majestic figure with the gentle face of a goddess. The she-monkey, the Monkey King's mother, approached her son, her eyes filled with warmth and adoration.",
+      "side": "left",
+      "start": 49.1,
+      "end": 61.94,
+      "image": "6_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 48.52,
+          "e": 49.2
+        },
+        {
+          "w": "trees",
+          "s": 49.2,
+          "e": 49.68
+        },
+        {
+          "w": "parted",
+          "s": 49.68,
+          "e": 50.6
+        },
+        {
+          "w": "revealing",
+          "s": 50.6,
+          "e": 51.24
+        },
+        {
+          "w": "a",
+          "s": 51.24,
+          "e": 51.36
+        },
+        {
+          "w": "majestic",
+          "s": 51.36,
+          "e": 51.84
+        },
+        {
+          "w": "figure",
+          "s": 51.84,
+          "e": 52.52
+        },
+        {
+          "w": "with",
+          "s": 52.52,
+          "e": 52.64
+        },
+        {
+          "w": "the",
+          "s": 52.64,
+          "e": 52.64
+        },
+        {
+          "w": "gentle",
+          "s": 52.64,
+          "e": 53.04
+        },
+        {
+          "w": "face",
+          "s": 53.04,
+          "e": 53.64
+        },
+        {
+          "w": "of",
+          "s": 53.64,
+          "e": 53.76
+        },
+        {
+          "w": "a",
+          "s": 53.76,
+          "e": 53.76
+        },
+        {
+          "w": "goddess",
+          "s": 53.76,
+          "e": 54.44
+        },
+        {
+          "w": "The",
+          "s": 54.44,
+          "e": 54.44
+        },
+        {
+          "w": "shemonkey",
+          "s": 54.44,
+          "e": 55.76
+        },
+        {
+          "w": "the",
+          "s": 55.76,
+          "e": 56.4
+        },
+        {
+          "w": "Monkey",
+          "s": 56.4,
+          "e": 56.56
+        },
+        {
+          "w": "King's",
+          "s": 56.56,
+          "e": 56.96
+        },
+        {
+          "w": "mother",
+          "s": 56.96,
+          "e": 57.6
+        },
+        {
+          "w": "approached",
+          "s": 57.6,
+          "e": 57.96
+        },
+        {
+          "w": "her",
+          "s": 57.96,
+          "e": 58.2
+        },
+        {
+          "w": "son",
+          "s": 58.2,
+          "e": 58.76
+        },
+        {
+          "w": "her",
+          "s": 58.76,
+          "e": 58.96
+        },
+        {
+          "w": "eyes",
+          "s": 58.96,
+          "e": 59.6
+        },
+        {
+          "w": "filled",
+          "s": 59.6,
+          "e": 59.88
+        },
+        {
+          "w": "with",
+          "s": 59.88,
+          "e": 59.88
+        },
+        {
+          "w": "warmth",
+          "s": 59.88,
+          "e": 60.2
+        },
+        {
+          "w": "and",
+          "s": 60.2,
+          "e": 60.64
+        },
+        {
+          "w": "adoration",
+          "s": 60.64,
+          "e": 61.36
+        }
+      ]
+    },
+    {
+      "text": "Mother: Ah, my little king, I'm here. The forest has provided for us. Eat and grow strong.",
+      "side": "right",
+      "start": 61.94,
+      "end": 69.91,
+      "image": "7_right.jpg",
+      "words": [
+        {
+          "w": "Ah",
+          "s": 61.36,
+          "e": 62.4
+        },
+        {
+          "w": "my",
+          "s": 62.4,
+          "e": 63.4
+        },
+        {
+          "w": "little",
+          "s": 63.4,
+          "e": 63.48
+        },
+        {
+          "w": "king",
+          "s": 63.48,
+          "e": 63.92
+        },
+        {
+          "w": "I'm",
+          "s": 63.92,
+          "e": 64.48
+        },
+        {
+          "w": "here",
+          "s": 64.48,
+          "e": 64.88
+        },
+        {
+          "w": "The",
+          "s": 64.88,
+          "e": 64.88
+        },
+        {
+          "w": "forest",
+          "s": 64.88,
+          "e": 66.08
+        },
+        {
+          "w": "has",
+          "s": 66.08,
+          "e": 66.2
+        },
+        {
+          "w": "provided",
+          "s": 66.2,
+          "e": 66.64
+        },
+        {
+          "w": "for",
+          "s": 66.64,
+          "e": 66.92
+        },
+        {
+          "w": "us",
+          "s": 66.92,
+          "e": 67.32
+        },
+        {
+          "w": "Eat",
+          "s": 67.32,
+          "e": 68.12
+        },
+        {
+          "w": "and",
+          "s": 68.12,
+          "e": 68.12
+        },
+        {
+          "w": "grow",
+          "s": 68.12,
+          "e": 68.64
+        },
+        {
+          "w": "strong",
+          "s": 68.64,
+          "e": 69.32
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Monkey King devoured the fruits of the forest, and with each bite, his strength and cunning grew.",
+      "side": "left",
+      "start": 69.91,
+      "end": 76.82,
+      "image": "8_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 69.32,
+          "e": 70.0
+        },
+        {
+          "w": "Monkey",
+          "s": 70.0,
+          "e": 70.4
+        },
+        {
+          "w": "King",
+          "s": 70.4,
+          "e": 70.96
+        },
+        {
+          "w": "devoured",
+          "s": 70.96,
+          "e": 71.48
+        },
+        {
+          "w": "the",
+          "s": 71.48,
+          "e": 71.52
+        },
+        {
+          "w": "fruits",
+          "s": 71.52,
+          "e": 71.92
+        },
+        {
+          "w": "of",
+          "s": 71.92,
+          "e": 71.92
+        },
+        {
+          "w": "the",
+          "s": 71.92,
+          "e": 72.16
+        },
+        {
+          "w": "forest",
+          "s": 72.16,
+          "e": 72.88
+        },
+        {
+          "w": "and",
+          "s": 72.88,
+          "e": 73.16
+        },
+        {
+          "w": "with",
+          "s": 73.16,
+          "e": 73.56
+        },
+        {
+          "w": "each",
+          "s": 73.56,
+          "e": 73.84
+        },
+        {
+          "w": "bite",
+          "s": 73.84,
+          "e": 74.2
+        },
+        {
+          "w": "his",
+          "s": 74.2,
+          "e": 74.32
+        },
+        {
+          "w": "strength",
+          "s": 74.32,
+          "e": 75.44
+        },
+        {
+          "w": "and",
+          "s": 75.44,
+          "e": 75.44
+        },
+        {
+          "w": "cunning",
+          "s": 75.44,
+          "e": 75.84
+        },
+        {
+          "w": "grew",
+          "s": 75.84,
+          "e": 76.32
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The she-monkey watched with pride as her son leapt from tree to tree, his agility and speed unmatched.",
+      "side": "right",
+      "start": 76.82,
+      "end": 84.11,
+      "image": "9_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 76.32,
+          "e": 76.8
+        },
+        {
+          "w": "shemonkey",
+          "s": 76.8,
+          "e": 77.48
+        },
+        {
+          "w": "watched",
+          "s": 77.48,
+          "e": 77.92
+        },
+        {
+          "w": "with",
+          "s": 77.92,
+          "e": 78.12
+        },
+        {
+          "w": "pride",
+          "s": 78.12,
+          "e": 79.36
+        },
+        {
+          "w": "as",
+          "s": 79.36,
+          "e": 79.6
+        },
+        {
+          "w": "her",
+          "s": 79.6,
+          "e": 79.68
+        },
+        {
+          "w": "son",
+          "s": 79.68,
+          "e": 79.68
+        },
+        {
+          "w": "leapt",
+          "s": 79.68,
+          "e": 79.68
+        },
+        {
+          "w": "from",
+          "s": 79.68,
+          "e": 79.96
+        },
+        {
+          "w": "tree",
+          "s": 79.96,
+          "e": 80.44
+        },
+        {
+          "w": "to",
+          "s": 80.44,
+          "e": 80.6
+        },
+        {
+          "w": "tree",
+          "s": 80.6,
+          "e": 81.08
+        },
+        {
+          "w": "his",
+          "s": 81.08,
+          "e": 81.6
+        },
+        {
+          "w": "agility",
+          "s": 81.6,
+          "e": 82.2
+        },
+        {
+          "w": "and",
+          "s": 82.2,
+          "e": 82.44
+        },
+        {
+          "w": "speed",
+          "s": 82.44,
+          "e": 82.76
+        },
+        {
+          "w": "unmatched",
+          "s": 82.76,
+          "e": 84.08
+        }
+      ]
+    },
+    {
+      "text": "Mother: You are destined for greatness, my son. But beware, for the world beyond our mountain is treacherous.",
+      "side": "left",
+      "start": 84.11,
+      "end": 92.04,
+      "image": "10_left.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 84.08,
+          "e": 84.44
+        },
+        {
+          "w": "are",
+          "s": 84.44,
+          "e": 84.44
+        },
+        {
+          "w": "destined",
+          "s": 84.44,
+          "e": 85.12
+        },
+        {
+          "w": "for",
+          "s": 85.12,
+          "e": 85.12
+        },
+        {
+          "w": "greatness",
+          "s": 85.12,
+          "e": 85.56
+        },
+        {
+          "w": "my",
+          "s": 85.56,
+          "e": 85.72
+        },
+        {
+          "w": "son",
+          "s": 85.72,
+          "e": 86.12
+        },
+        {
+          "w": "But",
+          "s": 86.12,
+          "e": 86.84
+        },
+        {
+          "w": "beware",
+          "s": 86.84,
+          "e": 87.52
+        },
+        {
+          "w": "for",
+          "s": 87.52,
+          "e": 88.44
+        },
+        {
+          "w": "the",
+          "s": 88.44,
+          "e": 88.6
+        },
+        {
+          "w": "world",
+          "s": 88.6,
+          "e": 89.12
+        },
+        {
+          "w": "beyond",
+          "s": 89.12,
+          "e": 89.52
+        },
+        {
+          "w": "our",
+          "s": 89.52,
+          "e": 89.8
+        },
+        {
+          "w": "mountain",
+          "s": 89.8,
+          "e": 90.16
+        },
+        {
+          "w": "is",
+          "s": 90.16,
+          "e": 90.16
+        },
+        {
+          "w": "treacherous",
+          "s": 90.16,
+          "e": 91.56
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Monkey King listened intently, his ears perked up, drinking in the words of his mother.",
+      "side": "right",
+      "start": 92.04,
+      "end": 97.75,
+      "image": "11_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 91.56,
+          "e": 92.08
+        },
+        {
+          "w": "Monkey",
+          "s": 92.08,
+          "e": 92.44
+        },
+        {
+          "w": "King",
+          "s": 92.44,
+          "e": 92.72
+        },
+        {
+          "w": "listened",
+          "s": 92.72,
+          "e": 93.36
+        },
+        {
+          "w": "intently",
+          "s": 93.36,
+          "e": 93.96
+        },
+        {
+          "w": "his",
+          "s": 93.96,
+          "e": 94.24
+        },
+        {
+          "w": "ears",
+          "s": 94.24,
+          "e": 94.64
+        },
+        {
+          "w": "perked",
+          "s": 94.64,
+          "e": 94.88
+        },
+        {
+          "w": "up",
+          "s": 94.88,
+          "e": 95.32
+        },
+        {
+          "w": "drinking",
+          "s": 95.32,
+          "e": 95.92
+        },
+        {
+          "w": "in",
+          "s": 95.92,
+          "e": 96.04
+        },
+        {
+          "w": "the",
+          "s": 96.04,
+          "e": 96.2
+        },
+        {
+          "w": "words",
+          "s": 96.2,
+          "e": 96.48
+        },
+        {
+          "w": "of",
+          "s": 96.48,
+          "e": 96.48
+        },
+        {
+          "w": "his",
+          "s": 96.48,
+          "e": 96.8
+        },
+        {
+          "w": "mother",
+          "s": 96.8,
+          "e": 97.16
+        }
+      ]
+    },
+    {
+      "text": "Narrator: But his curiosity was insatiable, and he longed to explore the world beyond the Mountain of Flowers and Fruit.",
+      "side": "left",
+      "start": 97.75,
+      "end": 104.8,
+      "image": "12_left.jpg",
+      "words": [
+        {
+          "w": "But",
+          "s": 97.16,
+          "e": 97.2
+        },
+        {
+          "w": "his",
+          "s": 97.2,
+          "e": 98.08
+        },
+        {
+          "w": "curiosity",
+          "s": 98.08,
+          "e": 98.88
+        },
+        {
+          "w": "was",
+          "s": 98.88,
+          "e": 99.16
+        },
+        {
+          "w": "insatiable",
+          "s": 99.16,
+          "e": 99.68
+        },
+        {
+          "w": "and",
+          "s": 99.68,
+          "e": 99.88
+        },
+        {
+          "w": "he",
+          "s": 99.88,
+          "e": 100.4
+        },
+        {
+          "w": "longed",
+          "s": 100.4,
+          "e": 101.04
+        },
+        {
+          "w": "to",
+          "s": 101.04,
+          "e": 101.24
+        },
+        {
+          "w": "explore",
+          "s": 101.24,
+          "e": 101.72
+        },
+        {
+          "w": "the",
+          "s": 101.72,
+          "e": 101.88
+        },
+        {
+          "w": "world",
+          "s": 101.88,
+          "e": 102.32
+        },
+        {
+          "w": "beyond",
+          "s": 102.32,
+          "e": 102.68
+        },
+        {
+          "w": "the",
+          "s": 102.68,
+          "e": 102.8
+        },
+        {
+          "w": "Mountain",
+          "s": 102.8,
+          "e": 103.04
+        },
+        {
+          "w": "of",
+          "s": 103.04,
+          "e": 103.08
+        },
+        {
+          "w": "Flowers",
+          "s": 103.08,
+          "e": 103.84
+        },
+        {
+          "w": "and",
+          "s": 103.84,
+          "e": 103.84
+        },
+        {
+          "w": "Fruit",
+          "s": 103.84,
+          "e": 104.2
+        }
+      ]
+    },
+    {
+      "text": "Monkey King: I'll be careful, Mother. I promise.",
+      "side": "right",
+      "start": 104.8,
+      "end": 108.32,
+      "image": "13_right.jpg",
+      "words": [
+        {
+          "w": "I'll",
+          "s": 104.2,
+          "e": 104.96
+        },
+        {
+          "w": "be",
+          "s": 104.96,
+          "e": 105.12
+        },
+        {
+          "w": "careful",
+          "s": 105.12,
+          "e": 105.64
+        },
+        {
+          "w": "Mother",
+          "s": 105.64,
+          "e": 106.12
+        },
+        {
+          "w": "I",
+          "s": 106.12,
+          "e": 107.0
+        },
+        {
+          "w": "promise",
+          "s": 107.0,
+          "e": 107.76
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The she-monkey smiled, knowing that her son's fate was sealed. The wind carried the whispers of the forest, warning of the dangers that lay ahead.",
+      "side": "left",
+      "start": 108.32,
+      "end": 118.06,
+      "image": "14_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 107.76,
+          "e": 107.76
+        },
+        {
+          "w": "shemonkey",
+          "s": 107.76,
+          "e": 108.92
+        },
+        {
+          "w": "smiled",
+          "s": 108.92,
+          "e": 109.48
+        },
+        {
+          "w": "knowing",
+          "s": 109.48,
+          "e": 109.48
+        },
+        {
+          "w": "that",
+          "s": 109.48,
+          "e": 109.48
+        },
+        {
+          "w": "her",
+          "s": 109.48,
+          "e": 109.6
+        },
+        {
+          "w": "son's",
+          "s": 109.6,
+          "e": 110.76
+        },
+        {
+          "w": "fate",
+          "s": 110.76,
+          "e": 111.2
+        },
+        {
+          "w": "was",
+          "s": 111.2,
+          "e": 111.24
+        },
+        {
+          "w": "sealed",
+          "s": 111.24,
+          "e": 111.88
+        },
+        {
+          "w": "The",
+          "s": 111.88,
+          "e": 111.88
+        },
+        {
+          "w": "wind",
+          "s": 111.88,
+          "e": 113.0
+        },
+        {
+          "w": "carried",
+          "s": 113.0,
+          "e": 113.36
+        },
+        {
+          "w": "the",
+          "s": 113.36,
+          "e": 113.52
+        },
+        {
+          "w": "whispers",
+          "s": 113.52,
+          "e": 113.8
+        },
+        {
+          "w": "of",
+          "s": 113.8,
+          "e": 113.8
+        },
+        {
+          "w": "the",
+          "s": 113.8,
+          "e": 114.16
+        },
+        {
+          "w": "forest",
+          "s": 114.16,
+          "e": 114.96
+        },
+        {
+          "w": "warning",
+          "s": 114.96,
+          "e": 115.72
+        },
+        {
+          "w": "of",
+          "s": 115.72,
+          "e": 115.84
+        },
+        {
+          "w": "the",
+          "s": 115.84,
+          "e": 116.04
+        },
+        {
+          "w": "dangers",
+          "s": 116.04,
+          "e": 116.72
+        },
+        {
+          "w": "that",
+          "s": 116.72,
+          "e": 116.88
+        },
+        {
+          "w": "lay",
+          "s": 116.88,
+          "e": 117.4
+        },
+        {
+          "w": "ahead",
+          "s": 117.4,
+          "e": 117.48
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Years passed, and the Monkey King grew into a powerful and feared warrior. His exploits echoed throughout the land, and the gods themselves took notice.",
+      "side": "right",
+      "start": 118.06,
+      "end": 130.53,
+      "image": "15_right.jpg",
+      "words": [
+        {
+          "w": "Years",
+          "s": 117.48,
+          "e": 118.56
+        },
+        {
+          "w": "passed",
+          "s": 118.56,
+          "e": 119.28
+        },
+        {
+          "w": "and",
+          "s": 119.28,
+          "e": 119.76
+        },
+        {
+          "w": "the",
+          "s": 119.76,
+          "e": 119.92
+        },
+        {
+          "w": "Monkey",
+          "s": 119.92,
+          "e": 120.32
+        },
+        {
+          "w": "King",
+          "s": 120.32,
+          "e": 120.72
+        },
+        {
+          "w": "grew",
+          "s": 120.72,
+          "e": 121.24
+        },
+        {
+          "w": "into",
+          "s": 121.24,
+          "e": 121.64
+        },
+        {
+          "w": "a",
+          "s": 121.64,
+          "e": 121.64
+        },
+        {
+          "w": "powerful",
+          "s": 121.64,
+          "e": 122.4
+        },
+        {
+          "w": "and",
+          "s": 122.4,
+          "e": 122.6
+        },
+        {
+          "w": "feared",
+          "s": 122.6,
+          "e": 123.4
+        },
+        {
+          "w": "warrior",
+          "s": 123.4,
+          "e": 124.0
+        },
+        {
+          "w": "His",
+          "s": 124.0,
+          "e": 124.68
+        },
+        {
+          "w": "exploits",
+          "s": 124.68,
+          "e": 125.44
+        },
+        {
+          "w": "echoed",
+          "s": 125.44,
+          "e": 125.92
+        },
+        {
+          "w": "throughout",
+          "s": 125.92,
+          "e": 126.36
+        },
+        {
+          "w": "the",
+          "s": 126.36,
+          "e": 126.36
+        },
+        {
+          "w": "land",
+          "s": 126.36,
+          "e": 127.2
+        },
+        {
+          "w": "and",
+          "s": 127.2,
+          "e": 127.8
+        },
+        {
+          "w": "the",
+          "s": 127.8,
+          "e": 127.84
+        },
+        {
+          "w": "gods",
+          "s": 127.84,
+          "e": 128.48
+        },
+        {
+          "w": "themselves",
+          "s": 128.48,
+          "e": 129.16
+        },
+        {
+          "w": "took",
+          "s": 129.16,
+          "e": 129.32
+        },
+        {
+          "w": "notice",
+          "s": 129.32,
+          "e": 130.04
+        }
+      ]
+    },
+    {
+      "text": "Narrator: One day, as the Monkey King sat upon his throne, a wise and enigmatic figure appeared before him.",
+      "side": "left",
+      "start": 130.53,
+      "end": 137.91,
+      "image": "16_left.jpg",
+      "words": [
+        {
+          "w": "One",
+          "s": 130.04,
+          "e": 130.84
+        },
+        {
+          "w": "day",
+          "s": 130.84,
+          "e": 131.24
+        },
+        {
+          "w": "as",
+          "s": 131.24,
+          "e": 131.72
+        },
+        {
+          "w": "the",
+          "s": 131.72,
+          "e": 131.88
+        },
+        {
+          "w": "Monkey",
+          "s": 131.88,
+          "e": 132.2
+        },
+        {
+          "w": "King",
+          "s": 132.2,
+          "e": 132.4
+        },
+        {
+          "w": "sat",
+          "s": 132.4,
+          "e": 132.84
+        },
+        {
+          "w": "upon",
+          "s": 132.84,
+          "e": 133.08
+        },
+        {
+          "w": "his",
+          "s": 133.08,
+          "e": 133.32
+        },
+        {
+          "w": "throne",
+          "s": 133.32,
+          "e": 133.76
+        },
+        {
+          "w": "a",
+          "s": 133.76,
+          "e": 134.32
+        },
+        {
+          "w": "wise",
+          "s": 134.32,
+          "e": 134.96
+        },
+        {
+          "w": "and",
+          "s": 134.96,
+          "e": 135.04
+        },
+        {
+          "w": "enigmatic",
+          "s": 135.04,
+          "e": 135.64
+        },
+        {
+          "w": "figure",
+          "s": 135.64,
+          "e": 136.2
+        },
+        {
+          "w": "appeared",
+          "s": 136.2,
+          "e": 136.68
+        },
+        {
+          "w": "before",
+          "s": 136.68,
+          "e": 137.12
+        },
+        {
+          "w": "him",
+          "s": 137.12,
+          "e": 137.32
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Patriarch Subhuti, with eyes that saw beyond the veil of time, gazed upon the Monkey King with a deep understanding.",
+      "side": "right",
+      "start": 137.91,
+      "end": 146.31,
+      "image": "17_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 137.32,
+          "e": 138.0
+        },
+        {
+          "w": "Patriarch",
+          "s": 138.0,
+          "e": 138.84
+        },
+        {
+          "w": "Subhuti",
+          "s": 138.84,
+          "e": 139.4
+        },
+        {
+          "w": "with",
+          "s": 139.4,
+          "e": 139.4
+        },
+        {
+          "w": "eyes",
+          "s": 139.4,
+          "e": 139.8
+        },
+        {
+          "w": "that",
+          "s": 139.8,
+          "e": 140.44
+        },
+        {
+          "w": "saw",
+          "s": 140.44,
+          "e": 140.84
+        },
+        {
+          "w": "beyond",
+          "s": 140.84,
+          "e": 141.28
+        },
+        {
+          "w": "the",
+          "s": 141.28,
+          "e": 141.4
+        },
+        {
+          "w": "veil",
+          "s": 141.4,
+          "e": 141.8
+        },
+        {
+          "w": "of",
+          "s": 141.8,
+          "e": 141.84
+        },
+        {
+          "w": "time",
+          "s": 141.84,
+          "e": 142.36
+        },
+        {
+          "w": "gazed",
+          "s": 142.36,
+          "e": 143.44
+        },
+        {
+          "w": "upon",
+          "s": 143.44,
+          "e": 143.72
+        },
+        {
+          "w": "the",
+          "s": 143.72,
+          "e": 143.84
+        },
+        {
+          "w": "Monkey",
+          "s": 143.84,
+          "e": 144.2
+        },
+        {
+          "w": "King",
+          "s": 144.2,
+          "e": 144.52
+        },
+        {
+          "w": "with",
+          "s": 144.52,
+          "e": 144.68
+        },
+        {
+          "w": "a",
+          "s": 144.68,
+          "e": 144.88
+        },
+        {
+          "w": "deep",
+          "s": 144.88,
+          "e": 145.04
+        },
+        {
+          "w": "understanding",
+          "s": 145.04,
+          "e": 145.8
+        }
+      ]
+    },
+    {
+      "text": "Patriarch Subhuti: You have walked the path of the warrior, but have you walked the path of the wise?",
+      "side": "left",
+      "start": 146.31,
+      "end": 151.6,
+      "image": "18_left.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 145.8,
+          "e": 146.64
+        },
+        {
+          "w": "have",
+          "s": 146.64,
+          "e": 147.0
+        },
+        {
+          "w": "walked",
+          "s": 147.0,
+          "e": 147.16
+        },
+        {
+          "w": "the",
+          "s": 147.16,
+          "e": 147.16
+        },
+        {
+          "w": "path",
+          "s": 147.16,
+          "e": 147.16
+        },
+        {
+          "w": "of",
+          "s": 147.16,
+          "e": 147.16
+        },
+        {
+          "w": "the",
+          "s": 147.16,
+          "e": 147.72
+        },
+        {
+          "w": "warrior",
+          "s": 147.72,
+          "e": 148.48
+        },
+        {
+          "w": "but",
+          "s": 148.48,
+          "e": 148.48
+        },
+        {
+          "w": "have",
+          "s": 148.48,
+          "e": 149.4
+        },
+        {
+          "w": "you",
+          "s": 149.4,
+          "e": 149.56
+        },
+        {
+          "w": "walked",
+          "s": 149.56,
+          "e": 149.88
+        },
+        {
+          "w": "the",
+          "s": 149.88,
+          "e": 150.04
+        },
+        {
+          "w": "path",
+          "s": 150.04,
+          "e": 150.04
+        },
+        {
+          "w": "of",
+          "s": 150.04,
+          "e": 150.04
+        },
+        {
+          "w": "the",
+          "s": 150.04,
+          "e": 150.36
+        },
+        {
+          "w": "wise",
+          "s": 150.36,
+          "e": 151.08
+        }
+      ]
+    },
+    {
+      "text": "Monkey King: What do you mean?",
+      "side": "right",
+      "start": 151.6,
+      "end": 152.81,
+      "image": "19_right.jpg",
+      "words": [
+        {
+          "w": "What",
+          "s": 151.08,
+          "e": 151.72
+        },
+        {
+          "w": "do",
+          "s": 151.72,
+          "e": 151.72
+        },
+        {
+          "w": "you",
+          "s": 151.72,
+          "e": 151.92
+        },
+        {
+          "w": "mean",
+          "s": 151.92,
+          "e": 152.24
+        }
+      ]
+    },
+    {
+      "text": "Patriarch Subhuti: The power of the gods is not to be trifled with. To wield it, one must first understand the nature of the universe.",
+      "side": "left",
+      "start": 152.81,
+      "end": 160.13,
+      "image": "20_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 152.24,
+          "e": 152.92
+        },
+        {
+          "w": "power",
+          "s": 152.92,
+          "e": 153.64
+        },
+        {
+          "w": "of",
+          "s": 153.64,
+          "e": 153.64
+        },
+        {
+          "w": "the",
+          "s": 153.64,
+          "e": 153.64
+        },
+        {
+          "w": "gods",
+          "s": 153.64,
+          "e": 154.0
+        },
+        {
+          "w": "is",
+          "s": 154.0,
+          "e": 154.2
+        },
+        {
+          "w": "not",
+          "s": 154.2,
+          "e": 154.48
+        },
+        {
+          "w": "to",
+          "s": 154.48,
+          "e": 154.6
+        },
+        {
+          "w": "be",
+          "s": 154.6,
+          "e": 154.76
+        },
+        {
+          "w": "trifled",
+          "s": 154.76,
+          "e": 155.2
+        },
+        {
+          "w": "with",
+          "s": 155.2,
+          "e": 155.4
+        },
+        {
+          "w": "To",
+          "s": 155.4,
+          "e": 155.4
+        },
+        {
+          "w": "wield",
+          "s": 155.4,
+          "e": 156.4
+        },
+        {
+          "w": "it",
+          "s": 156.4,
+          "e": 156.64
+        },
+        {
+          "w": "one",
+          "s": 156.64,
+          "e": 157.32
+        },
+        {
+          "w": "must",
+          "s": 157.32,
+          "e": 157.56
+        },
+        {
+          "w": "first",
+          "s": 157.56,
+          "e": 157.6
+        },
+        {
+          "w": "understand",
+          "s": 157.6,
+          "e": 158.16
+        },
+        {
+          "w": "the",
+          "s": 158.16,
+          "e": 158.52
+        },
+        {
+          "w": "nature",
+          "s": 158.52,
+          "e": 158.96
+        },
+        {
+          "w": "of",
+          "s": 158.96,
+          "e": 158.96
+        },
+        {
+          "w": "the",
+          "s": 158.96,
+          "e": 158.96
+        },
+        {
+          "w": "universe",
+          "s": 158.96,
+          "e": 159.36
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Monkey King listened intently, his mind expanding with the Patriarch's words. He began to grasp the concepts of the cosmos, and his understanding of the world deepened.",
+      "side": "right",
+      "start": 160.13,
+      "end": 171.81,
+      "image": "21_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 159.36,
+          "e": 159.56
+        },
+        {
+          "w": "Monkey",
+          "s": 159.56,
+          "e": 160.6
+        },
+        {
+          "w": "King",
+          "s": 160.6,
+          "e": 160.84
+        },
+        {
+          "w": "listened",
+          "s": 160.84,
+          "e": 161.52
+        },
+        {
+          "w": "intently",
+          "s": 161.52,
+          "e": 162.16
+        },
+        {
+          "w": "his",
+          "s": 162.16,
+          "e": 162.84
+        },
+        {
+          "w": "mind",
+          "s": 162.84,
+          "e": 163.4
+        },
+        {
+          "w": "expanding",
+          "s": 163.4,
+          "e": 164.04
+        },
+        {
+          "w": "with",
+          "s": 164.04,
+          "e": 164.2
+        },
+        {
+          "w": "the",
+          "s": 164.2,
+          "e": 164.36
+        },
+        {
+          "w": "Patriarch's",
+          "s": 164.36,
+          "e": 165.04
+        },
+        {
+          "w": "words",
+          "s": 165.04,
+          "e": 165.64
+        },
+        {
+          "w": "He",
+          "s": 165.64,
+          "e": 166.24
+        },
+        {
+          "w": "began",
+          "s": 166.24,
+          "e": 166.6
+        },
+        {
+          "w": "to",
+          "s": 166.6,
+          "e": 166.72
+        },
+        {
+          "w": "grasp",
+          "s": 166.72,
+          "e": 167.08
+        },
+        {
+          "w": "the",
+          "s": 167.08,
+          "e": 167.2
+        },
+        {
+          "w": "concepts",
+          "s": 167.2,
+          "e": 167.88
+        },
+        {
+          "w": "of",
+          "s": 167.88,
+          "e": 167.92
+        },
+        {
+          "w": "the",
+          "s": 167.92,
+          "e": 168.0
+        },
+        {
+          "w": "cosmos",
+          "s": 168.0,
+          "e": 168.8
+        },
+        {
+          "w": "and",
+          "s": 168.8,
+          "e": 169.0
+        },
+        {
+          "w": "his",
+          "s": 169.0,
+          "e": 169.28
+        },
+        {
+          "w": "understanding",
+          "s": 169.28,
+          "e": 169.92
+        },
+        {
+          "w": "of",
+          "s": 169.92,
+          "e": 170.12
+        },
+        {
+          "w": "the",
+          "s": 170.12,
+          "e": 170.36
+        },
+        {
+          "w": "world",
+          "s": 170.36,
+          "e": 170.8
+        },
+        {
+          "w": "deepened",
+          "s": 170.8,
+          "e": 171.24
+        }
+      ]
+    },
+    {
+      "text": "Monkey King: I see. The power of the gods is not to be used for personal gain, but to maintain balance and harmony in the universe.",
+      "side": "left",
+      "start": 171.81,
+      "end": 180.25,
+      "image": "22_left.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 171.24,
+          "e": 171.96
+        },
+        {
+          "w": "see",
+          "s": 171.96,
+          "e": 172.52
+        },
+        {
+          "w": "The",
+          "s": 172.52,
+          "e": 173.2
+        },
+        {
+          "w": "power",
+          "s": 173.2,
+          "e": 173.44
+        },
+        {
+          "w": "of",
+          "s": 173.44,
+          "e": 173.68
+        },
+        {
+          "w": "the",
+          "s": 173.68,
+          "e": 173.8
+        },
+        {
+          "w": "gods",
+          "s": 173.8,
+          "e": 174.24
+        },
+        {
+          "w": "is",
+          "s": 174.24,
+          "e": 174.4
+        },
+        {
+          "w": "not",
+          "s": 174.4,
+          "e": 174.6
+        },
+        {
+          "w": "to",
+          "s": 174.6,
+          "e": 174.72
+        },
+        {
+          "w": "be",
+          "s": 174.72,
+          "e": 174.88
+        },
+        {
+          "w": "used",
+          "s": 174.88,
+          "e": 175.28
+        },
+        {
+          "w": "for",
+          "s": 175.28,
+          "e": 175.44
+        },
+        {
+          "w": "personal",
+          "s": 175.44,
+          "e": 175.88
+        },
+        {
+          "w": "gain",
+          "s": 175.88,
+          "e": 176.36
+        },
+        {
+          "w": "but",
+          "s": 176.36,
+          "e": 176.72
+        },
+        {
+          "w": "to",
+          "s": 176.72,
+          "e": 176.84
+        },
+        {
+          "w": "maintain",
+          "s": 176.84,
+          "e": 177.48
+        },
+        {
+          "w": "balance",
+          "s": 177.48,
+          "e": 178.04
+        },
+        {
+          "w": "and",
+          "s": 178.04,
+          "e": 178.12
+        },
+        {
+          "w": "harmony",
+          "s": 178.12,
+          "e": 178.56
+        },
+        {
+          "w": "in",
+          "s": 178.56,
+          "e": 178.8
+        },
+        {
+          "w": "the",
+          "s": 178.8,
+          "e": 178.8
+        },
+        {
+          "w": "universe",
+          "s": 178.8,
+          "e": 179.64
+        }
+      ]
+    },
+    {
+      "text": "Patriarch Subhuti: You have taken the first step on the path of wisdom. Now, you must learn to control your own nature.",
+      "side": "right",
+      "start": 180.25,
+      "end": 186.14,
+      "image": "23_right.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 179.64,
+          "e": 179.64
+        },
+        {
+          "w": "have",
+          "s": 179.64,
+          "e": 180.48
+        },
+        {
+          "w": "taken",
+          "s": 180.48,
+          "e": 180.8
+        },
+        {
+          "w": "the",
+          "s": 180.8,
+          "e": 180.88
+        },
+        {
+          "w": "first",
+          "s": 180.88,
+          "e": 181.2
+        },
+        {
+          "w": "step",
+          "s": 181.2,
+          "e": 181.4
+        },
+        {
+          "w": "on",
+          "s": 181.4,
+          "e": 181.64
+        },
+        {
+          "w": "the",
+          "s": 181.64,
+          "e": 181.64
+        },
+        {
+          "w": "path",
+          "s": 181.64,
+          "e": 181.88
+        },
+        {
+          "w": "of",
+          "s": 181.88,
+          "e": 181.88
+        },
+        {
+          "w": "wisdom",
+          "s": 181.88,
+          "e": 182.48
+        },
+        {
+          "w": "Now",
+          "s": 182.48,
+          "e": 183.32
+        },
+        {
+          "w": "you",
+          "s": 183.32,
+          "e": 183.44
+        },
+        {
+          "w": "must",
+          "s": 183.44,
+          "e": 183.76
+        },
+        {
+          "w": "learn",
+          "s": 183.76,
+          "e": 184.04
+        },
+        {
+          "w": "to",
+          "s": 184.04,
+          "e": 184.16
+        },
+        {
+          "w": "control",
+          "s": 184.16,
+          "e": 184.6
+        },
+        {
+          "w": "your",
+          "s": 184.6,
+          "e": 185.08
+        },
+        {
+          "w": "own",
+          "s": 185.08,
+          "e": 185.28
+        },
+        {
+          "w": "nature",
+          "s": 185.28,
+          "e": 185.56
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Monkey King trained tirelessly, mastering the ancient arts of magic and combat. His name became synonymous with bravery and cunning.",
+      "side": "left",
+      "start": 186.14,
+      "end": 197.22,
+      "image": "24_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 185.56,
+          "e": 186.28
+        },
+        {
+          "w": "Monkey",
+          "s": 186.28,
+          "e": 186.64
+        },
+        {
+          "w": "King",
+          "s": 186.64,
+          "e": 187.04
+        },
+        {
+          "w": "trained",
+          "s": 187.04,
+          "e": 187.52
+        },
+        {
+          "w": "tirelessly",
+          "s": 187.52,
+          "e": 188.48
+        },
+        {
+          "w": "mastering",
+          "s": 188.48,
+          "e": 189.8
+        },
+        {
+          "w": "the",
+          "s": 189.8,
+          "e": 190.2
+        },
+        {
+          "w": "ancient",
+          "s": 190.2,
+          "e": 190.44
+        },
+        {
+          "w": "arts",
+          "s": 190.44,
+          "e": 190.96
+        },
+        {
+          "w": "of",
+          "s": 190.96,
+          "e": 191.0
+        },
+        {
+          "w": "magic",
+          "s": 191.0,
+          "e": 191.44
+        },
+        {
+          "w": "and",
+          "s": 191.44,
+          "e": 191.68
+        },
+        {
+          "w": "combat",
+          "s": 191.68,
+          "e": 192.24
+        },
+        {
+          "w": "His",
+          "s": 192.24,
+          "e": 193.0
+        },
+        {
+          "w": "name",
+          "s": 193.0,
+          "e": 193.36
+        },
+        {
+          "w": "became",
+          "s": 193.36,
+          "e": 193.76
+        },
+        {
+          "w": "synonymous",
+          "s": 193.76,
+          "e": 194.8
+        },
+        {
+          "w": "with",
+          "s": 194.8,
+          "e": 195.28
+        },
+        {
+          "w": "bravery",
+          "s": 195.28,
+          "e": 195.68
+        },
+        {
+          "w": "and",
+          "s": 195.68,
+          "e": 196.16
+        },
+        {
+          "w": "cunning",
+          "s": 196.16,
+          "e": 196.64
+        }
+      ]
+    },
+    {
+      "text": "Narrator: But as his power grew, so did his ego. The Monkey King began to challenge the authority of the gods themselves, and the heavenly realm took notice.",
+      "side": "right",
+      "start": 197.22,
+      "end": 207.51,
+      "image": "25_right.jpg",
+      "words": [
+        {
+          "w": "But",
+          "s": 196.64,
+          "e": 196.64
+        },
+        {
+          "w": "as",
+          "s": 196.64,
+          "e": 197.56
+        },
+        {
+          "w": "his",
+          "s": 197.56,
+          "e": 197.72
+        },
+        {
+          "w": "power",
+          "s": 197.72,
+          "e": 198.16
+        },
+        {
+          "w": "grew",
+          "s": 198.16,
+          "e": 198.76
+        },
+        {
+          "w": "so",
+          "s": 198.76,
+          "e": 199.44
+        },
+        {
+          "w": "did",
+          "s": 199.44,
+          "e": 199.56
+        },
+        {
+          "w": "his",
+          "s": 199.56,
+          "e": 199.88
+        },
+        {
+          "w": "ego",
+          "s": 199.88,
+          "e": 200.28
+        },
+        {
+          "w": "The",
+          "s": 200.28,
+          "e": 200.28
+        },
+        {
+          "w": "Monkey",
+          "s": 200.28,
+          "e": 201.28
+        },
+        {
+          "w": "King",
+          "s": 201.28,
+          "e": 201.56
+        },
+        {
+          "w": "began",
+          "s": 201.56,
+          "e": 201.88
+        },
+        {
+          "w": "to",
+          "s": 201.88,
+          "e": 202.0
+        },
+        {
+          "w": "challenge",
+          "s": 202.0,
+          "e": 202.56
+        },
+        {
+          "w": "the",
+          "s": 202.56,
+          "e": 202.72
+        },
+        {
+          "w": "authority",
+          "s": 202.72,
+          "e": 203.24
+        },
+        {
+          "w": "of",
+          "s": 203.24,
+          "e": 203.28
+        },
+        {
+          "w": "the",
+          "s": 203.28,
+          "e": 203.4
+        },
+        {
+          "w": "gods",
+          "s": 203.4,
+          "e": 203.92
+        },
+        {
+          "w": "themselves",
+          "s": 203.92,
+          "e": 204.6
+        },
+        {
+          "w": "and",
+          "s": 204.6,
+          "e": 204.84
+        },
+        {
+          "w": "the",
+          "s": 204.84,
+          "e": 205.2
+        },
+        {
+          "w": "heavenly",
+          "s": 205.2,
+          "e": 205.8
+        },
+        {
+          "w": "realm",
+          "s": 205.8,
+          "e": 206.28
+        },
+        {
+          "w": "took",
+          "s": 206.28,
+          "e": 206.44
+        },
+        {
+          "w": "notice",
+          "s": 206.44,
+          "e": 207.12
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Jade Emperor, ruler of the heavens, summoned the Monkey King to his court.",
+      "side": "left",
+      "start": 207.51,
+      "end": 213.08,
+      "image": "26_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 207.12,
+          "e": 207.6
+        },
+        {
+          "w": "Jade",
+          "s": 207.6,
+          "e": 208.0
+        },
+        {
+          "w": "Emperor",
+          "s": 208.0,
+          "e": 208.28
+        },
+        {
+          "w": "ruler",
+          "s": 208.28,
+          "e": 208.68
+        },
+        {
+          "w": "of",
+          "s": 208.68,
+          "e": 209.36
+        },
+        {
+          "w": "the",
+          "s": 209.36,
+          "e": 209.72
+        },
+        {
+          "w": "heavens",
+          "s": 209.72,
+          "e": 210.2
+        },
+        {
+          "w": "summoned",
+          "s": 210.2,
+          "e": 210.92
+        },
+        {
+          "w": "the",
+          "s": 210.92,
+          "e": 211.04
+        },
+        {
+          "w": "Monkey",
+          "s": 211.04,
+          "e": 211.48
+        },
+        {
+          "w": "King",
+          "s": 211.48,
+          "e": 211.84
+        },
+        {
+          "w": "to",
+          "s": 211.84,
+          "e": 211.84
+        },
+        {
+          "w": "his",
+          "s": 211.84,
+          "e": 212.16
+        },
+        {
+          "w": "court",
+          "s": 212.16,
+          "e": 212.52
+        }
+      ]
+    },
+    {
+      "text": "Jade Emperor: You have overstepped your bounds, Monkey King. Your arrogance will be your downfall.",
+      "side": "right",
+      "start": 213.08,
+      "end": 220.45,
+      "image": "27_right.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 212.52,
+          "e": 213.44
+        },
+        {
+          "w": "have",
+          "s": 213.44,
+          "e": 213.8
+        },
+        {
+          "w": "overstepped",
+          "s": 213.8,
+          "e": 214.72
+        },
+        {
+          "w": "your",
+          "s": 214.72,
+          "e": 215.04
+        },
+        {
+          "w": "bounds",
+          "s": 215.04,
+          "e": 215.96
+        },
+        {
+          "w": "Monkey",
+          "s": 215.96,
+          "e": 216.56
+        },
+        {
+          "w": "King",
+          "s": 216.56,
+          "e": 216.96
+        },
+        {
+          "w": "Your",
+          "s": 216.96,
+          "e": 217.76
+        },
+        {
+          "w": "arrogance",
+          "s": 217.76,
+          "e": 218.56
+        },
+        {
+          "w": "will",
+          "s": 218.56,
+          "e": 218.8
+        },
+        {
+          "w": "be",
+          "s": 218.8,
+          "e": 218.8
+        },
+        {
+          "w": "your",
+          "s": 218.8,
+          "e": 219.12
+        },
+        {
+          "w": "downfall",
+          "s": 219.12,
+          "e": 219.88
+        }
+      ]
+    },
+    {
+      "text": "Monkey King: I am the greatest warrior the world has ever known. I will not be bound by the rules of the gods.",
+      "side": "left",
+      "start": 220.45,
+      "end": 226.66,
+      "image": "28_left.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 219.88,
+          "e": 220.68
+        },
+        {
+          "w": "am",
+          "s": 220.68,
+          "e": 220.88
+        },
+        {
+          "w": "the",
+          "s": 220.88,
+          "e": 220.88
+        },
+        {
+          "w": "greatest",
+          "s": 220.88,
+          "e": 221.32
+        },
+        {
+          "w": "warrior",
+          "s": 221.32,
+          "e": 221.8
+        },
+        {
+          "w": "the",
+          "s": 221.8,
+          "e": 221.8
+        },
+        {
+          "w": "world",
+          "s": 221.8,
+          "e": 222.24
+        },
+        {
+          "w": "has",
+          "s": 222.24,
+          "e": 222.56
+        },
+        {
+          "w": "ever",
+          "s": 222.56,
+          "e": 222.72
+        },
+        {
+          "w": "known",
+          "s": 222.72,
+          "e": 223.0
+        },
+        {
+          "w": "I",
+          "s": 223.0,
+          "e": 223.12
+        },
+        {
+          "w": "will",
+          "s": 223.12,
+          "e": 223.88
+        },
+        {
+          "w": "not",
+          "s": 223.88,
+          "e": 224.12
+        },
+        {
+          "w": "be",
+          "s": 224.12,
+          "e": 224.32
+        },
+        {
+          "w": "bound",
+          "s": 224.32,
+          "e": 224.68
+        },
+        {
+          "w": "by",
+          "s": 224.68,
+          "e": 224.84
+        },
+        {
+          "w": "the",
+          "s": 224.84,
+          "e": 224.92
+        },
+        {
+          "w": "rules",
+          "s": 224.92,
+          "e": 225.36
+        },
+        {
+          "w": "of",
+          "s": 225.36,
+          "e": 225.88
+        },
+        {
+          "w": "the",
+          "s": 225.88,
+          "e": 225.88
+        },
+        {
+          "w": "gods",
+          "s": 225.88,
+          "e": 226.08
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Jade Emperor, with a heavy heart, banished the Monkey King to the Mountain of Five Elements, a prison of eternal torment.",
+      "side": "right",
+      "start": 226.66,
+      "end": 235.98,
+      "image": "29_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 226.08,
+          "e": 226.76
+        },
+        {
+          "w": "Jade",
+          "s": 226.76,
+          "e": 227.28
+        },
+        {
+          "w": "Emperor",
+          "s": 227.28,
+          "e": 227.88
+        },
+        {
+          "w": "with",
+          "s": 227.88,
+          "e": 228.2
+        },
+        {
+          "w": "a",
+          "s": 228.2,
+          "e": 228.48
+        },
+        {
+          "w": "heavy",
+          "s": 228.48,
+          "e": 228.56
+        },
+        {
+          "w": "heart",
+          "s": 228.56,
+          "e": 229.04
+        },
+        {
+          "w": "banished",
+          "s": 229.04,
+          "e": 229.92
+        },
+        {
+          "w": "the",
+          "s": 229.92,
+          "e": 229.92
+        },
+        {
+          "w": "Monkey",
+          "s": 229.92,
+          "e": 230.4
+        },
+        {
+          "w": "King",
+          "s": 230.4,
+          "e": 230.8
+        },
+        {
+          "w": "to",
+          "s": 230.8,
+          "e": 230.96
+        },
+        {
+          "w": "the",
+          "s": 230.96,
+          "e": 231.04
+        },
+        {
+          "w": "Mountain",
+          "s": 231.04,
+          "e": 231.44
+        },
+        {
+          "w": "of",
+          "s": 231.44,
+          "e": 231.52
+        },
+        {
+          "w": "Five",
+          "s": 231.52,
+          "e": 231.92
+        },
+        {
+          "w": "Elements",
+          "s": 231.92,
+          "e": 232.6
+        },
+        {
+          "w": "a",
+          "s": 232.6,
+          "e": 232.84
+        },
+        {
+          "w": "prison",
+          "s": 232.84,
+          "e": 233.92
+        },
+        {
+          "w": "of",
+          "s": 233.92,
+          "e": 234.2
+        },
+        {
+          "w": "eternal",
+          "s": 234.2,
+          "e": 234.8
+        },
+        {
+          "w": "torment",
+          "s": 234.8,
+          "e": 235.48
+        }
+      ]
+    },
+    {
+      "text": "Narrator: But the Monkey King was not one to be defeated so easily. Using his cunning and magical powers, he escaped his prison and began a campaign of chaos and destruction.",
+      "side": "left",
+      "start": 235.98,
+      "end": 247.91,
+      "image": "30_left.jpg",
+      "words": [
+        {
+          "w": "But",
+          "s": 235.48,
+          "e": 235.48
+        },
+        {
+          "w": "the",
+          "s": 235.48,
+          "e": 236.2
+        },
+        {
+          "w": "Monkey",
+          "s": 236.2,
+          "e": 236.8
+        },
+        {
+          "w": "King",
+          "s": 236.8,
+          "e": 237.12
+        },
+        {
+          "w": "was",
+          "s": 237.12,
+          "e": 237.4
+        },
+        {
+          "w": "not",
+          "s": 237.4,
+          "e": 237.64
+        },
+        {
+          "w": "one",
+          "s": 237.64,
+          "e": 237.88
+        },
+        {
+          "w": "to",
+          "s": 237.88,
+          "e": 238.0
+        },
+        {
+          "w": "be",
+          "s": 238.0,
+          "e": 238.12
+        },
+        {
+          "w": "defeated",
+          "s": 238.12,
+          "e": 238.64
+        },
+        {
+          "w": "so",
+          "s": 238.64,
+          "e": 239.04
+        },
+        {
+          "w": "easily",
+          "s": 239.04,
+          "e": 239.64
+        },
+        {
+          "w": "Using",
+          "s": 239.64,
+          "e": 240.52
+        },
+        {
+          "w": "his",
+          "s": 240.52,
+          "e": 240.72
+        },
+        {
+          "w": "cunning",
+          "s": 240.72,
+          "e": 241.12
+        },
+        {
+          "w": "and",
+          "s": 241.12,
+          "e": 241.64
+        },
+        {
+          "w": "magical",
+          "s": 241.64,
+          "e": 241.8
+        },
+        {
+          "w": "powers",
+          "s": 241.8,
+          "e": 242.52
+        },
+        {
+          "w": "he",
+          "s": 242.52,
+          "e": 242.92
+        },
+        {
+          "w": "escaped",
+          "s": 242.92,
+          "e": 243.36
+        },
+        {
+          "w": "his",
+          "s": 243.36,
+          "e": 243.64
+        },
+        {
+          "w": "prison",
+          "s": 243.64,
+          "e": 244.16
+        },
+        {
+          "w": "and",
+          "s": 244.16,
+          "e": 244.56
+        },
+        {
+          "w": "began",
+          "s": 244.56,
+          "e": 244.84
+        },
+        {
+          "w": "a",
+          "s": 244.84,
+          "e": 244.96
+        },
+        {
+          "w": "campaign",
+          "s": 244.96,
+          "e": 245.56
+        },
+        {
+          "w": "of",
+          "s": 245.56,
+          "e": 245.84
+        },
+        {
+          "w": "chaos",
+          "s": 245.84,
+          "e": 246.52
+        },
+        {
+          "w": "and",
+          "s": 246.52,
+          "e": 246.64
+        },
+        {
+          "w": "destruction",
+          "s": 246.64,
+          "e": 247.32
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The gods themselves were forced to intervene, and a great battle ensued. The Monkey King, with his army of demons and monsters, clashed with the heavenly host.",
+      "side": "right",
+      "start": 247.91,
+      "end": 259.04,
+      "image": "31_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 247.32,
+          "e": 248.0
+        },
+        {
+          "w": "gods",
+          "s": 248.0,
+          "e": 248.44
+        },
+        {
+          "w": "themselves",
+          "s": 248.44,
+          "e": 249.04
+        },
+        {
+          "w": "were",
+          "s": 249.04,
+          "e": 249.16
+        },
+        {
+          "w": "forced",
+          "s": 249.16,
+          "e": 249.52
+        },
+        {
+          "w": "to",
+          "s": 249.52,
+          "e": 249.76
+        },
+        {
+          "w": "intervene",
+          "s": 249.76,
+          "e": 250.32
+        },
+        {
+          "w": "and",
+          "s": 250.32,
+          "e": 250.92
+        },
+        {
+          "w": "a",
+          "s": 250.92,
+          "e": 251.2
+        },
+        {
+          "w": "great",
+          "s": 251.2,
+          "e": 251.36
+        },
+        {
+          "w": "battle",
+          "s": 251.36,
+          "e": 251.84
+        },
+        {
+          "w": "ensued",
+          "s": 251.84,
+          "e": 252.68
+        },
+        {
+          "w": "The",
+          "s": 252.68,
+          "e": 252.84
+        },
+        {
+          "w": "Monkey",
+          "s": 252.84,
+          "e": 253.84
+        },
+        {
+          "w": "King",
+          "s": 253.84,
+          "e": 254.24
+        },
+        {
+          "w": "with",
+          "s": 254.24,
+          "e": 254.4
+        },
+        {
+          "w": "his",
+          "s": 254.4,
+          "e": 254.68
+        },
+        {
+          "w": "army",
+          "s": 254.68,
+          "e": 255.2
+        },
+        {
+          "w": "of",
+          "s": 255.2,
+          "e": 255.28
+        },
+        {
+          "w": "demons",
+          "s": 255.28,
+          "e": 255.92
+        },
+        {
+          "w": "and",
+          "s": 255.92,
+          "e": 256.0
+        },
+        {
+          "w": "monsters",
+          "s": 256.0,
+          "e": 256.68
+        },
+        {
+          "w": "clashed",
+          "s": 256.68,
+          "e": 257.28
+        },
+        {
+          "w": "with",
+          "s": 257.28,
+          "e": 257.4
+        },
+        {
+          "w": "the",
+          "s": 257.4,
+          "e": 257.68
+        },
+        {
+          "w": "heavenly",
+          "s": 257.68,
+          "e": 257.8
+        },
+        {
+          "w": "host",
+          "s": 257.8,
+          "e": 258.52
+        }
+      ]
+    },
+    {
+      "text": "Narrator: In the heat of the battle, a figure emerged from the shadows. The Bodhisattva Guanyin, with a heart full of compassion and a will of iron, approached the Monkey King.",
+      "side": "left",
+      "start": 259.04,
+      "end": 271.24,
+      "image": "32_left.jpg",
+      "words": [
+        {
+          "w": "In",
+          "s": 258.52,
+          "e": 259.24
+        },
+        {
+          "w": "the",
+          "s": 259.24,
+          "e": 259.24
+        },
+        {
+          "w": "heat",
+          "s": 259.24,
+          "e": 260.08
+        },
+        {
+          "w": "of",
+          "s": 260.08,
+          "e": 260.56
+        },
+        {
+          "w": "the",
+          "s": 260.56,
+          "e": 260.76
+        },
+        {
+          "w": "battle",
+          "s": 260.76,
+          "e": 261.32
+        },
+        {
+          "w": "a",
+          "s": 261.32,
+          "e": 261.48
+        },
+        {
+          "w": "figure",
+          "s": 261.48,
+          "e": 262.72
+        },
+        {
+          "w": "emerged",
+          "s": 262.72,
+          "e": 263.24
+        },
+        {
+          "w": "from",
+          "s": 263.24,
+          "e": 263.48
+        },
+        {
+          "w": "the",
+          "s": 263.48,
+          "e": 263.52
+        },
+        {
+          "w": "shadows",
+          "s": 263.52,
+          "e": 264.36
+        },
+        {
+          "w": "The",
+          "s": 264.36,
+          "e": 264.96
+        },
+        {
+          "w": "Bodhisattva",
+          "s": 264.96,
+          "e": 265.56
+        },
+        {
+          "w": "Guanyin",
+          "s": 265.56,
+          "e": 266.0
+        },
+        {
+          "w": "with",
+          "s": 266.0,
+          "e": 266.32
+        },
+        {
+          "w": "a",
+          "s": 266.32,
+          "e": 266.32
+        },
+        {
+          "w": "heart",
+          "s": 266.32,
+          "e": 267.08
+        },
+        {
+          "w": "full",
+          "s": 267.08,
+          "e": 267.32
+        },
+        {
+          "w": "of",
+          "s": 267.32,
+          "e": 267.52
+        },
+        {
+          "w": "compassion",
+          "s": 267.52,
+          "e": 268.04
+        },
+        {
+          "w": "and",
+          "s": 268.04,
+          "e": 268.08
+        },
+        {
+          "w": "a",
+          "s": 268.08,
+          "e": 268.52
+        },
+        {
+          "w": "will",
+          "s": 268.52,
+          "e": 268.76
+        },
+        {
+          "w": "of",
+          "s": 268.76,
+          "e": 268.76
+        },
+        {
+          "w": "iron",
+          "s": 268.76,
+          "e": 269.24
+        },
+        {
+          "w": "approached",
+          "s": 269.24,
+          "e": 269.6
+        },
+        {
+          "w": "the",
+          "s": 269.6,
+          "e": 269.76
+        },
+        {
+          "w": "Monkey",
+          "s": 269.76,
+          "e": 270.32
+        },
+        {
+          "w": "King",
+          "s": 270.32,
+          "e": 270.68
+        }
+      ]
+    },
+    {
+      "text": "Guanyin: Why do you wage war against the gods, Monkey King? What is it that you seek?",
+      "side": "right",
+      "start": 271.24,
+      "end": 277.31,
+      "image": "33_right.jpg",
+      "words": [
+        {
+          "w": "Why",
+          "s": 270.68,
+          "e": 271.56
+        },
+        {
+          "w": "do",
+          "s": 271.56,
+          "e": 271.56
+        },
+        {
+          "w": "you",
+          "s": 271.56,
+          "e": 271.92
+        },
+        {
+          "w": "wage",
+          "s": 271.92,
+          "e": 272.44
+        },
+        {
+          "w": "war",
+          "s": 272.44,
+          "e": 272.88
+        },
+        {
+          "w": "against",
+          "s": 272.88,
+          "e": 273.2
+        },
+        {
+          "w": "the",
+          "s": 273.2,
+          "e": 273.32
+        },
+        {
+          "w": "gods",
+          "s": 273.32,
+          "e": 273.88
+        },
+        {
+          "w": "Monkey",
+          "s": 273.88,
+          "e": 274.24
+        },
+        {
+          "w": "King",
+          "s": 274.24,
+          "e": 274.64
+        },
+        {
+          "w": "What",
+          "s": 274.64,
+          "e": 275.48
+        },
+        {
+          "w": "is",
+          "s": 275.48,
+          "e": 275.84
+        },
+        {
+          "w": "it",
+          "s": 275.84,
+          "e": 275.88
+        },
+        {
+          "w": "that",
+          "s": 275.88,
+          "e": 275.92
+        },
+        {
+          "w": "you",
+          "s": 275.92,
+          "e": 276.32
+        },
+        {
+          "w": "seek",
+          "s": 276.32,
+          "e": 276.76
+        }
+      ]
+    },
+    {
+      "text": "Monkey King: I seek power, and the recognition of my greatness.",
+      "side": "left",
+      "start": 277.31,
+      "end": 281.16,
+      "image": "34_left.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 276.76,
+          "e": 277.44
+        },
+        {
+          "w": "seek",
+          "s": 277.44,
+          "e": 277.76
+        },
+        {
+          "w": "power",
+          "s": 277.76,
+          "e": 278.28
+        },
+        {
+          "w": "and",
+          "s": 278.28,
+          "e": 278.76
+        },
+        {
+          "w": "the",
+          "s": 278.76,
+          "e": 279.04
+        },
+        {
+          "w": "recognition",
+          "s": 279.04,
+          "e": 279.48
+        },
+        {
+          "w": "of",
+          "s": 279.48,
+          "e": 279.68
+        },
+        {
+          "w": "my",
+          "s": 279.68,
+          "e": 279.92
+        },
+        {
+          "w": "greatness",
+          "s": 279.92,
+          "e": 280.56
+        }
+      ]
+    },
+    {
+      "text": "Guanyin: You are great, Monkey King, but your greatness is not in your power, but in your heart. You have the potential to be a force for good in the world.",
+      "side": "right",
+      "start": 281.16,
+      "end": 292.81,
+      "image": "35_right.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 280.56,
+          "e": 281.2
+        },
+        {
+          "w": "are",
+          "s": 281.2,
+          "e": 281.52
+        },
+        {
+          "w": "great",
+          "s": 281.52,
+          "e": 282.0
+        },
+        {
+          "w": "Monkey",
+          "s": 282.0,
+          "e": 282.64
+        },
+        {
+          "w": "King",
+          "s": 282.64,
+          "e": 283.12
+        },
+        {
+          "w": "but",
+          "s": 283.12,
+          "e": 284.12
+        },
+        {
+          "w": "your",
+          "s": 284.12,
+          "e": 284.52
+        },
+        {
+          "w": "greatness",
+          "s": 284.52,
+          "e": 285.08
+        },
+        {
+          "w": "is",
+          "s": 285.08,
+          "e": 285.28
+        },
+        {
+          "w": "not",
+          "s": 285.28,
+          "e": 285.56
+        },
+        {
+          "w": "in",
+          "s": 285.56,
+          "e": 285.56
+        },
+        {
+          "w": "your",
+          "s": 285.56,
+          "e": 285.92
+        },
+        {
+          "w": "power",
+          "s": 285.92,
+          "e": 286.6
+        },
+        {
+          "w": "but",
+          "s": 286.6,
+          "e": 286.68
+        },
+        {
+          "w": "in",
+          "s": 286.68,
+          "e": 286.92
+        },
+        {
+          "w": "your",
+          "s": 286.92,
+          "e": 287.24
+        },
+        {
+          "w": "heart",
+          "s": 287.24,
+          "e": 287.76
+        },
+        {
+          "w": "You",
+          "s": 287.76,
+          "e": 288.48
+        },
+        {
+          "w": "have",
+          "s": 288.48,
+          "e": 289.04
+        },
+        {
+          "w": "the",
+          "s": 289.04,
+          "e": 289.2
+        },
+        {
+          "w": "potential",
+          "s": 289.2,
+          "e": 289.8
+        },
+        {
+          "w": "to",
+          "s": 289.8,
+          "e": 290.04
+        },
+        {
+          "w": "be",
+          "s": 290.04,
+          "e": 290.16
+        },
+        {
+          "w": "a",
+          "s": 290.16,
+          "e": 290.24
+        },
+        {
+          "w": "force",
+          "s": 290.24,
+          "e": 290.92
+        },
+        {
+          "w": "for",
+          "s": 290.92,
+          "e": 291.36
+        },
+        {
+          "w": "good",
+          "s": 291.36,
+          "e": 291.4
+        },
+        {
+          "w": "in",
+          "s": 291.4,
+          "e": 291.52
+        },
+        {
+          "w": "the",
+          "s": 291.52,
+          "e": 291.6
+        },
+        {
+          "w": "world",
+          "s": 291.6,
+          "e": 292.2
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Monkey King, for the first time, saw the world through the eyes of another.",
+      "side": "left",
+      "start": 292.81,
+      "end": 298.19,
+      "image": "36_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 292.2,
+          "e": 292.2
+        },
+        {
+          "w": "Monkey",
+          "s": 292.2,
+          "e": 293.28
+        },
+        {
+          "w": "King",
+          "s": 293.28,
+          "e": 293.64
+        },
+        {
+          "w": "for",
+          "s": 293.64,
+          "e": 294.36
+        },
+        {
+          "w": "the",
+          "s": 294.36,
+          "e": 294.44
+        },
+        {
+          "w": "first",
+          "s": 294.44,
+          "e": 294.72
+        },
+        {
+          "w": "time",
+          "s": 294.72,
+          "e": 295.2
+        },
+        {
+          "w": "saw",
+          "s": 295.2,
+          "e": 295.8
+        },
+        {
+          "w": "the",
+          "s": 295.8,
+          "e": 295.96
+        },
+        {
+          "w": "world",
+          "s": 295.96,
+          "e": 296.36
+        },
+        {
+          "w": "through",
+          "s": 296.36,
+          "e": 296.52
+        },
+        {
+          "w": "the",
+          "s": 296.52,
+          "e": 296.64
+        },
+        {
+          "w": "eyes",
+          "s": 296.64,
+          "e": 297.08
+        },
+        {
+          "w": "of",
+          "s": 297.08,
+          "e": 297.16
+        },
+        {
+          "w": "another",
+          "s": 297.16,
+          "e": 297.6
+        }
+      ]
+    },
+    {
+      "text": "Narrator: He began to understand the nature of his own heart, and the true meaning of greatness.",
+      "side": "right",
+      "start": 298.19,
+      "end": 304.17,
+      "image": "37_right.jpg",
+      "words": [
+        {
+          "w": "He",
+          "s": 297.6,
+          "e": 298.24
+        },
+        {
+          "w": "began",
+          "s": 298.24,
+          "e": 298.4
+        },
+        {
+          "w": "to",
+          "s": 298.4,
+          "e": 298.68
+        },
+        {
+          "w": "understand",
+          "s": 298.68,
+          "e": 299.44
+        },
+        {
+          "w": "the",
+          "s": 299.44,
+          "e": 299.52
+        },
+        {
+          "w": "nature",
+          "s": 299.52,
+          "e": 300.0
+        },
+        {
+          "w": "of",
+          "s": 300.0,
+          "e": 300.08
+        },
+        {
+          "w": "his",
+          "s": 300.08,
+          "e": 300.2
+        },
+        {
+          "w": "own",
+          "s": 300.2,
+          "e": 300.44
+        },
+        {
+          "w": "heart",
+          "s": 300.44,
+          "e": 300.88
+        },
+        {
+          "w": "and",
+          "s": 300.88,
+          "e": 301.76
+        },
+        {
+          "w": "the",
+          "s": 301.76,
+          "e": 301.76
+        },
+        {
+          "w": "true",
+          "s": 301.76,
+          "e": 302.08
+        },
+        {
+          "w": "meaning",
+          "s": 302.08,
+          "e": 302.52
+        },
+        {
+          "w": "of",
+          "s": 302.52,
+          "e": 302.76
+        },
+        {
+          "w": "greatness",
+          "s": 302.76,
+          "e": 303.6
+        }
+      ]
+    },
+    {
+      "text": "Monkey King: I am sorry. I have been blind to my own flaws.",
+      "side": "left",
+      "start": 304.17,
+      "end": 308.38,
+      "image": "38_left.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 303.6,
+          "e": 304.36
+        },
+        {
+          "w": "am",
+          "s": 304.36,
+          "e": 304.44
+        },
+        {
+          "w": "sorry",
+          "s": 304.44,
+          "e": 305.16
+        },
+        {
+          "w": "I",
+          "s": 305.16,
+          "e": 306.0
+        },
+        {
+          "w": "have",
+          "s": 306.0,
+          "e": 306.12
+        },
+        {
+          "w": "been",
+          "s": 306.12,
+          "e": 306.12
+        },
+        {
+          "w": "blind",
+          "s": 306.12,
+          "e": 306.12
+        },
+        {
+          "w": "to",
+          "s": 306.12,
+          "e": 306.24
+        },
+        {
+          "w": "my",
+          "s": 306.24,
+          "e": 306.6
+        },
+        {
+          "w": "own",
+          "s": 306.6,
+          "e": 307.04
+        },
+        {
+          "w": "flaws",
+          "s": 307.04,
+          "e": 307.64
+        }
+      ]
+    },
+    {
+      "text": "Guanyin: You have taken the first step on the path of redemption. Now, you must make amends for your actions.",
+      "side": "right",
+      "start": 308.38,
+      "end": 317.1,
+      "image": "39_right.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 307.64,
+          "e": 308.52
+        },
+        {
+          "w": "have",
+          "s": 308.52,
+          "e": 309.04
+        },
+        {
+          "w": "taken",
+          "s": 309.04,
+          "e": 309.48
+        },
+        {
+          "w": "the",
+          "s": 309.48,
+          "e": 309.64
+        },
+        {
+          "w": "first",
+          "s": 309.64,
+          "e": 310.28
+        },
+        {
+          "w": "step",
+          "s": 310.28,
+          "e": 310.6
+        },
+        {
+          "w": "on",
+          "s": 310.6,
+          "e": 310.96
+        },
+        {
+          "w": "the",
+          "s": 310.96,
+          "e": 311.08
+        },
+        {
+          "w": "path",
+          "s": 311.08,
+          "e": 311.68
+        },
+        {
+          "w": "of",
+          "s": 311.68,
+          "e": 311.92
+        },
+        {
+          "w": "redemption",
+          "s": 311.92,
+          "e": 312.68
+        },
+        {
+          "w": "Now",
+          "s": 312.68,
+          "e": 313.6
+        },
+        {
+          "w": "you",
+          "s": 313.6,
+          "e": 313.92
+        },
+        {
+          "w": "must",
+          "s": 313.92,
+          "e": 314.24
+        },
+        {
+          "w": "make",
+          "s": 314.24,
+          "e": 314.52
+        },
+        {
+          "w": "amends",
+          "s": 314.52,
+          "e": 315.16
+        },
+        {
+          "w": "for",
+          "s": 315.16,
+          "e": 315.28
+        },
+        {
+          "w": "your",
+          "s": 315.28,
+          "e": 315.76
+        },
+        {
+          "w": "actions",
+          "s": 315.76,
+          "e": 316.36
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Monkey King, with a newfound sense of purpose, joined forces with the gods to bring balance and harmony to the universe.",
+      "side": "left",
+      "start": 317.1,
+      "end": 326.52,
+      "image": "40_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 316.36,
+          "e": 317.2
+        },
+        {
+          "w": "Monkey",
+          "s": 317.2,
+          "e": 317.64
+        },
+        {
+          "w": "King",
+          "s": 317.64,
+          "e": 318.04
+        },
+        {
+          "w": "with",
+          "s": 318.04,
+          "e": 318.8
+        },
+        {
+          "w": "a",
+          "s": 318.8,
+          "e": 318.88
+        },
+        {
+          "w": "newfound",
+          "s": 318.88,
+          "e": 319.56
+        },
+        {
+          "w": "sense",
+          "s": 319.56,
+          "e": 319.88
+        },
+        {
+          "w": "of",
+          "s": 319.88,
+          "e": 320.4
+        },
+        {
+          "w": "purpose",
+          "s": 320.4,
+          "e": 320.68
+        },
+        {
+          "w": "joined",
+          "s": 320.68,
+          "e": 321.6
+        },
+        {
+          "w": "forces",
+          "s": 321.6,
+          "e": 322.24
+        },
+        {
+          "w": "with",
+          "s": 322.24,
+          "e": 322.4
+        },
+        {
+          "w": "the",
+          "s": 322.4,
+          "e": 322.48
+        },
+        {
+          "w": "gods",
+          "s": 322.48,
+          "e": 323.04
+        },
+        {
+          "w": "to",
+          "s": 323.04,
+          "e": 323.24
+        },
+        {
+          "w": "bring",
+          "s": 323.24,
+          "e": 323.52
+        },
+        {
+          "w": "balance",
+          "s": 323.52,
+          "e": 324.08
+        },
+        {
+          "w": "and",
+          "s": 324.08,
+          "e": 324.88
+        },
+        {
+          "w": "harmony",
+          "s": 324.88,
+          "e": 325.16
+        },
+        {
+          "w": "to",
+          "s": 325.16,
+          "e": 325.48
+        },
+        {
+          "w": "the",
+          "s": 325.48,
+          "e": 325.56
+        },
+        {
+          "w": "universe",
+          "s": 325.56,
+          "e": 326.0
+        }
+      ]
+    },
+    {
+      "text": "Narrator: And so, the legend of the Monkey King came full circle.",
+      "side": "right",
+      "start": 326.52,
+      "end": 331.99,
+      "image": "41_right.jpg",
+      "words": [
+        {
+          "w": "And",
+          "s": 326.0,
+          "e": 326.68
+        },
+        {
+          "w": "so",
+          "s": 326.68,
+          "e": 327.08
+        },
+        {
+          "w": "the",
+          "s": 327.08,
+          "e": 328.0
+        },
+        {
+          "w": "legend",
+          "s": 328.0,
+          "e": 328.36
+        },
+        {
+          "w": "of",
+          "s": 328.36,
+          "e": 328.76
+        },
+        {
+          "w": "the",
+          "s": 328.76,
+          "e": 328.84
+        },
+        {
+          "w": "Monkey",
+          "s": 328.84,
+          "e": 329.32
+        },
+        {
+          "w": "King",
+          "s": 329.32,
+          "e": 329.76
+        },
+        {
+          "w": "came",
+          "s": 329.76,
+          "e": 330.36
+        },
+        {
+          "w": "full",
+          "s": 330.36,
+          "e": 330.64
+        },
+        {
+          "w": "circle",
+          "s": 330.64,
+          "e": 331.32
+        }
+      ]
+    },
+    {
+      "text": "Narrator: From his humble beginnings on the Mountain of Flowers and Fruit, to his rise as a great warrior, and finally, to his redemption as a hero of the gods.",
+      "side": "left",
+      "start": 331.99,
+      "end": 343.64,
+      "image": "42_left.jpg",
+      "words": [
+        {
+          "w": "From",
+          "s": 331.32,
+          "e": 332.08
+        },
+        {
+          "w": "his",
+          "s": 332.08,
+          "e": 332.24
+        },
+        {
+          "w": "humble",
+          "s": 332.24,
+          "e": 332.64
+        },
+        {
+          "w": "beginnings",
+          "s": 332.64,
+          "e": 332.92
+        },
+        {
+          "w": "on",
+          "s": 332.92,
+          "e": 333.12
+        },
+        {
+          "w": "the",
+          "s": 333.12,
+          "e": 333.52
+        },
+        {
+          "w": "Mountain",
+          "s": 333.52,
+          "e": 334.08
+        },
+        {
+          "w": "of",
+          "s": 334.08,
+          "e": 334.2
+        },
+        {
+          "w": "Flowers",
+          "s": 334.2,
+          "e": 334.84
+        },
+        {
+          "w": "and",
+          "s": 334.84,
+          "e": 335.04
+        },
+        {
+          "w": "Fruit",
+          "s": 335.04,
+          "e": 335.48
+        },
+        {
+          "w": "to",
+          "s": 335.48,
+          "e": 335.64
+        },
+        {
+          "w": "his",
+          "s": 335.64,
+          "e": 336.24
+        },
+        {
+          "w": "rise",
+          "s": 336.24,
+          "e": 336.92
+        },
+        {
+          "w": "as",
+          "s": 336.92,
+          "e": 337.08
+        },
+        {
+          "w": "a",
+          "s": 337.08,
+          "e": 337.24
+        },
+        {
+          "w": "great",
+          "s": 337.24,
+          "e": 337.56
+        },
+        {
+          "w": "warrior",
+          "s": 337.56,
+          "e": 338.32
+        },
+        {
+          "w": "and",
+          "s": 338.32,
+          "e": 339.24
+        },
+        {
+          "w": "finally",
+          "s": 339.24,
+          "e": 339.84
+        },
+        {
+          "w": "to",
+          "s": 339.84,
+          "e": 340.08
+        },
+        {
+          "w": "his",
+          "s": 340.08,
+          "e": 340.68
+        },
+        {
+          "w": "redemption",
+          "s": 340.68,
+          "e": 341.36
+        },
+        {
+          "w": "as",
+          "s": 341.36,
+          "e": 341.52
+        },
+        {
+          "w": "a",
+          "s": 341.52,
+          "e": 341.68
+        },
+        {
+          "w": "hero",
+          "s": 341.68,
+          "e": 341.92
+        },
+        {
+          "w": "of",
+          "s": 341.92,
+          "e": 342.24
+        },
+        {
+          "w": "the",
+          "s": 342.24,
+          "e": 342.36
+        },
+        {
+          "w": "gods",
+          "s": 342.36,
+          "e": 343.04
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The wind whispers secrets to the trees, and the trees lean in, their leaves rustling with an otherworldly language.",
+      "side": "right",
+      "start": 343.64,
+      "end": 352.55,
+      "image": "43_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 343.04,
+          "e": 343.16
+        },
+        {
+          "w": "wind",
+          "s": 343.16,
+          "e": 344.28
+        },
+        {
+          "w": "whispers",
+          "s": 344.28,
+          "e": 344.68
+        },
+        {
+          "w": "secrets",
+          "s": 344.68,
+          "e": 345.48
+        },
+        {
+          "w": "to",
+          "s": 345.48,
+          "e": 345.68
+        },
+        {
+          "w": "the",
+          "s": 345.68,
+          "e": 345.68
+        },
+        {
+          "w": "trees",
+          "s": 345.68,
+          "e": 346.28
+        },
+        {
+          "w": "and",
+          "s": 346.28,
+          "e": 346.6
+        },
+        {
+          "w": "the",
+          "s": 346.6,
+          "e": 347.08
+        },
+        {
+          "w": "trees",
+          "s": 347.08,
+          "e": 347.64
+        },
+        {
+          "w": "lean",
+          "s": 347.64,
+          "e": 347.92
+        },
+        {
+          "w": "in",
+          "s": 347.92,
+          "e": 348.8
+        },
+        {
+          "w": "their",
+          "s": 348.8,
+          "e": 348.92
+        },
+        {
+          "w": "leaves",
+          "s": 348.92,
+          "e": 349.48
+        },
+        {
+          "w": "rustling",
+          "s": 349.48,
+          "e": 350.12
+        },
+        {
+          "w": "with",
+          "s": 350.12,
+          "e": 350.4
+        },
+        {
+          "w": "an",
+          "s": 350.4,
+          "e": 350.48
+        },
+        {
+          "w": "otherworldly",
+          "s": 350.48,
+          "e": 351.24
+        },
+        {
+          "w": "language",
+          "s": 351.24,
+          "e": 351.84
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The Monkey King's story is told and retold, a reminder of the power of compassion and the true meaning of greatness.",
+      "side": "left",
+      "start": 352.55,
+      "end": 360.43,
+      "image": "44_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 351.84,
+          "e": 352.0
+        },
+        {
+          "w": "Monkey",
+          "s": 352.0,
+          "e": 352.92
+        },
+        {
+          "w": "King's",
+          "s": 352.92,
+          "e": 353.44
+        },
+        {
+          "w": "story",
+          "s": 353.44,
+          "e": 353.8
+        },
+        {
+          "w": "is",
+          "s": 353.8,
+          "e": 354.04
+        },
+        {
+          "w": "told",
+          "s": 354.04,
+          "e": 354.52
+        },
+        {
+          "w": "and",
+          "s": 354.52,
+          "e": 354.92
+        },
+        {
+          "w": "retold",
+          "s": 354.92,
+          "e": 355.28
+        },
+        {
+          "w": "a",
+          "s": 355.28,
+          "e": 355.4
+        },
+        {
+          "w": "reminder",
+          "s": 355.4,
+          "e": 356.4
+        },
+        {
+          "w": "of",
+          "s": 356.4,
+          "e": 356.6
+        },
+        {
+          "w": "the",
+          "s": 356.6,
+          "e": 356.72
+        },
+        {
+          "w": "power",
+          "s": 356.72,
+          "e": 357.2
+        },
+        {
+          "w": "of",
+          "s": 357.2,
+          "e": 357.52
+        },
+        {
+          "w": "compassion",
+          "s": 357.52,
+          "e": 357.96
+        },
+        {
+          "w": "and",
+          "s": 357.96,
+          "e": 358.08
+        },
+        {
+          "w": "the",
+          "s": 358.08,
+          "e": 358.32
+        },
+        {
+          "w": "true",
+          "s": 358.32,
+          "e": 358.72
+        },
+        {
+          "w": "meaning",
+          "s": 358.72,
+          "e": 358.88
+        },
+        {
+          "w": "of",
+          "s": 358.88,
+          "e": 359.16
+        },
+        {
+          "w": "greatness",
+          "s": 359.16,
+          "e": 360.4
+        }
+      ]
+    }
+  ]
+}
