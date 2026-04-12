@@ -1,0 +1,5044 @@
+{
+  "title": "Urashima Taro",
+  "author": "Japanese Folklore",
+  "cover": "cover.jpeg",
+  "audio": "audio.mp3",
+  "youtube": "https://youtu.be/onJ9pmyHO0U",
+  "content": [
+    {
+      "text": "Narrator: In the quaint fishing village of Suminoya, where the salty sea air mingled with the sweet scent of cherry blossoms, a young fisherman named Urashima Taro dwelled.",
+      "side": "right",
+      "start": 0.0,
+      "end": 12.67,
+      "image": "1_right.jpg",
+      "words": [
+        {
+          "w": "In",
+          "s": 0.0,
+          "e": 0.2
+        },
+        {
+          "w": "the",
+          "s": 0.2,
+          "e": 0.2
+        },
+        {
+          "w": "quaint",
+          "s": 0.2,
+          "e": 0.56
+        },
+        {
+          "w": "fishing",
+          "s": 0.56,
+          "e": 0.92
+        },
+        {
+          "w": "village",
+          "s": 0.92,
+          "e": 1.28
+        },
+        {
+          "w": "of",
+          "s": 1.28,
+          "e": 1.36
+        },
+        {
+          "w": "Suminoya",
+          "s": 1.36,
+          "e": 1.76
+        },
+        {
+          "w": "where",
+          "s": 1.76,
+          "e": 2.64
+        },
+        {
+          "w": "the",
+          "s": 2.64,
+          "e": 3.0
+        },
+        {
+          "w": "salty",
+          "s": 3.0,
+          "e": 3.48
+        },
+        {
+          "w": "sea",
+          "s": 3.48,
+          "e": 3.92
+        },
+        {
+          "w": "air",
+          "s": 3.92,
+          "e": 4.24
+        },
+        {
+          "w": "mingled",
+          "s": 4.24,
+          "e": 4.72
+        },
+        {
+          "w": "with",
+          "s": 4.72,
+          "e": 4.88
+        },
+        {
+          "w": "the",
+          "s": 4.88,
+          "e": 5.0
+        },
+        {
+          "w": "sweet",
+          "s": 5.0,
+          "e": 5.36
+        },
+        {
+          "w": "scent",
+          "s": 5.36,
+          "e": 5.8
+        },
+        {
+          "w": "of",
+          "s": 5.8,
+          "e": 5.92
+        },
+        {
+          "w": "cherry",
+          "s": 5.92,
+          "e": 6.36
+        },
+        {
+          "w": "blossoms",
+          "s": 6.36,
+          "e": 7.2
+        },
+        {
+          "w": "a",
+          "s": 7.2,
+          "e": 7.88
+        },
+        {
+          "w": "young",
+          "s": 7.88,
+          "e": 8.24
+        },
+        {
+          "w": "fisherman",
+          "s": 8.24,
+          "e": 8.72
+        },
+        {
+          "w": "named",
+          "s": 8.72,
+          "e": 9.72
+        },
+        {
+          "w": "Urashima",
+          "s": 9.72,
+          "e": 10.64
+        },
+        {
+          "w": "Taro",
+          "s": 10.64,
+          "e": 11.76
+        },
+        {
+          "w": "dwelled",
+          "s": 11.76,
+          "e": 12.64
+        }
+      ]
+    },
+    {
+      "text": "Narrator: His eyes, like the ocean's depths, held a quiet wisdom, a reflection of the countless days spent listening to the waves.",
+      "side": "left",
+      "start": 12.67,
+      "end": 23.86,
+      "image": "2_left.jpg",
+      "words": [
+        {
+          "w": "His",
+          "s": 12.64,
+          "e": 12.88
+        },
+        {
+          "w": "eyes",
+          "s": 12.88,
+          "e": 14.04
+        },
+        {
+          "w": "like",
+          "s": 14.04,
+          "e": 14.32
+        },
+        {
+          "w": "the",
+          "s": 14.32,
+          "e": 14.64
+        },
+        {
+          "w": "ocean's",
+          "s": 14.64,
+          "e": 15.2
+        },
+        {
+          "w": "depths",
+          "s": 15.2,
+          "e": 16.4
+        },
+        {
+          "w": "held",
+          "s": 16.4,
+          "e": 16.72
+        },
+        {
+          "w": "a",
+          "s": 16.72,
+          "e": 16.72
+        },
+        {
+          "w": "quiet",
+          "s": 16.72,
+          "e": 17.24
+        },
+        {
+          "w": "wisdom",
+          "s": 17.24,
+          "e": 18.0
+        },
+        {
+          "w": "a",
+          "s": 18.0,
+          "e": 18.64
+        },
+        {
+          "w": "reflection",
+          "s": 18.64,
+          "e": 19.48
+        },
+        {
+          "w": "of",
+          "s": 19.48,
+          "e": 19.48
+        },
+        {
+          "w": "the",
+          "s": 19.48,
+          "e": 19.68
+        },
+        {
+          "w": "countless",
+          "s": 19.68,
+          "e": 20.4
+        },
+        {
+          "w": "days",
+          "s": 20.4,
+          "e": 20.96
+        },
+        {
+          "w": "spent",
+          "s": 20.96,
+          "e": 21.68
+        },
+        {
+          "w": "listening",
+          "s": 21.68,
+          "e": 22.28
+        },
+        {
+          "w": "to",
+          "s": 22.28,
+          "e": 22.4
+        },
+        {
+          "w": "the",
+          "s": 22.4,
+          "e": 22.56
+        },
+        {
+          "w": "waves",
+          "s": 22.56,
+          "e": 23.84
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: Mother, I must go out to sea today. The tide is favorable, and the fish are plentiful.",
+      "side": "right",
+      "start": 23.86,
+      "end": 31.19,
+      "image": "3_right.jpg",
+      "words": [
+        {
+          "w": "Mother",
+          "s": 23.84,
+          "e": 24.68
+        },
+        {
+          "w": "I",
+          "s": 24.68,
+          "e": 24.84
+        },
+        {
+          "w": "must",
+          "s": 24.84,
+          "e": 25.16
+        },
+        {
+          "w": "go",
+          "s": 25.16,
+          "e": 25.24
+        },
+        {
+          "w": "out",
+          "s": 25.24,
+          "e": 25.8
+        },
+        {
+          "w": "to",
+          "s": 25.8,
+          "e": 25.84
+        },
+        {
+          "w": "sea",
+          "s": 25.84,
+          "e": 25.96
+        },
+        {
+          "w": "today",
+          "s": 25.96,
+          "e": 26.2
+        },
+        {
+          "w": "The",
+          "s": 26.2,
+          "e": 26.96
+        },
+        {
+          "w": "tide",
+          "s": 26.96,
+          "e": 27.44
+        },
+        {
+          "w": "is",
+          "s": 27.44,
+          "e": 27.48
+        },
+        {
+          "w": "favorable",
+          "s": 27.48,
+          "e": 28.56
+        },
+        {
+          "w": "and",
+          "s": 28.56,
+          "e": 28.72
+        },
+        {
+          "w": "the",
+          "s": 28.72,
+          "e": 28.96
+        },
+        {
+          "w": "fish",
+          "s": 28.96,
+          "e": 29.52
+        },
+        {
+          "w": "are",
+          "s": 29.52,
+          "e": 29.8
+        },
+        {
+          "w": "plentiful",
+          "s": 29.8,
+          "e": 30.6
+        }
+      ]
+    },
+    {
+      "text": "Mother: Taro, be careful. The sea can be a cruel mistress. Don't stray too far from shore.",
+      "side": "left",
+      "start": 31.19,
+      "end": 38.73,
+      "image": "4_left.jpg",
+      "words": [
+        {
+          "w": "Taro",
+          "s": 30.6,
+          "e": 31.76
+        },
+        {
+          "w": "be",
+          "s": 31.76,
+          "e": 32.6
+        },
+        {
+          "w": "careful",
+          "s": 32.6,
+          "e": 33.16
+        },
+        {
+          "w": "The",
+          "s": 33.16,
+          "e": 33.16
+        },
+        {
+          "w": "sea",
+          "s": 33.16,
+          "e": 34.2
+        },
+        {
+          "w": "can",
+          "s": 34.2,
+          "e": 34.44
+        },
+        {
+          "w": "be",
+          "s": 34.44,
+          "e": 34.68
+        },
+        {
+          "w": "a",
+          "s": 34.68,
+          "e": 34.68
+        },
+        {
+          "w": "cruel",
+          "s": 34.68,
+          "e": 35.08
+        },
+        {
+          "w": "mistress",
+          "s": 35.08,
+          "e": 36.36
+        },
+        {
+          "w": "Don't",
+          "s": 36.36,
+          "e": 36.6
+        },
+        {
+          "w": "stray",
+          "s": 36.6,
+          "e": 36.92
+        },
+        {
+          "w": "too",
+          "s": 36.92,
+          "e": 37.12
+        },
+        {
+          "w": "far",
+          "s": 37.12,
+          "e": 37.44
+        },
+        {
+          "w": "from",
+          "s": 37.44,
+          "e": 37.64
+        },
+        {
+          "w": "shore",
+          "s": 37.64,
+          "e": 38.72
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As Urashima Taro pushed his boat into the waves, the creaking of the wooden hull echoed through the still morning air.",
+      "side": "right",
+      "start": 38.73,
+      "end": 46.15,
+      "image": "5_right.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 38.72,
+          "e": 38.96
+        },
+        {
+          "w": "Urashima",
+          "s": 38.96,
+          "e": 39.52
+        },
+        {
+          "w": "Taro",
+          "s": 39.52,
+          "e": 40.08
+        },
+        {
+          "w": "pushed",
+          "s": 40.08,
+          "e": 40.44
+        },
+        {
+          "w": "his",
+          "s": 40.44,
+          "e": 40.6
+        },
+        {
+          "w": "boat",
+          "s": 40.6,
+          "e": 40.64
+        },
+        {
+          "w": "into",
+          "s": 40.64,
+          "e": 41.0
+        },
+        {
+          "w": "the",
+          "s": 41.0,
+          "e": 41.16
+        },
+        {
+          "w": "waves",
+          "s": 41.16,
+          "e": 41.8
+        },
+        {
+          "w": "the",
+          "s": 41.8,
+          "e": 42.2
+        },
+        {
+          "w": "creaking",
+          "s": 42.2,
+          "e": 42.72
+        },
+        {
+          "w": "of",
+          "s": 42.72,
+          "e": 42.8
+        },
+        {
+          "w": "the",
+          "s": 42.8,
+          "e": 42.96
+        },
+        {
+          "w": "wooden",
+          "s": 42.96,
+          "e": 43.24
+        },
+        {
+          "w": "hull",
+          "s": 43.24,
+          "e": 43.8
+        },
+        {
+          "w": "echoed",
+          "s": 43.8,
+          "e": 44.16
+        },
+        {
+          "w": "through",
+          "s": 44.16,
+          "e": 44.36
+        },
+        {
+          "w": "the",
+          "s": 44.36,
+          "e": 44.4
+        },
+        {
+          "w": "still",
+          "s": 44.4,
+          "e": 44.84
+        },
+        {
+          "w": "morning",
+          "s": 44.84,
+          "e": 45.28
+        },
+        {
+          "w": "air",
+          "s": 45.28,
+          "e": 45.6
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The sun cast its golden light upon the water, creating a dappled pathway for him to follow.",
+      "side": "left",
+      "start": 46.15,
+      "end": 52.0,
+      "image": "6_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 45.6,
+          "e": 46.24
+        },
+        {
+          "w": "sun",
+          "s": 46.24,
+          "e": 46.68
+        },
+        {
+          "w": "cast",
+          "s": 46.68,
+          "e": 47.12
+        },
+        {
+          "w": "its",
+          "s": 47.12,
+          "e": 47.28
+        },
+        {
+          "w": "golden",
+          "s": 47.28,
+          "e": 47.64
+        },
+        {
+          "w": "light",
+          "s": 47.64,
+          "e": 47.96
+        },
+        {
+          "w": "upon",
+          "s": 47.96,
+          "e": 48.04
+        },
+        {
+          "w": "the",
+          "s": 48.04,
+          "e": 48.24
+        },
+        {
+          "w": "water",
+          "s": 48.24,
+          "e": 48.8
+        },
+        {
+          "w": "creating",
+          "s": 48.8,
+          "e": 49.56
+        },
+        {
+          "w": "a",
+          "s": 49.56,
+          "e": 49.8
+        },
+        {
+          "w": "dappled",
+          "s": 49.8,
+          "e": 50.04
+        },
+        {
+          "w": "pathway",
+          "s": 50.04,
+          "e": 50.92
+        },
+        {
+          "w": "for",
+          "s": 50.92,
+          "e": 51.44
+        },
+        {
+          "w": "him",
+          "s": 51.44,
+          "e": 51.44
+        },
+        {
+          "w": "to",
+          "s": 51.44,
+          "e": 51.44
+        },
+        {
+          "w": "follow",
+          "s": 51.44,
+          "e": 51.44
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Schools of silvery fish darted beneath the surface, their gentle ripples disturbing the otherwise glassy calm.",
+      "side": "right",
+      "start": 52.0,
+      "end": 58.96,
+      "image": "7_right.jpg",
+      "words": [
+        {
+          "w": "Schools",
+          "s": 51.44,
+          "e": 52.6
+        },
+        {
+          "w": "of",
+          "s": 52.6,
+          "e": 52.64
+        },
+        {
+          "w": "silvery",
+          "s": 52.64,
+          "e": 53.24
+        },
+        {
+          "w": "fish",
+          "s": 53.24,
+          "e": 53.8
+        },
+        {
+          "w": "darted",
+          "s": 53.8,
+          "e": 54.32
+        },
+        {
+          "w": "beneath",
+          "s": 54.32,
+          "e": 54.32
+        },
+        {
+          "w": "the",
+          "s": 54.32,
+          "e": 54.56
+        },
+        {
+          "w": "surface",
+          "s": 54.56,
+          "e": 55.32
+        },
+        {
+          "w": "their",
+          "s": 55.32,
+          "e": 55.64
+        },
+        {
+          "w": "gentle",
+          "s": 55.64,
+          "e": 56.2
+        },
+        {
+          "w": "ripples",
+          "s": 56.2,
+          "e": 56.44
+        },
+        {
+          "w": "disturbing",
+          "s": 56.44,
+          "e": 56.92
+        },
+        {
+          "w": "the",
+          "s": 56.92,
+          "e": 57.16
+        },
+        {
+          "w": "otherwise",
+          "s": 57.16,
+          "e": 57.64
+        },
+        {
+          "w": "glassy",
+          "s": 57.64,
+          "e": 58.0
+        },
+        {
+          "w": "calm",
+          "s": 58.0,
+          "e": 58.4
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: Ah, what a glorious day to be alive!",
+      "side": "left",
+      "start": 58.96,
+      "end": 62.02,
+      "image": "8_left.jpg",
+      "words": [
+        {
+          "w": "Ah",
+          "s": 58.4,
+          "e": 59.32
+        },
+        {
+          "w": "what",
+          "s": 59.32,
+          "e": 59.68
+        },
+        {
+          "w": "a",
+          "s": 59.68,
+          "e": 60.08
+        },
+        {
+          "w": "glorious",
+          "s": 60.08,
+          "e": 60.48
+        },
+        {
+          "w": "day",
+          "s": 60.48,
+          "e": 60.48
+        },
+        {
+          "w": "to",
+          "s": 60.48,
+          "e": 60.48
+        },
+        {
+          "w": "be",
+          "s": 60.48,
+          "e": 61.0
+        },
+        {
+          "w": "alive",
+          "s": 61.0,
+          "e": 61.48
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Hours passed, and the sun began its slow descent toward the horizon. The air grew heavy with the scent of salt and seaweed.",
+      "side": "right",
+      "start": 62.02,
+      "end": 70.5,
+      "image": "9_right.jpg",
+      "words": [
+        {
+          "w": "Hours",
+          "s": 61.48,
+          "e": 62.44
+        },
+        {
+          "w": "passed",
+          "s": 62.44,
+          "e": 63.04
+        },
+        {
+          "w": "and",
+          "s": 63.04,
+          "e": 63.04
+        },
+        {
+          "w": "the",
+          "s": 63.04,
+          "e": 63.52
+        },
+        {
+          "w": "sun",
+          "s": 63.52,
+          "e": 64.2
+        },
+        {
+          "w": "began",
+          "s": 64.2,
+          "e": 64.6
+        },
+        {
+          "w": "its",
+          "s": 64.6,
+          "e": 64.6
+        },
+        {
+          "w": "slow",
+          "s": 64.6,
+          "e": 65.04
+        },
+        {
+          "w": "descent",
+          "s": 65.04,
+          "e": 65.52
+        },
+        {
+          "w": "toward",
+          "s": 65.52,
+          "e": 65.84
+        },
+        {
+          "w": "the",
+          "s": 65.84,
+          "e": 65.84
+        },
+        {
+          "w": "horizon",
+          "s": 65.84,
+          "e": 66.6
+        },
+        {
+          "w": "The",
+          "s": 66.6,
+          "e": 66.6
+        },
+        {
+          "w": "air",
+          "s": 66.6,
+          "e": 67.56
+        },
+        {
+          "w": "grew",
+          "s": 67.56,
+          "e": 67.72
+        },
+        {
+          "w": "heavy",
+          "s": 67.72,
+          "e": 68.12
+        },
+        {
+          "w": "with",
+          "s": 68.12,
+          "e": 68.24
+        },
+        {
+          "w": "the",
+          "s": 68.24,
+          "e": 68.24
+        },
+        {
+          "w": "scent",
+          "s": 68.24,
+          "e": 68.72
+        },
+        {
+          "w": "of",
+          "s": 68.72,
+          "e": 68.72
+        },
+        {
+          "w": "salt",
+          "s": 68.72,
+          "e": 69.2
+        },
+        {
+          "w": "and",
+          "s": 69.2,
+          "e": 69.32
+        },
+        {
+          "w": "seaweed",
+          "s": 69.32,
+          "e": 69.92
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As the stars began to twinkle in the darkening sky, Urashima Taro spotted a tortoise swimming alongside his boat.",
+      "side": "left",
+      "start": 70.5,
+      "end": 78.67,
+      "image": "10_left.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 69.92,
+          "e": 70.68
+        },
+        {
+          "w": "the",
+          "s": 70.68,
+          "e": 70.76
+        },
+        {
+          "w": "stars",
+          "s": 70.76,
+          "e": 71.48
+        },
+        {
+          "w": "began",
+          "s": 71.48,
+          "e": 71.8
+        },
+        {
+          "w": "to",
+          "s": 71.8,
+          "e": 71.96
+        },
+        {
+          "w": "twinkle",
+          "s": 71.96,
+          "e": 72.6
+        },
+        {
+          "w": "in",
+          "s": 72.6,
+          "e": 72.68
+        },
+        {
+          "w": "the",
+          "s": 72.68,
+          "e": 72.92
+        },
+        {
+          "w": "darkening",
+          "s": 72.92,
+          "e": 73.16
+        },
+        {
+          "w": "sky",
+          "s": 73.16,
+          "e": 73.84
+        },
+        {
+          "w": "Urashima",
+          "s": 73.84,
+          "e": 74.76
+        },
+        {
+          "w": "Taro",
+          "s": 74.76,
+          "e": 75.36
+        },
+        {
+          "w": "spotted",
+          "s": 75.36,
+          "e": 75.56
+        },
+        {
+          "w": "a",
+          "s": 75.56,
+          "e": 76.0
+        },
+        {
+          "w": "tortoise",
+          "s": 76.0,
+          "e": 76.56
+        },
+        {
+          "w": "swimming",
+          "s": 76.56,
+          "e": 76.88
+        },
+        {
+          "w": "alongside",
+          "s": 76.88,
+          "e": 77.56
+        },
+        {
+          "w": "his",
+          "s": 77.56,
+          "e": 77.76
+        },
+        {
+          "w": "boat",
+          "s": 77.76,
+          "e": 78.12
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: A tortoise! What brings you so far from shore?",
+      "side": "right",
+      "start": 78.67,
+      "end": 82.74,
+      "image": "11_right.jpg",
+      "words": [
+        {
+          "w": "A",
+          "s": 78.12,
+          "e": 78.84
+        },
+        {
+          "w": "tortoise",
+          "s": 78.84,
+          "e": 78.88
+        },
+        {
+          "w": "What",
+          "s": 78.88,
+          "e": 79.28
+        },
+        {
+          "w": "brings",
+          "s": 79.28,
+          "e": 79.52
+        },
+        {
+          "w": "you",
+          "s": 79.52,
+          "e": 80.68
+        },
+        {
+          "w": "so",
+          "s": 80.68,
+          "e": 81.0
+        },
+        {
+          "w": "far",
+          "s": 81.0,
+          "e": 81.44
+        },
+        {
+          "w": "from",
+          "s": 81.44,
+          "e": 81.6
+        },
+        {
+          "w": "shore",
+          "s": 81.6,
+          "e": 82.16
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The tortoise regarded him with wise, ancient eyes, its shell glistening in the fading light.",
+      "side": "left",
+      "start": 82.74,
+      "end": 89.28,
+      "image": "12_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 82.16,
+          "e": 82.84
+        },
+        {
+          "w": "tortoise",
+          "s": 82.84,
+          "e": 83.4
+        },
+        {
+          "w": "regarded",
+          "s": 83.4,
+          "e": 83.72
+        },
+        {
+          "w": "him",
+          "s": 83.72,
+          "e": 83.96
+        },
+        {
+          "w": "with",
+          "s": 83.96,
+          "e": 84.16
+        },
+        {
+          "w": "wise",
+          "s": 84.16,
+          "e": 84.8
+        },
+        {
+          "w": "ancient",
+          "s": 84.8,
+          "e": 85.4
+        },
+        {
+          "w": "eyes",
+          "s": 85.4,
+          "e": 86.08
+        },
+        {
+          "w": "its",
+          "s": 86.08,
+          "e": 86.36
+        },
+        {
+          "w": "shell",
+          "s": 86.36,
+          "e": 87.12
+        },
+        {
+          "w": "glistening",
+          "s": 87.12,
+          "e": 87.64
+        },
+        {
+          "w": "in",
+          "s": 87.64,
+          "e": 87.76
+        },
+        {
+          "w": "the",
+          "s": 87.76,
+          "e": 87.8
+        },
+        {
+          "w": "fading",
+          "s": 87.8,
+          "e": 88.28
+        },
+        {
+          "w": "light",
+          "s": 88.28,
+          "e": 88.72
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: I must take you aboard. You seem lost.",
+      "side": "right",
+      "start": 89.28,
+      "end": 92.71,
+      "image": "13_right.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 88.72,
+          "e": 89.44
+        },
+        {
+          "w": "must",
+          "s": 89.44,
+          "e": 89.72
+        },
+        {
+          "w": "take",
+          "s": 89.72,
+          "e": 89.96
+        },
+        {
+          "w": "you",
+          "s": 89.96,
+          "e": 90.32
+        },
+        {
+          "w": "aboard",
+          "s": 90.32,
+          "e": 90.64
+        },
+        {
+          "w": "You",
+          "s": 90.64,
+          "e": 90.64
+        },
+        {
+          "w": "seem",
+          "s": 90.64,
+          "e": 90.68
+        },
+        {
+          "w": "lost",
+          "s": 90.68,
+          "e": 91.76
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As he reached out to scoop up the tortoise, the creature spoke in a low, rumbling voice.",
+      "side": "left",
+      "start": 92.71,
+      "end": 98.46,
+      "image": "14_left.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 91.76,
+          "e": 92.16
+        },
+        {
+          "w": "he",
+          "s": 92.16,
+          "e": 93.0
+        },
+        {
+          "w": "reached",
+          "s": 93.0,
+          "e": 93.28
+        },
+        {
+          "w": "out",
+          "s": 93.28,
+          "e": 93.44
+        },
+        {
+          "w": "to",
+          "s": 93.44,
+          "e": 93.72
+        },
+        {
+          "w": "scoop",
+          "s": 93.72,
+          "e": 93.92
+        },
+        {
+          "w": "up",
+          "s": 93.92,
+          "e": 94.08
+        },
+        {
+          "w": "the",
+          "s": 94.08,
+          "e": 94.24
+        },
+        {
+          "w": "tortoise",
+          "s": 94.24,
+          "e": 94.76
+        },
+        {
+          "w": "the",
+          "s": 94.76,
+          "e": 95.4
+        },
+        {
+          "w": "creature",
+          "s": 95.4,
+          "e": 95.6
+        },
+        {
+          "w": "spoke",
+          "s": 95.6,
+          "e": 95.96
+        },
+        {
+          "w": "in",
+          "s": 95.96,
+          "e": 96.16
+        },
+        {
+          "w": "a",
+          "s": 96.16,
+          "e": 96.44
+        },
+        {
+          "w": "low",
+          "s": 96.44,
+          "e": 96.84
+        },
+        {
+          "w": "rumbling",
+          "s": 96.84,
+          "e": 97.36
+        },
+        {
+          "w": "voice",
+          "s": 97.36,
+          "e": 97.96
+        }
+      ]
+    },
+    {
+      "text": "Tortoise: Young fisherman, I am no ordinary tortoise. I am a messenger from the underwater palace of the Dragon King.",
+      "side": "right",
+      "start": 98.46,
+      "end": 109.78,
+      "image": "15_right.jpg",
+      "words": [
+        {
+          "w": "Young",
+          "s": 97.96,
+          "e": 98.8
+        },
+        {
+          "w": "fisherman",
+          "s": 98.8,
+          "e": 99.8
+        },
+        {
+          "w": "I",
+          "s": 99.8,
+          "e": 101.08
+        },
+        {
+          "w": "am",
+          "s": 101.08,
+          "e": 101.4
+        },
+        {
+          "w": "no",
+          "s": 101.4,
+          "e": 101.68
+        },
+        {
+          "w": "ordinary",
+          "s": 101.68,
+          "e": 102.2
+        },
+        {
+          "w": "tortoise",
+          "s": 102.2,
+          "e": 102.92
+        },
+        {
+          "w": "I",
+          "s": 102.92,
+          "e": 104.08
+        },
+        {
+          "w": "am",
+          "s": 104.08,
+          "e": 104.24
+        },
+        {
+          "w": "a",
+          "s": 104.24,
+          "e": 104.32
+        },
+        {
+          "w": "messenger",
+          "s": 104.32,
+          "e": 105.2
+        },
+        {
+          "w": "from",
+          "s": 105.2,
+          "e": 105.48
+        },
+        {
+          "w": "the",
+          "s": 105.48,
+          "e": 105.8
+        },
+        {
+          "w": "underwater",
+          "s": 105.8,
+          "e": 106.68
+        },
+        {
+          "w": "palace",
+          "s": 106.68,
+          "e": 107.4
+        },
+        {
+          "w": "of",
+          "s": 107.4,
+          "e": 107.76
+        },
+        {
+          "w": "the",
+          "s": 107.76,
+          "e": 108.04
+        },
+        {
+          "w": "Dragon",
+          "s": 108.04,
+          "e": 108.68
+        },
+        {
+          "w": "King",
+          "s": 108.68,
+          "e": 109.2
+        }
+      ]
+    },
+    {
+      "text": "Tortoise: You have shown kindness to one of his subjects, and as a reward, you are invited to join us beneath the waves.",
+      "side": "left",
+      "start": 109.78,
+      "end": 119.24,
+      "image": "16_left.jpg",
+      "words": [
+        {
+          "w": "You",
+          "s": 109.2,
+          "e": 109.92
+        },
+        {
+          "w": "have",
+          "s": 109.92,
+          "e": 110.12
+        },
+        {
+          "w": "shown",
+          "s": 110.12,
+          "e": 110.64
+        },
+        {
+          "w": "kindness",
+          "s": 110.64,
+          "e": 111.4
+        },
+        {
+          "w": "to",
+          "s": 111.4,
+          "e": 111.56
+        },
+        {
+          "w": "one",
+          "s": 111.56,
+          "e": 111.84
+        },
+        {
+          "w": "of",
+          "s": 111.84,
+          "e": 111.84
+        },
+        {
+          "w": "his",
+          "s": 111.84,
+          "e": 111.92
+        },
+        {
+          "w": "subjects",
+          "s": 111.92,
+          "e": 113.0
+        },
+        {
+          "w": "and",
+          "s": 113.0,
+          "e": 113.52
+        },
+        {
+          "w": "as",
+          "s": 113.52,
+          "e": 113.6
+        },
+        {
+          "w": "a",
+          "s": 113.6,
+          "e": 114.08
+        },
+        {
+          "w": "reward",
+          "s": 114.08,
+          "e": 114.92
+        },
+        {
+          "w": "you",
+          "s": 114.92,
+          "e": 115.12
+        },
+        {
+          "w": "are",
+          "s": 115.12,
+          "e": 116.16
+        },
+        {
+          "w": "invited",
+          "s": 116.16,
+          "e": 116.52
+        },
+        {
+          "w": "to",
+          "s": 116.52,
+          "e": 116.64
+        },
+        {
+          "w": "join",
+          "s": 116.64,
+          "e": 116.96
+        },
+        {
+          "w": "us",
+          "s": 116.96,
+          "e": 117.32
+        },
+        {
+          "w": "beneath",
+          "s": 117.32,
+          "e": 117.68
+        },
+        {
+          "w": "the",
+          "s": 117.68,
+          "e": 117.72
+        },
+        {
+          "w": "waves",
+          "s": 117.72,
+          "e": 118.64
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: The underwater palace? I've heard tales, but I never thought...",
+      "side": "right",
+      "start": 119.24,
+      "end": 124.66,
+      "image": "17_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 118.64,
+          "e": 118.64
+        },
+        {
+          "w": "underwater",
+          "s": 118.64,
+          "e": 120.4
+        },
+        {
+          "w": "palace",
+          "s": 120.4,
+          "e": 120.88
+        },
+        {
+          "w": "I've",
+          "s": 120.88,
+          "e": 122.0
+        },
+        {
+          "w": "heard",
+          "s": 122.0,
+          "e": 122.0
+        },
+        {
+          "w": "tales",
+          "s": 122.0,
+          "e": 122.56
+        },
+        {
+          "w": "but",
+          "s": 122.56,
+          "e": 122.92
+        },
+        {
+          "w": "I",
+          "s": 122.92,
+          "e": 123.32
+        },
+        {
+          "w": "never",
+          "s": 123.32,
+          "e": 123.76
+        },
+        {
+          "w": "thought",
+          "s": 123.76,
+          "e": 124.08
+        }
+      ]
+    },
+    {
+      "text": "Tortoise: Come, and you shall see wonders beyond your wildest dreams.",
+      "side": "left",
+      "start": 124.66,
+      "end": 130.83,
+      "image": "18_left.jpg",
+      "words": [
+        {
+          "w": "Come",
+          "s": 124.08,
+          "e": 125.04
+        },
+        {
+          "w": "and",
+          "s": 125.04,
+          "e": 125.24
+        },
+        {
+          "w": "you",
+          "s": 125.24,
+          "e": 126.36
+        },
+        {
+          "w": "shall",
+          "s": 126.36,
+          "e": 126.76
+        },
+        {
+          "w": "see",
+          "s": 126.76,
+          "e": 127.28
+        },
+        {
+          "w": "wonders",
+          "s": 127.28,
+          "e": 128.08
+        },
+        {
+          "w": "beyond",
+          "s": 128.08,
+          "e": 128.48
+        },
+        {
+          "w": "your",
+          "s": 128.48,
+          "e": 128.76
+        },
+        {
+          "w": "wildest",
+          "s": 128.76,
+          "e": 129.36
+        },
+        {
+          "w": "dreams",
+          "s": 129.36,
+          "e": 130.24
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The tortoise dove into the depths, beckoning Urashima Taro to follow. The young fisherman hesitated, his heart pounding in his chest, but his curiosity proved stronger.",
+      "side": "right",
+      "start": 130.83,
+      "end": 142.93,
+      "image": "19_right.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 130.24,
+          "e": 130.96
+        },
+        {
+          "w": "tortoise",
+          "s": 130.96,
+          "e": 131.44
+        },
+        {
+          "w": "dove",
+          "s": 131.44,
+          "e": 131.92
+        },
+        {
+          "w": "into",
+          "s": 131.92,
+          "e": 132.36
+        },
+        {
+          "w": "the",
+          "s": 132.36,
+          "e": 132.6
+        },
+        {
+          "w": "depths",
+          "s": 132.6,
+          "e": 133.04
+        },
+        {
+          "w": "beckoning",
+          "s": 133.04,
+          "e": 133.8
+        },
+        {
+          "w": "Urashima",
+          "s": 133.8,
+          "e": 134.48
+        },
+        {
+          "w": "Taro",
+          "s": 134.48,
+          "e": 135.16
+        },
+        {
+          "w": "to",
+          "s": 135.16,
+          "e": 135.28
+        },
+        {
+          "w": "follow",
+          "s": 135.28,
+          "e": 135.92
+        },
+        {
+          "w": "The",
+          "s": 135.92,
+          "e": 135.92
+        },
+        {
+          "w": "young",
+          "s": 135.92,
+          "e": 136.84
+        },
+        {
+          "w": "fisherman",
+          "s": 136.84,
+          "e": 137.32
+        },
+        {
+          "w": "hesitated",
+          "s": 137.32,
+          "e": 137.88
+        },
+        {
+          "w": "his",
+          "s": 137.88,
+          "e": 138.12
+        },
+        {
+          "w": "heart",
+          "s": 138.12,
+          "e": 138.92
+        },
+        {
+          "w": "pounding",
+          "s": 138.92,
+          "e": 139.32
+        },
+        {
+          "w": "in",
+          "s": 139.32,
+          "e": 139.48
+        },
+        {
+          "w": "his",
+          "s": 139.48,
+          "e": 139.64
+        },
+        {
+          "w": "chest",
+          "s": 139.64,
+          "e": 140.16
+        },
+        {
+          "w": "but",
+          "s": 140.16,
+          "e": 140.72
+        },
+        {
+          "w": "his",
+          "s": 140.72,
+          "e": 140.72
+        },
+        {
+          "w": "curiosity",
+          "s": 140.72,
+          "e": 141.52
+        },
+        {
+          "w": "proved",
+          "s": 141.52,
+          "e": 141.72
+        },
+        {
+          "w": "stronger",
+          "s": 141.72,
+          "e": 142.4
+        }
+      ]
+    },
+    {
+      "text": "Narrator: He took a deep breath and plunged into the unknown.",
+      "side": "left",
+      "start": 142.93,
+      "end": 146.35,
+      "image": "20_left.jpg",
+      "words": [
+        {
+          "w": "He",
+          "s": 142.4,
+          "e": 143.04
+        },
+        {
+          "w": "took",
+          "s": 143.04,
+          "e": 143.2
+        },
+        {
+          "w": "a",
+          "s": 143.2,
+          "e": 143.44
+        },
+        {
+          "w": "deep",
+          "s": 143.44,
+          "e": 143.68
+        },
+        {
+          "w": "breath",
+          "s": 143.68,
+          "e": 144.2
+        },
+        {
+          "w": "and",
+          "s": 144.2,
+          "e": 144.28
+        },
+        {
+          "w": "plunged",
+          "s": 144.28,
+          "e": 144.76
+        },
+        {
+          "w": "into",
+          "s": 144.76,
+          "e": 145.04
+        },
+        {
+          "w": "the",
+          "s": 145.04,
+          "e": 145.32
+        },
+        {
+          "w": "unknown",
+          "s": 145.32,
+          "e": 145.84
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Down, down he descended, the water pressure building in his ears, until he felt as though he'd entered a realm beyond the mortal world.",
+      "side": "right",
+      "start": 146.35,
+      "end": 155.31,
+      "image": "21_right.jpg",
+      "words": [
+        {
+          "w": "Down",
+          "s": 145.84,
+          "e": 146.96
+        },
+        {
+          "w": "down",
+          "s": 146.96,
+          "e": 147.32
+        },
+        {
+          "w": "he",
+          "s": 147.32,
+          "e": 147.32
+        },
+        {
+          "w": "descended",
+          "s": 147.32,
+          "e": 147.96
+        },
+        {
+          "w": "the",
+          "s": 147.96,
+          "e": 148.28
+        },
+        {
+          "w": "water",
+          "s": 148.28,
+          "e": 149.16
+        },
+        {
+          "w": "pressure",
+          "s": 149.16,
+          "e": 149.6
+        },
+        {
+          "w": "building",
+          "s": 149.6,
+          "e": 149.76
+        },
+        {
+          "w": "in",
+          "s": 149.76,
+          "e": 150.0
+        },
+        {
+          "w": "his",
+          "s": 150.0,
+          "e": 150.64
+        },
+        {
+          "w": "ears",
+          "s": 150.64,
+          "e": 151.04
+        },
+        {
+          "w": "until",
+          "s": 151.04,
+          "e": 151.52
+        },
+        {
+          "w": "he",
+          "s": 151.52,
+          "e": 151.56
+        },
+        {
+          "w": "felt",
+          "s": 151.56,
+          "e": 152.08
+        },
+        {
+          "w": "as",
+          "s": 152.08,
+          "e": 152.08
+        },
+        {
+          "w": "though",
+          "s": 152.08,
+          "e": 152.28
+        },
+        {
+          "w": "he'd",
+          "s": 152.28,
+          "e": 152.36
+        },
+        {
+          "w": "entered",
+          "s": 152.36,
+          "e": 152.64
+        },
+        {
+          "w": "a",
+          "s": 152.64,
+          "e": 153.0
+        },
+        {
+          "w": "realm",
+          "s": 153.0,
+          "e": 153.4
+        },
+        {
+          "w": "beyond",
+          "s": 153.4,
+          "e": 153.84
+        },
+        {
+          "w": "the",
+          "s": 153.84,
+          "e": 153.84
+        },
+        {
+          "w": "mortal",
+          "s": 153.84,
+          "e": 153.96
+        },
+        {
+          "w": "world",
+          "s": 153.96,
+          "e": 154.72
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The darkness was illuminated by a soft, ethereal glow emanating from the palace walls.",
+      "side": "left",
+      "start": 155.31,
+      "end": 161.67,
+      "image": "22_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 154.72,
+          "e": 155.44
+        },
+        {
+          "w": "darkness",
+          "s": 155.44,
+          "e": 156.0
+        },
+        {
+          "w": "was",
+          "s": 156.0,
+          "e": 156.28
+        },
+        {
+          "w": "illuminated",
+          "s": 156.28,
+          "e": 156.84
+        },
+        {
+          "w": "by",
+          "s": 156.84,
+          "e": 157.0
+        },
+        {
+          "w": "a",
+          "s": 157.0,
+          "e": 157.0
+        },
+        {
+          "w": "soft",
+          "s": 157.0,
+          "e": 157.64
+        },
+        {
+          "w": "ethereal",
+          "s": 157.64,
+          "e": 158.36
+        },
+        {
+          "w": "glow",
+          "s": 158.36,
+          "e": 158.96
+        },
+        {
+          "w": "emanating",
+          "s": 158.96,
+          "e": 159.76
+        },
+        {
+          "w": "from",
+          "s": 159.76,
+          "e": 159.92
+        },
+        {
+          "w": "the",
+          "s": 159.92,
+          "e": 160.08
+        },
+        {
+          "w": "palace",
+          "s": 160.08,
+          "e": 160.56
+        },
+        {
+          "w": "walls",
+          "s": 160.56,
+          "e": 161.16
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: By the gods...",
+      "side": "right",
+      "start": 161.67,
+      "end": 163.24,
+      "image": "23_right.jpg",
+      "words": [
+        {
+          "w": "By",
+          "s": 161.16,
+          "e": 161.92
+        },
+        {
+          "w": "the",
+          "s": 161.92,
+          "e": 162.08
+        },
+        {
+          "w": "gods",
+          "s": 162.08,
+          "e": 162.72
+        }
+      ]
+    },
+    {
+      "text": "Narrator: Schools of rainbow-tailed fish darted past him, their scales shimmering like diamonds in the soft light. The palace gates, made of coral and pearl, swung open with a gentle creak.",
+      "side": "left",
+      "start": 163.24,
+      "end": 175.67,
+      "image": "24_left.jpg",
+      "words": [
+        {
+          "w": "Schools",
+          "s": 162.72,
+          "e": 163.92
+        },
+        {
+          "w": "of",
+          "s": 163.92,
+          "e": 163.96
+        },
+        {
+          "w": "rainbowtailed",
+          "s": 163.96,
+          "e": 164.8
+        },
+        {
+          "w": "fish",
+          "s": 164.8,
+          "e": 165.4
+        },
+        {
+          "w": "darted",
+          "s": 165.4,
+          "e": 165.92
+        },
+        {
+          "w": "past",
+          "s": 165.92,
+          "e": 166.28
+        },
+        {
+          "w": "him",
+          "s": 166.28,
+          "e": 166.56
+        },
+        {
+          "w": "their",
+          "s": 166.56,
+          "e": 166.92
+        },
+        {
+          "w": "scales",
+          "s": 166.92,
+          "e": 167.6
+        },
+        {
+          "w": "shimmering",
+          "s": 167.6,
+          "e": 168.28
+        },
+        {
+          "w": "like",
+          "s": 168.28,
+          "e": 168.6
+        },
+        {
+          "w": "diamonds",
+          "s": 168.6,
+          "e": 169.2
+        },
+        {
+          "w": "in",
+          "s": 169.2,
+          "e": 169.24
+        },
+        {
+          "w": "the",
+          "s": 169.24,
+          "e": 169.24
+        },
+        {
+          "w": "soft",
+          "s": 169.24,
+          "e": 169.68
+        },
+        {
+          "w": "light",
+          "s": 169.68,
+          "e": 170.04
+        },
+        {
+          "w": "The",
+          "s": 170.04,
+          "e": 170.72
+        },
+        {
+          "w": "palace",
+          "s": 170.72,
+          "e": 171.12
+        },
+        {
+          "w": "gates",
+          "s": 171.12,
+          "e": 171.56
+        },
+        {
+          "w": "made",
+          "s": 171.56,
+          "e": 171.92
+        },
+        {
+          "w": "of",
+          "s": 171.92,
+          "e": 171.92
+        },
+        {
+          "w": "coral",
+          "s": 171.92,
+          "e": 172.36
+        },
+        {
+          "w": "and",
+          "s": 172.36,
+          "e": 172.48
+        },
+        {
+          "w": "pearl",
+          "s": 172.48,
+          "e": 173.0
+        },
+        {
+          "w": "swung",
+          "s": 173.0,
+          "e": 173.8
+        },
+        {
+          "w": "open",
+          "s": 173.8,
+          "e": 174.32
+        },
+        {
+          "w": "with",
+          "s": 174.32,
+          "e": 174.32
+        },
+        {
+          "w": "a",
+          "s": 174.32,
+          "e": 174.32
+        },
+        {
+          "w": "gentle",
+          "s": 174.32,
+          "e": 174.76
+        },
+        {
+          "w": "creak",
+          "s": 174.76,
+          "e": 175.12
+        }
+      ]
+    },
+    {
+      "text": "Tortoise: Welcome, Urashima Taro, to the underwater palace.",
+      "side": "right",
+      "start": 175.67,
+      "end": 181.56,
+      "image": "25_right.jpg",
+      "words": [
+        {
+          "w": "Welcome",
+          "s": 175.12,
+          "e": 176.52
+        },
+        {
+          "w": "Urashima",
+          "s": 176.52,
+          "e": 177.52
+        },
+        {
+          "w": "Taro",
+          "s": 177.52,
+          "e": 178.32
+        },
+        {
+          "w": "to",
+          "s": 178.32,
+          "e": 179.4
+        },
+        {
+          "w": "the",
+          "s": 179.4,
+          "e": 179.64
+        },
+        {
+          "w": "underwater",
+          "s": 179.64,
+          "e": 180.64
+        },
+        {
+          "w": "palace",
+          "s": 180.64,
+          "e": 181.0
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The young fisherman stepped into a grand hall filled with wonders: glittering jewels, delicate sea fans, and the majestic form of the Dragon King himself.",
+      "side": "left",
+      "start": 181.56,
+      "end": 192.7,
+      "image": "26_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 181.0,
+          "e": 181.52
+        },
+        {
+          "w": "young",
+          "s": 181.52,
+          "e": 181.96
+        },
+        {
+          "w": "fisherman",
+          "s": 181.96,
+          "e": 182.48
+        },
+        {
+          "w": "stepped",
+          "s": 182.48,
+          "e": 182.8
+        },
+        {
+          "w": "into",
+          "s": 182.8,
+          "e": 183.28
+        },
+        {
+          "w": "a",
+          "s": 183.28,
+          "e": 183.28
+        },
+        {
+          "w": "grand",
+          "s": 183.28,
+          "e": 183.64
+        },
+        {
+          "w": "hall",
+          "s": 183.64,
+          "e": 184.12
+        },
+        {
+          "w": "filled",
+          "s": 184.12,
+          "e": 184.52
+        },
+        {
+          "w": "with",
+          "s": 184.52,
+          "e": 184.72
+        },
+        {
+          "w": "wonders",
+          "s": 184.72,
+          "e": 185.36
+        },
+        {
+          "w": "glittering",
+          "s": 185.36,
+          "e": 186.44
+        },
+        {
+          "w": "jewels",
+          "s": 186.44,
+          "e": 187.12
+        },
+        {
+          "w": "delicate",
+          "s": 187.12,
+          "e": 187.76
+        },
+        {
+          "w": "sea",
+          "s": 187.76,
+          "e": 188.16
+        },
+        {
+          "w": "fans",
+          "s": 188.16,
+          "e": 188.88
+        },
+        {
+          "w": "and",
+          "s": 188.88,
+          "e": 189.64
+        },
+        {
+          "w": "the",
+          "s": 189.64,
+          "e": 189.64
+        },
+        {
+          "w": "majestic",
+          "s": 189.64,
+          "e": 190.08
+        },
+        {
+          "w": "form",
+          "s": 190.08,
+          "e": 190.56
+        },
+        {
+          "w": "of",
+          "s": 190.56,
+          "e": 190.6
+        },
+        {
+          "w": "the",
+          "s": 190.6,
+          "e": 190.72
+        },
+        {
+          "w": "Dragon",
+          "s": 190.72,
+          "e": 191.28
+        },
+        {
+          "w": "King",
+          "s": 191.28,
+          "e": 191.52
+        },
+        {
+          "w": "himself",
+          "s": 191.52,
+          "e": 192.12
+        }
+      ]
+    },
+    {
+      "text": "Dragon King: Urashima Taro, you have shown kindness to one of my subjects. As a reward, I offer you the hand of my daughter, the lovely Otohime.",
+      "side": "right",
+      "start": 192.7,
+      "end": 204.43,
+      "image": "27_right.jpg",
+      "words": [
+        {
+          "w": "Urashima",
+          "s": 192.12,
+          "e": 193.36
+        },
+        {
+          "w": "Taro",
+          "s": 193.36,
+          "e": 194.0
+        },
+        {
+          "w": "you",
+          "s": 194.0,
+          "e": 194.04
+        },
+        {
+          "w": "have",
+          "s": 194.04,
+          "e": 194.88
+        },
+        {
+          "w": "shown",
+          "s": 194.88,
+          "e": 195.28
+        },
+        {
+          "w": "kindness",
+          "s": 195.28,
+          "e": 196.16
+        },
+        {
+          "w": "to",
+          "s": 196.16,
+          "e": 196.16
+        },
+        {
+          "w": "one",
+          "s": 196.16,
+          "e": 196.96
+        },
+        {
+          "w": "of",
+          "s": 196.96,
+          "e": 196.96
+        },
+        {
+          "w": "my",
+          "s": 196.96,
+          "e": 197.12
+        },
+        {
+          "w": "subjects",
+          "s": 197.12,
+          "e": 197.96
+        },
+        {
+          "w": "As",
+          "s": 197.96,
+          "e": 198.72
+        },
+        {
+          "w": "a",
+          "s": 198.72,
+          "e": 198.88
+        },
+        {
+          "w": "reward",
+          "s": 198.88,
+          "e": 199.32
+        },
+        {
+          "w": "I",
+          "s": 199.32,
+          "e": 199.56
+        },
+        {
+          "w": "offer",
+          "s": 199.56,
+          "e": 200.2
+        },
+        {
+          "w": "you",
+          "s": 200.2,
+          "e": 200.52
+        },
+        {
+          "w": "the",
+          "s": 200.52,
+          "e": 200.6
+        },
+        {
+          "w": "hand",
+          "s": 200.6,
+          "e": 201.2
+        },
+        {
+          "w": "of",
+          "s": 201.2,
+          "e": 201.2
+        },
+        {
+          "w": "my",
+          "s": 201.2,
+          "e": 201.48
+        },
+        {
+          "w": "daughter",
+          "s": 201.48,
+          "e": 202.12
+        },
+        {
+          "w": "the",
+          "s": 202.12,
+          "e": 202.16
+        },
+        {
+          "w": "lovely",
+          "s": 202.16,
+          "e": 202.72
+        },
+        {
+          "w": "Otohime",
+          "s": 202.72,
+          "e": 203.0
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: I... I am but a humble fisherman. I am not worthy of such an honor.",
+      "side": "left",
+      "start": 204.43,
+      "end": 210.5,
+      "image": "28_left.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 203.0,
+          "e": 203.28
+        },
+        {
+          "w": "I",
+          "s": 203.28,
+          "e": 203.72
+        },
+        {
+          "w": "am",
+          "s": 203.72,
+          "e": 203.88
+        },
+        {
+          "w": "but",
+          "s": 203.88,
+          "e": 203.88
+        },
+        {
+          "w": "a",
+          "s": 203.88,
+          "e": 203.88
+        },
+        {
+          "w": "humble",
+          "s": 203.88,
+          "e": 205.12
+        },
+        {
+          "w": "fisherman",
+          "s": 205.12,
+          "e": 206.08
+        },
+        {
+          "w": "I",
+          "s": 206.08,
+          "e": 206.24
+        },
+        {
+          "w": "am",
+          "s": 206.24,
+          "e": 206.6
+        },
+        {
+          "w": "not",
+          "s": 206.6,
+          "e": 206.88
+        },
+        {
+          "w": "worthy",
+          "s": 206.88,
+          "e": 207.24
+        },
+        {
+          "w": "of",
+          "s": 207.24,
+          "e": 207.52
+        },
+        {
+          "w": "such",
+          "s": 207.52,
+          "e": 208.56
+        },
+        {
+          "w": "an",
+          "s": 208.56,
+          "e": 208.84
+        },
+        {
+          "w": "honor",
+          "s": 208.84,
+          "e": 209.16
+        }
+      ]
+    },
+    {
+      "text": "Otohime: Father, I wish to know this mortal better. May I show him the wonders of our realm?",
+      "side": "right",
+      "start": 210.5,
+      "end": 217.03,
+      "image": "29_right.jpg",
+      "words": [
+        {
+          "w": "Father",
+          "s": 209.16,
+          "e": 209.92
+        },
+        {
+          "w": "I",
+          "s": 209.92,
+          "e": 211.32
+        },
+        {
+          "w": "wish",
+          "s": 211.32,
+          "e": 212.12
+        },
+        {
+          "w": "to",
+          "s": 212.12,
+          "e": 212.12
+        },
+        {
+          "w": "know",
+          "s": 212.12,
+          "e": 212.48
+        },
+        {
+          "w": "this",
+          "s": 212.48,
+          "e": 212.68
+        },
+        {
+          "w": "mortal",
+          "s": 212.68,
+          "e": 212.96
+        },
+        {
+          "w": "better",
+          "s": 212.96,
+          "e": 213.2
+        },
+        {
+          "w": "May",
+          "s": 213.2,
+          "e": 213.36
+        },
+        {
+          "w": "I",
+          "s": 213.36,
+          "e": 213.4
+        },
+        {
+          "w": "show",
+          "s": 213.4,
+          "e": 213.72
+        },
+        {
+          "w": "him",
+          "s": 213.72,
+          "e": 215.0
+        },
+        {
+          "w": "the",
+          "s": 215.0,
+          "e": 215.28
+        },
+        {
+          "w": "wonders",
+          "s": 215.28,
+          "e": 215.84
+        },
+        {
+          "w": "of",
+          "s": 215.84,
+          "e": 215.84
+        },
+        {
+          "w": "our",
+          "s": 215.84,
+          "e": 216.04
+        },
+        {
+          "w": "realm",
+          "s": 216.04,
+          "e": 216.48
+        }
+      ]
+    },
+    {
+      "text": "Dragon King: Very well, my child. Take Urashima Taro on a tour of our kingdom.",
+      "side": "left",
+      "start": 217.03,
+      "end": 224.39,
+      "image": "30_left.jpg",
+      "words": [
+        {
+          "w": "Very",
+          "s": 216.48,
+          "e": 217.36
+        },
+        {
+          "w": "well",
+          "s": 217.36,
+          "e": 217.76
+        },
+        {
+          "w": "my",
+          "s": 217.76,
+          "e": 218.6
+        },
+        {
+          "w": "child",
+          "s": 218.6,
+          "e": 219.04
+        },
+        {
+          "w": "Take",
+          "s": 219.04,
+          "e": 220.32
+        },
+        {
+          "w": "Urashima",
+          "s": 220.32,
+          "e": 221.24
+        },
+        {
+          "w": "Taro",
+          "s": 221.24,
+          "e": 221.92
+        },
+        {
+          "w": "on",
+          "s": 221.92,
+          "e": 222.56
+        },
+        {
+          "w": "a",
+          "s": 222.56,
+          "e": 222.68
+        },
+        {
+          "w": "tour",
+          "s": 222.68,
+          "e": 223.12
+        },
+        {
+          "w": "of",
+          "s": 223.12,
+          "e": 223.36
+        },
+        {
+          "w": "our",
+          "s": 223.36,
+          "e": 223.36
+        },
+        {
+          "w": "kingdom",
+          "s": 223.36,
+          "e": 223.6
+        }
+      ]
+    },
+    {
+      "text": "Narrator: And so, Urashima Taro spent three enchanted years beneath the waves, exploring the wonders of the underwater realm with Otohime by his side.",
+      "side": "right",
+      "start": 224.39,
+      "end": 234.97,
+      "image": "31_right.jpg",
+      "words": [
+        {
+          "w": "And",
+          "s": 223.6,
+          "e": 223.84
+        },
+        {
+          "w": "so",
+          "s": 223.84,
+          "e": 225.04
+        },
+        {
+          "w": "Urashima",
+          "s": 225.04,
+          "e": 225.92
+        },
+        {
+          "w": "Taro",
+          "s": 225.92,
+          "e": 226.36
+        },
+        {
+          "w": "spent",
+          "s": 226.36,
+          "e": 226.76
+        },
+        {
+          "w": "three",
+          "s": 226.76,
+          "e": 227.32
+        },
+        {
+          "w": "enchanted",
+          "s": 227.32,
+          "e": 227.72
+        },
+        {
+          "w": "years",
+          "s": 227.72,
+          "e": 228.2
+        },
+        {
+          "w": "beneath",
+          "s": 228.2,
+          "e": 228.68
+        },
+        {
+          "w": "the",
+          "s": 228.68,
+          "e": 228.72
+        },
+        {
+          "w": "waves",
+          "s": 228.72,
+          "e": 229.44
+        },
+        {
+          "w": "exploring",
+          "s": 229.44,
+          "e": 230.36
+        },
+        {
+          "w": "the",
+          "s": 230.36,
+          "e": 230.52
+        },
+        {
+          "w": "wonders",
+          "s": 230.52,
+          "e": 231.08
+        },
+        {
+          "w": "of",
+          "s": 231.08,
+          "e": 231.12
+        },
+        {
+          "w": "the",
+          "s": 231.12,
+          "e": 231.44
+        },
+        {
+          "w": "underwater",
+          "s": 231.44,
+          "e": 232.0
+        },
+        {
+          "w": "realm",
+          "s": 232.0,
+          "e": 232.44
+        },
+        {
+          "w": "with",
+          "s": 232.44,
+          "e": 232.72
+        },
+        {
+          "w": "Otohime",
+          "s": 232.72,
+          "e": 233.48
+        },
+        {
+          "w": "by",
+          "s": 233.48,
+          "e": 233.64
+        },
+        {
+          "w": "his",
+          "s": 233.64,
+          "e": 233.8
+        },
+        {
+          "w": "side",
+          "s": 233.8,
+          "e": 234.4
+        }
+      ]
+    },
+    {
+      "text": "Narrator: They danced under the starlight, their footsteps echoing through the empty halls. They laughed and loved, their joy infectious, spreading throughout the palace.",
+      "side": "left",
+      "start": 234.97,
+      "end": 245.64,
+      "image": "32_left.jpg",
+      "words": [
+        {
+          "w": "They",
+          "s": 234.4,
+          "e": 235.16
+        },
+        {
+          "w": "danced",
+          "s": 235.16,
+          "e": 235.56
+        },
+        {
+          "w": "under",
+          "s": 235.56,
+          "e": 235.84
+        },
+        {
+          "w": "the",
+          "s": 235.84,
+          "e": 235.84
+        },
+        {
+          "w": "starlight",
+          "s": 235.84,
+          "e": 236.56
+        },
+        {
+          "w": "their",
+          "s": 236.56,
+          "e": 236.76
+        },
+        {
+          "w": "footsteps",
+          "s": 236.76,
+          "e": 237.8
+        },
+        {
+          "w": "echoing",
+          "s": 237.8,
+          "e": 238.32
+        },
+        {
+          "w": "through",
+          "s": 238.32,
+          "e": 238.48
+        },
+        {
+          "w": "the",
+          "s": 238.48,
+          "e": 238.8
+        },
+        {
+          "w": "empty",
+          "s": 238.8,
+          "e": 238.84
+        },
+        {
+          "w": "halls",
+          "s": 238.84,
+          "e": 239.68
+        },
+        {
+          "w": "They",
+          "s": 239.68,
+          "e": 240.4
+        },
+        {
+          "w": "laughed",
+          "s": 240.4,
+          "e": 240.76
+        },
+        {
+          "w": "and",
+          "s": 240.76,
+          "e": 241.0
+        },
+        {
+          "w": "loved",
+          "s": 241.0,
+          "e": 241.56
+        },
+        {
+          "w": "their",
+          "s": 241.56,
+          "e": 242.04
+        },
+        {
+          "w": "joy",
+          "s": 242.04,
+          "e": 242.48
+        },
+        {
+          "w": "infectious",
+          "s": 242.48,
+          "e": 243.24
+        },
+        {
+          "w": "spreading",
+          "s": 243.24,
+          "e": 243.96
+        },
+        {
+          "w": "throughout",
+          "s": 243.96,
+          "e": 244.4
+        },
+        {
+          "w": "the",
+          "s": 244.4,
+          "e": 244.56
+        },
+        {
+          "w": "palace",
+          "s": 244.56,
+          "e": 245.16
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: Otohime, I never knew happiness could be so complete.",
+      "side": "right",
+      "start": 245.64,
+      "end": 250.32,
+      "image": "33_right.jpg",
+      "words": [
+        {
+          "w": "Otohime",
+          "s": 245.16,
+          "e": 246.24
+        },
+        {
+          "w": "I",
+          "s": 246.24,
+          "e": 246.96
+        },
+        {
+          "w": "never",
+          "s": 246.96,
+          "e": 247.56
+        },
+        {
+          "w": "knew",
+          "s": 247.56,
+          "e": 247.88
+        },
+        {
+          "w": "happiness",
+          "s": 247.88,
+          "e": 248.28
+        },
+        {
+          "w": "could",
+          "s": 248.28,
+          "e": 248.56
+        },
+        {
+          "w": "be",
+          "s": 248.56,
+          "e": 248.68
+        },
+        {
+          "w": "so",
+          "s": 248.68,
+          "e": 249.2
+        },
+        {
+          "w": "complete",
+          "s": 249.2,
+          "e": 249.72
+        }
+      ]
+    },
+    {
+      "text": "Otohime: My love, you have brought light into our world. I fear that one day you may wish to return to your own world.",
+      "side": "left",
+      "start": 250.32,
+      "end": 258.9,
+      "image": "34_left.jpg",
+      "words": [
+        {
+          "w": "My",
+          "s": 249.72,
+          "e": 250.64
+        },
+        {
+          "w": "love",
+          "s": 250.64,
+          "e": 251.12
+        },
+        {
+          "w": "you",
+          "s": 251.12,
+          "e": 251.92
+        },
+        {
+          "w": "have",
+          "s": 251.92,
+          "e": 252.32
+        },
+        {
+          "w": "brought",
+          "s": 252.32,
+          "e": 252.72
+        },
+        {
+          "w": "light",
+          "s": 252.72,
+          "e": 252.8
+        },
+        {
+          "w": "into",
+          "s": 252.8,
+          "e": 252.96
+        },
+        {
+          "w": "our",
+          "s": 252.96,
+          "e": 253.28
+        },
+        {
+          "w": "world",
+          "s": 253.28,
+          "e": 253.64
+        },
+        {
+          "w": "I",
+          "s": 253.64,
+          "e": 254.32
+        },
+        {
+          "w": "fear",
+          "s": 254.32,
+          "e": 254.76
+        },
+        {
+          "w": "that",
+          "s": 254.76,
+          "e": 254.96
+        },
+        {
+          "w": "one",
+          "s": 254.96,
+          "e": 255.36
+        },
+        {
+          "w": "day",
+          "s": 255.36,
+          "e": 255.36
+        },
+        {
+          "w": "you",
+          "s": 255.36,
+          "e": 255.36
+        },
+        {
+          "w": "may",
+          "s": 255.36,
+          "e": 255.72
+        },
+        {
+          "w": "wish",
+          "s": 255.72,
+          "e": 256.32
+        },
+        {
+          "w": "to",
+          "s": 256.32,
+          "e": 256.6
+        },
+        {
+          "w": "return",
+          "s": 256.6,
+          "e": 257.0
+        },
+        {
+          "w": "to",
+          "s": 257.0,
+          "e": 257.44
+        },
+        {
+          "w": "your",
+          "s": 257.44,
+          "e": 257.84
+        },
+        {
+          "w": "own",
+          "s": 257.84,
+          "e": 258.32
+        },
+        {
+          "w": "world",
+          "s": 258.32,
+          "e": 259.24
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: Never. I am content here, with you by my side.",
+      "side": "right",
+      "start": 258.9,
+      "end": 263.96,
+      "image": "35_right.jpg",
+      "words": [
+        {
+          "w": "Never",
+          "s": 259.24,
+          "e": 259.64
+        },
+        {
+          "w": "I",
+          "s": 259.64,
+          "e": 260.52
+        },
+        {
+          "w": "am",
+          "s": 260.52,
+          "e": 260.88
+        },
+        {
+          "w": "content",
+          "s": 260.88,
+          "e": 261.12
+        },
+        {
+          "w": "here",
+          "s": 261.12,
+          "e": 261.48
+        },
+        {
+          "w": "with",
+          "s": 261.48,
+          "e": 262.12
+        },
+        {
+          "w": "you",
+          "s": 262.12,
+          "e": 262.28
+        },
+        {
+          "w": "by",
+          "s": 262.28,
+          "e": 262.52
+        },
+        {
+          "w": "my",
+          "s": 262.52,
+          "e": 263.0
+        },
+        {
+          "w": "side",
+          "s": 263.0,
+          "e": 263.4
+        }
+      ]
+    },
+    {
+      "text": "Narrator: But as the days passed, a pang of longing began to gnaw at Urashima Taro's heart. He missed his mother, his friends, and the familiar rhythms of his village.",
+      "side": "left",
+      "start": 263.96,
+      "end": 275.93,
+      "image": "36_left.jpg",
+      "words": [
+        {
+          "w": "But",
+          "s": 263.4,
+          "e": 263.4
+        },
+        {
+          "w": "as",
+          "s": 263.4,
+          "e": 264.28
+        },
+        {
+          "w": "the",
+          "s": 264.28,
+          "e": 264.44
+        },
+        {
+          "w": "days",
+          "s": 264.44,
+          "e": 264.8
+        },
+        {
+          "w": "passed",
+          "s": 264.8,
+          "e": 265.48
+        },
+        {
+          "w": "a",
+          "s": 265.48,
+          "e": 265.52
+        },
+        {
+          "w": "pang",
+          "s": 265.52,
+          "e": 266.0
+        },
+        {
+          "w": "of",
+          "s": 266.0,
+          "e": 266.48
+        },
+        {
+          "w": "longing",
+          "s": 266.48,
+          "e": 267.2
+        },
+        {
+          "w": "began",
+          "s": 267.2,
+          "e": 267.56
+        },
+        {
+          "w": "to",
+          "s": 267.56,
+          "e": 267.72
+        },
+        {
+          "w": "gnaw",
+          "s": 267.72,
+          "e": 268.28
+        },
+        {
+          "w": "at",
+          "s": 268.28,
+          "e": 268.52
+        },
+        {
+          "w": "Urashima",
+          "s": 268.52,
+          "e": 269.24
+        },
+        {
+          "w": "Taro's",
+          "s": 269.24,
+          "e": 269.72
+        },
+        {
+          "w": "heart",
+          "s": 269.72,
+          "e": 270.0
+        },
+        {
+          "w": "He",
+          "s": 270.0,
+          "e": 270.16
+        },
+        {
+          "w": "missed",
+          "s": 270.16,
+          "e": 271.08
+        },
+        {
+          "w": "his",
+          "s": 271.08,
+          "e": 271.24
+        },
+        {
+          "w": "mother",
+          "s": 271.24,
+          "e": 271.44
+        },
+        {
+          "w": "his",
+          "s": 271.44,
+          "e": 271.44
+        },
+        {
+          "w": "friends",
+          "s": 271.44,
+          "e": 272.12
+        },
+        {
+          "w": "and",
+          "s": 272.12,
+          "e": 272.84
+        },
+        {
+          "w": "the",
+          "s": 272.84,
+          "e": 273.24
+        },
+        {
+          "w": "familiar",
+          "s": 273.24,
+          "e": 273.88
+        },
+        {
+          "w": "rhythms",
+          "s": 273.88,
+          "e": 274.08
+        },
+        {
+          "w": "of",
+          "s": 274.08,
+          "e": 274.24
+        },
+        {
+          "w": "his",
+          "s": 274.24,
+          "e": 274.84
+        },
+        {
+          "w": "village",
+          "s": 274.84,
+          "e": 275.36
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: Otohime, I... I must return to my world.",
+      "side": "right",
+      "start": 275.93,
+      "end": 280.14,
+      "image": "37_right.jpg",
+      "words": [
+        {
+          "w": "Otohime",
+          "s": 275.36,
+          "e": 276.16
+        },
+        {
+          "w": "I",
+          "s": 276.16,
+          "e": 276.68
+        },
+        {
+          "w": "I",
+          "s": 276.68,
+          "e": 277.36
+        },
+        {
+          "w": "must",
+          "s": 277.36,
+          "e": 278.08
+        },
+        {
+          "w": "return",
+          "s": 278.08,
+          "e": 278.56
+        },
+        {
+          "w": "to",
+          "s": 278.56,
+          "e": 278.92
+        },
+        {
+          "w": "my",
+          "s": 278.92,
+          "e": 279.56
+        },
+        {
+          "w": "world",
+          "s": 279.56,
+          "e": 279.56
+        }
+      ]
+    },
+    {
+      "text": "Otohime: I knew this day would come. Take this box as a gift, but do not open it, no matter what happens.",
+      "side": "left",
+      "start": 280.14,
+      "end": 288.58,
+      "image": "38_left.jpg",
+      "words": [
+        {
+          "w": "I",
+          "s": 279.56,
+          "e": 280.2
+        },
+        {
+          "w": "knew",
+          "s": 280.2,
+          "e": 280.6
+        },
+        {
+          "w": "this",
+          "s": 280.6,
+          "e": 280.84
+        },
+        {
+          "w": "day",
+          "s": 280.84,
+          "e": 281.12
+        },
+        {
+          "w": "would",
+          "s": 281.12,
+          "e": 281.36
+        },
+        {
+          "w": "come",
+          "s": 281.36,
+          "e": 281.72
+        },
+        {
+          "w": "Take",
+          "s": 281.72,
+          "e": 282.52
+        },
+        {
+          "w": "this",
+          "s": 282.52,
+          "e": 282.88
+        },
+        {
+          "w": "box",
+          "s": 282.88,
+          "e": 283.36
+        },
+        {
+          "w": "as",
+          "s": 283.36,
+          "e": 283.56
+        },
+        {
+          "w": "a",
+          "s": 283.56,
+          "e": 283.8
+        },
+        {
+          "w": "gift",
+          "s": 283.8,
+          "e": 284.24
+        },
+        {
+          "w": "but",
+          "s": 284.24,
+          "e": 284.4
+        },
+        {
+          "w": "do",
+          "s": 284.4,
+          "e": 284.68
+        },
+        {
+          "w": "not",
+          "s": 284.68,
+          "e": 285.04
+        },
+        {
+          "w": "open",
+          "s": 285.04,
+          "e": 285.52
+        },
+        {
+          "w": "it",
+          "s": 285.52,
+          "e": 285.76
+        },
+        {
+          "w": "no",
+          "s": 285.76,
+          "e": 286.12
+        },
+        {
+          "w": "matter",
+          "s": 286.12,
+          "e": 286.96
+        },
+        {
+          "w": "what",
+          "s": 286.96,
+          "e": 287.36
+        },
+        {
+          "w": "happens",
+          "s": 287.36,
+          "e": 287.68
+        }
+      ]
+    },
+    {
+      "text": "Narrator: With a heavy heart, Urashima Taro bid farewell to the underwater palace and its inhabitants.",
+      "side": "right",
+      "start": 288.58,
+      "end": 295.87,
+      "image": "39_right.jpg",
+      "words": [
+        {
+          "w": "With",
+          "s": 287.68,
+          "e": 288.04
+        },
+        {
+          "w": "a",
+          "s": 288.04,
+          "e": 288.56
+        },
+        {
+          "w": "heavy",
+          "s": 288.56,
+          "e": 289.04
+        },
+        {
+          "w": "heart",
+          "s": 289.04,
+          "e": 289.72
+        },
+        {
+          "w": "Urashima",
+          "s": 289.72,
+          "e": 290.64
+        },
+        {
+          "w": "Taro",
+          "s": 290.64,
+          "e": 291.16
+        },
+        {
+          "w": "bid",
+          "s": 291.16,
+          "e": 291.4
+        },
+        {
+          "w": "farewell",
+          "s": 291.4,
+          "e": 292.2
+        },
+        {
+          "w": "to",
+          "s": 292.2,
+          "e": 292.36
+        },
+        {
+          "w": "the",
+          "s": 292.36,
+          "e": 292.56
+        },
+        {
+          "w": "underwater",
+          "s": 292.56,
+          "e": 293.12
+        },
+        {
+          "w": "palace",
+          "s": 293.12,
+          "e": 293.72
+        },
+        {
+          "w": "and",
+          "s": 293.72,
+          "e": 294.28
+        },
+        {
+          "w": "its",
+          "s": 294.28,
+          "e": 294.44
+        },
+        {
+          "w": "inhabitants",
+          "s": 294.44,
+          "e": 295.32
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As he ascended into the bright sunlight, the world above seemed dull and gray in comparison to the wonders he'd left behind.",
+      "side": "left",
+      "start": 295.87,
+      "end": 303.48,
+      "image": "40_left.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 295.32,
+          "e": 296.08
+        },
+        {
+          "w": "he",
+          "s": 296.08,
+          "e": 296.08
+        },
+        {
+          "w": "ascended",
+          "s": 296.08,
+          "e": 296.64
+        },
+        {
+          "w": "into",
+          "s": 296.64,
+          "e": 296.88
+        },
+        {
+          "w": "the",
+          "s": 296.88,
+          "e": 297.04
+        },
+        {
+          "w": "bright",
+          "s": 297.04,
+          "e": 297.28
+        },
+        {
+          "w": "sunlight",
+          "s": 297.28,
+          "e": 297.88
+        },
+        {
+          "w": "the",
+          "s": 297.88,
+          "e": 297.96
+        },
+        {
+          "w": "world",
+          "s": 297.96,
+          "e": 298.72
+        },
+        {
+          "w": "above",
+          "s": 298.72,
+          "e": 298.96
+        },
+        {
+          "w": "seemed",
+          "s": 298.96,
+          "e": 299.44
+        },
+        {
+          "w": "dull",
+          "s": 299.44,
+          "e": 299.72
+        },
+        {
+          "w": "and",
+          "s": 299.72,
+          "e": 299.92
+        },
+        {
+          "w": "gray",
+          "s": 299.92,
+          "e": 300.4
+        },
+        {
+          "w": "in",
+          "s": 300.4,
+          "e": 300.48
+        },
+        {
+          "w": "comparison",
+          "s": 300.48,
+          "e": 301.2
+        },
+        {
+          "w": "to",
+          "s": 301.2,
+          "e": 301.36
+        },
+        {
+          "w": "the",
+          "s": 301.36,
+          "e": 301.36
+        },
+        {
+          "w": "wonders",
+          "s": 301.36,
+          "e": 301.92
+        },
+        {
+          "w": "he'd",
+          "s": 301.92,
+          "e": 302.0
+        },
+        {
+          "w": "left",
+          "s": 302.0,
+          "e": 302.28
+        },
+        {
+          "w": "behind",
+          "s": 302.28,
+          "e": 302.88
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: Mother! I've returned!",
+      "side": "right",
+      "start": 303.48,
+      "end": 306.06,
+      "image": "41_right.jpg",
+      "words": [
+        {
+          "w": "Mother",
+          "s": 302.88,
+          "e": 303.84
+        },
+        {
+          "w": "I've",
+          "s": 303.84,
+          "e": 304.2
+        },
+        {
+          "w": "returned",
+          "s": 304.2,
+          "e": 304.2
+        }
+      ]
+    },
+    {
+      "text": "Mother: Taro! My child, where have you been? You've been gone for so long...",
+      "side": "left",
+      "start": 306.06,
+      "end": 312.08,
+      "image": "42_left.jpg",
+      "words": [
+        {
+          "w": "Taro",
+          "s": 304.2,
+          "e": 305.16
+        },
+        {
+          "w": "My",
+          "s": 305.16,
+          "e": 305.36
+        },
+        {
+          "w": "child",
+          "s": 305.36,
+          "e": 306.72
+        },
+        {
+          "w": "where",
+          "s": 306.72,
+          "e": 307.4
+        },
+        {
+          "w": "have",
+          "s": 307.4,
+          "e": 307.96
+        },
+        {
+          "w": "you",
+          "s": 307.96,
+          "e": 308.88
+        },
+        {
+          "w": "been",
+          "s": 308.88,
+          "e": 309.4
+        },
+        {
+          "w": "You've",
+          "s": 309.4,
+          "e": 309.44
+        },
+        {
+          "w": "been",
+          "s": 309.44,
+          "e": 310.12
+        },
+        {
+          "w": "gone",
+          "s": 310.12,
+          "e": 310.36
+        },
+        {
+          "w": "for",
+          "s": 310.36,
+          "e": 310.6
+        },
+        {
+          "w": "so",
+          "s": 310.6,
+          "e": 311.08
+        },
+        {
+          "w": "long",
+          "s": 311.08,
+          "e": 311.44
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: I've been... I've been on a journey. But I'm home now.",
+      "side": "right",
+      "start": 312.08,
+      "end": 317.03,
+      "image": "43_right.jpg",
+      "words": [
+        {
+          "w": "I've",
+          "s": 311.44,
+          "e": 311.52
+        },
+        {
+          "w": "been",
+          "s": 311.52,
+          "e": 312.4
+        },
+        {
+          "w": "I've",
+          "s": 312.4,
+          "e": 312.8
+        },
+        {
+          "w": "been",
+          "s": 312.8,
+          "e": 312.8
+        },
+        {
+          "w": "on",
+          "s": 312.8,
+          "e": 313.68
+        },
+        {
+          "w": "a",
+          "s": 313.68,
+          "e": 314.16
+        },
+        {
+          "w": "journey",
+          "s": 314.16,
+          "e": 314.48
+        },
+        {
+          "w": "But",
+          "s": 314.48,
+          "e": 314.72
+        },
+        {
+          "w": "I'm",
+          "s": 314.72,
+          "e": 315.44
+        },
+        {
+          "w": "home",
+          "s": 315.44,
+          "e": 316.04
+        },
+        {
+          "w": "now",
+          "s": 316.04,
+          "e": 316.4
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The days passed, and Urashima Taro struggled to adjust to his old life. The familiar rhythms of the village seemed dull and monotonous.",
+      "side": "left",
+      "start": 317.03,
+      "end": 325.65,
+      "image": "44_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 316.4,
+          "e": 317.08
+        },
+        {
+          "w": "days",
+          "s": 317.08,
+          "e": 317.44
+        },
+        {
+          "w": "passed",
+          "s": 317.44,
+          "e": 318.0
+        },
+        {
+          "w": "and",
+          "s": 318.0,
+          "e": 318.56
+        },
+        {
+          "w": "Urashima",
+          "s": 318.56,
+          "e": 319.16
+        },
+        {
+          "w": "Taro",
+          "s": 319.16,
+          "e": 319.52
+        },
+        {
+          "w": "struggled",
+          "s": 319.52,
+          "e": 320.0
+        },
+        {
+          "w": "to",
+          "s": 320.0,
+          "e": 320.24
+        },
+        {
+          "w": "adjust",
+          "s": 320.24,
+          "e": 320.48
+        },
+        {
+          "w": "to",
+          "s": 320.48,
+          "e": 320.52
+        },
+        {
+          "w": "his",
+          "s": 320.52,
+          "e": 320.72
+        },
+        {
+          "w": "old",
+          "s": 320.72,
+          "e": 320.92
+        },
+        {
+          "w": "life",
+          "s": 320.92,
+          "e": 321.36
+        },
+        {
+          "w": "The",
+          "s": 321.36,
+          "e": 321.36
+        },
+        {
+          "w": "familiar",
+          "s": 321.36,
+          "e": 322.4
+        },
+        {
+          "w": "rhythms",
+          "s": 322.4,
+          "e": 322.88
+        },
+        {
+          "w": "of",
+          "s": 322.88,
+          "e": 323.16
+        },
+        {
+          "w": "the",
+          "s": 323.16,
+          "e": 323.16
+        },
+        {
+          "w": "village",
+          "s": 323.16,
+          "e": 323.44
+        },
+        {
+          "w": "seemed",
+          "s": 323.44,
+          "e": 323.88
+        },
+        {
+          "w": "dull",
+          "s": 323.88,
+          "e": 324.12
+        },
+        {
+          "w": "and",
+          "s": 324.12,
+          "e": 324.76
+        },
+        {
+          "w": "monotonous",
+          "s": 324.76,
+          "e": 325.08
+        }
+      ]
+    },
+    {
+      "text": "Narrator: He longed for the magic of the underwater realm.",
+      "side": "right",
+      "start": 325.65,
+      "end": 328.99,
+      "image": "45_right.jpg",
+      "words": [
+        {
+          "w": "He",
+          "s": 325.08,
+          "e": 325.68
+        },
+        {
+          "w": "longed",
+          "s": 325.68,
+          "e": 326.2
+        },
+        {
+          "w": "for",
+          "s": 326.2,
+          "e": 326.4
+        },
+        {
+          "w": "the",
+          "s": 326.4,
+          "e": 326.48
+        },
+        {
+          "w": "magic",
+          "s": 326.48,
+          "e": 326.96
+        },
+        {
+          "w": "of",
+          "s": 326.96,
+          "e": 327.08
+        },
+        {
+          "w": "the",
+          "s": 327.08,
+          "e": 327.36
+        },
+        {
+          "w": "underwater",
+          "s": 327.36,
+          "e": 327.76
+        },
+        {
+          "w": "realm",
+          "s": 327.76,
+          "e": 328.32
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: What's in this box? Perhaps it holds the key to my happiness...",
+      "side": "left",
+      "start": 328.99,
+      "end": 333.52,
+      "image": "46_left.jpg",
+      "words": [
+        {
+          "w": "What's",
+          "s": 328.32,
+          "e": 329.24
+        },
+        {
+          "w": "in",
+          "s": 329.24,
+          "e": 329.52
+        },
+        {
+          "w": "this",
+          "s": 329.52,
+          "e": 329.76
+        },
+        {
+          "w": "box",
+          "s": 329.76,
+          "e": 330.32
+        },
+        {
+          "w": "Perhaps",
+          "s": 330.32,
+          "e": 331.32
+        },
+        {
+          "w": "it",
+          "s": 331.32,
+          "e": 331.8
+        },
+        {
+          "w": "holds",
+          "s": 331.8,
+          "e": 332.0
+        },
+        {
+          "w": "the",
+          "s": 332.0,
+          "e": 332.08
+        },
+        {
+          "w": "key",
+          "s": 332.08,
+          "e": 332.08
+        },
+        {
+          "w": "to",
+          "s": 332.08,
+          "e": 332.08
+        },
+        {
+          "w": "my",
+          "s": 332.08,
+          "e": 332.52
+        },
+        {
+          "w": "happiness",
+          "s": 332.52,
+          "e": 332.92
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As he lifted the lid, a puff of smoke escaped, carrying with it the whispers of the sea. Urashima Taro's eyes widened in horror as he realized his mistake.",
+      "side": "right",
+      "start": 333.52,
+      "end": 344.51,
+      "image": "47_right.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 332.92,
+          "e": 333.48
+        },
+        {
+          "w": "he",
+          "s": 333.48,
+          "e": 333.48
+        },
+        {
+          "w": "lifted",
+          "s": 333.48,
+          "e": 333.92
+        },
+        {
+          "w": "the",
+          "s": 333.92,
+          "e": 334.08
+        },
+        {
+          "w": "lid",
+          "s": 334.08,
+          "e": 334.52
+        },
+        {
+          "w": "a",
+          "s": 334.52,
+          "e": 334.6
+        },
+        {
+          "w": "puff",
+          "s": 334.6,
+          "e": 335.08
+        },
+        {
+          "w": "of",
+          "s": 335.08,
+          "e": 335.32
+        },
+        {
+          "w": "smoke",
+          "s": 335.32,
+          "e": 335.88
+        },
+        {
+          "w": "escaped",
+          "s": 335.88,
+          "e": 336.44
+        },
+        {
+          "w": "carrying",
+          "s": 336.44,
+          "e": 337.24
+        },
+        {
+          "w": "with",
+          "s": 337.24,
+          "e": 337.44
+        },
+        {
+          "w": "it",
+          "s": 337.44,
+          "e": 337.88
+        },
+        {
+          "w": "the",
+          "s": 337.88,
+          "e": 338.0
+        },
+        {
+          "w": "whispers",
+          "s": 338.0,
+          "e": 338.36
+        },
+        {
+          "w": "of",
+          "s": 338.36,
+          "e": 338.36
+        },
+        {
+          "w": "the",
+          "s": 338.36,
+          "e": 338.36
+        },
+        {
+          "w": "sea",
+          "s": 338.36,
+          "e": 338.8
+        },
+        {
+          "w": "Urashima",
+          "s": 338.8,
+          "e": 340.08
+        },
+        {
+          "w": "Taro's",
+          "s": 340.08,
+          "e": 340.64
+        },
+        {
+          "w": "eyes",
+          "s": 340.64,
+          "e": 341.08
+        },
+        {
+          "w": "widened",
+          "s": 341.08,
+          "e": 341.64
+        },
+        {
+          "w": "in",
+          "s": 341.64,
+          "e": 341.72
+        },
+        {
+          "w": "horror",
+          "s": 341.72,
+          "e": 342.24
+        },
+        {
+          "w": "as",
+          "s": 342.24,
+          "e": 342.56
+        },
+        {
+          "w": "he",
+          "s": 342.56,
+          "e": 342.6
+        },
+        {
+          "w": "realized",
+          "s": 342.6,
+          "e": 343.28
+        },
+        {
+          "w": "his",
+          "s": 343.28,
+          "e": 343.4
+        },
+        {
+          "w": "mistake",
+          "s": 343.4,
+          "e": 343.88
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: No... Oh, no...",
+      "side": "left",
+      "start": 344.51,
+      "end": 346.96,
+      "image": "48_left.jpg",
+      "words": [
+        {
+          "w": "No",
+          "s": 343.88,
+          "e": 344.88
+        },
+        {
+          "w": "Oh",
+          "s": 344.88,
+          "e": 345.84
+        },
+        {
+          "w": "no",
+          "s": 345.84,
+          "e": 346.2
+        }
+      ]
+    },
+    {
+      "text": "Narrator: His body began to wither, his skin wrinkling, his hair graying.",
+      "side": "right",
+      "start": 346.96,
+      "end": 351.92,
+      "image": "49_right.jpg",
+      "words": [
+        {
+          "w": "His",
+          "s": 346.2,
+          "e": 347.08
+        },
+        {
+          "w": "body",
+          "s": 347.08,
+          "e": 347.4
+        },
+        {
+          "w": "began",
+          "s": 347.4,
+          "e": 347.72
+        },
+        {
+          "w": "to",
+          "s": 347.72,
+          "e": 347.8
+        },
+        {
+          "w": "wither",
+          "s": 347.8,
+          "e": 348.28
+        },
+        {
+          "w": "his",
+          "s": 348.28,
+          "e": 348.76
+        },
+        {
+          "w": "skin",
+          "s": 348.76,
+          "e": 349.08
+        },
+        {
+          "w": "wrinkling",
+          "s": 349.08,
+          "e": 349.64
+        },
+        {
+          "w": "his",
+          "s": 349.64,
+          "e": 350.12
+        },
+        {
+          "w": "hair",
+          "s": 350.12,
+          "e": 350.68
+        },
+        {
+          "w": "graying",
+          "s": 350.68,
+          "e": 351.24
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The years he'd spent beneath the waves had been mere moments in the mortal world, but now, time was claiming its due.",
+      "side": "left",
+      "start": 351.92,
+      "end": 359.9,
+      "image": "50_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 351.24,
+          "e": 351.36
+        },
+        {
+          "w": "years",
+          "s": 351.36,
+          "e": 352.4
+        },
+        {
+          "w": "he'd",
+          "s": 352.4,
+          "e": 352.72
+        },
+        {
+          "w": "spent",
+          "s": 352.72,
+          "e": 353.0
+        },
+        {
+          "w": "beneath",
+          "s": 353.0,
+          "e": 353.32
+        },
+        {
+          "w": "the",
+          "s": 353.32,
+          "e": 353.52
+        },
+        {
+          "w": "waves",
+          "s": 353.52,
+          "e": 353.88
+        },
+        {
+          "w": "had",
+          "s": 353.88,
+          "e": 354.16
+        },
+        {
+          "w": "been",
+          "s": 354.16,
+          "e": 354.28
+        },
+        {
+          "w": "mere",
+          "s": 354.28,
+          "e": 354.6
+        },
+        {
+          "w": "moments",
+          "s": 354.6,
+          "e": 355.2
+        },
+        {
+          "w": "in",
+          "s": 355.2,
+          "e": 355.36
+        },
+        {
+          "w": "the",
+          "s": 355.36,
+          "e": 355.4
+        },
+        {
+          "w": "mortal",
+          "s": 355.4,
+          "e": 355.8
+        },
+        {
+          "w": "world",
+          "s": 355.8,
+          "e": 356.32
+        },
+        {
+          "w": "but",
+          "s": 356.32,
+          "e": 356.8
+        },
+        {
+          "w": "now",
+          "s": 356.8,
+          "e": 357.2
+        },
+        {
+          "w": "time",
+          "s": 357.2,
+          "e": 358.0
+        },
+        {
+          "w": "was",
+          "s": 358.0,
+          "e": 358.16
+        },
+        {
+          "w": "claiming",
+          "s": 358.16,
+          "e": 358.6
+        },
+        {
+          "w": "its",
+          "s": 358.6,
+          "e": 358.84
+        },
+        {
+          "w": "due",
+          "s": 358.84,
+          "e": 359.2
+        }
+      ]
+    },
+    {
+      "text": "Urashima Taro: Mother... forgive me...",
+      "side": "right",
+      "start": 359.9,
+      "end": 364.53,
+      "image": "51_right.jpg",
+      "words": [
+        {
+          "w": "Mother",
+          "s": 359.2,
+          "e": 360.32
+        },
+        {
+          "w": "forgive",
+          "s": 360.32,
+          "e": 361.52
+        },
+        {
+          "w": "me",
+          "s": 361.52,
+          "e": 361.56
+        }
+      ]
+    },
+    {
+      "text": "Mother: Taro! My child!",
+      "side": "left",
+      "start": 364.53,
+      "end": 366.93,
+      "image": "52_left.jpg",
+      "words": [
+        {
+          "w": "Taro",
+          "s": 361.56,
+          "e": 362.56
+        },
+        {
+          "w": "My",
+          "s": 362.56,
+          "e": 363.24
+        },
+        {
+          "w": "child",
+          "s": 363.24,
+          "e": 363.6
+        }
+      ]
+    },
+    {
+      "text": "Narrator: As the old man crumpled to the ground, the wind howled through the village, a mournful cry that echoed the sorrow in Urashima Taro's heart.",
+      "side": "right",
+      "start": 366.93,
+      "end": 376.25,
+      "image": "53_right.jpg",
+      "words": [
+        {
+          "w": "As",
+          "s": 363.6,
+          "e": 365.04
+        },
+        {
+          "w": "the",
+          "s": 365.04,
+          "e": 366.24
+        },
+        {
+          "w": "old",
+          "s": 366.24,
+          "e": 367.04
+        },
+        {
+          "w": "man",
+          "s": 367.04,
+          "e": 367.64
+        },
+        {
+          "w": "crumpled",
+          "s": 367.64,
+          "e": 368.08
+        },
+        {
+          "w": "to",
+          "s": 368.08,
+          "e": 368.28
+        },
+        {
+          "w": "the",
+          "s": 368.28,
+          "e": 368.32
+        },
+        {
+          "w": "ground",
+          "s": 368.32,
+          "e": 368.76
+        },
+        {
+          "w": "the",
+          "s": 368.76,
+          "e": 369.24
+        },
+        {
+          "w": "wind",
+          "s": 369.24,
+          "e": 369.72
+        },
+        {
+          "w": "howled",
+          "s": 369.72,
+          "e": 370.36
+        },
+        {
+          "w": "through",
+          "s": 370.36,
+          "e": 370.6
+        },
+        {
+          "w": "the",
+          "s": 370.6,
+          "e": 370.68
+        },
+        {
+          "w": "village",
+          "s": 370.68,
+          "e": 371.12
+        },
+        {
+          "w": "a",
+          "s": 371.12,
+          "e": 371.44
+        },
+        {
+          "w": "mournful",
+          "s": 371.44,
+          "e": 372.2
+        },
+        {
+          "w": "cry",
+          "s": 372.2,
+          "e": 372.64
+        },
+        {
+          "w": "that",
+          "s": 372.64,
+          "e": 372.92
+        },
+        {
+          "w": "echoed",
+          "s": 372.92,
+          "e": 373.08
+        },
+        {
+          "w": "the",
+          "s": 373.08,
+          "e": 373.12
+        },
+        {
+          "w": "sorrow",
+          "s": 373.12,
+          "e": 373.8
+        },
+        {
+          "w": "in",
+          "s": 373.8,
+          "e": 374.28
+        },
+        {
+          "w": "Urashima",
+          "s": 374.28,
+          "e": 374.92
+        },
+        {
+          "w": "Taro's",
+          "s": 374.92,
+          "e": 375.36
+        },
+        {
+          "w": "heart",
+          "s": 375.36,
+          "e": 375.64
+        }
+      ]
+    },
+    {
+      "text": "Narrator: The sea, once a source of wonder, had become a reminder of his loss, a bittersweet memory that would haunt him until the end of his days.",
+      "side": "left",
+      "start": 376.25,
+      "end": 385.81,
+      "image": "54_left.jpg",
+      "words": [
+        {
+          "w": "The",
+          "s": 375.64,
+          "e": 375.68
+        },
+        {
+          "w": "sea",
+          "s": 375.68,
+          "e": 376.92
+        },
+        {
+          "w": "once",
+          "s": 376.92,
+          "e": 377.52
+        },
+        {
+          "w": "a",
+          "s": 377.52,
+          "e": 377.68
+        },
+        {
+          "w": "source",
+          "s": 377.68,
+          "e": 378.0
+        },
+        {
+          "w": "of",
+          "s": 378.0,
+          "e": 378.36
+        },
+        {
+          "w": "wonder",
+          "s": 378.36,
+          "e": 378.6
+        },
+        {
+          "w": "had",
+          "s": 378.6,
+          "e": 379.36
+        },
+        {
+          "w": "become",
+          "s": 379.36,
+          "e": 379.88
+        },
+        {
+          "w": "a",
+          "s": 379.88,
+          "e": 380.16
+        },
+        {
+          "w": "reminder",
+          "s": 380.16,
+          "e": 380.24
+        },
+        {
+          "w": "of",
+          "s": 380.24,
+          "e": 380.44
+        },
+        {
+          "w": "his",
+          "s": 380.44,
+          "e": 380.6
+        },
+        {
+          "w": "loss",
+          "s": 380.6,
+          "e": 381.0
+        },
+        {
+          "w": "a",
+          "s": 381.0,
+          "e": 381.72
+        },
+        {
+          "w": "bittersweet",
+          "s": 381.72,
+          "e": 382.36
+        },
+        {
+          "w": "memory",
+          "s": 382.36,
+          "e": 382.84
+        },
+        {
+          "w": "that",
+          "s": 382.84,
+          "e": 382.92
+        },
+        {
+          "w": "would",
+          "s": 382.92,
+          "e": 382.92
+        },
+        {
+          "w": "haunt",
+          "s": 382.92,
+          "e": 383.08
+        },
+        {
+          "w": "him",
+          "s": 383.08,
+          "e": 383.08
+        },
+        {
+          "w": "until",
+          "s": 383.08,
+          "e": 383.64
+        },
+        {
+          "w": "the",
+          "s": 383.64,
+          "e": 383.8
+        },
+        {
+          "w": "end",
+          "s": 383.8,
+          "e": 383.8
+        },
+        {
+          "w": "of",
+          "s": 383.8,
+          "e": 383.96
+        },
+        {
+          "w": "his",
+          "s": 383.96,
+          "e": 384.52
+        },
+        {
+          "w": "days",
+          "s": 384.52,
+          "e": 385.04
+        }
+      ]
+    },
+    {
+      "text": "Narrator: And so, the story of Urashima Taro came full circle, a cautionary tale of the transience of human life and the enduring power of love and memory.",
+      "side": "right",
+      "start": 385.81,
+      "end": 397.28,
+      "image": "55_right.jpg",
+      "words": [
+        {
+          "w": "And",
+          "s": 385.04,
+          "e": 385.88
+        },
+        {
+          "w": "so",
+          "s": 385.88,
+          "e": 386.24
+        },
+        {
+          "w": "the",
+          "s": 386.24,
+          "e": 386.48
+        },
+        {
+          "w": "story",
+          "s": 386.48,
+          "e": 387.28
+        },
+        {
+          "w": "of",
+          "s": 387.28,
+          "e": 387.4
+        },
+        {
+          "w": "Urashima",
+          "s": 387.4,
+          "e": 388.04
+        },
+        {
+          "w": "Taro",
+          "s": 388.04,
+          "e": 388.52
+        },
+        {
+          "w": "came",
+          "s": 388.52,
+          "e": 388.88
+        },
+        {
+          "w": "full",
+          "s": 388.88,
+          "e": 389.08
+        },
+        {
+          "w": "circle",
+          "s": 389.08,
+          "e": 389.6
+        },
+        {
+          "w": "a",
+          "s": 389.6,
+          "e": 390.08
+        },
+        {
+          "w": "cautionary",
+          "s": 390.08,
+          "e": 390.88
+        },
+        {
+          "w": "tale",
+          "s": 390.88,
+          "e": 391.32
+        },
+        {
+          "w": "of",
+          "s": 391.32,
+          "e": 391.56
+        },
+        {
+          "w": "the",
+          "s": 391.56,
+          "e": 391.64
+        },
+        {
+          "w": "transience",
+          "s": 391.64,
+          "e": 392.4
+        },
+        {
+          "w": "of",
+          "s": 392.4,
+          "e": 392.52
+        },
+        {
+          "w": "human",
+          "s": 392.52,
+          "e": 392.84
+        },
+        {
+          "w": "life",
+          "s": 392.84,
+          "e": 393.28
+        },
+        {
+          "w": "and",
+          "s": 393.28,
+          "e": 394.08
+        },
+        {
+          "w": "the",
+          "s": 394.08,
+          "e": 394.32
+        },
+        {
+          "w": "enduring",
+          "s": 394.32,
+          "e": 394.64
+        },
+        {
+          "w": "power",
+          "s": 394.64,
+          "e": 395.24
+        },
+        {
+          "w": "of",
+          "s": 395.24,
+          "e": 395.72
+        },
+        {
+          "w": "love",
+          "s": 395.72,
+          "e": 396.0
+        },
+        {
+          "w": "and",
+          "s": 396.0,
+          "e": 396.2
+        },
+        {
+          "w": "memory",
+          "s": 396.2,
+          "e": 397.28
+        }
+      ]
+    }
+  ]
+}
